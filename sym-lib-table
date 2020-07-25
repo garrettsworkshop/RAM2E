@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name GW_PLD.lib)(type Legacy)(uri ${KIPRJMOD}/../GW_Parts/GW_PLD.lib)(options "")(descr ""))
+  (lib (name GW_RAM.lib)(type Legacy)(uri ${KIPRJMOD}/../GW_Parts/GW_RAM.lib)(options "")(descr ""))
+)
