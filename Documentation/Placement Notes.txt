@@ -1,0 +1,3 @@
+Placement and schematic are to mount Altera MAX II EPM240T100 for U1.
+Board also supports Altera MAX V 5M240ZT100 for lower power consumption.
+To use MAX V, DNP R5, 3k3 for R3, and 6k8 for R4, and mount TPS73701 for U9.

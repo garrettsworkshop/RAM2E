@@ -1,0 +1,127 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 0 0 160 208)
+	(text "UFM" (rect 66 -1 99 15)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 192 25 204)(font "Arial" ))
+	(port
+		(pt 0 48)
+		(input)
+		(text "program" (rect 0 0 47 14)(font "Arial" (font_size 8)))
+		(text "program" (rect 4 34 42 47)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 48 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "erase" (rect 0 0 33 14)(font "Arial" (font_size 8)))
+		(text "erase" (rect 4 50 30 63)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 48 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "oscena" (rect 0 0 42 14)(font "Arial" (font_size 8)))
+		(text "oscena" (rect 4 66 38 79)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 48 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "arclk" (rect 0 0 27 14)(font "Arial" (font_size 8)))
+		(text "arclk" (rect 4 82 25 95)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 48 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "arshft" (rect 0 0 34 14)(font "Arial" (font_size 8)))
+		(text "arshft" (rect 4 98 31 111)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 48 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "ardin" (rect 0 0 28 14)(font "Arial" (font_size 8)))
+		(text "ardin" (rect 4 114 26 127)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 48 128))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "drclk" (rect 0 0 27 14)(font "Arial" (font_size 8)))
+		(text "drclk" (rect 4 130 25 143)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 48 144))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "drshft" (rect 0 0 34 14)(font "Arial" (font_size 8)))
+		(text "drshft" (rect 4 146 31 159)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 48 160))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "drdin" (rect 0 0 28 14)(font "Arial" (font_size 8)))
+		(text "drdin" (rect 4 162 26 175)(font "Arial" (font_size 8)))
+		(line (pt 0 176)(pt 48 176))
+	)
+	(port
+		(pt 160 48)
+		(output)
+		(text "busy" (rect 0 0 28 14)(font "Arial" (font_size 8)))
+		(text "busy" (rect 133 34 155 47)(font "Arial" (font_size 8)))
+		(line (pt 160 48)(pt 112 48))
+	)
+	(port
+		(pt 160 64)
+		(output)
+		(text "osc" (rect 0 0 21 14)(font "Arial" (font_size 8)))
+		(text "osc" (rect 139 50 155 63)(font "Arial" (font_size 8)))
+		(line (pt 160 64)(pt 112 64))
+	)
+	(port
+		(pt 160 80)
+		(output)
+		(text "drdout" (rect 0 0 36 14)(font "Arial" (font_size 8)))
+		(text "drdout" (rect 126 66 155 79)(font "Arial" (font_size 8)))
+		(line (pt 160 80)(pt 112 80))
+	)
+	(port
+		(pt 160 96)
+		(output)
+		(text "rtpbusy" (rect 0 0 43 14)(font "Arial" (font_size 8)))
+		(text "rtpbusy" (rect 120 82 155 95)(font "Arial" (font_size 8)))
+		(line (pt 160 96)(pt 112 96))
+	)
+	(drawing
+		(line (pt 48 32)(pt 112 32))
+		(line (pt 112 32)(pt 112 192))
+		(line (pt 48 192)(pt 112 192))
+		(line (pt 48 32)(pt 48 192))
+		(line (pt 0 0)(pt 160 0))
+		(line (pt 160 0)(pt 160 208))
+		(line (pt 0 208)(pt 160 208))
+		(line (pt 0 0)(pt 0 208))
+	)
+)
