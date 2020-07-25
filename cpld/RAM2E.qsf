@@ -1,0 +1,148 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 32-bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 17:58:45  August 04, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		RAM2E_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY MAX7000S
+set_global_assignment -name DEVICE "EPM7128SLC84-15"
+set_global_assignment -name TOP_LEVEL_ENTITY RAM2E
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:58:45  AUGUST 04, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name DEVICE_FILTER_PACKAGE PLCC
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 84
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name MAX7000_DEVICE_IO_STANDARD TTL
+set_location_assignment PIN_2 -to Q3
+set_location_assignment PIN_5 -to nWE
+set_location_assignment PIN_6 -to nC07X
+set_location_assignment PIN_8 -to nPRAS
+set_location_assignment PIN_9 -to C7M
+set_location_assignment PIN_1 -to Q3_2
+set_location_assignment PIN_24 -to RA[10]
+set_location_assignment PIN_25 -to RA[11]
+set_location_assignment PIN_27 -to nCAS
+set_location_assignment PIN_28 -to RD[4]
+set_location_assignment PIN_29 -to RD[5]
+set_location_assignment PIN_30 -to RD[6]
+set_location_assignment PIN_31 -to RD[7]
+set_location_assignment PIN_33 -to RD[0]
+set_location_assignment PIN_34 -to RD[1]
+set_location_assignment PIN_35 -to RD[2]
+set_location_assignment PIN_36 -to RD[3]
+set_location_assignment PIN_37 -to nRWE
+set_location_assignment PIN_39 -to nRAS
+set_location_assignment PIN_40 -to RA[9]
+set_location_assignment PIN_41 -to RA[8]
+set_location_assignment PIN_54 -to VD[7]
+set_location_assignment PIN_55 -to MD[7]
+set_location_assignment PIN_56 -to VD[0]
+set_location_assignment PIN_57 -to MD[0]
+set_location_assignment PIN_58 -to MD[6]
+set_location_assignment PIN_60 -to VD[6]
+set_location_assignment PIN_61 -to MD[1]
+set_location_assignment PIN_63 -to VD[1]
+set_location_assignment PIN_64 -to VD[5]
+set_location_assignment PIN_65 -to MD[5]
+set_location_assignment PIN_67 -to VD[2]
+set_location_assignment PIN_68 -to MD[2]
+set_location_assignment PIN_69 -to MD[4]
+set_location_assignment PIN_70 -to VD[4]
+set_location_assignment PIN_73 -to MD[3]
+set_location_assignment PIN_74 -to VD[3]
+set_location_assignment PIN_75 -to PHI0
+set_location_assignment PIN_76 -to nEN80
+set_location_assignment PIN_79 -to PHI1
+set_location_assignment PIN_77 -to nCASEN
+set_location_assignment PIN_80 -to nWE80
+set_location_assignment PIN_81 -to nPCAS
+set_location_assignment PIN_83 -to C14M
+set_location_assignment PIN_84 -to C14M_2
+set_location_assignment PIN_44 -to MA[7]
+set_location_assignment PIN_45 -to MA[0]
+set_location_assignment PIN_46 -to MA[1]
+set_location_assignment PIN_48 -to MA[2]
+set_location_assignment PIN_49 -to MA[3]
+set_location_assignment PIN_50 -to MA[4]
+set_location_assignment PIN_51 -to MA[5]
+set_location_assignment PIN_52 -to MA[6]
+set_location_assignment PIN_10 -to C3M58
+set_location_assignment PIN_4 -to AN3
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_location_assignment PIN_15 -to DelayIn[1]
+set_location_assignment PIN_16 -to DelayOut[1]
+set_location_assignment PIN_12 -to DelayOut[0]
+set_location_assignment PIN_11 -to DelayIn[0]
+set_location_assignment PIN_17 -to DelayIn[2]
+set_location_assignment PIN_18 -to DelayOut[2]
+set_location_assignment PIN_20 -to DelayIn[3]
+set_location_assignment PIN_21 -to DelayOut[3]
+set_global_assignment -name MAX7000S_JTAG_USER_CODE 7A2E
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name VERILOG_FILE RAM2E.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Simulation.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "Z:/Repos/RAM2E/cpld/Simulation.vwf"
+set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS OFF
+set_global_assignment -name MAX7000_IGNORE_LCELL_BUFFERS OFF
+set_global_assignment -name AUTO_LCELL_INSERTION OFF
+set_global_assignment -name AUTO_PARALLEL_EXPANDERS OFF
+set_global_assignment -name SYNTH_MESSAGE_LEVEL HIGH
+set_global_assignment -name OPTIMIZE_HOLD_TIMING OFF
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING OFF
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+set_global_assignment -name ECO_OPTIMIZE_TIMING ON
+set_global_assignment -name ECO_REGENERATE_REPORT ON
+set_global_assignment -name OPTIMIZE_IOC_REGISTER_PLACEMENT_FOR_TIMING "PACK ALL IO REGISTERS"
+set_global_assignment -name SLOW_SLEW_RATE ON
+set_global_assignment -name ALM_REGISTER_PACKING_EFFORT HIGH
+set_global_assignment -name POWER_USE_PVA OFF
+set_global_assignment -name AUTO_TURBO_BIT OFF
+set_location_assignment PIN_22 -to C073SEL
+set_instance_assignment -name MAX7000_INDIVIDUAL_TURBO_BIT ON -to DelayOut[1]
+set_instance_assignment -name MAX7000_INDIVIDUAL_TURBO_BIT ON -to DelayOut[2]
+set_instance_assignment -name MAX7000_INDIVIDUAL_TURBO_BIT ON -to DelayIn[2]
+set_instance_assignment -name MAX7000_INDIVIDUAL_TURBO_BIT ON -to DelayIn[3]
+set_instance_assignment -name MAX7000_INDIVIDUAL_TURBO_BIT ON -to DelayIn[1]
+set_instance_assignment -name MAX7000_INDIVIDUAL_TURBO_BIT ON -to DelayOut[3]
+set_instance_assignment -name MAX7000_INDIVIDUAL_TURBO_BIT ON -to MDBEN
