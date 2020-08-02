@@ -10,6 +10,13 @@
   )
 
   (page A4)
+  (title_block
+    (title "GW4203B (RAM2E II)")
+    (date 2020-08-02)
+    (rev 1.0)
+    (company "Garrett's Workshop")
+  )
+
   (layers
     (0 F.Cu signal)
     (1 In1.Cu signal)
