@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 2
 Title "GW4203B (RAM2E II)"
-Date "2020-08-02"
-Rev "1.0"
+Date "2020-08-04"
+Rev "1.1"
 Comp "Garrett's Workshop"
 Comment1 ""
 Comment2 ""
