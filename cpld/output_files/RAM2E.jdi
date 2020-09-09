@@ -1,8 +1,8 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="630f733e3f02bcb8a3ce"/>
+    <hash md5_digest_80b="56678bba3097e929c412"/>
   </project>
   <file_info>
-    <file device="EPM240T100C5" path="RAM2E.sof" usercode="0xFFFFFFFF"/>
+    <file device="5M240ZT100C5" path="RAM2E.sof" usercode="0xFFFFFFFF"/>
   </file_info>
 </sld_project_info>
