@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RAM2E
-Tue Jun 02 17:01:02 2020
+Tue Sep 08 19:28:14 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -45,11 +45,11 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Jun 02 17:01:02 2020           ;
+; Analysis & Synthesis Status ; Successful - Tue Sep 08 19:28:14 2020           ;
 ; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name               ; RAM2E                                           ;
 ; Top-level Entity Name       ; RAM2E                                           ;
-; Family                      ; MAX II                                          ;
+; Family                      ; MAX V                                           ;
 ; Total logic elements        ; 193                                             ;
 ; Total pins                  ; 69                                              ;
 ; Total virtual pins          ; 0                                               ;
@@ -62,9 +62,9 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EPM240T100C5       ;                    ;
+; Device                                                                     ; 5M240ZT100C5       ;                    ;
 ; Top-level entity name                                                      ; RAM2E              ; RAM2E              ;
-; Family name                                                                ; MAX II             ; Cyclone IV GX      ;
+; Family name                                                                ; MAX V              ; Cyclone IV GX      ;
 ; Safe State Machine                                                         ; On                 ; Off                ;
 ; Parallel Synthesis                                                         ; Off                ; On                 ;
 ; Power-Up Don't Care                                                        ; Off                ; On                 ;
@@ -147,7 +147,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                        ; Library ;
 +----------------------------------+-----------------+----------------------------------+-----------------------------------------------------+---------+
 ; RAM2E.v                          ; yes             ; User Verilog HDL File            ; C:/Users/Zane/Documents/GitHub/RAM2E/cpld/RAM2E.v   ;         ;
-; UFM.v                            ; yes             ; User Wizard-Generated File       ; C:/Users/Zane/Documents/GitHub/RAM2E/cpld/UFM.v     ;         ;
+; db/UFM.v                         ; yes             ; Auto-Generated Megafunction      ; C:/Users/Zane/Documents/GitHub/RAM2E/cpld/db/UFM.v  ;         ;
 ; RAM2E.mif                        ; yes             ; User Memory Initialization File  ; C:/Users/Zane/Documents/GitHub/RAM2E/cpld/RAM2E.mif ;         ;
 +----------------------------------+-----------------+----------------------------------+-----------------------------------------------------+---------+
 
@@ -200,13 +200,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                 ;
-+--------+--------------+---------+--------------+--------------+---------------------+-------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance     ; IP Include File                                 ;
-+--------+--------------+---------+--------------+--------------+---------------------+-------------------------------------------------+
-; Altera ; ALTUFM_NONE  ; 13.0    ; N/A          ; N/A          ; |RAM2E|UFM:UFM_inst ; C:/Users/Zane/Documents/GitHub/RAM2E/cpld/UFM.v ;
-+--------+--------------+---------+--------------+--------------+---------------------+-------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                    ;
++--------+--------------+---------+--------------+--------------+---------------------+----------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance     ; IP Include File                                    ;
++--------+--------------+---------+--------------+--------------+---------------------+----------------------------------------------------+
+; Altera ; ALTUFM_NONE  ; 13.0    ; N/A          ; N/A          ; |RAM2E|UFM:UFM_inst ; C:/Users/Zane/Documents/GitHub/RAM2E/cpld/db/UFM.v ;
++--------+--------------+---------+--------------+--------------+---------------------+----------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -268,12 +268,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jun 02 17:01:01 2020
+    Info: Processing started: Tue Sep 08 19:28:13 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RAM2E -c RAM2E
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file ram2e.v
     Info (12023): Found entity 1: RAM2E
-Info (12021): Found 2 design units, including 2 entities, in source file ufm.v
+Warning (12136): Clear box output file C:/Users/Zane/Documents/GitHub/RAM2E/cpld/UFM.v is not compatible with the current compile. Used regenerated output file C:/Users/Zane/Documents/GitHub/RAM2E/cpld/db/UFM.v for elaboration
+Info (12021): Found 2 design units, including 2 entities, in source file db/ufm.v
     Info (12023): Found entity 1: UFM_altufm_none_a7r
     Info (12023): Found entity 2: UFM
 Info (12127): Elaborating entity "RAM2E" for the top level hierarchy
@@ -290,9 +291,9 @@ Info (21057): Implemented 263 device resources after synthesis - the final resou
     Info (21061): Implemented 193 logic cells
     Info (21070): Implemented 1 User Flash Memory blocks
 Info (144001): Generated suppressed messages file C:/Users/Zane/Documents/GitHub/RAM2E/cpld/output_files/RAM2E.map.smsg
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4574 megabytes
-    Info: Processing ended: Tue Jun 02 17:01:02 2020
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4577 megabytes
+    Info: Processing ended: Tue Sep 08 19:28:14 2020
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

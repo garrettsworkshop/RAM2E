@@ -1,5 +1,5 @@
 Fitter report for RAM2E
-Tue Jun 02 17:01:04 2020
+Tue Sep 08 19:28:17 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -57,15 +57,15 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Fitter Summary                                                              ;
 +---------------------------+-------------------------------------------------+
-; Fitter Status             ; Successful - Tue Jun 02 17:01:04 2020           ;
+; Fitter Status             ; Successful - Tue Sep 08 19:28:17 2020           ;
 ; Quartus II 64-Bit Version ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name             ; RAM2E                                           ;
 ; Top-level Entity Name     ; RAM2E                                           ;
-; Family                    ; MAX II                                          ;
-; Device                    ; EPM240T100C5                                    ;
+; Family                    ; MAX V                                           ;
+; Device                    ; 5M240ZT100C5                                    ;
 ; Timing Models             ; Final                                           ;
 ; Total logic elements      ; 184 / 240 ( 77 % )                              ;
-; Total pins                ; 69 / 80 ( 86 % )                                ;
+; Total pins                ; 69 / 79 ( 87 % )                                ;
 ; Total virtual pins        ; 0                                               ;
 ; UFM blocks                ; 1 / 1 ( 100 % )                                 ;
 +---------------------------+-------------------------------------------------+
@@ -76,7 +76,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------------------+--------------------------------+
 ; Option                                                                     ; Setting                        ; Default Value                  ;
 +----------------------------------------------------------------------------+--------------------------------+--------------------------------+
-; Device                                                                     ; EPM240T100C5                   ;                                ;
+; Device                                                                     ; 5M240ZT100C5                   ;                                ;
 ; Minimum Core Junction Temperature                                          ; 0                              ;                                ;
 ; Maximum Core Junction Temperature                                          ; 85                             ;                                ;
 ; Fit Attempts to Skip                                                       ; 0                              ; 0.0                            ;
@@ -159,22 +159,22 @@ The pin-out file can be found in C:/Users/Zane/Documents/GitHub/RAM2E/cpld/outpu
 ;     -- arithmetic mode                      ; 14                 ;
 ;     -- qfbk mode                            ; 9                  ;
 ;     -- register cascade mode                ; 0                  ;
-;     -- synchronous clear/load mode          ; 12                 ;
+;     -- synchronous clear/load mode          ; 13                 ;
 ;     -- asynchronous clear/load mode         ; 0                  ;
 ;                                             ;                    ;
 ; Total registers                             ; 106 / 240 ( 44 % ) ;
-; Total LABs                                  ; 23 / 24 ( 96 % )   ;
+; Total LABs                                  ; 22 / 24 ( 92 % )   ;
 ; Logic elements in carry chains              ; 15                 ;
 ; Virtual pins                                ; 0                  ;
-; I/O pins                                    ; 69 / 80 ( 86 % )   ;
+; I/O pins                                    ; 69 / 79 ( 87 % )   ;
 ;     -- Clock pins                           ; 3 / 4 ( 75 % )     ;
 ;                                             ;                    ;
 ; Global signals                              ; 1                  ;
 ; UFM blocks                                  ; 1 / 1 ( 100 % )    ;
 ; Global clocks                               ; 1 / 4 ( 25 % )     ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )      ;
-; Average interconnect usage (total/H/V)      ; 21% / 21% / 21%    ;
-; Peak interconnect usage (total/H/V)         ; 21% / 21% / 21%    ;
+; Average interconnect usage (total/H/V)      ; 23% / 23% / 22%    ;
+; Peak interconnect usage (total/H/V)         ; 23% / 23% / 22%    ;
 ; Maximum fan-out                             ; 106                ;
 ; Highest non-global fan-out                  ; 33                 ;
 ; Total fan-out                               ; 793                ;
@@ -218,9 +218,9 @@ The pin-out file can be found in C:/Users/Zane/Documents/GitHub/RAM2E/cpld/outpu
 ; Name    ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Fast Output Connection ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
 +---------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 ; BA[0]   ; 6     ; 1        ; 1            ; 3            ; 0           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
-; BA[1]   ; 14    ; 1        ; 1            ; 2            ; 0           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
+; BA[1]   ; 14    ; 1        ; 1            ; 2            ; 0           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; CKE     ; 4     ; 1        ; 1            ; 4            ; 2           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
-; DQMH    ; 100   ; 2        ; 2            ; 5            ; 2           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
+; DQMH    ; 100   ; 2        ; 2            ; 5            ; 2           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; DQML    ; 98    ; 2        ; 2            ; 5            ; 0           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; Dout[0] ; 77    ; 2        ; 7            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; Dout[1] ; 76    ; 2        ; 7            ; 5            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
@@ -281,116 +281,116 @@ The pin-out file can be found in C:/Users/Zane/Documents/GitHub/RAM2E/cpld/outpu
 ; I/O Bank ; Usage             ; VCCIO Voltage ; VREF Voltage ;
 +----------+-------------------+---------------+--------------+
 ; 1        ; 38 / 38 ( 100 % ) ; 3.3V          ; --           ;
-; 2        ; 31 / 42 ( 74 % )  ; 3.3V          ; --           ;
+; 2        ; 31 / 41 ( 76 % )  ; 3.3V          ; --           ;
 +----------+-------------------+---------------+--------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; All Package Pins                                                                                                                               ;
-+----------+------------+----------+----------------+--------+--------------+-----------+------------+-----------------+----------+--------------+
-; Location ; Pad Number ; I/O Bank ; Pin Name/Usage ; Dir.   ; I/O Standard ; Voltage   ; I/O Type   ; User Assignment ; Bus Hold ; Weak Pull Up ;
-+----------+------------+----------+----------------+--------+--------------+-----------+------------+-----------------+----------+--------------+
-; 1        ; 83         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 2        ; 0          ; 1        ; nRWE           ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 3        ; 1          ; 1        ; nCAS           ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 4        ; 2          ; 1        ; CKE            ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 5        ; 3          ; 1        ; nRAS           ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 6        ; 4          ; 1        ; BA[0]          ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 7        ; 5          ; 1        ; RA[11]         ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 8        ; 6          ; 1        ; nCS            ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 9        ;            ; 1        ; VCCIO1         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
-; 10       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
-; 11       ;            ;          ; GNDINT         ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
-; 12       ; 7          ; 1        ; C14M           ; input  ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 13       ;            ;          ; VCCINT         ; power  ;              ; 2.5V/3.3V ; --         ;                 ; --       ; --           ;
-; 14       ; 8          ; 1        ; BA[1]          ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 15       ; 9          ; 1        ; RA[9]          ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 16       ; 10         ; 1        ; RA[10]         ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 17       ; 11         ; 1        ; RA[8]          ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 18       ; 12         ; 1        ; RA[0]          ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 19       ; 13         ; 1        ; RA[7]          ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 20       ; 14         ; 1        ; RA[1]          ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 21       ; 15         ; 1        ; RA[6]          ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 22       ; 16         ; 1        ; #TMS           ; input  ;              ;           ; --         ;                 ; --       ; --           ;
-; 23       ; 17         ; 1        ; #TDI           ; input  ;              ;           ; --         ;                 ; --       ; --           ;
-; 24       ; 18         ; 1        ; #TCK           ; input  ;              ;           ; --         ;                 ; --       ; --           ;
-; 25       ; 19         ; 1        ; #TDO           ; output ;              ;           ; --         ;                 ; --       ; --           ;
-; 26       ; 20         ; 1        ; RA[4]          ; output ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 27       ; 21         ; 1        ; RA[3]          ; output ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 28       ; 22         ; 1        ; nEN80          ; input  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 29       ; 23         ; 1        ; RA[5]          ; output ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 30       ; 24         ; 1        ; RA[2]          ; output ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 31       ;            ; 1        ; VCCIO1         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
-; 32       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
-; 33       ; 25         ; 1        ; nWE80          ; input  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 34       ; 26         ; 1        ; Ain[5]         ; input  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 35       ; 27         ; 1        ; Din[7]         ; input  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 36       ; 28         ; 1        ; Din[6]         ; input  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 37       ; 29         ; 1        ; PHI1           ; input  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 38       ; 30         ; 1        ; Din[0]         ; input  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 39       ; 31         ; 1        ; Ain[6]         ; input  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 40       ; 32         ; 1        ; Din[1]         ; input  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 41       ; 33         ; 1        ; Din[3]         ; input  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 42       ; 34         ; 1        ; Din[2]         ; input  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 43       ; 35         ; 1        ; Ain[2]         ; input  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 44       ; 36         ; 1        ; Ain[4]         ; input  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 45       ;            ; 1        ; VCCIO1         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
-; 46       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
-; 47       ; 37         ; 1        ; Ain[3]         ; input  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 48       ; 38         ; 1        ; Din[4]         ; input  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 49       ; 39         ; 1        ; Din[5]         ; input  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 50       ; 40         ; 1        ; nVOE           ; output ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 51       ; 41         ; 1        ; nWE            ; input  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 52       ; 42         ; 2        ; nC07X          ; input  ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 53       ; 43         ; 2        ; Ain[7]         ; input  ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 54       ; 44         ; 2        ; Ain[1]         ; input  ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 55       ; 45         ; 2        ; nDOE           ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 56       ; 46         ; 2        ; Ain[0]         ; input  ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 57       ; 47         ; 2        ; Vout[7]        ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 58       ; 48         ; 2        ; Vout[6]        ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 59       ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
-; 60       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
-; 61       ; 49         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 62       ; 50         ; 2        ; Vout[3]        ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 63       ;            ;          ; VCCINT         ; power  ;              ; 2.5V/3.3V ; --         ;                 ; --       ; --           ;
-; 64       ; 51         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 65       ;            ;          ; GNDINT         ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
-; 66       ; 52         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 67       ; 53         ; 2        ; Vout[1]        ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 68       ; 54         ; 2        ; Vout[5]        ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 69       ; 55         ; 2        ; Vout[2]        ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 70       ; 56         ; 2        ; Vout[0]        ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 71       ; 57         ; 2        ; Vout[4]        ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 72       ; 58         ; 2        ; Dout[5]        ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 73       ; 59         ; 2        ; Dout[4]        ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 74       ; 60         ; 2        ; Dout[2]        ; output ; 3.3-V LVCMOS ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 75       ; 61         ; 2        ; Dout[3]        ; output ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 76       ; 62         ; 2        ; Dout[1]        ; output ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 77       ; 63         ; 2        ; Dout[0]        ; output ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 78       ; 64         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 79       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
-; 80       ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
-; 81       ; 65         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 82       ; 66         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 83       ; 67         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 84       ; 68         ; 2        ; Dout[6]        ; output ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 85       ; 69         ; 2        ; Dout[7]        ; output ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 86       ; 70         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 87       ; 71         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 88       ; 72         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 89       ; 73         ; 2        ; RD[3]          ; bidir  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 90       ; 74         ; 2        ; RD[1]          ; bidir  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 91       ; 75         ; 2        ; RD[4]          ; bidir  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 92       ; 76         ; 2        ; RD[5]          ; bidir  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 93       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
-; 94       ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
-; 95       ; 77         ; 2        ; RD[6]          ; bidir  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 96       ; 78         ; 2        ; RD[7]          ; bidir  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 97       ; 79         ; 2        ; RD[0]          ; bidir  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 98       ; 80         ; 2        ; DQML           ; output ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 99       ; 81         ; 2        ; RD[2]          ; bidir  ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 100      ; 82         ; 2        ; DQMH           ; output ; 3.3-V LVCMOS ;           ; Column I/O ; Y               ; no       ; Off          ;
-+----------+------------+----------+----------------+--------+--------------+-----------+------------+-----------------+----------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                                                             ;
++----------+------------+----------+----------------+--------+--------------+---------+------------+-----------------+----------+--------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage ; Dir.   ; I/O Standard ; Voltage ; I/O Type   ; User Assignment ; Bus Hold ; Weak Pull Up ;
++----------+------------+----------+----------------+--------+--------------+---------+------------+-----------------+----------+--------------+
+; 1        ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 2        ; 0          ; 1        ; nRWE           ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 3        ; 1          ; 1        ; nCAS           ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 4        ; 2          ; 1        ; CKE            ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 5        ; 3          ; 1        ; nRAS           ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 6        ; 4          ; 1        ; BA[0]          ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 7        ; 5          ; 1        ; RA[11]         ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 8        ; 6          ; 1        ; nCS            ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 9        ;            ; 1        ; VCCIO1         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 10       ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 11       ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 12       ; 7          ; 1        ; C14M           ; input  ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 13       ;            ;          ; VCCINT         ; power  ;              ; 1.8V    ; --         ;                 ; --       ; --           ;
+; 14       ; 8          ; 1        ; BA[1]          ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 15       ; 9          ; 1        ; RA[9]          ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 16       ; 10         ; 1        ; RA[10]         ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 17       ; 11         ; 1        ; RA[8]          ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 18       ; 12         ; 1        ; RA[0]          ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 19       ; 13         ; 1        ; RA[7]          ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 20       ; 14         ; 1        ; RA[1]          ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 21       ; 15         ; 1        ; RA[6]          ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 22       ; 16         ; 1        ; #TMS           ; input  ;              ;         ; --         ;                 ; --       ; --           ;
+; 23       ; 17         ; 1        ; #TDI           ; input  ;              ;         ; --         ;                 ; --       ; --           ;
+; 24       ; 18         ; 1        ; #TCK           ; input  ;              ;         ; --         ;                 ; --       ; --           ;
+; 25       ; 19         ; 1        ; #TDO           ; output ;              ;         ; --         ;                 ; --       ; --           ;
+; 26       ; 20         ; 1        ; RA[4]          ; output ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 27       ; 21         ; 1        ; RA[3]          ; output ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 28       ; 22         ; 1        ; nEN80          ; input  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 29       ; 23         ; 1        ; RA[5]          ; output ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 30       ; 24         ; 1        ; RA[2]          ; output ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 31       ;            ; 1        ; VCCIO1         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 32       ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 33       ; 25         ; 1        ; nWE80          ; input  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 34       ; 26         ; 1        ; Ain[5]         ; input  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 35       ; 27         ; 1        ; Din[7]         ; input  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 36       ; 28         ; 1        ; Din[6]         ; input  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 37       ; 29         ; 1        ; PHI1           ; input  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 38       ; 30         ; 1        ; Din[0]         ; input  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 39       ; 31         ; 1        ; Ain[6]         ; input  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 40       ; 32         ; 1        ; Din[1]         ; input  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 41       ; 33         ; 1        ; Din[3]         ; input  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 42       ; 34         ; 1        ; Din[2]         ; input  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 43       ; 35         ; 1        ; Ain[2]         ; input  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 44       ; 36         ; 1        ; Ain[4]         ; input  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 45       ;            ; 1        ; VCCIO1         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 46       ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 47       ; 37         ; 1        ; Ain[3]         ; input  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 48       ; 38         ; 1        ; Din[4]         ; input  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 49       ; 39         ; 1        ; Din[5]         ; input  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 50       ; 40         ; 1        ; nVOE           ; output ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 51       ; 41         ; 1        ; nWE            ; input  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 52       ; 42         ; 2        ; nC07X          ; input  ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 53       ; 43         ; 2        ; Ain[7]         ; input  ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 54       ; 44         ; 2        ; Ain[1]         ; input  ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 55       ; 45         ; 2        ; nDOE           ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 56       ; 46         ; 2        ; Ain[0]         ; input  ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 57       ; 47         ; 2        ; Vout[7]        ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 58       ; 48         ; 2        ; Vout[6]        ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 59       ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 60       ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 61       ; 49         ; 2        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 62       ; 50         ; 2        ; Vout[3]        ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 63       ;            ;          ; VCCINT         ; power  ;              ; 1.8V    ; --         ;                 ; --       ; --           ;
+; 64       ; 51         ; 2        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 65       ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 66       ; 52         ; 2        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 67       ; 53         ; 2        ; Vout[1]        ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 68       ; 54         ; 2        ; Vout[5]        ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 69       ; 55         ; 2        ; Vout[2]        ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 70       ; 56         ; 2        ; Vout[0]        ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 71       ; 57         ; 2        ; Vout[4]        ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 72       ; 58         ; 2        ; Dout[5]        ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 73       ; 59         ; 2        ; Dout[4]        ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 74       ; 60         ; 2        ; Dout[2]        ; output ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 75       ; 61         ; 2        ; Dout[3]        ; output ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 76       ; 62         ; 2        ; Dout[1]        ; output ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 77       ; 63         ; 2        ; Dout[0]        ; output ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 78       ; 64         ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 79       ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 80       ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 81       ; 65         ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 82       ; 66         ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 83       ; 67         ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 84       ; 68         ; 2        ; Dout[6]        ; output ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 85       ; 69         ; 2        ; Dout[7]        ; output ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 86       ; 70         ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 87       ; 71         ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 88       ; 72         ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 89       ; 73         ; 2        ; RD[3]          ; bidir  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 90       ; 74         ; 2        ; RD[1]          ; bidir  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 91       ; 75         ; 2        ; RD[4]          ; bidir  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 92       ; 76         ; 2        ; RD[5]          ; bidir  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 93       ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 94       ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 95       ; 77         ; 2        ; RD[6]          ; bidir  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 96       ; 78         ; 2        ; RD[7]          ; bidir  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 97       ; 79         ; 2        ; RD[0]          ; bidir  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 98       ; 80         ; 2        ; DQML           ; output ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 99       ; 81         ; 2        ; RD[2]          ; bidir  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 100      ; 82         ; 2        ; DQMH           ; output ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
++----------+------------+----------+----------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
 
@@ -406,6 +406,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; 1.5 V                      ; 10 pF ; Not Available          ;
 ; 3.3V Schmitt Trigger Input ; 10 pF ; Not Available          ;
 ; 2.5V Schmitt Trigger Input ; 10 pF ; Not Available          ;
+; 1.2 V                      ; 10 pF ; Not Available          ;
+; LVDS_E_3R                  ; 10 pF ; Not Available          ;
+; RSDS_E_3R                  ; 10 pF ; Not Available          ;
 +----------------------------+-------+------------------------+
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
@@ -505,15 +508,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name        ; Location    ; Fan-Out ; Usage         ; Global ; Global Resource Used ; Global Line Name ;
 +-------------+-------------+---------+---------------+--------+----------------------+------------------+
 ; C14M        ; PIN_12      ; 106     ; Clock         ; yes    ; Global Clock         ; GCLK0            ;
-; CS[0]~2     ; LC_X5_Y4_N1 ; 3       ; Clock enable  ; no     ; --                   ; --               ;
-; Equal9~0    ; LC_X7_Y4_N6 ; 14      ; Clock enable  ; no     ; --                   ; --               ;
-; Equal9~1    ; LC_X6_Y2_N6 ; 8       ; Clock enable  ; no     ; --                   ; --               ;
-; RA[4]~1     ; LC_X2_Y2_N0 ; 8       ; Clock enable  ; no     ; --                   ; --               ;
-; RDOE        ; LC_X2_Y4_N6 ; 8       ; Output enable ; no     ; --                   ; --               ;
-; RWBank[4]~1 ; LC_X5_Y4_N7 ; 13      ; Clock enable  ; no     ; --                   ; --               ;
-; RWMask[4]~2 ; LC_X5_Y2_N2 ; 8       ; Clock enable  ; no     ; --                   ; --               ;
-; S[2]        ; LC_X6_Y2_N7 ; 19      ; Sync. clear   ; no     ; --                   ; --               ;
-; UFMD[8]~5   ; LC_X4_Y2_N6 ; 7       ; Clock enable  ; no     ; --                   ; --               ;
+; CS[0]~2     ; LC_X7_Y3_N9 ; 3       ; Clock enable  ; no     ; --                   ; --               ;
+; Equal9~0    ; LC_X6_Y3_N7 ; 14      ; Clock enable  ; no     ; --                   ; --               ;
+; Equal9~1    ; LC_X6_Y3_N5 ; 8       ; Clock enable  ; no     ; --                   ; --               ;
+; RA[4]~1     ; LC_X2_Y2_N7 ; 8       ; Clock enable  ; no     ; --                   ; --               ;
+; RDOE        ; LC_X2_Y2_N1 ; 8       ; Output enable ; no     ; --                   ; --               ;
+; RWBank[4]~1 ; LC_X5_Y3_N1 ; 13      ; Clock enable  ; no     ; --                   ; --               ;
+; RWMask[4]~2 ; LC_X4_Y2_N8 ; 8       ; Clock enable  ; no     ; --                   ; --               ;
+; S[2]        ; LC_X6_Y3_N0 ; 19      ; Sync. clear   ; no     ; --                   ; --               ;
+; UFMD[8]~5   ; LC_X4_Y4_N3 ; 7       ; Clock enable  ; no     ; --                   ; --               ;
 +-------------+-------------+---------+---------------+--------+----------------------+------------------+
 
 
@@ -789,62 +792,62 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+--------------------+
 ; Other Routing Resource Type ; Usage              ;
 +-----------------------------+--------------------+
-; C4s                         ; 135 / 784 ( 17 % ) ;
-; Direct links                ; 50 / 888 ( 6 % )   ;
+; C4s                         ; 146 / 784 ( 19 % ) ;
+; Direct links                ; 53 / 888 ( 6 % )   ;
 ; Global clocks               ; 1 / 4 ( 25 % )     ;
 ; LAB clocks                  ; 6 / 32 ( 19 % )    ;
-; LUT chains                  ; 13 / 216 ( 6 % )   ;
-; Local interconnects         ; 270 / 888 ( 30 % ) ;
-; R4s                         ; 120 / 704 ( 17 % ) ;
+; LUT chains                  ; 16 / 216 ( 7 % )   ;
+; Local interconnects         ; 281 / 888 ( 32 % ) ;
+; R4s                         ; 132 / 704 ( 19 % ) ;
 +-----------------------------+--------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +--------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 8.00) ; Number of LABs  (Total = 23) ;
+; Number of Logic Elements  (Average = 8.36) ; Number of LABs  (Total = 22) ;
 +--------------------------------------------+------------------------------+
 ; 1                                          ; 2                            ;
-; 2                                          ; 1                            ;
+; 2                                          ; 0                            ;
 ; 3                                          ; 1                            ;
 ; 4                                          ; 0                            ;
 ; 5                                          ; 1                            ;
 ; 6                                          ; 0                            ;
-; 7                                          ; 1                            ;
-; 8                                          ; 1                            ;
-; 9                                          ; 3                            ;
-; 10                                         ; 13                           ;
+; 7                                          ; 0                            ;
+; 8                                          ; 3                            ;
+; 9                                          ; 0                            ;
+; 10                                         ; 15                           ;
 +--------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.39) ; Number of LABs  (Total = 23) ;
+; LAB-wide Signals  (Average = 1.45) ; Number of LABs  (Total = 22) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 20                           ;
-; 1 Clock enable                     ; 11                           ;
-; 2 Clock enables                    ; 1                            ;
+; 1 Clock                            ; 21                           ;
+; 1 Clock enable                     ; 7                            ;
+; 2 Clock enables                    ; 4                            ;
 +------------------------------------+------------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 8.39) ; Number of LABs  (Total = 23) ;
+; Number of Signals Sourced  (Average = 8.77) ; Number of LABs  (Total = 22) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
 ; 1                                           ; 2                            ;
-; 2                                           ; 1                            ;
+; 2                                           ; 0                            ;
 ; 3                                           ; 1                            ;
 ; 4                                           ; 0                            ;
-; 5                                           ; 1                            ;
-; 6                                           ; 0                            ;
-; 7                                           ; 1                            ;
-; 8                                           ; 1                            ;
-; 9                                           ; 3                            ;
-; 10                                          ; 10                           ;
-; 11                                          ; 1                            ;
+; 5                                           ; 0                            ;
+; 6                                           ; 1                            ;
+; 7                                           ; 0                            ;
+; 8                                           ; 3                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 13                           ;
+; 11                                          ; 0                            ;
 ; 12                                          ; 1                            ;
 ; 13                                          ; 0                            ;
 ; 14                                          ; 0                            ;
@@ -856,49 +859,50 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 6.17) ; Number of LABs  (Total = 23) ;
+; Number of Signals Sourced Out  (Average = 6.50) ; Number of LABs  (Total = 22) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
 ; 1                                               ; 2                            ;
-; 2                                               ; 1                            ;
+; 2                                               ; 0                            ;
 ; 3                                               ; 1                            ;
 ; 4                                               ; 2                            ;
-; 5                                               ; 2                            ;
+; 5                                               ; 1                            ;
 ; 6                                               ; 3                            ;
-; 7                                               ; 5                            ;
-; 8                                               ; 1                            ;
-; 9                                               ; 4                            ;
+; 7                                               ; 4                            ;
+; 8                                               ; 6                            ;
+; 9                                               ; 0                            ;
 ; 10                                              ; 2                            ;
+; 11                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 10.57) ; Number of LABs  (Total = 23) ;
+; Number of Distinct Inputs  (Average = 11.05) ; Number of LABs  (Total = 22) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 3                            ;
-; 3                                            ; 1                            ;
-; 4                                            ; 0                            ;
-; 5                                            ; 2                            ;
+; 2                                            ; 2                            ;
+; 3                                            ; 2                            ;
+; 4                                            ; 1                            ;
+; 5                                            ; 1                            ;
 ; 6                                            ; 0                            ;
 ; 7                                            ; 1                            ;
-; 8                                            ; 1                            ;
-; 9                                            ; 3                            ;
-; 10                                           ; 0                            ;
+; 8                                            ; 0                            ;
+; 9                                            ; 1                            ;
+; 10                                           ; 1                            ;
 ; 11                                           ; 2                            ;
 ; 12                                           ; 3                            ;
-; 13                                           ; 0                            ;
+; 13                                           ; 1                            ;
 ; 14                                           ; 1                            ;
-; 15                                           ; 1                            ;
+; 15                                           ; 0                            ;
 ; 16                                           ; 1                            ;
 ; 17                                           ; 0                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 2                            ;
-; 20                                           ; 1                            ;
-; 21                                           ; 1                            ;
+; 18                                           ; 2                            ;
+; 19                                           ; 1                            ;
+; 20                                           ; 0                            ;
+; 21                                           ; 2                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -921,17 +925,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Fitter Messages ;
 +-----------------+
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (119006): Selected device EPM240T100C5 for design "RAM2E"
+Info (119006): Selected device 5M240ZT100C5 for design "RAM2E"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (171004): Fitter is performing a Standard Fit compilation using maximum Fitter effort to optimize design performance
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
-    Info (176445): Device EPM240T100I5 is compatible
-    Info (176445): Device EPM240T100A5 is compatible
-    Info (176445): Device EPM570T100C5 is compatible
-    Info (176445): Device EPM570T100I5 is compatible
-    Info (176445): Device EPM570T100A5 is compatible
+    Info (176445): Device 5M80ZT100C5 is compatible
+    Info (176445): Device 5M80ZT100I5 is compatible
+    Info (176445): Device 5M160ZT100C5 is compatible
+    Info (176445): Device 5M160ZT100I5 is compatible
+    Info (176445): Device 5M240ZT100I5 is compatible
+    Info (176445): Device 5M570ZT100C5 is compatible
+    Info (176445): Device 5M570ZT100I5 is compatible
 Info (332104): Reading SDC File: 'constraints.sdc'
 Warning (332060): Node: DRCLK was determined to be a clock but was found without an associated clock assignment.
 Warning (332060): Node: ARCLK was determined to be a clock but was found without an associated clock assignment.
@@ -955,19 +961,18 @@ Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
-Info (170089): 4e+01 ns of routing delay (approximately 2.7% of available device routing delay) has been added to meet hold timing. For more information, refer to the Estimated Delay Added for Hold Timing section in the Fitter report.
-Info (170195): Router estimated average interconnect usage is 19% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 19% of the available device resources in the region that extends from location X0_Y0 to location X8_Y5
+Info (170195): Router estimated average interconnect usage is 17% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 17% of the available device resources in the region that extends from location X0_Y0 to location X8_Y5
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.14 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.13 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/Zane/Documents/GitHub/RAM2E/cpld/output_files/RAM2E.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4772 megabytes
-    Info: Processing ended: Tue Jun 02 17:01:04 2020
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 4771 megabytes
+    Info: Processing ended: Tue Sep 08 19:28:18 2020
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +----------------------------+
