@@ -1,5 +1,5 @@
 Fitter report for RAM2E
-Wed Sep 16 19:34:48 2020
+Wed Sep 16 20:14:40 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -57,14 +57,14 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Fitter Summary                                                              ;
 +---------------------------+-------------------------------------------------+
-; Fitter Status             ; Successful - Wed Sep 16 19:34:48 2020           ;
+; Fitter Status             ; Successful - Wed Sep 16 20:14:40 2020           ;
 ; Quartus II 64-Bit Version ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name             ; RAM2E                                           ;
 ; Top-level Entity Name     ; RAM2E                                           ;
 ; Family                    ; MAX V                                           ;
 ; Device                    ; 5M240ZT100C5                                    ;
 ; Timing Models             ; Final                                           ;
-; Total logic elements      ; 199 / 240 ( 83 % )                              ;
+; Total logic elements      ; 189 / 240 ( 79 % )                              ;
 ; Total pins                ; 69 / 79 ( 87 % )                                ;
 ; Total virtual pins        ; 0                                               ;
 ; UFM blocks                ; 1 / 1 ( 100 % )                                 ;
@@ -142,28 +142,28 @@ The pin-out file can be found in C:/Users/Zane/Documents/GitHub/RAM2E/cpld/outpu
 +---------------------------------------------+--------------------+
 ; Resource                                    ; Usage              ;
 +---------------------------------------------+--------------------+
-; Total logic elements                        ; 199 / 240 ( 83 % ) ;
-;     -- Combinational with no register       ; 84                 ;
-;     -- Register only                        ; 25                 ;
+; Total logic elements                        ; 189 / 240 ( 79 % ) ;
+;     -- Combinational with no register       ; 82                 ;
+;     -- Register only                        ; 17                 ;
 ;     -- Combinational with a register        ; 90                 ;
 ;                                             ;                    ;
 ; Logic element usage by number of LUT inputs ;                    ;
-;     -- 4 input functions                    ; 99                 ;
-;     -- 3 input functions                    ; 36                 ;
-;     -- 2 input functions                    ; 35                 ;
+;     -- 4 input functions                    ; 90                 ;
+;     -- 3 input functions                    ; 42                 ;
+;     -- 2 input functions                    ; 36                 ;
 ;     -- 1 input functions                    ; 3                  ;
 ;     -- 0 input functions                    ; 1                  ;
 ;                                             ;                    ;
 ; Logic elements by mode                      ;                    ;
-;     -- normal mode                          ; 185                ;
+;     -- normal mode                          ; 175                ;
 ;     -- arithmetic mode                      ; 14                 ;
 ;     -- qfbk mode                            ; 9                  ;
 ;     -- register cascade mode                ; 0                  ;
 ;     -- synchronous clear/load mode          ; 14                 ;
 ;     -- asynchronous clear/load mode         ; 0                  ;
 ;                                             ;                    ;
-; Total registers                             ; 115 / 240 ( 48 % ) ;
-; Total LABs                                  ; 24 / 24 ( 100 % )  ;
+; Total registers                             ; 107 / 240 ( 45 % ) ;
+; Total LABs                                  ; 22 / 24 ( 92 % )   ;
 ; Logic elements in carry chains              ; 15                 ;
 ; Virtual pins                                ; 0                  ;
 ; I/O pins                                    ; 69 / 79 ( 87 % )   ;
@@ -173,12 +173,12 @@ The pin-out file can be found in C:/Users/Zane/Documents/GitHub/RAM2E/cpld/outpu
 ; UFM blocks                                  ; 1 / 1 ( 100 % )    ;
 ; Global clocks                               ; 1 / 4 ( 25 % )     ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )      ;
-; Average interconnect usage (total/H/V)      ; 23% / 22% / 23%    ;
-; Peak interconnect usage (total/H/V)         ; 23% / 22% / 23%    ;
-; Maximum fan-out                             ; 115                ;
-; Highest non-global fan-out                  ; 25                 ;
-; Total fan-out                               ; 850                ;
-; Average fan-out                             ; 3.16               ;
+; Average interconnect usage (total/H/V)      ; 24% / 26% / 22%    ;
+; Peak interconnect usage (total/H/V)         ; 24% / 26% / 22%    ;
+; Maximum fan-out                             ; 107                ;
+; Highest non-global fan-out                  ; 34                 ;
+; Total fan-out                               ; 810                ;
+; Average fan-out                             ; 3.13               ;
 +---------------------------------------------+--------------------+
 
 
@@ -187,19 +187,19 @@ The pin-out file can be found in C:/Users/Zane/Documents/GitHub/RAM2E/cpld/outpu
 +--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+
 ; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Location assigned by ;
 +--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+
-; Ain[0] ; 56    ; 2        ; 8            ; 1            ; 0           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
-; Ain[1] ; 54    ; 2        ; 8            ; 1            ; 2           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
-; Ain[2] ; 43    ; 1        ; 6            ; 0            ; 3           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
-; Ain[3] ; 47    ; 1        ; 6            ; 0            ; 1           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
-; Ain[4] ; 44    ; 1        ; 6            ; 0            ; 2           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
-; Ain[5] ; 34    ; 1        ; 3            ; 0            ; 1           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
-; Ain[6] ; 39    ; 1        ; 5            ; 0            ; 3           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
-; Ain[7] ; 53    ; 2        ; 8            ; 1            ; 3           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
-; C14M   ; 12    ; 1        ; 1            ; 3            ; 3           ; 115                   ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
-; Din[0] ; 38    ; 1        ; 4            ; 0            ; 0           ; 9                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
+; Ain[0] ; 56    ; 2        ; 8            ; 1            ; 0           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
+; Ain[1] ; 54    ; 2        ; 8            ; 1            ; 2           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
+; Ain[2] ; 43    ; 1        ; 6            ; 0            ; 3           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
+; Ain[3] ; 47    ; 1        ; 6            ; 0            ; 1           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
+; Ain[4] ; 44    ; 1        ; 6            ; 0            ; 2           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
+; Ain[5] ; 34    ; 1        ; 3            ; 0            ; 1           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
+; Ain[6] ; 39    ; 1        ; 5            ; 0            ; 3           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
+; Ain[7] ; 53    ; 2        ; 8            ; 1            ; 3           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
+; C14M   ; 12    ; 1        ; 1            ; 3            ; 3           ; 107                   ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
+; Din[0] ; 38    ; 1        ; 4            ; 0            ; 0           ; 10                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
 ; Din[1] ; 40    ; 1        ; 5            ; 0            ; 2           ; 11                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
-; Din[2] ; 42    ; 1        ; 5            ; 0            ; 0           ; 9                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
-; Din[3] ; 41    ; 1        ; 5            ; 0            ; 1           ; 9                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
+; Din[2] ; 42    ; 1        ; 5            ; 0            ; 0           ; 10                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
+; Din[3] ; 41    ; 1        ; 5            ; 0            ; 1           ; 8                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
 ; Din[4] ; 48    ; 1        ; 6            ; 0            ; 0           ; 7                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
 ; Din[5] ; 49    ; 1        ; 7            ; 0            ; 2           ; 7                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
 ; Din[6] ; 36    ; 1        ; 4            ; 0            ; 2           ; 8                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ;
@@ -220,8 +220,8 @@ The pin-out file can be found in C:/Users/Zane/Documents/GitHub/RAM2E/cpld/outpu
 ; BA[0]   ; 6     ; 1        ; 1            ; 3            ; 0           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; BA[1]   ; 14    ; 1        ; 1            ; 2            ; 0           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; CKE     ; 4     ; 1        ; 1            ; 4            ; 2           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
-; DQMH    ; 100   ; 2        ; 2            ; 5            ; 2           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; DQML    ; 98    ; 2        ; 2            ; 5            ; 0           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
+; DQMH    ; 100   ; 2        ; 2            ; 5            ; 2           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
+; DQML    ; 98    ; 2        ; 2            ; 5            ; 0           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; Dout[0] ; 77    ; 2        ; 7            ; 5            ; 2           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; Dout[1] ; 76    ; 2        ; 7            ; 5            ; 1           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; Dout[2] ; 74    ; 2        ; 8            ; 4            ; 0           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
@@ -230,31 +230,31 @@ The pin-out file can be found in C:/Users/Zane/Documents/GitHub/RAM2E/cpld/outpu
 ; Dout[5] ; 72    ; 2        ; 8            ; 4            ; 2           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; Dout[6] ; 84    ; 2        ; 6            ; 5            ; 3           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; Dout[7] ; 85    ; 2        ; 5            ; 5            ; 0           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
-; RA[0]   ; 18    ; 1        ; 1            ; 1            ; 0           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
+; RA[0]   ; 18    ; 1        ; 1            ; 1            ; 0           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; RA[10]  ; 16    ; 1        ; 1            ; 2            ; 2           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; RA[11]  ; 7     ; 1        ; 1            ; 3            ; 1           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
-; RA[1]   ; 20    ; 1        ; 1            ; 1            ; 2           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; RA[1]   ; 20    ; 1        ; 1            ; 1            ; 2           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; RA[2]   ; 30    ; 1        ; 3            ; 0            ; 3           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
-; RA[3]   ; 27    ; 1        ; 2            ; 0            ; 2           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
+; RA[3]   ; 27    ; 1        ; 2            ; 0            ; 2           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; RA[4]   ; 26    ; 1        ; 2            ; 0            ; 3           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; RA[5]   ; 29    ; 1        ; 2            ; 0            ; 0           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; RA[6]   ; 21    ; 1        ; 1            ; 1            ; 3           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; RA[7]   ; 19    ; 1        ; 1            ; 1            ; 1           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; RA[8]   ; 17    ; 1        ; 1            ; 2            ; 3           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
-; RA[9]   ; 15    ; 1        ; 1            ; 2            ; 1           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
+; RA[9]   ; 15    ; 1        ; 1            ; 2            ; 1           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; Vout[0] ; 70    ; 2        ; 8            ; 4            ; 4           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
-; Vout[1] ; 67    ; 2        ; 8            ; 3            ; 2           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
-; Vout[2] ; 69    ; 2        ; 8            ; 3            ; 0           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
+; Vout[1] ; 67    ; 2        ; 8            ; 3            ; 2           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; Vout[2] ; 69    ; 2        ; 8            ; 3            ; 0           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; Vout[3] ; 62    ; 2        ; 8            ; 2            ; 0           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; Vout[4] ; 71    ; 2        ; 8            ; 4            ; 3           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
-; Vout[5] ; 68    ; 2        ; 8            ; 3            ; 1           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
+; Vout[5] ; 68    ; 2        ; 8            ; 3            ; 1           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; Vout[6] ; 58    ; 2        ; 8            ; 2            ; 2           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; Vout[7] ; 57    ; 2        ; 8            ; 2            ; 3           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
-; nCAS    ; 3     ; 1        ; 1            ; 4            ; 1           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; nCAS    ; 3     ; 1        ; 1            ; 4            ; 1           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; nCS     ; 8     ; 1        ; 1            ; 3            ; 2           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; nDOE    ; 55    ; 2        ; 8            ; 1            ; 1           ; no              ; yes            ; no              ; no         ; no            ; no       ; On           ; 3.3-V LVCMOS ; 4mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; nRAS    ; 5     ; 1        ; 1            ; 4            ; 3           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
-; nRWE    ; 2     ; 1        ; 1            ; 4            ; 0           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
+; nRWE    ; 2     ; 1        ; 1            ; 4            ; 0           ; no              ; yes            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; nVOE    ; 50    ; 1        ; 7            ; 0            ; 1           ; no              ; yes            ; no              ; no         ; no            ; no       ; On           ; 3.3-V LVCMOS ; 4mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 +---------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 
@@ -418,7 +418,7 @@ Note: User assignments will override these defaults. The user specified values a
 +-----------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                   ; Library Name ;
 +-----------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------+--------------+
-; |RAM2E                                                    ; 199 (199)   ; 115          ; 1          ; 69   ; 0            ; 84 (84)      ; 25 (25)           ; 90 (90)          ; 15 (15)         ; 9 (9)      ; |RAM2E                                                                ; work         ;
+; |RAM2E                                                    ; 189 (189)   ; 107          ; 1          ; 69   ; 0            ; 82 (82)      ; 17 (17)           ; 90 (90)          ; 15 (15)         ; 9 (9)      ; |RAM2E                                                                ; work         ;
 ;    |UFM:UFM_inst|                                         ; 0 (0)       ; 0            ; 1          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |RAM2E|UFM:UFM_inst                                                   ; work         ;
 ;       |UFM_altufm_none_e4r:UFM_altufm_none_e4r_component| ; 0 (0)       ; 0            ; 1          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |RAM2E|UFM:UFM_inst|UFM_altufm_none_e4r:UFM_altufm_none_e4r_component ; work         ;
 +-----------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------+--------------+
@@ -507,17 +507,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------+-------------+---------+---------------+--------+----------------------+------------------+
 ; Name        ; Location    ; Fan-Out ; Usage         ; Global ; Global Resource Used ; Global Line Name ;
 +-------------+-------------+---------+---------------+--------+----------------------+------------------+
-; C14M        ; PIN_12      ; 115     ; Clock         ; yes    ; Global Clock         ; GCLK0            ;
-; CS[0]~2     ; LC_X6_Y1_N4 ; 3       ; Clock enable  ; no     ; --                   ; --               ;
-; Equal9~0    ; LC_X6_Y3_N7 ; 14      ; Clock enable  ; no     ; --                   ; --               ;
-; Equal9~1    ; LC_X6_Y3_N5 ; 8       ; Clock enable  ; no     ; --                   ; --               ;
-; Equal9~7    ; LC_X2_Y2_N7 ; 8       ; Clock enable  ; no     ; --                   ; --               ;
-; RA[4]~2     ; LC_X2_Y2_N5 ; 8       ; Clock enable  ; no     ; --                   ; --               ;
-; RDOE        ; LC_X2_Y4_N6 ; 8       ; Output enable ; no     ; --                   ; --               ;
-; RWBank[4]~1 ; LC_X7_Y2_N1 ; 13      ; Clock enable  ; no     ; --                   ; --               ;
-; RWMask[4]~2 ; LC_X5_Y2_N9 ; 8       ; Clock enable  ; no     ; --                   ; --               ;
-; S[1]        ; LC_X6_Y3_N6 ; 23      ; Sync. clear   ; no     ; --                   ; --               ;
-; UFMD[8]~5   ; LC_X4_Y2_N7 ; 7       ; Clock enable  ; no     ; --                   ; --               ;
+; C14M        ; PIN_12      ; 107     ; Clock         ; yes    ; Global Clock         ; GCLK0            ;
+; CS[0]~2     ; LC_X4_Y3_N1 ; 3       ; Clock enable  ; no     ; --                   ; --               ;
+; Equal9~0    ; LC_X6_Y4_N8 ; 14      ; Clock enable  ; no     ; --                   ; --               ;
+; Equal9~1    ; LC_X7_Y3_N5 ; 8       ; Clock enable  ; no     ; --                   ; --               ;
+; RA[4]~1     ; LC_X2_Y2_N1 ; 8       ; Clock enable  ; no     ; --                   ; --               ;
+; RDOE        ; LC_X3_Y4_N7 ; 8       ; Output enable ; no     ; --                   ; --               ;
+; RWBank[4]~1 ; LC_X5_Y3_N2 ; 13      ; Clock enable  ; no     ; --                   ; --               ;
+; RWMask[4]~2 ; LC_X4_Y2_N8 ; 8       ; Clock enable  ; no     ; --                   ; --               ;
+; S[2]        ; LC_X7_Y3_N4 ; 20      ; Sync. clear   ; no     ; --                   ; --               ;
+; UFMD[8]~5   ; LC_X3_Y2_N8 ; 7       ; Clock enable  ; no     ; --                   ; --               ;
 +-------------+-------------+---------+---------------+--------+----------------------+------------------+
 
 
@@ -526,7 +525,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+----------------------+------------------+
 ; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ;
 +------+----------+---------+----------------------+------------------+
-; C14M ; PIN_12   ; 115     ; Global Clock         ; GCLK0            ;
+; C14M ; PIN_12   ; 107     ; Global Clock         ; GCLK0            ;
 +------+----------+---------+----------------------+------------------+
 
 
@@ -535,81 +534,79 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------+---------+
 ; Name                                                                                         ; Fan-Out ;
 +----------------------------------------------------------------------------------------------+---------+
-; S[0]                                                                                         ; 25      ;
-; S[3]                                                                                         ; 24      ;
-; Equal9~6                                                                                     ; 23      ;
-; S[1]                                                                                         ; 23      ;
-; S[2]                                                                                         ; 23      ;
+; S[0]                                                                                         ; 34      ;
+; S[1]                                                                                         ; 29      ;
+; Equal9~4                                                                                     ; 23      ;
+; S[3]                                                                                         ; 22      ;
+; S[2]                                                                                         ; 20      ;
 ; Equal9~0                                                                                     ; 14      ;
 ; RWBank[4]~1                                                                                  ; 13      ;
 ; Din[1]                                                                                       ; 11      ;
-; CS[1]                                                                                        ; 10      ;
-; Din[3]                                                                                       ; 9       ;
-; Din[2]                                                                                       ; 9       ;
-; Din[0]                                                                                       ; 9       ;
-; CS[0]                                                                                        ; 9       ;
+; Din[2]                                                                                       ; 10      ;
+; Din[0]                                                                                       ; 10      ;
+; CS[1]                                                                                        ; 9       ;
+; Din[3]                                                                                       ; 8       ;
 ; Din[7]                                                                                       ; 8       ;
 ; Din[6]                                                                                       ; 8       ;
 ; RWMask[4]~2                                                                                  ; 8       ;
 ; RDOE                                                                                         ; 8       ;
-; Equal9~7                                                                                     ; 8       ;
 ; SetRWBankFF                                                                                  ; 8       ;
-; CS[2]                                                                                        ; 8       ;
+; CS[0]                                                                                        ; 8       ;
 ; RWSel                                                                                        ; 8       ;
-; RA[4]~2                                                                                      ; 8       ;
-; RA[4]~0                                                                                      ; 8       ;
-; Equal9~4                                                                                     ; 8       ;
+; RA[4]~1                                                                                      ; 8       ;
 ; FS[4]                                                                                        ; 8       ;
 ; Equal9~1                                                                                     ; 8       ;
 ; Din[5]                                                                                       ; 7       ;
 ; Din[4]                                                                                       ; 7       ;
 ; UFMD[8]~5                                                                                    ; 7       ;
 ; always1~9                                                                                    ; 7       ;
-; FS[5]                                                                                        ; 7       ;
+; CS[2]                                                                                        ; 7       ;
+; UFMReqErase                                                                                  ; 6       ;
 ; UFMInitDone                                                                                  ; 6       ;
-; FS[3]                                                                                        ; 6       ;
 ; FS[0]                                                                                        ; 6       ;
-; Equal4~0                                                                                     ; 5       ;
-; UFMReqErase                                                                                  ; 5       ;
+; FS[5]                                                                                        ; 6       ;
 ; always1~1                                                                                    ; 5       ;
-; FS[2]~25                                                                                     ; 5       ;
-; FS[7]~19                                                                                     ; 5       ;
+; FS[3]                                                                                        ; 5       ;
+; FS[2]~27                                                                                     ; 5       ;
+; FS[7]~23                                                                                     ; 5       ;
 ; FS[15]                                                                                       ; 5       ;
 ; FS[14]                                                                                       ; 5       ;
 ; FS[13]                                                                                       ; 5       ;
 ; PHI1                                                                                         ; 4       ;
 ; nEN80                                                                                        ; 4       ;
-; always1~6                                                                                    ; 4       ;
 ; UFMD[13]                                                                                     ; 4       ;
 ; CmdTout[0]                                                                                   ; 4       ;
-; UFMBitbang~0                                                                                 ; 4       ;
 ; UFMEraseEN                                                                                   ; 4       ;
 ; UFMPrgmEN                                                                                    ; 4       ;
-; always1~2                                                                                    ; 4       ;
-; Equal9~5                                                                                     ; 4       ;
+; Equal4~0                                                                                     ; 4       ;
+; Equal9~3                                                                                     ; 4       ;
 ; DRCLK~0                                                                                      ; 4       ;
+; Equal9~2                                                                                     ; 4       ;
 ; UFM:UFM_inst|UFM_altufm_none_e4r:UFM_altufm_none_e4r_component|wire_maxii_ufm_block1_drdout  ; 4       ;
 ; S[3]~9                                                                                       ; 3       ;
 ; UFMD[11]                                                                                     ; 3       ;
 ; UFMD[9]                                                                                      ; 3       ;
 ; UFMD[10]                                                                                     ; 3       ;
+; always1~6                                                                                    ; 3       ;
 ; UFMD[12]                                                                                     ; 3       ;
 ; UFMD[8]                                                                                      ; 3       ;
 ; CS[0]~2                                                                                      ; 3       ;
 ; CmdTout[1]                                                                                   ; 3       ;
 ; CS~0                                                                                         ; 3       ;
-; RWMaskSet~1                                                                                  ; 3       ;
+; always2~7                                                                                    ; 3       ;
+; RWMaskSet~0                                                                                  ; 3       ;
 ; S~4                                                                                          ; 3       ;
 ; Ready                                                                                        ; 3       ;
 ; S[3]~2                                                                                       ; 3       ;
+; always1~2                                                                                    ; 3       ;
 ; always1~0                                                                                    ; 3       ;
 ; Equal10~4                                                                                    ; 3       ;
 ; FS[2]                                                                                        ; 3       ;
 ; FS[1]                                                                                        ; 3       ;
 ; always2~0                                                                                    ; 3       ;
 ; Ready~0                                                                                      ; 3       ;
+; nCS~2                                                                                        ; 3       ;
 ; FS[6]                                                                                        ; 3       ;
-; Equal9~2                                                                                     ; 3       ;
 ; Equal10~1                                                                                    ; 3       ;
 ; FS[12]~1                                                                                     ; 3       ;
 ; RD[7]~7                                                                                      ; 2       ;
@@ -620,40 +617,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; RD[2]~2                                                                                      ; 2       ;
 ; RD[1]~1                                                                                      ; 2       ;
 ; RD[0]~0                                                                                      ; 2       ;
-; Ain[7]                                                                                       ; 2       ;
-; Ain[6]                                                                                       ; 2       ;
-; Ain[5]                                                                                       ; 2       ;
-; Ain[4]                                                                                       ; 2       ;
-; Ain[3]                                                                                       ; 2       ;
-; Ain[2]                                                                                       ; 2       ;
-; Ain[1]                                                                                       ; 2       ;
-; Ain[0]                                                                                       ; 2       ;
 ; nWE80                                                                                        ; 2       ;
 ; nWE                                                                                          ; 2       ;
 ; UFMD[14]                                                                                     ; 2       ;
 ; UFMEraseEN~0                                                                                 ; 2       ;
-; UFMReqErase~3                                                                                ; 2       ;
-; UFMBusyReg                                                                                   ; 2       ;
+; RWMask[4]~0                                                                                  ; 2       ;
 ; UFMInitDone~0                                                                                ; 2       ;
 ; CmdTout[2]                                                                                   ; 2       ;
-; Equal39~1                                                                                    ; 2       ;
-; always2~10                                                                                   ; 2       ;
+; Equal39~0                                                                                    ; 2       ;
+; RWMaskSet~1                                                                                  ; 2       ;
+; Equal27~1                                                                                    ; 2       ;
+; UFMBitbang~0                                                                                 ; 2       ;
 ; S~3                                                                                          ; 2       ;
+; UFMBusyReg                                                                                   ; 2       ;
 ; always1~3                                                                                    ; 2       ;
 ; UFMD[8]~4                                                                                    ; 2       ;
 ; RWBank[6]                                                                                    ; 2       ;
-; nRAS~2                                                                                       ; 2       ;
-; nRAS~1                                                                                       ; 2       ;
-; nCS~3                                                                                        ; 2       ;
-; nCS~1                                                                                        ; 2       ;
+; nCS~5                                                                                        ; 2       ;
+; nCS~4                                                                                        ; 2       ;
+; Equal12~0                                                                                    ; 2       ;
 ; FS[7]                                                                                        ; 2       ;
-; CKE~1                                                                                        ; 2       ;
 ; Equal10~2                                                                                    ; 2       ;
 ; FS[11]                                                                                       ; 2       ;
 ; FS[10]                                                                                       ; 2       ;
 ; FS[9]                                                                                        ; 2       ;
 ; FS[8]                                                                                        ; 2       ;
 ; FS[12]                                                                                       ; 2       ;
+; CKE~0                                                                                        ; 2       ;
 ; UFMErase                                                                                     ; 2       ;
 ; UFMProgram                                                                                   ; 2       ;
 ; DRDIn                                                                                        ; 2       ;
@@ -662,32 +652,39 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; UFMProgram~_wirecell                                                                         ; 1       ;
 ; UFMErase~_wirecell                                                                           ; 1       ;
 ; nC07X                                                                                        ; 1       ;
+; Ain[7]                                                                                       ; 1       ;
+; Ain[6]                                                                                       ; 1       ;
+; Ain[5]                                                                                       ; 1       ;
+; Ain[4]                                                                                       ; 1       ;
+; Ain[3]                                                                                       ; 1       ;
+; Ain[2]                                                                                       ; 1       ;
+; Ain[1]                                                                                       ; 1       ;
+; Ain[0]                                                                                       ; 1       ;
 ; ~GND                                                                                         ; 1       ;
-; UFMReqErase~4                                                                                ; 1       ;
 ; RWMaskSet                                                                                    ; 1       ;
-; RWMask[4]~1                                                                                  ; 1       ;
 ; always1~8                                                                                    ; 1       ;
 ; always1~7                                                                                    ; 1       ;
 ; Ready~1                                                                                      ; 1       ;
+; UFMReqErase~3                                                                                ; 1       ;
 ; UFMReqErase~2                                                                                ; 1       ;
 ; UFMReqErase~1                                                                                ; 1       ;
 ; UFMReqErase~0                                                                                ; 1       ;
 ; always1~5                                                                                    ; 1       ;
 ; always1~4                                                                                    ; 1       ;
 ; Add3~0                                                                                       ; 1       ;
+; always2~13                                                                                   ; 1       ;
+; Equal39~1                                                                                    ; 1       ;
 ; always2~12                                                                                   ; 1       ;
-; Equal39~0                                                                                    ; 1       ;
 ; always2~11                                                                                   ; 1       ;
+; always2~10                                                                                   ; 1       ;
 ; always2~9                                                                                    ; 1       ;
 ; always2~8                                                                                    ; 1       ;
-; always2~7                                                                                    ; 1       ;
 ; always2~6                                                                                    ; 1       ;
 ; always2~5                                                                                    ; 1       ;
 ; always2~4                                                                                    ; 1       ;
 ; always2~3                                                                                    ; 1       ;
 ; always2~2                                                                                    ; 1       ;
 ; always2~1                                                                                    ; 1       ;
-; RWMaskSet~0                                                                                  ; 1       ;
 ; RWSel~0                                                                                      ; 1       ;
 ; RWMask[6]                                                                                    ; 1       ;
 ; RWMask[3]                                                                                    ; 1       ;
@@ -707,43 +704,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; DRCLK~1                                                                                      ; 1       ;
 ; Equal27~0                                                                                    ; 1       ;
 ; UFMBitbang                                                                                   ; 1       ;
+; DQML~0                                                                                       ; 1       ;
 ; RWBank[3]                                                                                    ; 1       ;
-; RA~12                                                                                        ; 1       ;
+; RA~11                                                                                        ; 1       ;
 ; RWBank[2]                                                                                    ; 1       ;
 ; RWBank[1]                                                                                    ; 1       ;
 ; RWBank[0]                                                                                    ; 1       ;
 ; RWBank[7]                                                                                    ; 1       ;
-; Areg[7]                                                                                      ; 1       ;
-; Areg[6]                                                                                      ; 1       ;
-; Areg[5]                                                                                      ; 1       ;
-; Areg[4]                                                                                      ; 1       ;
-; Areg[3]                                                                                      ; 1       ;
-; Areg[2]                                                                                      ; 1       ;
-; Areg[1]                                                                                      ; 1       ;
-; Areg[0]                                                                                      ; 1       ;
 ; RWBank[5]                                                                                    ; 1       ;
 ; RWBank[4]                                                                                    ; 1       ;
-; Equal12~1                                                                                    ; 1       ;
+; nRWE~1                                                                                       ; 1       ;
 ; nRWE~0                                                                                       ; 1       ;
+; nCAS~1                                                                                       ; 1       ;
 ; nCAS~0                                                                                       ; 1       ;
-; nCS~2                                                                                        ; 1       ;
-; nRAS~0                                                                                       ; 1       ;
-; Equal12~0                                                                                    ; 1       ;
 ; FS[3]~29COUT1_46                                                                             ; 1       ;
 ; FS[3]~29                                                                                     ; 1       ;
-; FS[5]~27COUT1_50                                                                             ; 1       ;
-; FS[5]~27                                                                                     ; 1       ;
-; FS[1]~23COUT1_44                                                                             ; 1       ;
-; FS[1]~23                                                                                     ; 1       ;
-; FS[4]~21COUT1_48                                                                             ; 1       ;
-; FS[4]~21                                                                                     ; 1       ;
-; FS[6]~17COUT1_52                                                                             ; 1       ;
-; FS[6]~17                                                                                     ; 1       ;
+; FS[1]~25COUT1_44                                                                             ; 1       ;
+; FS[1]~25                                                                                     ; 1       ;
 ; Equal10~3                                                                                    ; 1       ;
-; Equal9~3                                                                                     ; 1       ;
+; nCS~3                                                                                        ; 1       ;
+; FS[6]~21COUT1_52                                                                             ; 1       ;
+; FS[6]~21                                                                                     ; 1       ;
+; FS[5]~19COUT1_50                                                                             ; 1       ;
+; FS[5]~19                                                                                     ; 1       ;
+; FS[4]~17COUT1_48                                                                             ; 1       ;
+; FS[4]~17                                                                                     ; 1       ;
+; nCS~1                                                                                        ; 1       ;
 ; nCS~0                                                                                        ; 1       ;
 ; CKE~2                                                                                        ; 1       ;
-; CKE~0                                                                                        ; 1       ;
 ; FS[14]~13COUT1_64                                                                            ; 1       ;
 ; FS[14]~13                                                                                    ; 1       ;
 ; FS[13]~11COUT1_62                                                                            ; 1       ;
@@ -757,6 +745,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; FS[9]~5                                                                                      ; 1       ;
 ; FS[8]~3COUT1_54                                                                              ; 1       ;
 ; FS[8]~3                                                                                      ; 1       ;
+; CKE~1                                                                                        ; 1       ;
 ; ARShift                                                                                      ; 1       ;
 ; ARCLK                                                                                        ; 1       ;
 ; DRShift                                                                                      ; 1       ;
@@ -808,62 +797,62 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+--------------------+
 ; Other Routing Resource Type ; Usage              ;
 +-----------------------------+--------------------+
-; C4s                         ; 151 / 784 ( 19 % ) ;
-; Direct links                ; 54 / 888 ( 6 % )   ;
+; C4s                         ; 142 / 784 ( 18 % ) ;
+; Direct links                ; 49 / 888 ( 6 % )   ;
 ; Global clocks               ; 1 / 4 ( 25 % )     ;
 ; LAB clocks                  ; 6 / 32 ( 19 % )    ;
-; LUT chains                  ; 14 / 216 ( 6 % )   ;
-; Local interconnects         ; 299 / 888 ( 34 % ) ;
-; R4s                         ; 125 / 704 ( 18 % ) ;
+; LUT chains                  ; 13 / 216 ( 6 % )   ;
+; Local interconnects         ; 306 / 888 ( 34 % ) ;
+; R4s                         ; 151 / 704 ( 21 % ) ;
 +-----------------------------+--------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +--------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 8.29) ; Number of LABs  (Total = 24) ;
+; Number of Logic Elements  (Average = 8.59) ; Number of LABs  (Total = 22) ;
 +--------------------------------------------+------------------------------+
-; 1                                          ; 3                            ;
-; 2                                          ; 0                            ;
-; 3                                          ; 0                            ;
-; 4                                          ; 0                            ;
-; 5                                          ; 1                            ;
+; 1                                          ; 0                            ;
+; 2                                          ; 1                            ;
+; 3                                          ; 1                            ;
+; 4                                          ; 1                            ;
+; 5                                          ; 0                            ;
 ; 6                                          ; 1                            ;
 ; 7                                          ; 0                            ;
 ; 8                                          ; 1                            ;
-; 9                                          ; 3                            ;
-; 10                                         ; 15                           ;
+; 9                                          ; 4                            ;
+; 10                                         ; 13                           ;
 +--------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.38) ; Number of LABs  (Total = 24) ;
+; LAB-wide Signals  (Average = 1.36) ; Number of LABs  (Total = 22) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 22                           ;
-; 1 Clock enable                     ; 7                            ;
-; 2 Clock enables                    ; 4                            ;
+; 1 Clock                            ; 21                           ;
+; 1 Clock enable                     ; 8                            ;
+; 2 Clock enables                    ; 1                            ;
 +------------------------------------+------------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 8.67) ; Number of LABs  (Total = 24) ;
+; Number of Signals Sourced  (Average = 9.00) ; Number of LABs  (Total = 22) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
-; 1                                           ; 3                            ;
-; 2                                           ; 0                            ;
-; 3                                           ; 0                            ;
-; 4                                           ; 0                            ;
-; 5                                           ; 1                            ;
-; 6                                           ; 1                            ;
-; 7                                           ; 0                            ;
+; 1                                           ; 0                            ;
+; 2                                           ; 1                            ;
+; 3                                           ; 1                            ;
+; 4                                           ; 1                            ;
+; 5                                           ; 0                            ;
+; 6                                           ; 0                            ;
+; 7                                           ; 1                            ;
 ; 8                                           ; 1                            ;
-; 9                                           ; 3                            ;
-; 10                                          ; 12                           ;
-; 11                                          ; 1                            ;
+; 9                                           ; 4                            ;
+; 10                                          ; 11                           ;
+; 11                                          ; 0                            ;
 ; 12                                          ; 1                            ;
 ; 13                                          ; 0                            ;
 ; 14                                          ; 0                            ;
@@ -875,50 +864,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 6.13) ; Number of LABs  (Total = 24) ;
+; Number of Signals Sourced Out  (Average = 6.68) ; Number of LABs  (Total = 22) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 3                            ;
-; 2                                               ; 0                            ;
-; 3                                               ; 0                            ;
-; 4                                               ; 4                            ;
-; 5                                               ; 1                            ;
-; 6                                               ; 3                            ;
-; 7                                               ; 4                            ;
-; 8                                               ; 6                            ;
-; 9                                               ; 2                            ;
-; 10                                              ; 0                            ;
-; 11                                              ; 1                            ;
+; 1                                               ; 0                            ;
+; 2                                               ; 1                            ;
+; 3                                               ; 2                            ;
+; 4                                               ; 2                            ;
+; 5                                               ; 2                            ;
+; 6                                               ; 2                            ;
+; 7                                               ; 2                            ;
+; 8                                               ; 7                            ;
+; 9                                               ; 1                            ;
+; 10                                              ; 3                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 11.25) ; Number of LABs  (Total = 24) ;
+; Number of Distinct Inputs  (Average = 11.73) ; Number of LABs  (Total = 22) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 1                            ;
+; 1                                            ; 0                            ;
 ; 2                                            ; 2                            ;
-; 3                                            ; 2                            ;
-; 4                                            ; 1                            ;
-; 5                                            ; 0                            ;
-; 6                                            ; 0                            ;
+; 3                                            ; 0                            ;
+; 4                                            ; 0                            ;
+; 5                                            ; 1                            ;
+; 6                                            ; 1                            ;
 ; 7                                            ; 1                            ;
 ; 8                                            ; 0                            ;
-; 9                                            ; 2                            ;
-; 10                                           ; 2                            ;
+; 9                                            ; 5                            ;
+; 10                                           ; 0                            ;
 ; 11                                           ; 1                            ;
-; 12                                           ; 2                            ;
+; 12                                           ; 1                            ;
 ; 13                                           ; 1                            ;
-; 14                                           ; 0                            ;
+; 14                                           ; 2                            ;
 ; 15                                           ; 1                            ;
 ; 16                                           ; 1                            ;
-; 17                                           ; 3                            ;
-; 18                                           ; 1                            ;
-; 19                                           ; 0                            ;
+; 17                                           ; 1                            ;
+; 18                                           ; 0                            ;
+; 19                                           ; 2                            ;
 ; 20                                           ; 1                            ;
-; 21                                           ; 2                            ;
+; 21                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -977,7 +965,6 @@ Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
-Info (170089): 2e+01 ns of routing delay (approximately 1.2% of available device routing delay) has been added to meet hold timing. For more information, refer to the Estimated Delay Added for Hold Timing section in the Fitter report.
 Info (170195): Router estimated average interconnect usage is 19% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 19% of the available device resources in the region that extends from location X0_Y0 to location X8_Y5
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
@@ -987,8 +974,8 @@ Warning (169174): The Reserve All Unused Pins setting has not been specified, an
 Info (144001): Generated suppressed messages file C:/Users/Zane/Documents/GitHub/RAM2E/cpld/output_files/RAM2E.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4767 megabytes
-    Info: Processing ended: Wed Sep 16 19:34:48 2020
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Wed Sep 16 20:14:40 2020
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
