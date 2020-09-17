@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RAM2E
-Wed Sep 16 19:34:46 2020
+Wed Sep 16 20:14:38 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -45,12 +45,12 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Sep 16 19:34:45 2020           ;
+; Analysis & Synthesis Status ; Successful - Wed Sep 16 20:14:38 2020           ;
 ; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name               ; RAM2E                                           ;
 ; Top-level Entity Name       ; RAM2E                                           ;
 ; Family                      ; MAX V                                           ;
-; Total logic elements        ; 208                                             ;
+; Total logic elements        ; 198                                             ;
 ; Total pins                  ; 69                                              ;
 ; Total virtual pins          ; 0                                               ;
 ; UFM blocks                  ; 1 / 1 ( 100 % )                                 ;
@@ -157,34 +157,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 208   ;
-;     -- Combinational with no register       ; 93    ;
-;     -- Register only                        ; 34    ;
+; Total logic elements                        ; 198   ;
+;     -- Combinational with no register       ; 91    ;
+;     -- Register only                        ; 26    ;
 ;     -- Combinational with a register        ; 81    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 99    ;
-;     -- 3 input functions                    ; 36    ;
-;     -- 2 input functions                    ; 35    ;
+;     -- 4 input functions                    ; 90    ;
+;     -- 3 input functions                    ; 42    ;
+;     -- 2 input functions                    ; 36    ;
 ;     -- 1 input functions                    ; 3     ;
 ;     -- 0 input functions                    ; 1     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 194   ;
+;     -- normal mode                          ; 184   ;
 ;     -- arithmetic mode                      ; 14    ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
 ;     -- synchronous clear/load mode          ; 1     ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 115   ;
+; Total registers                             ; 107   ;
 ; Total logic cells in carry chains           ; 15    ;
 ; I/O pins                                    ; 69    ;
 ; UFM blocks                                  ; 1     ;
 ; Maximum fan-out node                        ; C14M  ;
-; Maximum fan-out                             ; 115   ;
-; Total fan-out                               ; 854   ;
-; Average fan-out                             ; 3.07  ;
+; Maximum fan-out                             ; 107   ;
+; Total fan-out                               ; 814   ;
+; Average fan-out                             ; 3.04  ;
 +---------------------------------------------+-------+
 
 
@@ -193,7 +193,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                   ; Library Name ;
 +-----------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------+--------------+
-; |RAM2E                                                    ; 208 (208)   ; 115          ; 1          ; 69   ; 0            ; 93 (93)      ; 34 (34)           ; 81 (81)          ; 15 (15)         ; 0 (0)      ; |RAM2E                                                                ; work         ;
+; |RAM2E                                                    ; 198 (198)   ; 107          ; 1          ; 69   ; 0            ; 91 (91)      ; 26 (26)           ; 81 (81)          ; 15 (15)         ; 0 (0)      ; |RAM2E                                                                ; work         ;
 ;    |UFM:UFM_inst|                                         ; 0 (0)       ; 0            ; 1          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |RAM2E|UFM:UFM_inst                                                   ; work         ;
 ;       |UFM_altufm_none_e4r:UFM_altufm_none_e4r_component| ; 0 (0)       ; 0            ; 1          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |RAM2E|UFM:UFM_inst|UFM_altufm_none_e4r:UFM_altufm_none_e4r_component ; work         ;
 +-----------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------+--------------+
@@ -214,12 +214,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 115   ;
+; Total registers                              ; 107   ;
 ; Number of registers using Synchronous Clear  ; 1     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 64    ;
+; Number of registers using Clock Enable       ; 56    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -246,7 +246,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |RAM2E|S[3]                ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |RAM2E|CS[2]               ;
-; 16:1               ; 8 bits    ; 80 LEs        ; 16 LEs               ; 64 LEs                 ; Yes        ; |RAM2E|RA[4]~reg0          ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 8 LEs                ; 72 LEs                 ; Yes        ; |RAM2E|RA[4]~reg0          ;
 ; 9:1                ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |RAM2E|RWMask[4]           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
@@ -268,7 +268,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Sep 16 19:34:45 2020
+    Info: Processing started: Wed Sep 16 20:14:37 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RAM2E -c RAM2E
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file ram2e.v
@@ -277,22 +277,22 @@ Info (12021): Found 2 design units, including 2 entities, in source file ufm.v
     Info (12023): Found entity 1: UFM_altufm_none_e4r
     Info (12023): Found entity 2: UFM
 Info (12127): Elaborating entity "RAM2E" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at RAM2E.v(101): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at RAM2E.v(104): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at RAM2E.v(551): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at RAM2E.v(568): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at RAM2E.v(100): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at RAM2E.v(103): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at RAM2E.v(544): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at RAM2E.v(561): truncated value with size 32 to match size of target (3)
 Info (12128): Elaborating entity "UFM" for hierarchy "UFM:UFM_inst"
 Info (12128): Elaborating entity "UFM_altufm_none_e4r" for hierarchy "UFM:UFM_inst|UFM_altufm_none_e4r:UFM_altufm_none_e4r_component"
-Info (21057): Implemented 278 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 268 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 22 input pins
     Info (21059): Implemented 39 output pins
     Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 208 logic cells
+    Info (21061): Implemented 198 logic cells
     Info (21070): Implemented 1 User Flash Memory blocks
 Info (144001): Generated suppressed messages file C:/Users/Zane/Documents/GitHub/RAM2E/cpld/output_files/RAM2E.map.smsg
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4575 megabytes
-    Info: Processing ended: Wed Sep 16 19:34:46 2020
+    Info: Peak virtual memory: 4568 megabytes
+    Info: Processing ended: Wed Sep 16 20:14:38 2020
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

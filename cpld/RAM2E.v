@@ -17,7 +17,6 @@ module RAM2E(C14M, PHI1,
 	
 	/* Address Bus */
 	input [7:0] Ain; // Multiplexed DRAM address input
-	reg [7:0] Areg; // Address saved for later
 	
 	/* 6502 Data Bus */
 	input [7:0] Din; // 6502 data bus inputs
@@ -264,8 +263,8 @@ module RAM2E(C14M, PHI1,
 			// Begin normal operation after 128k init cycles (~9.15ms)
 			if (FS == 16'hFFFF) Ready <= 1'b1;
 		end else if (S==4'h1) begin
-			// Disable clock
-			CKE <= 1'b0;
+			// Enable clock
+			CKE <= 1'b1;
 
 			// NOP
 			nCS <= 1'b1;
@@ -284,48 +283,6 @@ module RAM2E(C14M, PHI1,
 			// Inhibit data bus output
 			DOEEN <= 1'b0;
 		end else if (S==4'h2) begin
-			// Disable clock
-			CKE <= 1'b0;
-
-			// NOP
-			nCS <= 1'b1;
-			nRAS <= 1'b1;
-			nCAS <= 1'b1;
-			nRWE <= 1'b1;
-
-			// SDRAM bank 0, high-order row address is 0
-			BA <= 2'b00;
-			RA[11:8] <= 4'b0000;
-
-			// Mask everything
-			DQML <= 1'b1;
-			DQMH <= 1'b1;
-			
-			// Inhibit data bus output
-			DOEEN <= 1'b0;
-		end else if (S==4'h3) begin
-			// Enable clock
-			CKE <= 1'b1;
-
-			// NOP
-			nCS <= 1'b1;
-			nRAS <= 1'b1;
-			nCAS <= 1'b1;
-			nRWE <= 1'b1;
-
-			// Don't care bank, RA[11:8]
-			BA <= 2'b00;
-			RA[11:8] <= 4'b0000;
-			// Latch column address for read command
-			Areg[7:0] <= Ain[7:0];
-
-			// Mask everything
-			DQML <= 1'b1;
-			DQMH <= 1'b1;
-			
-			// Inhibit data bus output
-			DOEEN <= 1'b0;
-		end else if (S==4'h4) begin
 			// Enable clock
 			CKE <= 1'b1;
 			
@@ -335,7 +292,7 @@ module RAM2E(C14M, PHI1,
 			nCAS <= 1'b1;
 			nRWE <= 1'b1;
 
-			// Don't care bank, RA[11:8]
+			// SDRAM bank 0, high-order row address is 0
 			BA <= 2'b00;
 			RA[11:8] <= 4'b0000;
 			// Row address is as previously latched
@@ -346,7 +303,7 @@ module RAM2E(C14M, PHI1,
 			
 			// Inhibit data bus output
 			DOEEN <= 1'b0;
-		end else if (S==4'h5) begin
+		end else if (S==4'h3) begin
 			// Enable clock
 			CKE <= 1'b1;
 			
@@ -362,12 +319,8 @@ module RAM2E(C14M, PHI1,
 			RA[10] <= 1'b1; // (A10 set to auto-precharge)
 			RA[9] <= 1'b0;
 			RA[8] <= 1'b0;
-			// Output previously latched column address
-			RA[7:0] <= Areg[7:0];
-
-			// Mask everything
-			DQML <= 1'b1;
-			DQMH <= 1'b1;
+			// Latch column address for read command
+			RA[7:0] <= Ain[7:0];
 
 			// Read low byte (high byte is +4MB in ramworks)
 			DQML <= 1'b0;
@@ -375,7 +328,7 @@ module RAM2E(C14M, PHI1,
 			
 			// Inhibit data bus output
 			DOEEN <= 1'b0;
-		end else if (S==4'h6) begin
+		end else if (S==4'h4) begin
 			// Enable clock
 			CKE <= 1'b1;
 			
@@ -395,7 +348,27 @@ module RAM2E(C14M, PHI1,
 			
 			// Inhibit data bus output
 			DOEEN <= 1'b0;
-		end else if (S==4'h7) begin
+		end else if (S==4'h5) begin
+			// Enable clock
+			CKE <= 1'b1;
+			
+			// NOP
+			nCS <= 1'b1;
+			nRAS <= 1'b1;
+			nCAS <= 1'b1;
+			nRWE <= 1'b1;
+
+			// Don't care bank, RA[11:8]
+			BA <= 2'b00;
+			RA[11:8] <= 4'b0000;
+
+			// Mask everything
+			DQML <= 1'b1;
+			DQMH <= 1'b1;
+			
+			// Inhibit data bus output
+			DOEEN <= 1'b0;
+		end else if (S==4'h6) begin
 			// Enable clock
 			CKE <= 1'b1;
 			
@@ -412,6 +385,26 @@ module RAM2E(C14M, PHI1,
 				nCAS <= 1'b1;
 				nRWE <= 1'b1;
 			end
+
+			// Don't care bank, RA[11:8]
+			BA <= 2'b00;
+			RA[11:8] <= 4'b0000;
+
+			// Mask everything
+			DQML <= 1'b1;
+			DQMH <= 1'b1;
+			
+			// Inhibit data bus output
+			DOEEN <= 1'b0;
+		end else if (S==4'h7) begin
+			// Enable clock
+			CKE <= 1'b1;
+			
+			// NOP
+			nCS <= 1'b1;
+			nRAS <= 1'b1;
+			nCAS <= 1'b1;
+			nRWE <= 1'b1;
 
 			// Don't care bank, RA[11:8]
 			BA <= 2'b00;
@@ -637,7 +630,7 @@ module RAM2E(C14M, PHI1,
 	end
 	always @(negedge C14M) begin
 		// Latch video and read data outputs
-		if (S==4'h8) Vout[7:0] <= RD[7:0];
+		if (S==4'h6) Vout[7:0] <= RD[7:0];
 		if (S==4'hC) Dout[7:0] <= RD[7:0];
 	end
 endmodule
