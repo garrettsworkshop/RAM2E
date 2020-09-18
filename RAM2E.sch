@@ -5,8 +5,8 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 2
 Title "GW4203B (RAM2E II)"
-Date "2020-08-04"
-Rev "1.1"
+Date "2020-09-10"
+Rev "1.2"
 Comp "Garrett's Workshop"
 Comment1 ""
 Comment2 ""
@@ -287,10 +287,10 @@ L GW_Logic:74245 U3
 U 1 1 5E8972EF
 P 3000 1500
 F 0 "U3" H 3000 2100 50  0000 C CNN
-F 1 "74AHC245" H 3000 900 50  0000 C CNN
+F 1 "74LVC245" H 3000 900 50  0000 C CNN
 F 2 "stdpads:TSSOP-20_4.4x6.5mm_P0.65mm" H 3000 850 50  0001 C TNN
 F 3 "" H 3000 1600 60  0001 C CNN
-F 4 "C5516" H 3000 1500 50  0001 C CNN "LCSC Part"
+F 4 "C6082" H 3000 1500 50  0001 C CNN "LCSC Part"
 	1    3000 1500
 	1    0    0    -1  
 $EndComp
@@ -353,18 +353,16 @@ $EndComp
 $Comp
 L power:GND #PWR0104
 U 1 1 5E9BEAE2
-P 3600 950
-F 0 "#PWR0104" H 3600 700 50  0001 C CNN
-F 1 "GND" H 3600 800 50  0000 C CNN
-F 2 "" H 3600 950 50  0001 C CNN
-F 3 "" H 3600 950 50  0001 C CNN
-	1    3600 950 
+P 3600 850
+F 0 "#PWR0104" H 3600 600 50  0001 C CNN
+F 1 "GND" H 3600 700 50  0000 C CNN
+F 2 "" H 3600 850 50  0001 C CNN
+F 3 "" H 3600 850 50  0001 C CNN
+	1    3600 850 
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3500 1150 3500 950 
-Wire Wire Line
-	3500 950  3600 950 
+	3500 850  3600 850 
 Wire Wire Line
 	3400 1150 3500 1150
 Text Label 9700 3850 2    50   ~ 0
@@ -527,13 +525,13 @@ Wire Wire Line
 Connection ~ 8500 3850
 Wire Wire Line
 	8500 5150 8300 5150
-Text Label 3400 1350 0    50   ~ 0
+Text Label 3800 1350 0    50   ~ 0
 ~C07X~in
 Text Label 3400 2950 0    50   ~ 0
 R~W~80in
 Text Label 3400 2850 0    50   ~ 0
 ~EN80~in
-Text Label 3400 1250 0    50   ~ 0
+Text Label 3800 1250 0    50   ~ 0
 R~W~in
 Text Label 3400 3150 0    50   ~ 0
 PHI1in
@@ -854,10 +852,10 @@ L GW_Logic:74245 U5
 U 1 1 5E8F097C
 P 3000 4100
 F 0 "U5" H 3000 4700 50  0000 C CNN
-F 1 "74AHC245" H 3000 3500 50  0000 C CNN
+F 1 "74LVC245" H 3000 3500 50  0000 C CNN
 F 2 "stdpads:TSSOP-20_4.4x6.5mm_P0.65mm" H 3000 3450 50  0001 C TNN
 F 3 "" H 3000 4200 60  0001 C CNN
-F 4 "C5516" H 3000 4100 50  0001 C CNN "LCSC Part"
+F 4 "C6082" H 3000 4100 50  0001 C CNN "LCSC Part"
 	1    3000 4100
 	1    0    0    -1  
 $EndComp
@@ -898,16 +896,16 @@ $EndComp
 $Comp
 L power:GND #PWR0126
 U 1 1 5F3A4A01
-P 3600 2150
-F 0 "#PWR0126" H 3600 1900 50  0001 C CNN
-F 1 "GND" H 3600 2000 50  0000 C CNN
-F 2 "" H 3600 2150 50  0001 C CNN
-F 3 "" H 3600 2150 50  0001 C CNN
-	1    3600 2150
+P 3600 2350
+F 0 "#PWR0126" H 3600 2100 50  0001 C CNN
+F 1 "GND" H 3600 2200 50  0000 C CNN
+F 2 "" H 3600 2350 50  0001 C CNN
+F 3 "" H 3600 2350 50  0001 C CNN
+	1    3600 2350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3500 2150 3600 2150
+	3500 2350 3600 2350
 Wire Wire Line
 	3400 2450 3500 2450
 Text Label 2600 3050 2    50   ~ 0
@@ -917,35 +915,35 @@ Text Label 2600 2750 2    50   ~ 0
 Text Label 2600 2850 2    50   ~ 0
 R~W~80
 Wire Wire Line
-	3600 1750 3400 1750
+	4000 1750 3800 1750
 Wire Wire Line
-	3600 1950 3400 1950
+	4000 1950 3800 1950
 Wire Wire Line
-	3600 1850 3400 1850
+	4000 1850 3800 1850
 Wire Wire Line
 	3600 3050 3400 3050
 Wire Wire Line
-	3600 1450 3400 1450
-Text Label 3600 1750 2    50   ~ 0
+	4000 1450 3800 1450
+Text Label 4000 1750 2    50   ~ 0
 Ain2
-Text Label 3600 1950 2    50   ~ 0
+Text Label 4000 1950 2    50   ~ 0
 Ain3
 Text Label 3600 3250 2    50   ~ 0
 Ain6
-Text Label 3600 1850 2    50   ~ 0
+Text Label 4000 1850 2    50   ~ 0
 Ain4
 Text Label 3600 3050 2    50   ~ 0
 Ain5
-Text Label 3600 1450 2    50   ~ 0
+Text Label 4000 1450 2    50   ~ 0
 Ain7
 Wire Wire Line
-	3600 1550 3400 1550
-Text Label 3600 1650 2    50   ~ 0
+	4000 1550 3800 1550
+Text Label 4000 1650 2    50   ~ 0
 Ain0
-Text Label 3600 1550 2    50   ~ 0
+Text Label 4000 1550 2    50   ~ 0
 Ain1
 Wire Wire Line
-	3600 1650 3400 1650
+	4000 1650 3800 1650
 Text Label 2600 1150 2    50   ~ 0
 R~W~
 Text Label 2600 1250 2    50   ~ 0
@@ -1595,8 +1593,6 @@ Wire Wire Line
 Connection ~ 5900 1650
 Wire Wire Line
 	5200 1650 5300 1650
-Wire Wire Line
-	3500 2150 3500 2450
 Text Label 4150 2750 0    50   ~ 0
 ACLK
 $Comp
@@ -2129,7 +2125,7 @@ F 0 "U1" H 5600 6631 50  0000 C CNN
 F 1 "5M240ZT100" H 5600 6540 50  0000 C CNN
 F 2 "stdpads:TQFP-100_14x14mm_P0.5mm" H 6000 1700 50  0001 L CNN
 F 3 "https://www.altera.com/content/dam/altera-www/global/en_US/pdfs/literature/hb/max2/max2_mii5v1.pdf" H 5600 4050 50  0001 C CNN
-F 4 "C10041" H 5600 4050 50  0001 C CNN "LCSC Part"
+F 4 "C192889" H 5600 4050 50  0001 C CNN "LCSC Part"
 	1    5600 4050
 	1    0    0    -1  
 $EndComp
@@ -2241,10 +2237,10 @@ L GW_Power:AP2125 U8
 U 1 1 5F5E8C45
 P 8150 1450
 F 0 "U8" H 8150 1700 50  0000 C CNN
-F 1 "AP2125N-3.3" H 8150 1200 50  0000 C CNN
+F 1 "XC6206P332MR" H 8150 1200 50  0000 C CNN
 F 2 "stdpads:SOT-23" H 8150 1150 50  0001 C TNN
 F 3 "" H 8150 1350 60  0001 C CNN
-F 4 "C150715" H 8150 1450 50  0001 C CNN "LCSC Part"
+F 4 "C5446" H 8150 1450 50  0001 C CNN "LCSC Part"
 	1    8150 1450
 	1    0    0    -1  
 $EndComp
@@ -2271,17 +2267,11 @@ Wire Wire Line
 	9000 1350 8600 1350
 Wire Wire Line
 	8600 1750 8600 1650
-Text Label 2600 2650 2    50   ~ 0
-~80VID~
-Text Label 3400 2750 0    50   ~ 0
-~80VID~in
 Wire Wire Line
 	3600 2550 3650 2600
 Wire Wire Line
 	3400 2550 3600 2550
 NoConn ~ 3400 2650
-Wire Wire Line
-	2600 2550 2300 2550
 Wire Wire Line
 	2300 2550 2300 3250
 Wire Wire Line
@@ -2362,6 +2352,7 @@ F 0 "U9" H 8150 850 50  0000 C BNN
 F 1 "AP2127K-1.8" H 8150 1050 50  0000 C BNN
 F 2 "stdpads:SOT-23-5" H 8150 1175 50  0001 C CNN
 F 3 "https://www.diodes.com/assets/Datasheets/AP2127.pdf" H 8150 950 50  0001 C CNN
+F 4 "C151375" H 8150 850 50  0001 C CNN "LCSC Part"
 	1    8150 850 
 	1    0    0    -1  
 $EndComp
@@ -2408,7 +2399,7 @@ L Device:R_Small R1
 U 1 1 5FA85B84
 P 9100 750
 F 0 "R1" V 9050 750 50  0000 C BNN
-F 1 "0" V 9150 750 50  0000 C TNN
+F 1 "DNP" V 9150 750 50  0000 C TNN
 F 2 "stdpads:R_0805" H 9100 750 50  0001 C CNN
 F 3 "~" H 9100 750 50  0001 C CNN
 	1    9100 750 
@@ -2427,6 +2418,40 @@ F 3 "" H 9300 750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9300 750  9200 750 
+Wire Wire Line
+	2600 2550 2300 2550
+Wire Wire Line
+	2600 2550 2600 2650
+Connection ~ 2600 2550
+NoConn ~ 3400 2750
+$Comp
+L Device:R_Pack04 RN5
+U 1 1 5F6F2814
+P 3600 1850
+F 0 "RN5" V 3900 1850 50  0000 C BNN
+F 1 "4x33" V 3800 1850 50  0000 C CNN
+F 2 "stdpads:R4_0402" V 3875 1850 50  0001 C CNN
+F 3 "~" H 3600 1850 50  0001 C CNN
+F 4 "C25501" H 3600 1850 50  0001 C CNN "LCSC Part"
+	1    3600 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Pack04 RN4
+U 1 1 5F68B09A
+P 3600 1450
+F 0 "RN4" V 3250 1450 50  0000 C BNN
+F 1 "4x33" V 3300 1450 50  0000 C CNN
+F 2 "stdpads:R4_0402" V 3875 1450 50  0001 C CNN
+F 3 "~" H 3600 1450 50  0001 C CNN
+F 4 "C25501" H 3600 1450 50  0001 C CNN "LCSC Part"
+	1    3600 1450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3500 850  3500 1150
+Wire Wire Line
+	3500 2350 3500 2450
 Wire Bus Line
 	8200 4250 8200 5350
 $EndSCHEMATC
