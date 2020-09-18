@@ -1,11 +1,11 @@
-Fitter Status : Successful - Tue Sep 08 19:28:17 2020
+Fitter Status : Successful - Wed Sep 16 20:14:40 2020
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : RAM2E
 Top-level Entity Name : RAM2E
 Family : MAX V
 Device : 5M240ZT100C5
 Timing Models : Final
-Total logic elements : 184 / 240 ( 77 % )
+Total logic elements : 189 / 240 ( 79 % )
 Total pins : 69 / 79 ( 87 % )
 Total virtual pins : 0
 UFM blocks : 1 / 1 ( 100 % )
