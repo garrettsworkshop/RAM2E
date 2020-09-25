@@ -740,17 +740,15 @@ Wire Wire Line
 Wire Wire Line
 	3650 3450 4100 3450
 Wire Wire Line
-	7000 3350 8300 3350
+	7100 3350 8300 3350
 Wire Wire Line
-	7000 3450 8300 3450
+	7100 3450 8300 3450
 Text Notes 4150 3700 0    100  ~ 0
 Information may be out of date. See ./cpld/RAM2E.v
-Text Notes 7850 3300 0    50   ~ 0
+Text Notes 7950 3300 0    50   ~ 0
 read data
 Wire Wire Line
-	7850 3300 8300 3300
-Wire Wire Line
-	7850 3200 8300 3200
+	7950 3300 8300 3300
 Text Notes 7400 3450 0    50   ~ 0
 write data
 Text Notes 6900 3150 0    50   ~ 0
@@ -921,10 +919,6 @@ Wire Wire Line
 	7750 3200 7800 3300
 Wire Wire Line
 	7750 3300 7800 3200
-Wire Wire Line
-	7800 3200 7850 3300
-Wire Wire Line
-	7800 3300 7850 3200
 Wire Wire Line
 	8050 1850 8100 1950
 Wire Wire Line
@@ -1254,11 +1248,33 @@ Wire Wire Line
 Wire Wire Line
 	6900 3450 6950 3350
 Wire Wire Line
+	6200 3400 4150 3400
+Wire Wire Line
+	6200 3400 6250 3350
+Wire Wire Line
+	7800 3200 7850 3300
+Wire Wire Line
+	7800 3300 7850 3200
+Wire Wire Line
+	7850 3200 7900 3300
+Wire Wire Line
+	7850 3300 7900 3200
+Wire Wire Line
+	7950 3200 8300 3200
+Wire Wire Line
+	7900 3200 7950 3300
+Wire Wire Line
+	7900 3300 7950 3200
+Wire Wire Line
 	6950 3350 7000 3450
 Wire Wire Line
 	6950 3450 7000 3350
 Wire Wire Line
-	6200 3400 4150 3400
+	7000 3350 7050 3450
 Wire Wire Line
-	6200 3400 6250 3350
+	7000 3450 7050 3350
+Wire Wire Line
+	7050 3350 7100 3450
+Wire Wire Line
+	7050 3450 7100 3350
 $EndSCHEMATC
