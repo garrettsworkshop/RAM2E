@@ -326,7 +326,7 @@ Text Label 2400 1550 0    50   ~ 0
 MA0
 Text Label 2400 1450 0    50   ~ 0
 MA1
-Text Label 2600 2450 2    50   ~ 0
+Text Label 2150 2450 2    50   ~ 0
 C14M
 $Comp
 L power:GND #PWR0101
@@ -1382,7 +1382,7 @@ Text Label 4600 2750 2    50   ~ 0
 BA1
 Text Label 4600 2650 2    50   ~ 0
 ACLK
-Text Label 4150 2450 0    50   ~ 0
+Text Label 4150 2300 0    50   ~ 0
 RCLK
 Text Label 4600 2850 2    50   ~ 0
 RA9
@@ -1593,18 +1593,18 @@ Wire Wire Line
 Connection ~ 5900 1650
 Wire Wire Line
 	5200 1650 5300 1650
-Text Label 4150 2750 0    50   ~ 0
+Text Label 4150 2600 0    50   ~ 0
 ACLK
 $Comp
 L Device:R_Pack04 RN3
 U 1 1 5F475CD8
-P 3950 2650
-F 0 "RN3" V 3600 2650 50  0000 C BNN
-F 1 "4x33" V 3650 2650 50  0000 C CNN
-F 2 "stdpads:R4_0402" V 4225 2650 50  0001 C CNN
-F 3 "~" H 3950 2650 50  0001 C CNN
-F 4 "C25501" H 3950 2650 50  0001 C CNN "LCSC Part"
-	1    3950 2650
+P 3950 2500
+F 0 "RN3" V 3600 2500 50  0000 C BNN
+F 1 "4x33" V 3650 2500 50  0000 C CNN
+F 2 "stdpads:R4_0402" V 4225 2500 50  0001 C CNN
+F 3 "~" H 3950 2500 50  0001 C CNN
+F 4 "C25501" H 3950 2500 50  0001 C CNN "LCSC Part"
+	1    3950 2500
 	0    1    1    0   
 $EndComp
 Text Label 2400 6850 0    50   ~ 0
@@ -2168,20 +2168,16 @@ NoConn ~ 6600 4850
 NoConn ~ 6600 4950
 NoConn ~ 6600 5050
 Wire Wire Line
-	3750 2450 3700 2450
+	3750 2300 3700 2300
 Wire Wire Line
-	3700 2750 3750 2750
-NoConn ~ 4150 2550
-NoConn ~ 4150 2650
-NoConn ~ 3750 2550
-NoConn ~ 3750 2650
-Wire Wire Line
-	3700 2450 3700 2600
+	3700 2600 3750 2600
+NoConn ~ 4150 2400
+NoConn ~ 4150 2500
+NoConn ~ 3750 2400
+NoConn ~ 3750 2500
 Wire Wire Line
 	3650 2600 3700 2600
 Connection ~ 3700 2600
-Wire Wire Line
-	3700 2600 3700 2750
 $Comp
 L power:GND #PWR0146
 U 1 1 5FAF09E9
@@ -2272,8 +2268,6 @@ Wire Wire Line
 Wire Wire Line
 	3400 2550 3600 2550
 NoConn ~ 3400 2650
-Wire Wire Line
-	2300 2550 2300 3250
 Wire Wire Line
 	2300 3250 2600 3250
 Connection ~ 2600 3250
@@ -2418,12 +2412,6 @@ F 3 "" H 9300 750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9300 750  9200 750 
-Wire Wire Line
-	2600 2550 2300 2550
-Wire Wire Line
-	2600 2550 2600 2650
-Connection ~ 2600 2550
-NoConn ~ 3400 2750
 $Comp
 L Device:R_Pack04 RN5
 U 1 1 5F6F2814
@@ -2452,6 +2440,73 @@ Wire Wire Line
 	3500 850  3500 1150
 Wire Wire Line
 	3500 2350 3500 2450
+Wire Wire Line
+	2600 2550 2300 2550
+Wire Wire Line
+	2300 2550 2300 3250
+Wire Wire Line
+	2500 2450 2500 2650
+Wire Wire Line
+	2500 2650 2600 2650
+Wire Wire Line
+	2600 2450 2500 2450
+Wire Wire Line
+	3700 2300 3700 2600
+$Comp
+L Device:R_Small R3
+U 1 1 6081D682
+P 3950 2750
+F 0 "R3" V 4000 2750 50  0000 C TNN
+F 1 "33" V 4100 2750 50  0000 C CNN
+F 2 "stdpads:R_0603" H 3950 2750 50  0001 C CNN
+F 3 "~" H 3950 2750 50  0001 C CNN
+	1    3950 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3400 2750 3850 2750
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 608879CA
+P 1050 1150
+F 0 "J3" H 1050 1250 50  0000 C CNN
+F 1 "C14M" H 1050 950 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1050 1150 50  0001 C CNN
+F 3 "~" H 1050 1150 50  0001 C CNN
+	1    1050 1150
+	-1   0    0    -1  
+$EndComp
+Text Label 1250 1150 0    50   ~ 0
+C14MB
+$Comp
+L power:GND #PWR0147
+U 1 1 6088870C
+P 1250 1250
+F 0 "#PWR0147" H 1250 1000 50  0001 C CNN
+F 1 "GND" H 1250 1100 50  0000 C CNN
+F 2 "" H 1250 1250 50  0001 C CNN
+F 3 "" H 1250 1250 50  0001 C CNN
+	1    1250 1250
+	1    0    0    -1  
+$EndComp
+Text Label 4050 2750 0    50   ~ 0
+C14MB
+$Comp
+L Device:R_Small R2
+U 1 1 6088A353
+P 2250 2450
+F 0 "R2" V 2400 2450 50  0000 C CNN
+F 1 "33" V 2300 2450 50  0000 C TNN
+F 2 "stdpads:R_0603" H 2250 2450 50  0001 C CNN
+F 3 "~" H 2250 2450 50  0001 C CNN
+	1    2250 2450
+	0    1    -1   0   
+$EndComp
+Text Label 2600 2450 2    50   ~ 0
+C14MR
+Wire Wire Line
+	2350 2450 2500 2450
 Wire Bus Line
 	8200 4250 8200 5350
+Connection ~ 2500 2450
 $EndSCHEMATC
