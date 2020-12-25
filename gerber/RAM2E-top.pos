@@ -1,4 +1,4 @@
-### Module positions - created on Tuesday, September 29, 2020 at 05:53:05 PM ###
+### Module positions - created on Friday, December 25, 2020 at 12:28:00 PM ###
 ### Printed by Pcbnew version kicad (5.1.5-0-10_14)
 ## Unit = mm, Angle = deg.
 ## Side : top
@@ -36,7 +36,9 @@ FID1      Fiducial       Fiducial                         203.2000  -129.5400   
 FID2      Fiducial       Fiducial                         203.4540   -92.2020    0.0000  top
 FID3      Fiducial       Fiducial                         271.5260   -92.2020    0.0000  top
 FID4      Fiducial       Fiducial                         270.1290  -129.2860    0.0000  top
-R1        DNP            R_0805                           258.5000  -107.0500   90.0000  top
+R1        0              R_0805                           258.5000  -107.0500   90.0000  top
+R2        47             R_0603                           265.7500  -124.5000    0.0000  top
+R3        47             R_0603                           229.6500  -119.0500  270.0000  top
 R6        0              R_0805                           209.2960  -124.0155    0.0000  top
 R7        DNP            R_0805                           209.2960  -126.1745    0.0000  top
 R9        22k            R_0805                           203.7080  -108.0770  180.0000  top
@@ -46,7 +48,7 @@ RN2       4x33           R4_0402                          230.0000   -98.7000  2
 RN3       4x33           R4_0402                          228.3500  -110.6500    0.0000  top
 RN4       4x33           R4_0402                          220.0000  -119.5500    0.0000  top
 RN5       4x33           R4_0402                          222.8500  -119.5500    0.0000  top
-U1        5M240ZT100C5N  TQFP-100_14x14mm_P0.5mm          240.0500  -108.3500  270.0000  top
+U1        EPM240T100C5N  TQFP-100_14x14mm_P0.5mm          240.0500  -108.3500  270.0000  top
 U2        W9812G6KH-6    TSOP-II-54_22.2x10.16mm_P0.8mm   218.8000  -105.4500    0.0000  top
 U3        74LVC245APW    TSSOP-20_4.4x6.5mm_P0.65mm       220.7750  -124.6000    0.0000  top
 U4        74LVC245APW    TSSOP-20_4.4x6.5mm_P0.65mm       229.9750  -124.6000    0.0000  top
@@ -54,5 +56,5 @@ U5        74LVC245APW    TSSOP-20_4.4x6.5mm_P0.65mm       239.1750  -124.6000   
 U6        74AHCT245PW    TSSOP-20_4.4x6.5mm_P0.65mm       248.3750  -124.6000    0.0000  top
 U7        74AHCT245PW    TSSOP-20_4.4x6.5mm_P0.65mm       257.5750  -124.6000    0.0000  top
 U8        XC6206P332MR   SOT-23                           267.6500  -110.8000  180.0000  top
-U9        AP2127K-1.8    SOT-23-5                         267.6500  -105.1500    0.0000  top
+U9        DNP            SOT-23-5                         267.6500  -105.1500    0.0000  top
 ## End

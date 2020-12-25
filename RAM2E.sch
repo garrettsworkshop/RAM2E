@@ -5,8 +5,8 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 2
 Title "GW4203B (RAM2E II)"
-Date "2020-09-29"
-Rev "1.2"
+Date "2020-12-25"
+Rev "1.3"
 Comp "Garrett's Workshop"
 Comment1 ""
 Comment2 ""
@@ -2122,10 +2122,10 @@ L GW_PLD:5M240ZT100 U1
 U 1 1 5EF407E5
 P 5600 4050
 F 0 "U1" H 5550 6550 50  0000 C BNN
-F 1 "5M240ZT100C5N" H 5550 6500 50  0000 C CNN
+F 1 "EPM240T100C5N" H 5550 6500 50  0000 C CNN
 F 2 "stdpads:TQFP-100_14x14mm_P0.5mm" H 6000 1700 50  0001 L CNN
 F 3 "https://www.altera.com/content/dam/altera-www/global/en_US/pdfs/literature/hb/max2/max2_mii5v1.pdf" H 5600 4050 50  0001 C CNN
-F 4 "C192889" H 5600 4050 50  0001 C CNN "LCSC Part"
+F 4 "C10041" H 5600 4050 50  0001 C CNN "LCSC Part"
 	1    5600 4050
 	1    0    0    -1  
 $EndComp
@@ -2268,8 +2268,6 @@ Wire Wire Line
 Wire Wire Line
 	3400 2550 3600 2550
 NoConn ~ 3400 2650
-Wire Wire Line
-	2300 3250 2600 3250
 Connection ~ 2600 3250
 Text Label 6600 2950 0    50   ~ 0
 ~80VID~in
@@ -2343,10 +2341,10 @@ L Regulator_Linear:AP2127K-1.8 U9
 U 1 1 5F6DD402
 P 8150 850
 F 0 "U9" H 8150 850 50  0000 C BNN
-F 1 "AP2127K-1.8" H 8150 1050 50  0000 C BNN
+F 1 "DNP" H 8150 1050 50  0000 C BNN
 F 2 "stdpads:SOT-23-5" H 8150 1175 50  0001 C CNN
 F 3 "https://www.diodes.com/assets/Datasheets/AP2127.pdf" H 8150 950 50  0001 C CNN
-F 4 "C151375" H 8150 850 50  0001 C CNN "LCSC Part"
+F 4 "" H 8150 850 50  0001 C CNN "LCSC Part"
 	1    8150 850 
 	1    0    0    -1  
 $EndComp
@@ -2393,9 +2391,10 @@ L Device:R_Small R1
 U 1 1 5FA85B84
 P 9100 750
 F 0 "R1" V 9050 750 50  0000 C BNN
-F 1 "DNP" V 9150 750 50  0000 C TNN
+F 1 "0" V 9150 750 50  0000 C TNN
 F 2 "stdpads:R_0805" H 9100 750 50  0001 C CNN
 F 3 "~" H 9100 750 50  0001 C CNN
+F 4 "C17477" V 9100 750 50  0001 C CNN "LCSC Part"
 	1    9100 750 
 	0    1    1    0   
 $EndComp
@@ -2441,25 +2440,16 @@ Wire Wire Line
 Wire Wire Line
 	3500 2350 3500 2450
 Wire Wire Line
-	2600 2550 2300 2550
-Wire Wire Line
-	2300 2550 2300 3250
-Wire Wire Line
-	2500 2450 2500 2650
-Wire Wire Line
-	2500 2650 2600 2650
-Wire Wire Line
-	2600 2450 2500 2450
-Wire Wire Line
 	3700 2300 3700 2600
 $Comp
 L Device:R_Small R3
 U 1 1 6081D682
 P 3950 2750
 F 0 "R3" V 4000 2750 50  0000 C TNN
-F 1 "33" V 4100 2750 50  0000 C CNN
+F 1 "47" V 4100 2750 50  0000 C CNN
 F 2 "stdpads:R_0603" H 3950 2750 50  0001 C CNN
 F 3 "~" H 3950 2750 50  0001 C CNN
+F 4 "C23182" V 3950 2750 50  0001 C CNN "LCSC Part"
 	1    3950 2750
 	0    1    1    0   
 $EndComp
@@ -2496,17 +2486,30 @@ L Device:R_Small R2
 U 1 1 6088A353
 P 2250 2450
 F 0 "R2" V 2400 2450 50  0000 C CNN
-F 1 "33" V 2300 2450 50  0000 C TNN
+F 1 "47" V 2300 2450 50  0000 C TNN
 F 2 "stdpads:R_0603" H 2250 2450 50  0001 C CNN
 F 3 "~" H 2250 2450 50  0001 C CNN
+F 4 "C23182" V 2250 2450 50  0001 C CNN "LCSC Part"
 	1    2250 2450
 	0    1    -1   0   
 $EndComp
 Text Label 2600 2450 2    50   ~ 0
 C14MR
 Wire Wire Line
+	2300 3250 2600 3250
+Wire Wire Line
+	2600 2550 2300 2550
+Wire Wire Line
+	2300 2550 2300 3250
+Wire Wire Line
+	2500 2650 2600 2650
+Connection ~ 2500 2450
+Wire Wire Line
 	2350 2450 2500 2450
+Wire Wire Line
+	2600 2450 2500 2450
+Wire Wire Line
+	2500 2450 2500 2650
 Wire Bus Line
 	8200 4250 8200 5350
-Connection ~ 2500 2450
 $EndSCHEMATC
