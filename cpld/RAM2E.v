@@ -372,7 +372,7 @@ module RAM2E(C14M, PHI1,
 			// Enable clock
 			CKE <= 1'b1;
 			
-			if (FS[6:4]==0) begin
+			if (FS[5:4]==0) begin
 				// Auto-refresh
 				nCS <= 1'b0;
 				nRAS <= 1'b0;
