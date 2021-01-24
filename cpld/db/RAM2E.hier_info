@@ -20,6 +20,7 @@ C14M => RWBank[6].CLK
 C14M => RWBank[7].CLK
 C14M => RWSel.CLK
 C14M => Ready.CLK
+C14M => DOEEN.CLK
 C14M => DQMH~reg0.CLK
 C14M => DQML~reg0.CLK
 C14M => BA[0]~reg0.CLK
@@ -112,8 +113,13 @@ nWE => comb.IN0
 nWE => RWSel.IN1
 nWE80 => nRWE.DATAB
 nWE80 => RDOE.IN0
+nEN80 => nCS.DATAB
+nEN80 => nCS.DATAB
 nEN80 => comb.IN1
 nEN80 => RDOE.IN1
+nEN80 => CKE.DATAB
+nEN80 => CKE.DATAB
+nEN80 => CKE.DATAB
 nC07X => RWSel.IN1
 Ain[0] => RA.DATAB
 Ain[0] => RA.DATAB
@@ -320,13 +326,13 @@ drshft => drshft.IN1
 erase => erase.IN1
 oscena => oscena.IN1
 program => program.IN1
-busy <= UFM_altufm_none_a7r:UFM_altufm_none_a7r_component.busy
-drdout <= UFM_altufm_none_a7r:UFM_altufm_none_a7r_component.drdout
-osc <= UFM_altufm_none_a7r:UFM_altufm_none_a7r_component.osc
-rtpbusy <= UFM_altufm_none_a7r:UFM_altufm_none_a7r_component.rtpbusy
+busy <= UFM_altufm_none_e4r:UFM_altufm_none_e4r_component.busy
+drdout <= UFM_altufm_none_e4r:UFM_altufm_none_e4r_component.drdout
+osc <= UFM_altufm_none_e4r:UFM_altufm_none_e4r_component.osc
+rtpbusy <= UFM_altufm_none_e4r:UFM_altufm_none_e4r_component.rtpbusy
 
 
-|RAM2E|UFM:UFM_inst|UFM_altufm_none_a7r:UFM_altufm_none_a7r_component
+|RAM2E|UFM:UFM_inst|UFM_altufm_none_e4r:UFM_altufm_none_e4r_component
 arclk => maxii_ufm_block1.ARCLK
 ardin => maxii_ufm_block1.ARDIN
 arshft => maxii_ufm_block1.ARSHFT
