@@ -20,7 +20,8 @@ module RAM2E(C14M, PHI1,
 	
 	/* 6502 Data Bus */
 	input [7:0] Din; // 6502 data bus inputs
-	output nDOE = ~(EN80 & nWE); // 6502 data bus output enable
+	reg DOEEN = 0; // 6502 data bus output enable from state machine
+	output nDOE = ~(EN80 & nWE & DOEEN); // 6502 data bus output enable
 	output reg [7:0] Dout; // 6502 data Bus output
 	
 	/* Video Data Bus */
@@ -255,6 +256,9 @@ module RAM2E(C14M, PHI1,
 			// Mask everything
 			DQML <= 1'b1;
 			DQMH <= 1'b1;
+			
+			// Inhibit data bus output
+			DOEEN <= 1'b0;
 
 			// Begin normal operation after 128k init cycles (~9.15ms)
 			if (FS == 16'hFFFF) Ready <= 1'b1;
@@ -275,6 +279,9 @@ module RAM2E(C14M, PHI1,
 			// Mask everything
 			DQML <= 1'b1;
 			DQMH <= 1'b1;
+			
+			// Inhibit data bus output
+			DOEEN <= 1'b0;
 		end else if (S==4'h2) begin
 			// Enable clock
 			CKE <= 1'b1;
@@ -293,6 +300,9 @@ module RAM2E(C14M, PHI1,
 			// Mask everything
 			DQML <= 1'b1;
 			DQMH <= 1'b1;
+			
+			// Inhibit data bus output
+			DOEEN <= 1'b0;
 		end else if (S==4'h3) begin
 			// Enable clock
 			CKE <= 1'b1;
@@ -315,6 +325,9 @@ module RAM2E(C14M, PHI1,
 			// Read low byte (high byte is +4MB in ramworks)
 			DQML <= 1'b0;
 			DQMH <= 1'b1;
+			
+			// Inhibit data bus output
+			DOEEN <= 1'b0;
 		end else if (S==4'h4) begin
 			// Enable clock
 			CKE <= 1'b1;
@@ -332,6 +345,9 @@ module RAM2E(C14M, PHI1,
 			// Mask everything
 			DQML <= 1'b1;
 			DQMH <= 1'b1;
+			
+			// Inhibit data bus output
+			DOEEN <= 1'b0;
 		end else if (S==4'h5) begin
 			// Enable clock
 			CKE <= 1'b1;
@@ -349,6 +365,9 @@ module RAM2E(C14M, PHI1,
 			// Mask everything
 			DQML <= 1'b1;
 			DQMH <= 1'b1;
+			
+			// Inhibit data bus output
+			DOEEN <= 1'b0;
 		end else if (S==4'h6) begin
 			// Enable clock
 			CKE <= 1'b1;
@@ -374,6 +393,9 @@ module RAM2E(C14M, PHI1,
 			// Mask everything
 			DQML <= 1'b1;
 			DQMH <= 1'b1;
+			
+			// Inhibit data bus output
+			DOEEN <= 1'b0;
 		end else if (S==4'h7) begin
 			// Enable clock
 			CKE <= 1'b1;
@@ -393,12 +415,15 @@ module RAM2E(C14M, PHI1,
 			// Mask everything
 			DQML <= 1'b1;
 			DQMH <= 1'b1;
-		end else if (S==4'h8) begin
-			// Enable clock
-			CKE <= 1'b1;
 			
-			// Activate
-			nCS <= 1'b0;
+			// Inhibit data bus output
+			DOEEN <= 1'b0;
+		end else if (S==4'h8) begin
+			// Enable clock if '245 output enabled
+			CKE <= EN80;
+			
+			// Activate if '245 output enabled
+			nCS <= nEN80;
 			nRAS <= 1'b0;
 			nCAS <= 1'b1;
 			nRWE <= 1'b1;
@@ -411,12 +436,15 @@ module RAM2E(C14M, PHI1,
 			// Mask everything
 			DQML <= 1'b1;
 			DQMH <= 1'b1;
-		end else if (S==4'h9) begin
-			// Enable clock
-			CKE <= 1'b1;
 			
-			// Read/Write
-			nCS <= 1'b0;
+			// Inhibit data bus output
+			DOEEN <= 1'b0;
+		end else if (S==4'h9) begin
+			// Enable clock if '245 output enabled
+			CKE <= EN80;
+			
+			// Read/Write if '245 output enabled
+			nCS <= nEN80;
 			nRAS <= 1'b1;
 			nCAS <= 1'b0;
 			nRWE <= nWE80;
@@ -436,9 +464,12 @@ module RAM2E(C14M, PHI1,
 			// Mask according to RAMWorks bank (high byte is +4MB)
 			DQML <= RWBank[6];
 			DQMH <= ~RWBank[6];
+			
+			// Inhibit data bus output
+			DOEEN <= 1'b0;
 		end else if (S==4'hA) begin
-			// Enable clock
-			CKE <= 1'b1;
+			// Enable clock if '245 output enabled
+			CKE <= EN80;
 			
 			// NOP
 			nCS <= 1'b1;
@@ -453,6 +484,9 @@ module RAM2E(C14M, PHI1,
 			// Mask everything
 			DQML <= 1'b1;
 			DQMH <= 1'b1;
+			
+			// Inhibit data bus output
+			DOEEN <= 1'b0;
 		end else if (S==4'hB) begin
 			// Disable clock
 			CKE <= 1'b0;
@@ -470,6 +504,9 @@ module RAM2E(C14M, PHI1,
 			// Mask everything
 			DQML <= 1'b1;
 			DQMH <= 1'b1;
+			
+			// Enable data bus output
+			DOEEN <= 1'b1;
 		end else if (S==4'hC) begin
 			// Disable clock
 			CKE <= 1'b0;
@@ -487,6 +524,9 @@ module RAM2E(C14M, PHI1,
 			// Mask everything
 			DQML <= 1'b1;
 			DQMH <= 1'b1;
+			
+			// Enable data bus output
+			DOEEN <= 1'b1;
 
 			// RAMWorks Bank Register Select
 			if (RWSel) begin
@@ -539,6 +579,9 @@ module RAM2E(C14M, PHI1,
 			// Mask everything
 			DQML <= 1'b1;
 			DQMH <= 1'b1;
+			
+			// Enable data bus output
+			DOEEN <= 1'b1;
 		end else if (S==4'hE) begin
 			// Disable clock
 			CKE <= 1'b0;
@@ -558,6 +601,9 @@ module RAM2E(C14M, PHI1,
 			// Mask everything
 			DQML <= 1'b1;
 			DQMH <= 1'b1;
+			
+			// Enable data bus output
+			DOEEN <= 1'b1;
 		end else if (S==4'hF) begin
 			// Disable clock
 			CKE <= 1'b0;
@@ -577,6 +623,9 @@ module RAM2E(C14M, PHI1,
 			// Mask everything
 			DQML <= 1'b1;
 			DQMH <= 1'b1;
+			
+			// Enable data bus output
+			DOEEN <= 1'b1;
 		end 
 	end
 	always @(negedge C14M) begin
