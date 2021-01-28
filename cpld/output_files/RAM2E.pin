@@ -23,7 +23,7 @@
  ---------------------------------------------------------------------------------
  -- NC            : No Connect. This pin has no internal connection to the device.
  -- DNU           : Do Not Use. This pin MUST NOT be connected.
- -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.8V).
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (2.5V/3.3V).
  -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
  --                 of its bank.
  --					Bank 1:		3.3V
@@ -58,11 +58,11 @@
  ---------------------------------------------------------------------------------
 
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-CHIP  "RAM2E"  ASSIGNED TO AN: 5M240ZT100C5
+CHIP  "RAM2E"  ASSIGNED TO AN: EPM240T100C5
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-GND                          : 1         : gnd    :                   :         :           :                
+GND*                         : 1         :        :                   :         : 2         :                
 nRWE                         : 2         : output : 3.3-V LVCMOS      :         : 1         : Y              
 nCAS                         : 3         : output : 3.3-V LVCMOS      :         : 1         : Y              
 CKE                          : 4         : output : 3.3-V LVCMOS      :         : 1         : Y              
@@ -71,10 +71,10 @@ BA[0]                        : 6         : output : 3.3-V LVCMOS      :         
 RA[11]                       : 7         : output : 3.3-V LVCMOS      :         : 1         : Y              
 nCS                          : 8         : output : 3.3-V LVCMOS      :         : 1         : Y              
 VCCIO1                       : 9         : power  :                   : 3.3V    : 1         :                
-GND                          : 10        : gnd    :                   :         :           :                
-GND                          : 11        : gnd    :                   :         :           :                
+GNDIO                        : 10        : gnd    :                   :         :           :                
+GNDINT                       : 11        : gnd    :                   :         :           :                
 C14M                         : 12        : input  : 3.3-V LVCMOS      :         : 1         : Y              
-VCCINT                       : 13        : power  :                   : 1.8V    :           :                
+VCCINT                       : 13        : power  :                   : 2.5V/3.3V :           :                
 BA[1]                        : 14        : output : 3.3-V LVCMOS      :         : 1         : Y              
 RA[9]                        : 15        : output : 3.3-V LVCMOS      :         : 1         : Y              
 RA[10]                       : 16        : output : 3.3-V LVCMOS      :         : 1         : Y              
@@ -93,7 +93,7 @@ nEN80                        : 28        : input  : 3.3-V LVCMOS      :         
 RA[5]                        : 29        : output : 3.3-V LVCMOS      :         : 1         : Y              
 RA[2]                        : 30        : output : 3.3-V LVCMOS      :         : 1         : Y              
 VCCIO1                       : 31        : power  :                   : 3.3V    : 1         :                
-GND                          : 32        : gnd    :                   :         :           :                
+GNDIO                        : 32        : gnd    :                   :         :           :                
 nWE80                        : 33        : input  : 3.3-V LVCMOS      :         : 1         : Y              
 Ain[5]                       : 34        : input  : 3.3-V LVCMOS      :         : 1         : Y              
 Din[7]                       : 35        : input  : 3.3-V LVCMOS      :         : 1         : Y              
@@ -107,7 +107,7 @@ Din[2]                       : 42        : input  : 3.3-V LVCMOS      :         
 Ain[2]                       : 43        : input  : 3.3-V LVCMOS      :         : 1         : Y              
 Ain[4]                       : 44        : input  : 3.3-V LVCMOS      :         : 1         : Y              
 VCCIO1                       : 45        : power  :                   : 3.3V    : 1         :                
-GND                          : 46        : gnd    :                   :         :           :                
+GNDIO                        : 46        : gnd    :                   :         :           :                
 Ain[3]                       : 47        : input  : 3.3-V LVCMOS      :         : 1         : Y              
 Din[4]                       : 48        : input  : 3.3-V LVCMOS      :         : 1         : Y              
 Din[5]                       : 49        : input  : 3.3-V LVCMOS      :         : 1         : Y              
@@ -121,12 +121,12 @@ Ain[0]                       : 56        : input  : 3.3-V LVCMOS      :         
 Vout[7]                      : 57        : output : 3.3-V LVCMOS      :         : 2         : Y              
 Vout[6]                      : 58        : output : 3.3-V LVCMOS      :         : 2         : Y              
 VCCIO2                       : 59        : power  :                   : 3.3V    : 2         :                
-GND                          : 60        : gnd    :                   :         :           :                
+GNDIO                        : 60        : gnd    :                   :         :           :                
 GND*                         : 61        :        :                   :         : 2         :                
 Vout[3]                      : 62        : output : 3.3-V LVCMOS      :         : 2         : Y              
-VCCINT                       : 63        : power  :                   : 1.8V    :           :                
+VCCINT                       : 63        : power  :                   : 2.5V/3.3V :           :                
 GND*                         : 64        :        :                   :         : 2         :                
-GND                          : 65        : gnd    :                   :         :           :                
+GNDINT                       : 65        : gnd    :                   :         :           :                
 GND*                         : 66        :        :                   :         : 2         :                
 Vout[1]                      : 67        : output : 3.3-V LVCMOS      :         : 2         : Y              
 Vout[5]                      : 68        : output : 3.3-V LVCMOS      :         : 2         : Y              
@@ -140,7 +140,7 @@ Dout[3]                      : 75        : output : 3.3-V LVCMOS      :         
 Dout[1]                      : 76        : output : 3.3-V LVCMOS      :         : 2         : Y              
 Dout[0]                      : 77        : output : 3.3-V LVCMOS      :         : 2         : Y              
 GND*                         : 78        :        :                   :         : 2         :                
-GND                          : 79        : gnd    :                   :         :           :                
+GNDIO                        : 79        : gnd    :                   :         :           :                
 VCCIO2                       : 80        : power  :                   : 3.3V    : 2         :                
 GND*                         : 81        :        :                   :         : 2         :                
 GND*                         : 82        :        :                   :         : 2         :                
@@ -154,7 +154,7 @@ RD[3]                        : 89        : bidir  : 3.3-V LVCMOS      :         
 RD[1]                        : 90        : bidir  : 3.3-V LVCMOS      :         : 2         : Y              
 RD[4]                        : 91        : bidir  : 3.3-V LVCMOS      :         : 2         : Y              
 RD[5]                        : 92        : bidir  : 3.3-V LVCMOS      :         : 2         : Y              
-GND                          : 93        : gnd    :                   :         :           :                
+GNDIO                        : 93        : gnd    :                   :         :           :                
 VCCIO2                       : 94        : power  :                   : 3.3V    : 2         :                
 RD[6]                        : 95        : bidir  : 3.3-V LVCMOS      :         : 2         : Y              
 RD[7]                        : 96        : bidir  : 3.3-V LVCMOS      :         : 2         : Y              
