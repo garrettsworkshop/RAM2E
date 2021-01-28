@@ -1,5 +1,5 @@
 Assembler report for RAM2E
-Wed Sep 16 20:14:41 2020
+Thu Jan 28 14:37:20 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,7 +10,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Zane/Documents/GitHub/RAM2E/cpld/output_files/RAM2E.pof
+  5. Assembler Device Options: C:/Users/wgfel_69wkrf3/OneDrive/Documents/GitHub/RAM2E/cpld/output_files/RAM2E.pof
   6. Assembler Messages
 
 
@@ -37,11 +37,11 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Sep 16 20:14:41 2020 ;
+; Assembler Status      ; Successful - Thu Jan 28 14:37:20 2021 ;
 ; Revision Name         ; RAM2E                                 ;
 ; Top-level Entity Name ; RAM2E                                 ;
-; Family                ; MAX V                                 ;
-; Device                ; 5M240ZT100C5                          ;
+; Family                ; MAX II                                ;
+; Device                ; EPM240T100C5                          ;
 +-----------------------+---------------------------------------+
 
 
@@ -75,24 +75,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+-----------+---------------+
 
 
-+------------------------------------------------------------------+
-; Assembler Generated Files                                        ;
-+------------------------------------------------------------------+
-; File Name                                                        ;
-+------------------------------------------------------------------+
-; C:/Users/Zane/Documents/GitHub/RAM2E/cpld/output_files/RAM2E.pof ;
-+------------------------------------------------------------------+
++------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                          ;
++------------------------------------------------------------------------------------+
+; File Name                                                                          ;
++------------------------------------------------------------------------------------+
+; C:/Users/wgfel_69wkrf3/OneDrive/Documents/GitHub/RAM2E/cpld/output_files/RAM2E.pof ;
++------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Zane/Documents/GitHub/RAM2E/cpld/output_files/RAM2E.pof ;
-+----------------+---------------------------------------------------------------------------+
-; Option         ; Setting                                                                   ;
-+----------------+---------------------------------------------------------------------------+
-; Device         ; 5M240ZT100C5                                                              ;
-; JTAG usercode  ; 0x0016ED59                                                                ;
-; Checksum       ; 0x0016F0C1                                                                ;
-+----------------+---------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/wgfel_69wkrf3/OneDrive/Documents/GitHub/RAM2E/cpld/output_files/RAM2E.pof ;
++----------------+---------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                     ;
++----------------+---------------------------------------------------------------------------------------------+
+; Device         ; EPM240T100C5                                                                                ;
+; JTAG usercode  ; 0x00170076                                                                                  ;
+; Checksum       ; 0x001703FE                                                                                  ;
++----------------+---------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -101,14 +101,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Sep 16 20:14:41 2020
+    Info: Processing started: Thu Jan 28 14:37:19 2021
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off RAM2E -c RAM2E
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4524 megabytes
-    Info: Processing ended: Wed Sep 16 20:14:41 2020
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Peak virtual memory: 4515 megabytes
+    Info: Processing ended: Thu Jan 28 14:37:20 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 
