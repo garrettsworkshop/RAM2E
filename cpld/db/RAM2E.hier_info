@@ -326,13 +326,13 @@ drshft => drshft.IN1
 erase => erase.IN1
 oscena => oscena.IN1
 program => program.IN1
-busy <= UFM_altufm_none_e4r:UFM_altufm_none_e4r_component.busy
-drdout <= UFM_altufm_none_e4r:UFM_altufm_none_e4r_component.drdout
-osc <= UFM_altufm_none_e4r:UFM_altufm_none_e4r_component.osc
-rtpbusy <= UFM_altufm_none_e4r:UFM_altufm_none_e4r_component.rtpbusy
+busy <= UFM_altufm_none_a7r:UFM_altufm_none_a7r_component.busy
+drdout <= UFM_altufm_none_a7r:UFM_altufm_none_a7r_component.drdout
+osc <= UFM_altufm_none_a7r:UFM_altufm_none_a7r_component.osc
+rtpbusy <= UFM_altufm_none_a7r:UFM_altufm_none_a7r_component.rtpbusy
 
 
-|RAM2E|UFM:UFM_inst|UFM_altufm_none_e4r:UFM_altufm_none_e4r_component
+|RAM2E|UFM:UFM_inst|UFM_altufm_none_a7r:UFM_altufm_none_a7r_component
 arclk => maxii_ufm_block1.ARCLK
 ardin => maxii_ufm_block1.ARDIN
 arshft => maxii_ufm_block1.ARSHFT
