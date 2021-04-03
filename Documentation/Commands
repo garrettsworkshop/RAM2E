@@ -1,0 +1,8 @@
+RAM2E II commands
+CmdNum	Name			Argument
+$FF		SetRWBankFF		RWBank[7:0] to not set (gets set if not RAM2E II)
+$EF		UFMPrgmEN		don't care
+$EE		UFMResetEN		don't care
+$EA		UFMBitbang		{ DRClkPulse(1), DRDIn(1), X(6) }
+$E0		RWMaskSet		RWMask[7:0]
+$00		NOP				switch to bank in argument
