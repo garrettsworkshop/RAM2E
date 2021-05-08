@@ -22,6 +22,8 @@ F 1 "10u" H 9050 1500 50  0000 L CNN
 F 2 "stdpads:C_0805" H 9000 1550 50  0001 C CNN
 F 3 "~" H 9000 1550 50  0001 C CNN
 F 4 "C15850" H 9000 1550 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL21A106KAYNNNE" H 9000 1550 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 9000 1550 50  0001 C CNN "Notes"
 	1    9000 1550
 	1    0    0    -1  
 $EndComp
@@ -57,6 +59,7 @@ F 0 "H2" H 1100 6851 50  0000 L CNN
 F 1 " " H 1100 6760 50  0000 L CNN
 F 2 "stdpads:PasteHole_1.152mm_NPTH" H 1000 6800 50  0001 C CNN
 F 3 "~" H 1000 6800 50  0001 C CNN
+F 4 "DNP - mounting hole for solder paste printing" H 1000 6800 50  0001 C CNN "Notes"
 	1    1000 6800
 	1    0    0    -1  
 $EndComp
@@ -68,6 +71,7 @@ F 0 "H1" H 800 6851 50  0000 L CNN
 F 1 " " H 800 6760 50  0000 L CNN
 F 2 "stdpads:PasteHole_1.152mm_NPTH" H 700 6800 50  0001 C CNN
 F 3 "~" H 700 6800 50  0001 C CNN
+F 4 "DNP - mounting hole for solder paste printing" H 700 6800 50  0001 C CNN "Notes"
 	1    700  6800
 	1    0    0    -1  
 $EndComp
@@ -79,6 +83,7 @@ F 0 "FID4" H 1300 7346 50  0000 L CNN
 F 1 "Fiducial" H 1300 7255 50  0000 L CNN
 F 2 "stdpads:Fiducial" H 1200 7300 50  0001 C CNN
 F 3 "~" H 1200 7300 50  0001 C CNN
+F 4 "DNP - SMT vision system fiducial" H 1200 7300 50  0001 C CNN "Notes"
 	1    1200 7300
 	1    0    0    -1  
 $EndComp
@@ -90,6 +95,7 @@ F 0 "FID3" H 800 7346 50  0000 L CNN
 F 1 "Fiducial" H 800 7255 50  0000 L CNN
 F 2 "stdpads:Fiducial" H 700 7300 50  0001 C CNN
 F 3 "~" H 700 7300 50  0001 C CNN
+F 4 "DNP - SMT vision system fiducial" H 700 7300 50  0001 C CNN "Notes"
 	1    700  7300
 	1    0    0    -1  
 $EndComp
@@ -101,6 +107,7 @@ F 0 "FID2" H 1300 7146 50  0000 L CNN
 F 1 "Fiducial" H 1300 7055 50  0000 L CNN
 F 2 "stdpads:Fiducial" H 1200 7100 50  0001 C CNN
 F 3 "~" H 1200 7100 50  0001 C CNN
+F 4 "DNP - SMT vision system fiducial" H 1200 7100 50  0001 C CNN "Notes"
 	1    1200 7100
 	1    0    0    -1  
 $EndComp
@@ -112,6 +119,7 @@ F 0 "FID1" H 800 7146 50  0000 L CNN
 F 1 "Fiducial" H 800 7055 50  0000 L CNN
 F 2 "stdpads:Fiducial" H 700 7100 50  0001 C CNN
 F 3 "~" H 700 7100 50  0001 C CNN
+F 4 "DNP - SMT vision system fiducial" H 700 7100 50  0001 C CNN "Notes"
 	1    700  7100
 	1    0    0    -1  
 $EndComp
@@ -261,6 +269,7 @@ F 0 "J1" H 1200 6467 50  0000 C CNN
 F 1 "AppleIIeAux" H 1200 6376 50  0000 C CNN
 F 2 "stdpads:AppleIIeAux_Edge" H 1150 4850 50  0001 C CNN
 F 3 "~" H 1150 4850 50  0001 C CNN
+F 4 "DNP - edge connector" H 1150 4850 50  0001 C CNN "Notes"
 	1    1150 4850
 	1    0    0    -1  
 $EndComp
@@ -279,6 +288,8 @@ F 1 "W9812G6KH-6" V 9000 4850 50  0000 C CNN
 F 2 "stdpads:TSOP-II-54_22.2x10.16mm_P0.8mm" H 9000 3200 50  0001 C CIN
 F 3 "" H 9000 4600 50  0001 C CNN
 F 4 "C62379" H 9000 4850 50  0001 C CNN "LCSC Part"
+F 5 "Winbond W9812G6KH-6, Winbond W9812G6KH-6I, Winbond W9825G6KH-6, Winbond W9825G6KH-6I, ISSI IS42S16160J-6TL, ISSI IS42S16160J-6TLI, Micron MT48LC16M16A2P-6A :G, Micron MT48LC16M16A2P-6A IT:G" H 9000 4850 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "Most 166 MHz 128/256 Mbit SDRAM is acceptable." H 9000 4850 50  0001 C CNN "Notes"
 	1    9000 4850
 	1    0    0    -1  
 $EndComp
@@ -291,6 +302,7 @@ F 1 "74LVC245APW" H 3000 900 50  0000 C CNN
 F 2 "stdpads:TSSOP-20_4.4x6.5mm_P0.65mm" H 3000 850 50  0001 C TNN
 F 3 "" H 3000 1600 60  0001 C CNN
 F 4 "C6082" H 3000 1500 50  0001 C CNN "LCSC Part"
+F 5 "NXP 74LVC245APW, TI SN74LVC245APW" H 3000 1500 50  0001 C CNN "Mfg. Part Numbers"
 	1    3000 1500
 	1    0    0    -1  
 $EndComp
@@ -589,28 +601,6 @@ F 3 "" H 2600 3250 50  0001 C CNN
 	1    2600 3250
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+3V3 #PWR0112
-U 1 1 5F2D18F3
-P 5900 1650
-F 0 "#PWR0112" H 5900 1500 50  0001 C CNN
-F 1 "+3V3" H 5900 1800 50  0000 C CNN
-F 2 "" H 5900 1650 50  0001 C CNN
-F 3 "" H 5900 1650 50  0001 C CNN
-	1    5900 1650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0113
-U 1 1 5F2D98D8
-P 5200 6450
-F 0 "#PWR0113" H 5200 6200 50  0001 C CNN
-F 1 "GND" H 5200 6300 50  0000 C CNN
-F 2 "" H 5200 6450 50  0001 C CNN
-F 3 "" H 5200 6450 50  0001 C CNN
-	1    5200 6450
-	1    0    0    -1  
-$EndComp
 Text Label 3600 5050 2    50   ~ 0
 V~OE~
 Wire Wire Line
@@ -711,6 +701,7 @@ F 1 "74AHCT245PW" H 3000 4800 50  0000 C CNN
 F 2 "stdpads:TSSOP-20_4.4x6.5mm_P0.65mm" H 3000 4750 50  0001 C TNN
 F 3 "" H 3000 5500 60  0001 C CNN
 F 4 "C173388" H 3000 5400 50  0001 C CNN "LCSC Part"
+F 5 "NXP 74AHCT245PW, TI SN74AHCT245PW" H 3000 5400 50  0001 C CNN "Mfg. Part Numbers"
 	1    3000 5400
 	1    0    0    -1  
 $EndComp
@@ -807,14 +798,14 @@ F 3 "" H 2600 4550 50  0001 C CNN
 	1    2600 4550
 	1    0    0    -1  
 $EndComp
-Text Label 6800 3750 2    50   ~ 0
+Text Label 10050 2900 2    50   ~ 0
 Dout4
-Text Label 6800 3650 2    50   ~ 0
+Text Label 10050 2800 2    50   ~ 0
 Dout5
 Wire Wire Line
-	6800 3650 6600 3650
+	10050 2800 9850 2800
 Wire Wire Line
-	6800 3750 6600 3750
+	10050 2900 9850 2900
 Text Label 2400 3950 0    50   ~ 0
 MD0
 Text Label 2400 4050 0    50   ~ 0
@@ -856,6 +847,7 @@ F 1 "74LVC245APW" H 3000 3500 50  0000 C CNN
 F 2 "stdpads:TSSOP-20_4.4x6.5mm_P0.65mm" H 3000 3450 50  0001 C TNN
 F 3 "" H 3000 4200 60  0001 C CNN
 F 4 "C6082" H 3000 4100 50  0001 C CNN "LCSC Part"
+F 5 "NXP 74LVC245APW, TI SN74LVC245APW" H 3000 4100 50  0001 C CNN "Mfg. Part Numbers"
 	1    3000 4100
 	1    0    0    -1  
 $EndComp
@@ -868,6 +860,7 @@ F 1 "74AHCT245PW" H 3000 6100 50  0000 C CNN
 F 2 "stdpads:TSSOP-20_4.4x6.5mm_P0.65mm" H 3000 6050 50  0001 C TNN
 F 3 "" H 3000 6800 60  0001 C CNN
 F 4 "C173388" H 3000 6700 50  0001 C CNN "LCSC Part"
+F 5 "NXP 74AHCT245PW, TI SN74AHCT245PW" H 3000 6700 50  0001 C CNN "Mfg. Part Numbers"
 	1    3000 6700
 	1    0    0    -1  
 $EndComp
@@ -959,6 +952,8 @@ F 1 "10u" H 7450 1500 50  0000 L CNN
 F 2 "stdpads:C_0805" H 7400 1550 50  0001 C CNN
 F 3 "~" H 7400 1550 50  0001 C CNN
 F 4 "C15850" H 7400 1550 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL21A106KAYNNNE" H 7400 1550 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 7400 1550 50  0001 C CNN "Notes"
 	1    7400 1550
 	1    0    0    -1  
 $EndComp
@@ -971,6 +966,8 @@ F 1 "2u2" H 8650 2000 50  0000 L CNN
 F 2 "stdpads:C_0603" H 8600 2050 50  0001 C CNN
 F 3 "~" H 8600 2050 50  0001 C CNN
 F 4 "C23630" H 8600 2050 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 8600 2050 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 8600 2050 50  0001 C CNN "Notes"
 	1    8600 2050
 	1    0    0    -1  
 $EndComp
@@ -983,6 +980,8 @@ F 1 "2u2" H 7450 2000 50  0000 L CNN
 F 2 "stdpads:C_0603" H 7400 2050 50  0001 C CNN
 F 3 "~" H 7400 2050 50  0001 C CNN
 F 4 "C23630" H 7400 2050 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 7400 2050 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 7400 2050 50  0001 C CNN "Notes"
 	1    7400 2050
 	1    0    0    -1  
 $EndComp
@@ -995,6 +994,8 @@ F 1 "2u2" H 9050 3200 50  0000 L CNN
 F 2 "stdpads:C_0603" H 9000 3250 50  0001 C CNN
 F 3 "~" H 9000 3250 50  0001 C CNN
 F 4 "C23630" H 9000 3250 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 9000 3250 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 9000 3250 50  0001 C CNN "Notes"
 	1    9000 3250
 	1    0    0    -1  
 $EndComp
@@ -1007,6 +1008,8 @@ F 1 "2u2" H 7850 2800 50  0000 L CNN
 F 2 "stdpads:C_0603" H 7800 2850 50  0001 C CNN
 F 3 "~" H 7800 2850 50  0001 C CNN
 F 4 "C23630" H 7800 2850 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 7800 2850 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 7800 2850 50  0001 C CNN "Notes"
 	1    7800 2850
 	1    0    0    -1  
 $EndComp
@@ -1031,6 +1034,8 @@ F 1 "2u2" H 9050 2000 50  0000 L CNN
 F 2 "stdpads:C_0603" H 9000 2050 50  0001 C CNN
 F 3 "~" H 9000 2050 50  0001 C CNN
 F 4 "C23630" H 9000 2050 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 9000 2050 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 9000 2050 50  0001 C CNN "Notes"
 	1    9000 2050
 	1    0    0    -1  
 $EndComp
@@ -1043,6 +1048,8 @@ F 1 "2u2" H 7850 2000 50  0000 L CNN
 F 2 "stdpads:C_0603" H 7800 2050 50  0001 C CNN
 F 3 "~" H 7800 2050 50  0001 C CNN
 F 4 "C23630" H 7800 2050 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 7800 2050 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 7800 2050 50  0001 C CNN "Notes"
 	1    7800 2050
 	1    0    0    -1  
 $EndComp
@@ -1055,6 +1062,8 @@ F 1 "2u2" H 7850 2400 50  0000 L CNN
 F 2 "stdpads:C_0603" H 7800 2450 50  0001 C CNN
 F 3 "~" H 7800 2450 50  0001 C CNN
 F 4 "C23630" H 7800 2450 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 7800 2450 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 7800 2450 50  0001 C CNN "Notes"
 	1    7800 2450
 	1    0    0    -1  
 $EndComp
@@ -1067,6 +1076,8 @@ F 1 "2u2" H 8250 2800 50  0000 L CNN
 F 2 "stdpads:C_0603" H 8200 2850 50  0001 C CNN
 F 3 "~" H 8200 2850 50  0001 C CNN
 F 4 "C23630" H 8200 2850 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 8200 2850 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 8200 2850 50  0001 C CNN "Notes"
 	1    8200 2850
 	1    0    0    -1  
 $EndComp
@@ -1090,6 +1101,8 @@ F 1 "2u2" H 9450 2000 50  0000 L CNN
 F 2 "stdpads:C_0603" H 9400 2050 50  0001 C CNN
 F 3 "~" H 9400 2050 50  0001 C CNN
 F 4 "C23630" H 9400 2050 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 9400 2050 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 9400 2050 50  0001 C CNN "Notes"
 	1    9400 2050
 	1    0    0    -1  
 $EndComp
@@ -1102,6 +1115,8 @@ F 1 "2u2" H 7450 3200 50  0000 L CNN
 F 2 "stdpads:C_0603" H 7400 3250 50  0001 C CNN
 F 3 "~" H 7400 3250 50  0001 C CNN
 F 4 "C23630" H 7400 3250 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 7400 3250 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 7400 3250 50  0001 C CNN "Notes"
 	1    7400 3250
 	1    0    0    -1  
 $EndComp
@@ -1114,6 +1129,8 @@ F 1 "2u2" H 9450 2400 50  0000 L CNN
 F 2 "stdpads:C_0603" H 9400 2450 50  0001 C CNN
 F 3 "~" H 9400 2450 50  0001 C CNN
 F 4 "C23630" H 9400 2450 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 9400 2450 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 9400 2450 50  0001 C CNN "Notes"
 	1    9400 2450
 	1    0    0    -1  
 $EndComp
@@ -1126,6 +1143,8 @@ F 1 "2u2" H 8250 2400 50  0000 L CNN
 F 2 "stdpads:C_0603" H 8200 2450 50  0001 C CNN
 F 3 "~" H 8200 2450 50  0001 C CNN
 F 4 "C23630" H 8200 2450 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 8200 2450 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 8200 2450 50  0001 C CNN "Notes"
 	1    8200 2450
 	1    0    0    -1  
 $EndComp
@@ -1138,6 +1157,8 @@ F 1 "2u2" H 8650 2800 50  0000 L CNN
 F 2 "stdpads:C_0603" H 8600 2850 50  0001 C CNN
 F 3 "~" H 8600 2850 50  0001 C CNN
 F 4 "C23630" H 8600 2850 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 8600 2850 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 8600 2850 50  0001 C CNN "Notes"
 	1    8600 2850
 	1    0    0    -1  
 $EndComp
@@ -1161,6 +1182,8 @@ F 1 "2u2" H 7450 2400 50  0000 L CNN
 F 2 "stdpads:C_0603" H 7400 2450 50  0001 C CNN
 F 3 "~" H 7400 2450 50  0001 C CNN
 F 4 "C23630" H 7400 2450 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 7400 2450 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 7400 2450 50  0001 C CNN "Notes"
 	1    7400 2450
 	1    0    0    -1  
 $EndComp
@@ -1173,6 +1196,8 @@ F 1 "2u2" H 7850 3200 50  0000 L CNN
 F 2 "stdpads:C_0603" H 7800 3250 50  0001 C CNN
 F 3 "~" H 7800 3250 50  0001 C CNN
 F 4 "C23630" H 7800 3250 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 7800 3250 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 7800 3250 50  0001 C CNN "Notes"
 	1    7800 3250
 	1    0    0    -1  
 $EndComp
@@ -1185,6 +1210,8 @@ F 1 "2u2" H 7450 2800 50  0000 L CNN
 F 2 "stdpads:C_0603" H 7400 2850 50  0001 C CNN
 F 3 "~" H 7400 2850 50  0001 C CNN
 F 4 "C23630" H 7400 2850 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 7400 2850 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 7400 2850 50  0001 C CNN "Notes"
 	1    7400 2850
 	1    0    0    -1  
 $EndComp
@@ -1240,6 +1267,8 @@ F 1 "2u2" H 8250 2000 50  0000 L CNN
 F 2 "stdpads:C_0603" H 8200 2050 50  0001 C CNN
 F 3 "~" H 8200 2050 50  0001 C CNN
 F 4 "C23630" H 8200 2050 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 8200 2050 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 8200 2050 50  0001 C CNN "Notes"
 	1    8200 2050
 	1    0    0    -1  
 $EndComp
@@ -1307,6 +1336,8 @@ F 1 "2u2" H 8650 3200 50  0000 L CNN
 F 2 "stdpads:C_0603" H 8600 3250 50  0001 C CNN
 F 3 "~" H 8600 3250 50  0001 C CNN
 F 4 "C23630" H 8600 3250 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 8600 3250 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 8600 3250 50  0001 C CNN "Notes"
 	1    8600 3250
 	1    0    0    -1  
 $EndComp
@@ -1319,6 +1350,8 @@ F 1 "2u2" H 9050 2400 50  0000 L CNN
 F 2 "stdpads:C_0603" H 9000 2450 50  0001 C CNN
 F 3 "~" H 9000 2450 50  0001 C CNN
 F 4 "C23630" H 9000 2450 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 9000 2450 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 9000 2450 50  0001 C CNN "Notes"
 	1    9000 2450
 	1    0    0    -1  
 $EndComp
@@ -1331,6 +1364,8 @@ F 1 "2u2" H 8650 2400 50  0000 L CNN
 F 2 "stdpads:C_0603" H 8600 2450 50  0001 C CNN
 F 3 "~" H 8600 2450 50  0001 C CNN
 F 4 "C23630" H 8600 2450 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 8600 2450 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 8600 2450 50  0001 C CNN "Notes"
 	1    8600 2450
 	1    0    0    -1  
 $EndComp
@@ -1343,6 +1378,8 @@ F 1 "2u2" H 9450 2800 50  0000 L CNN
 F 2 "stdpads:C_0603" H 9400 2850 50  0001 C CNN
 F 3 "~" H 9400 2850 50  0001 C CNN
 F 4 "C23630" H 9400 2850 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 9400 2850 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 9400 2850 50  0001 C CNN "Notes"
 	1    9400 2850
 	1    0    0    -1  
 $EndComp
@@ -1355,20 +1392,20 @@ F 1 "2u2" H 9050 2800 50  0000 L CNN
 F 2 "stdpads:C_0603" H 9000 2850 50  0001 C CNN
 F 3 "~" H 9000 2850 50  0001 C CNN
 F 4 "C23630" H 9000 2850 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 9000 2850 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 9000 2850 50  0001 C CNN "Notes"
 	1    9000 2850
 	1    0    0    -1  
 $EndComp
-Text Label 4600 1950 2    50   ~ 0
+Text Label 6500 2050 0    50   ~ 0
 ~WE~
-Text Label 4600 2050 2    50   ~ 0
+Text Label 6500 2150 0    50   ~ 0
 ~CAS~
-Text Label 4600 2250 2    50   ~ 0
+Text Label 6500 2350 0    50   ~ 0
 ~RAS~
-Text Label 4600 2150 2    50   ~ 0
-CKE
-Text Label 4600 2550 2    50   ~ 0
+Text Label 6500 2650 0    50   ~ 0
 ~CS~
-Text Label 4600 2350 2    50   ~ 0
+Text Label 6500 2450 0    50   ~ 0
 BA0
 Text Label 8500 5250 2    50   ~ 0
 RA11
@@ -1376,46 +1413,30 @@ Entry Wire Line
 	8300 5250 8200 5350
 Wire Wire Line
 	8300 5250 8500 5250
-Text Label 4600 2450 2    50   ~ 0
-RA11
-Text Label 4600 2750 2    50   ~ 0
+Text Label 6500 3150 0    50   ~ 0
 BA1
-Text Label 4600 2650 2    50   ~ 0
-ACLK
 Text Label 4150 2300 0    50   ~ 0
 RCLK
-Text Label 4600 2850 2    50   ~ 0
+Text Label 6500 3250 0    50   ~ 0
 RA9
-Text Label 4600 2950 2    50   ~ 0
-RA10
-Text Label 4600 3050 2    50   ~ 0
+Text Label 6500 3450 0    50   ~ 0
 RA8
-Text Label 4600 3150 2    50   ~ 0
+Text Label 6500 3550 0    50   ~ 0
 RA0
-Text Label 4600 3250 2    50   ~ 0
+Text Label 6500 3650 0    50   ~ 0
 RA7
-Text Label 4600 3350 2    50   ~ 0
+Text Label 6500 3750 0    50   ~ 0
 RA1
-Text Label 4600 3450 2    50   ~ 0
+Text Label 6500 3850 0    50   ~ 0
 RA6
-Text Label 4600 3950 2    50   ~ 0
+Text Label 6500 2850 0    50   ~ 0
 RA2
-Text Label 4600 3850 2    50   ~ 0
+Text Label 6500 2750 0    50   ~ 0
 RA5
-Text Label 4600 3650 2    50   ~ 0
+Text Label 6500 2950 0    50   ~ 0
 RA3
-Text Label 4600 3550 2    50   ~ 0
+Text Label 6500 3950 0    50   ~ 0
 RA4
-Text Label 4600 3750 2    50   ~ 0
-~EN80~in
-Text Label 4600 4050 2    50   ~ 0
-R~W~80in
-Text Label 4600 4450 2    50   ~ 0
-PHI1in
-Text Label 4600 4150 2    50   ~ 0
-Ain5
-Text Label 4600 4650 2    50   ~ 0
-Ain6
 $Comp
 L Device:R_Pack04 RN2
 U 1 1 5EA17AFE
@@ -1425,6 +1446,8 @@ F 1 "4x33" V 7500 5950 50  0000 C CNN
 F 2 "stdpads:R4_0402" V 7575 5950 50  0001 C CNN
 F 3 "~" H 7300 5950 50  0001 C CNN
 F 4 "C25501" H 7300 5950 50  0001 C CNN "LCSC Part"
+F 5 "Uniroyal 4D02WGJ0330TCE" H 7300 5950 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "Any manufacturer's part is acceptable." H 7300 5950 50  0001 C CNN "Notes"
 	1    7300 5950
 	0    -1   1    0   
 $EndComp
@@ -1456,16 +1479,17 @@ F 0 "J2" H 1200 3000 50  0000 C CNN
 F 1 "JTAG" H 1200 2400 50  0000 C CNN
 F 2 "stdpads:TC2050" H 1150 2700 50  0001 C CNN
 F 3 "~" H 1150 2700 50  0001 C CNN
+F 4 "DNP - test pad connector" H 1150 2700 50  0001 C CNN "Notes"
 	1    1150 2700
 	1    0    0    -1  
 $EndComp
-Text Label 4600 5750 2    50   ~ 0
-TMS
 Text Label 4600 5850 2    50   ~ 0
-TDI
+TMS
 Text Label 4600 5950 2    50   ~ 0
-TCK
+TDI
 Text Label 4600 6050 2    50   ~ 0
+TCK
+Text Label 4600 6150 2    50   ~ 0
 TDO
 Text Label 950  2700 2    50   ~ 0
 TMS
@@ -1515,41 +1539,6 @@ NoConn ~ 1450 2800
 NoConn ~ 950  2800
 Wire Wire Line
 	1900 6900 1600 6900
-Connection ~ 5800 6450
-Wire Wire Line
-	5700 6450 5600 6450
-Connection ~ 5700 6450
-Connection ~ 5600 6450
-Wire Wire Line
-	5600 6450 5500 6450
-Wire Wire Line
-	5500 6450 5400 6450
-Connection ~ 5500 6450
-Connection ~ 5400 6450
-Wire Wire Line
-	5400 6450 5300 6450
-Wire Wire Line
-	5300 6450 5200 6450
-Connection ~ 5300 6450
-Connection ~ 5900 6450
-Wire Wire Line
-	5800 6450 5700 6450
-Wire Wire Line
-	5900 6450 5800 6450
-Connection ~ 5800 1650
-Wire Wire Line
-	5700 1650 5600 1650
-Connection ~ 5700 1650
-Connection ~ 5600 1650
-Wire Wire Line
-	5600 1650 5500 1650
-Wire Wire Line
-	5500 1650 5400 1650
-Connection ~ 5500 1650
-Wire Wire Line
-	5800 1650 5700 1650
-Wire Wire Line
-	5900 1650 5800 1650
 Wire Wire Line
 	3600 3250 3400 3250
 Text Label 6900 5250 0    50   ~ 0
@@ -1557,17 +1546,17 @@ RD7r
 Text Label 6900 5350 0    50   ~ 0
 RD1r
 Wire Wire Line
-	6800 5150 6600 5150
-Wire Wire Line
 	6800 5250 6600 5250
-Text Label 6800 5150 2    50   ~ 0
-RD3r
-Text Label 6800 5250 2    50   ~ 0
-RD1r
-Text Label 6800 5350 2    50   ~ 0
-RD4r
 Wire Wire Line
 	6800 5350 6600 5350
+Text Label 6800 5250 2    50   ~ 0
+RD3r
+Text Label 6800 5350 2    50   ~ 0
+RD1r
+Text Label 6800 5450 2    50   ~ 0
+RD4r
+Wire Wire Line
+	6800 5450 6600 5450
 Text Label 6900 5450 0    50   ~ 0
 RD2r
 Text Label 6900 5550 0    50   ~ 0
@@ -1590,9 +1579,6 @@ Wire Wire Line
 	7100 5950 6900 5950
 Wire Wire Line
 	6900 5850 7100 5850
-Connection ~ 5900 1650
-Wire Wire Line
-	5200 1650 5300 1650
 Text Label 4150 2600 0    50   ~ 0
 ACLK
 $Comp
@@ -1604,6 +1590,8 @@ F 1 "4x33" V 3650 2500 50  0000 C CNN
 F 2 "stdpads:R4_0402" V 4225 2500 50  0001 C CNN
 F 3 "~" H 3950 2500 50  0001 C CNN
 F 4 "C25501" H 3950 2500 50  0001 C CNN "LCSC Part"
+F 5 "Uniroyal 4D02WGJ0330TCE" H 3950 2500 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "Any manufacturer's part is acceptable." H 3950 2500 50  0001 C CNN "Notes"
 	1    3950 2500
 	0    1    1    0   
 $EndComp
@@ -1640,20 +1628,20 @@ Din1
 Text Label 3600 4050 2    50   ~ 0
 Din0
 Wire Wire Line
-	6800 4150 6600 4150
+	10050 3300 9850 3300
 Wire Wire Line
-	6800 4050 6600 4050
-Wire Wire Line
-	6800 4650 6600 4650
+	10050 3200 9850 3200
 Wire Wire Line
 	6800 4750 6600 4750
-Text Label 6800 4750 2    50   ~ 0
+Wire Wire Line
+	6800 4850 6600 4850
+Text Label 6800 4850 2    50   ~ 0
 Dout7
-Text Label 6800 4650 2    50   ~ 0
+Text Label 6800 4750 2    50   ~ 0
 Dout6
-Text Label 6800 4050 2    50   ~ 0
+Text Label 10050 3200 2    50   ~ 0
 Dout1
-Text Label 6800 4150 2    50   ~ 0
+Text Label 10050 3300 2    50   ~ 0
 Dout0
 Text Label 2400 4350 0    50   ~ 0
 MD4
@@ -1688,12 +1676,12 @@ Din3
 Text Label 3600 4350 2    50   ~ 0
 Din2
 Wire Wire Line
-	6800 3850 6600 3850
+	10050 3000 9850 3000
 Wire Wire Line
-	6800 3950 6600 3950
-Text Label 6800 3950 2    50   ~ 0
+	10050 3100 9850 3100
+Text Label 10050 3100 2    50   ~ 0
 Dout3
-Text Label 6800 3850 2    50   ~ 0
+Text Label 10050 3000 2    50   ~ 0
 Dout2
 Wire Wire Line
 	3600 5650 3400 5650
@@ -1832,6 +1820,8 @@ F 1 "10u" H 8250 3200 50  0000 L CNN
 F 2 "stdpads:C_0805" H 8200 3250 50  0001 C CNN
 F 3 "~" H 8200 3250 50  0001 C CNN
 F 4 "C15850" H 8200 3250 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL21A106KAYNNNE" H 8200 3250 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 8200 3250 50  0001 C CNN "Notes"
 	1    8200 3250
 	1    0    0    -1  
 $EndComp
@@ -1841,119 +1831,55 @@ Connection ~ 8200 3350
 Wire Wire Line
 	8200 3350 8600 3350
 Wire Wire Line
-	4400 4550 4600 4550
-Wire Wire Line
-	4400 4750 4600 4750
-Text Label 4400 4750 0    50   ~ 0
-Din1
-Text Label 4400 4550 0    50   ~ 0
-Din0
-Text Label 4400 5350 0    50   ~ 0
-Din4
-Text Label 4400 5450 0    50   ~ 0
-Din5
-Wire Wire Line
-	4400 5450 4600 5450
-Wire Wire Line
-	4400 5350 4600 5350
-Wire Wire Line
-	4400 4950 4600 4950
-Wire Wire Line
-	4400 4850 4600 4850
-Text Label 4400 4850 0    50   ~ 0
-Din3
-Text Label 4400 4950 0    50   ~ 0
-Din2
-Text Label 4400 4350 0    50   ~ 0
-Din6
-Text Label 4400 4250 0    50   ~ 0
-Din7
-Wire Wire Line
-	4400 4250 4600 4250
-Wire Wire Line
-	4400 4350 4600 4350
-Wire Wire Line
-	4400 5050 4600 5050
-Wire Wire Line
-	4400 5250 4600 5250
-Wire Wire Line
-	4400 5150 4600 5150
-Wire Wire Line
-	6800 2150 6600 2150
-Text Label 4400 5050 0    50   ~ 0
-Ain2
-Text Label 4400 5250 0    50   ~ 0
-Ain3
-Text Label 4400 5150 0    50   ~ 0
-Ain4
-Text Label 6800 2150 2    50   ~ 0
+	10050 1300 9850 1300
+Text Label 10050 1300 2    50   ~ 0
 Ain7
 Wire Wire Line
-	6800 2250 6600 2250
-Text Label 6800 2450 2    50   ~ 0
+	10050 1400 9850 1400
+Text Label 10050 1600 2    50   ~ 0
 Ain0
-Text Label 6800 2250 2    50   ~ 0
+Text Label 10050 1400 2    50   ~ 0
 Ain1
 Wire Wire Line
-	6800 2450 6600 2450
-Text Label 6800 2350 2    50   ~ 0
+	10050 1600 9850 1600
+Text Label 10050 1500 2    50   ~ 0
 D~OE~
 Wire Wire Line
-	6600 2350 6800 2350
-Text Label 4600 5650 2    50   ~ 0
-R~W~in
-Text Label 6600 2050 0    50   ~ 0
+	9850 1500 10050 1500
+Text Label 9850 1200 0    50   ~ 0
 ~C07X~in
-Text Label 4400 5550 0    50   ~ 0
-V~OE~
 Wire Wire Line
-	4600 5550 4400 5550
+	10050 1800 9850 1800
 Wire Wire Line
-	6800 2650 6600 2650
+	10050 1700 9850 1700
 Wire Wire Line
-	6800 2550 6600 2550
+	10050 2600 9850 2600
 Wire Wire Line
-	6800 3450 6600 3450
-Wire Wire Line
-	6800 2850 6600 2850
-Text Label 6800 2850 2    50   ~ 0
+	10050 2000 9850 2000
+Text Label 10050 2000 2    50   ~ 0
 Vout3
-Text Label 6800 3450 2    50   ~ 0
+Text Label 10050 2600 2    50   ~ 0
 Vout0
-Text Label 6800 2550 2    50   ~ 0
+Text Label 10050 1700 2    50   ~ 0
 Vout7
-Text Label 6800 2650 2    50   ~ 0
+Text Label 10050 1800 2    50   ~ 0
 Vout6
 Wire Wire Line
-	6800 3350 6600 3350
+	10050 2500 9850 2500
 Wire Wire Line
-	6800 3250 6600 3250
-Text Label 6800 3350 2    50   ~ 0
+	10050 2400 9850 2400
+Text Label 10050 2500 2    50   ~ 0
 Vout2
-Text Label 6800 3150 2    50   ~ 0
+Text Label 10050 2300 2    50   ~ 0
 Vout1
-Text Label 6800 3550 2    50   ~ 0
+Text Label 10050 2700 2    50   ~ 0
 Vout4
-Text Label 6800 3250 2    50   ~ 0
+Text Label 10050 2400 2    50   ~ 0
 Vout5
 Wire Wire Line
-	6800 3550 6600 3550
+	10050 2700 9850 2700
 Wire Wire Line
-	6800 3150 6600 3150
-NoConn ~ 6600 2750
-NoConn ~ 6600 3050
-$Comp
-L Device:R_Small R6
-U 1 1 602F9D9A
-P 1900 7150
-F 0 "R6" H 1850 7200 50  0000 R CNN
-F 1 "0" H 1850 7100 50  0000 R CNN
-F 2 "stdpads:R_0805" H 1900 7150 50  0001 C CNN
-F 3 "~" H 1900 7150 50  0001 C CNN
-F 4 "C17477" H 1900 7150 50  0001 C CNN "LCSC Part"
-	1    1900 7150
-	-1   0    0    -1  
-$EndComp
+	10050 2300 9850 2300
 Wire Wire Line
 	1900 7250 1900 7350
 Wire Wire Line
@@ -1997,40 +1923,26 @@ F 1 "74LVC245APW" H 3000 2200 50  0000 C CNN
 F 2 "stdpads:TSSOP-20_4.4x6.5mm_P0.65mm" H 3000 2150 50  0001 C TNN
 F 3 "" H 3000 2900 60  0001 C CNN
 F 4 "C6082" H 3000 2800 50  0001 C CNN "LCSC Part"
+F 5 "NXP 74LVC245APW, TI SN74LVC245APW" H 3000 2800 50  0001 C CNN "Mfg. Part Numbers"
 	1    3000 2800
 	1    0    0    -1  
 $EndComp
-Text Label 6800 6050 2    50   ~ 0
-DQMH
-Wire Wire Line
-	6600 5950 6800 5950
-Text Label 6800 5950 2    50   ~ 0
-RD2r
-Text Label 6800 5750 2    50   ~ 0
+Text Label 6800 5850 2    50   ~ 0
 RD0r
-Text Label 6800 5650 2    50   ~ 0
+Text Label 6800 5750 2    50   ~ 0
 RD7r
-Text Label 6800 5550 2    50   ~ 0
+Text Label 6800 5650 2    50   ~ 0
 RD6r
-Text Label 6800 5450 2    50   ~ 0
+Text Label 6800 5550 2    50   ~ 0
 RD5r
+Wire Wire Line
+	6600 5850 6800 5850
 Wire Wire Line
 	6600 5750 6800 5750
 Wire Wire Line
 	6600 5650 6800 5650
 Wire Wire Line
-	6600 5550 6800 5550
-Wire Wire Line
-	6800 5450 6600 5450
-Text Label 6800 5850 2    50   ~ 0
-DQML
-Wire Wire Line
-	6600 5850 6800 5850
-Wire Wire Line
-	6600 6050 6800 6050
-Wire Wire Line
-	5900 6450 6000 6450
-Connection ~ 5200 6450
+	6800 5550 6600 5550
 $Comp
 L Device:R_Pack04 RN1
 U 1 1 5E9DBDA3
@@ -2040,6 +1952,8 @@ F 1 "4x33" V 7000 5450 50  0000 C CNN
 F 2 "stdpads:R4_0402" V 7575 5450 50  0001 C CNN
 F 3 "~" H 7300 5450 50  0001 C CNN
 F 4 "C25501" H 7300 5450 50  0001 C CNN "LCSC Part"
+F 5 "Uniroyal 4D02WGJ0330TCE" H 7300 5450 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "Any manufacturer's part is acceptable." H 7300 5450 50  0001 C CNN "Notes"
 	1    7300 5450
 	0    -1   1    0   
 $EndComp
@@ -2068,6 +1982,8 @@ F 1 "22k" H 900 1950 50  0000 R CNN
 F 2 "stdpads:R_0805" H 950 2000 50  0001 C CNN
 F 3 "~" H 950 2000 50  0001 C CNN
 F 4 "C17560" H 950 2000 50  0001 C CNN "LCSC Part"
+F 5 "Uniroyal 0805W8F2202T5E" H 950 2000 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "Any manufacturer's part is acceptable." H 950 2000 50  0001 C CNN "Notes"
 	1    950  2000
 	-1   0    0    -1  
 $EndComp
@@ -2080,6 +1996,8 @@ F 1 "22k" H 1300 1950 50  0000 R CNN
 F 2 "stdpads:R_0805" H 1350 2000 50  0001 C CNN
 F 3 "~" H 1350 2000 50  0001 C CNN
 F 4 "C17560" H 1350 2000 50  0001 C CNN "LCSC Part"
+F 5 "Uniroyal 0805W8F2202T5E" H 1350 2000 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "Any manufacturer's part is acceptable." H 1350 2000 50  0001 C CNN "Notes"
 	1    1350 2000
 	-1   0    0    -1  
 $EndComp
@@ -2117,20 +2035,8 @@ Wire Wire Line
 	950  1800 1050 1800
 Text Label 1050 1800 0    50   ~ 0
 TCK
-$Comp
-L GW_PLD:5M240ZT100 U1
-U 1 1 5EF407E5
-P 5600 4050
-F 0 "U1" H 5550 6550 50  0000 C BNN
-F 1 "EPM240T100C5N" H 5550 6500 50  0000 C CNN
-F 2 "stdpads:TQFP-100_14x14mm_P0.5mm" H 6000 1700 50  0001 L CNN
-F 3 "https://www.altera.com/content/dam/altera-www/global/en_US/pdfs/literature/hb/max2/max2_mii5v1.pdf" H 5600 4050 50  0001 C CNN
-F 4 "C10041" H 5600 4050 50  0001 C CNN "LCSC Part"
-	1    5600 4050
-	1    0    0    -1  
-$EndComp
-NoConn ~ 6600 4250
-NoConn ~ 6600 4350
+NoConn ~ 6500 4350
+NoConn ~ 6500 4450
 $Comp
 L Mechanical:MountingHole_Pad H3
 U 1 1 5CC7E0B9
@@ -2139,6 +2045,7 @@ F 0 "H3" H 1400 6851 50  0000 L CNN
 F 1 " " H 1400 6760 50  0000 L CNN
 F 2 "stdpads:PasteHole_1.152mm_NPTH" H 1300 6800 50  0001 C CNN
 F 3 "~" H 1300 6800 50  0001 C CNN
+F 4 "DNP - mounting hole for solder paste printing" H 1300 6800 50  0001 C CNN "Notes"
 	1    1300 6800
 	1    0    0    -1  
 $EndComp
@@ -2150,6 +2057,7 @@ F 0 "H4" H 1700 6851 50  0000 L CNN
 F 1 " " H 1700 6760 50  0000 L CNN
 F 2 "stdpads:PasteHole_1.152mm_NPTH" H 1600 6800 50  0001 C CNN
 F 3 "~" H 1600 6800 50  0001 C CNN
+F 4 "DNP - mounting hole for solder paste printing" H 1600 6800 50  0001 C CNN "Notes"
 	1    1600 6800
 	1    0    0    -1  
 $EndComp
@@ -2161,12 +2069,13 @@ F 0 "H5" H 2000 6851 50  0000 L CNN
 F 1 " " H 2000 6760 50  0000 L CNN
 F 2 "stdpads:PasteHole_1.1mm_PTH" H 1900 6800 50  0001 C CNN
 F 3 "~" H 1900 6800 50  0001 C CNN
+F 4 "DNP - mounting hole" H 1900 6800 50  0001 C CNN "Notes"
 	1    1900 6800
 	1    0    0    -1  
 $EndComp
-NoConn ~ 6600 4850
-NoConn ~ 6600 4950
-NoConn ~ 6600 5050
+NoConn ~ 6500 4950
+NoConn ~ 6500 5050
+NoConn ~ 6500 5150
 Wire Wire Line
 	3750 2300 3700 2300
 Wire Wire Line
@@ -2198,6 +2107,8 @@ F 1 "10u" H 9050 900 50  0000 L CNN
 F 2 "stdpads:C_0805" H 9000 950 50  0001 C CNN
 F 3 "~" H 9000 950 50  0001 C CNN
 F 4 "C15850" H 9000 950 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL21A106KAYNNNE" H 9000 950 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 9000 950 50  0001 C CNN "Notes"
 	1    9000 950 
 	1    0    0    -1  
 $EndComp
@@ -2221,6 +2132,8 @@ F 1 "10u" H 8650 900 50  0000 L CNN
 F 2 "stdpads:C_0805" H 8600 950 50  0001 C CNN
 F 3 "~" H 8600 950 50  0001 C CNN
 F 4 "C15850" H 8600 950 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL21A106KAYNNNE" H 8600 950 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 8600 950 50  0001 C CNN "Notes"
 	1    8600 950 
 	1    0    0    -1  
 $EndComp
@@ -2237,11 +2150,12 @@ F 1 "XC6206P332MR" H 8150 1200 50  0000 C CNN
 F 2 "stdpads:SOT-23" H 8150 1150 50  0001 C TNN
 F 3 "" H 8150 1350 60  0001 C CNN
 F 4 "C5446" H 8150 1450 50  0001 C CNN "LCSC Part"
+F 5 "Torex XC6206P332MR" H 8150 1450 50  0001 C CNN "Mfg. Part Numbers"
 	1    8150 1450
 	1    0    0    -1  
 $EndComp
-NoConn ~ 6600 4450
-NoConn ~ 6600 4550
+NoConn ~ 6500 4550
+NoConn ~ 6500 4650
 Connection ~ 7700 1750
 $Comp
 L Device:C_Small C2
@@ -2252,6 +2166,8 @@ F 1 "10u" H 8650 1500 50  0000 L CNN
 F 2 "stdpads:C_0805" H 8600 1550 50  0001 C CNN
 F 3 "~" H 8600 1550 50  0001 C CNN
 F 4 "C15850" H 8600 1550 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL21A106KAYNNNE" H 8600 1550 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 8600 1550 50  0001 C CNN "Notes"
 	1    8600 1550
 	1    0    0    -1  
 $EndComp
@@ -2269,7 +2185,7 @@ Wire Wire Line
 	3400 2550 3600 2550
 NoConn ~ 3400 2650
 Connection ~ 2600 3250
-Text Label 6600 2950 0    50   ~ 0
+Text Label 9850 2100 0    50   ~ 0
 ~80VID~in
 $Comp
 L Device:C_Small C6
@@ -2280,6 +2196,8 @@ F 1 "10u" H 7450 900 50  0000 L CNN
 F 2 "stdpads:C_0805" H 7400 950 50  0001 C CNN
 F 3 "~" H 7400 950 50  0001 C CNN
 F 4 "C15850" H 7400 950 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL21A106KAYNNNE" H 7400 950 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 7400 950 50  0001 C CNN "Notes"
 	1    7400 950 
 	1    0    0    -1  
 $EndComp
@@ -2322,29 +2240,18 @@ Wire Wire Line
 	9000 750  8600 750 
 Wire Wire Line
 	8600 1150 8600 1050
-$Comp
-L power:+1V8 #PWR0128
-U 1 1 5F76BD3B
-P 5200 1650
-F 0 "#PWR0128" H 5200 1500 50  0001 C CNN
-F 1 "+1V8" H 5200 1800 50  0000 C CNN
-F 2 "" H 5200 1650 50  0001 C CNN
-F 3 "" H 5200 1650 50  0001 C CNN
-	1    5200 1650
-	1    0    0    -1  
-$EndComp
-Connection ~ 5200 1650
 Wire Wire Line
 	8600 1150 8150 1150
 $Comp
-L Regulator_Linear:AP2127K-1.8 U9
+L Regulator_Linear:AP2127K-1.2 U9
 U 1 1 5F6DD402
 P 8150 850
 F 0 "U9" H 8150 850 50  0000 C BNN
-F 1 "DNP" H 8150 1050 50  0000 C BNN
+F 1 "AP2127K-1.2TRG1" H 8150 1050 50  0000 C BNN
 F 2 "stdpads:SOT-23-5" H 8150 1175 50  0001 C CNN
-F 3 "https://www.diodes.com/assets/Datasheets/AP2127.pdf" H 8150 950 50  0001 C CNN
+F 3 "" H 8150 950 50  0001 C CNN
 F 4 "" H 8150 850 50  0001 C CNN "LCSC Part"
+F 5 "" H 8150 850 50  0001 C CNN "Mfg. Part Numbers"
 	1    8150 850 
 	1    0    0    -1  
 $EndComp
@@ -2360,29 +2267,6 @@ Wire Wire Line
 	8600 750  8450 750 
 Connection ~ 8600 750 
 Connection ~ 8600 1350
-$Comp
-L power:+1V8 #PWR0136
-U 1 1 5F9647F5
-P 8600 750
-F 0 "#PWR0136" H 8600 600 50  0001 C CNN
-F 1 "+1V8" H 8600 900 50  0000 C CNN
-F 2 "" H 8600 750 50  0001 C CNN
-F 3 "" H 8600 750 50  0001 C CNN
-	1    8600 750 
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+1V8 #PWR0137
-U 1 1 5F964E4B
-P 8600 3150
-F 0 "#PWR0137" H 8600 3000 50  0001 C CNN
-F 1 "+1V8" H 8600 3300 50  0000 C CNN
-F 2 "" H 8600 3150 50  0001 C CNN
-F 3 "" H 8600 3150 50  0001 C CNN
-	1    8600 3150
-	1    0    0    -1  
-$EndComp
-Connection ~ 8600 3150
 Connection ~ 9000 1150
 Connection ~ 9000 1750
 Connection ~ 9000 750 
@@ -2391,10 +2275,12 @@ L Device:R_Small R1
 U 1 1 5FA85B84
 P 9100 750
 F 0 "R1" V 9050 750 50  0000 C BNN
-F 1 "0" V 9150 750 50  0000 C TNN
+F 1 "0 " V 9150 750 50  0000 C TNN
 F 2 "stdpads:R_0805" H 9100 750 50  0001 C CNN
 F 3 "~" H 9100 750 50  0001 C CNN
 F 4 "C17477" V 9100 750 50  0001 C CNN "LCSC Part"
+F 5 "Uniroyal 0805W8F2202T5E" H 9100 750 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "Any manufacturer's part is acceptable." H 9100 750 50  0001 C CNN "Notes"
 	1    9100 750 
 	0    1    1    0   
 $EndComp
@@ -2420,6 +2306,8 @@ F 1 "4x33" V 3800 1850 50  0000 C CNN
 F 2 "stdpads:R4_0402" V 3875 1850 50  0001 C CNN
 F 3 "~" H 3600 1850 50  0001 C CNN
 F 4 "C25501" H 3600 1850 50  0001 C CNN "LCSC Part"
+F 5 "Uniroyal 4D02WGJ0330TCE" H 3600 1850 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "Any manufacturer's part is acceptable." H 3600 1850 50  0001 C CNN "Notes"
 	1    3600 1850
 	0    1    1    0   
 $EndComp
@@ -2432,6 +2320,8 @@ F 1 "4x33" V 3300 1450 50  0000 C CNN
 F 2 "stdpads:R4_0402" V 3875 1450 50  0001 C CNN
 F 3 "~" H 3600 1450 50  0001 C CNN
 F 4 "C25501" H 3600 1450 50  0001 C CNN "LCSC Part"
+F 5 "Uniroyal 4D02WGJ0330TCE" H 3600 1450 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "Any manufacturer's part is acceptable." H 3600 1450 50  0001 C CNN "Notes"
 	1    3600 1450
 	0    1    1    0   
 $EndComp
@@ -2450,6 +2340,8 @@ F 1 "47" V 4100 2750 50  0000 C CNN
 F 2 "stdpads:R_0603" H 3950 2750 50  0001 C CNN
 F 3 "~" H 3950 2750 50  0001 C CNN
 F 4 "C23182" V 3950 2750 50  0001 C CNN "LCSC Part"
+F 5 "Any manufacturer's part is acceptable." H 3950 2750 50  0001 C CNN "Notes"
+F 6 "Uniroyal 0603WAF470JT5E" H 3950 2750 50  0001 C CNN "Mfg. Part Numbers"
 	1    3950 2750
 	0    1    1    0   
 $EndComp
@@ -2463,6 +2355,7 @@ F 0 "J3" H 1050 1250 50  0000 C CNN
 F 1 "C14M" H 1050 950 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1050 1150 50  0001 C CNN
 F 3 "~" H 1050 1150 50  0001 C CNN
+F 4 "DNP" H 1050 1150 50  0001 C CNN "Notes"
 	1    1050 1150
 	-1   0    0    -1  
 $EndComp
@@ -2490,6 +2383,8 @@ F 1 "47" V 2300 2450 50  0000 C TNN
 F 2 "stdpads:R_0603" H 2250 2450 50  0001 C CNN
 F 3 "~" H 2250 2450 50  0001 C CNN
 F 4 "C23182" V 2250 2450 50  0001 C CNN "LCSC Part"
+F 5 "Any manufacturer's part is acceptable." H 2250 2450 50  0001 C CNN "Notes"
+F 6 "Uniroyal 0603WAF470JT5E" H 2250 2450 50  0001 C CNN "Mfg. Part Numbers"
 	1    2250 2450
 	0    1    -1   0   
 $EndComp
@@ -2510,6 +2405,221 @@ Wire Wire Line
 	2600 2450 2500 2450
 Wire Wire Line
 	2500 2450 2500 2650
+$Comp
+L Device:R_Small R6
+U 1 1 602F9D9A
+P 1900 7150
+F 0 "R6" H 1850 7200 50  0000 R CNN
+F 1 "0" H 1850 7100 50  0000 R CNN
+F 2 "stdpads:R_0805" H 1900 7150 50  0001 C CNN
+F 3 "~" H 1900 7150 50  0001 C CNN
+F 4 "C17477" H 1900 7150 50  0001 C CNN "LCSC Part"
+F 5 "Uniroyal 0805W8F2202T5E" H 1900 7150 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "Any manufacturer's part is acceptable." H 1900 7150 50  0001 C CNN "Notes"
+	1    1900 7150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0113
+U 1 1 5F2D98D8
+P 5150 6450
+F 0 "#PWR0113" H 5150 6200 50  0001 C CNN
+F 1 "GND" H 5150 6300 50  0000 C CNN
+F 2 "" H 5150 6450 50  0001 C CNN
+F 3 "" H 5150 6450 50  0001 C CNN
+	1    5150 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 6450 5250 6450
+$Comp
+L GW_PLD:LCMXO256-TQFP-100 U1
+U 1 1 6094DB04
+P 5550 4050
+F 0 "U1" H 5550 1561 50  0000 C CNN
+F 1 "LCMXO256-TQFP-100" H 5550 1477 40  0000 C CNN
+F 2 "stdpads:TQFP-100" H 5550 3950 40  0001 C CNN
+F 3 "" H 5550 4150 50  0001 C CNN
+	1    5550 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 5550 4300 5550
+Text Label 4300 5550 0    50   ~ 0
+V~OE~
+Text Label 4500 5650 2    50   ~ 0
+R~W~in
+Text Label 4300 5150 0    50   ~ 0
+Ain4
+Text Label 4300 5250 0    50   ~ 0
+Ain3
+Text Label 4300 5050 0    50   ~ 0
+Ain2
+Wire Wire Line
+	4300 5150 4500 5150
+Wire Wire Line
+	4300 5250 4500 5250
+Wire Wire Line
+	4300 5050 4500 5050
+Wire Wire Line
+	4300 4350 4500 4350
+Wire Wire Line
+	4300 4250 4500 4250
+Text Label 4300 4250 0    50   ~ 0
+Din7
+Text Label 4300 4350 0    50   ~ 0
+Din6
+Text Label 4300 4950 0    50   ~ 0
+Din2
+Text Label 4300 4850 0    50   ~ 0
+Din3
+Wire Wire Line
+	4300 4850 4500 4850
+Wire Wire Line
+	4300 4950 4500 4950
+Wire Wire Line
+	4300 5350 4500 5350
+Wire Wire Line
+	4300 5450 4500 5450
+Text Label 4300 5450 0    50   ~ 0
+Din5
+Text Label 4300 5350 0    50   ~ 0
+Din4
+Text Label 4300 4550 0    50   ~ 0
+Din0
+Text Label 4300 4750 0    50   ~ 0
+Din1
+Wire Wire Line
+	4300 4750 4500 4750
+Wire Wire Line
+	4300 4550 4500 4550
+Text Label 4500 4650 2    50   ~ 0
+Ain6
+Text Label 4500 4150 2    50   ~ 0
+Ain5
+Text Label 4500 4450 2    50   ~ 0
+PHI1in
+Text Label 4500 4050 2    50   ~ 0
+R~W~80in
+Text Label 4500 3750 2    50   ~ 0
+~EN80~in
+Text Label 6500 3350 0    50   ~ 0
+RA10
+Text Label 6500 3050 0    50   ~ 0
+ACLK
+Text Label 6500 2550 0    50   ~ 0
+RA11
+Text Label 6500 2250 0    50   ~ 0
+CKE
+Connection ~ 5150 6450
+Connection ~ 5250 6450
+Wire Wire Line
+	5250 6450 5350 6450
+Connection ~ 5350 6450
+Wire Wire Line
+	5350 6450 5450 6450
+Connection ~ 5450 6450
+Wire Wire Line
+	5450 6450 5550 6450
+Connection ~ 5550 6450
+Wire Wire Line
+	5550 6450 5650 6450
+Connection ~ 5650 6450
+Wire Wire Line
+	5650 6450 5750 6450
+Connection ~ 5750 6450
+Wire Wire Line
+	5750 6450 5850 6450
+Wire Wire Line
+	5350 1650 5450 1650
+Connection ~ 5450 1650
+Wire Wire Line
+	5450 1650 5550 1650
+Connection ~ 5550 1650
+Wire Wire Line
+	5550 1650 5650 1650
+Connection ~ 5650 1650
+Wire Wire Line
+	5650 1650 5750 1650
+Wire Wire Line
+	5850 1650 5950 1650
+Wire Wire Line
+	5150 1650 5250 1650
+Wire Wire Line
+	5250 1650 5350 1650
+Connection ~ 5250 1650
+Connection ~ 5350 1650
+$Comp
+L power:+1V2 #PWR0128
+U 1 1 60C40167
+P 5850 1650
+F 0 "#PWR0128" H 5850 1500 50  0001 C CNN
+F 1 "+1V2" H 5850 1800 50  0000 C CNN
+F 2 "" H 5850 1650 50  0001 C CNN
+F 3 "" H 5850 1650 50  0001 C CNN
+	1    5850 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0136
+U 1 1 60C40FE4
+P 5150 1650
+F 0 "#PWR0136" H 5150 1500 50  0001 C CNN
+F 1 "+3V3" H 5165 1823 50  0000 C CNN
+F 2 "" H 5150 1650 50  0001 C CNN
+F 3 "" H 5150 1650 50  0001 C CNN
+	1    5150 1650
+	1    0    0    -1  
+$EndComp
+Connection ~ 5150 1650
+Connection ~ 5850 1650
+Text Label 6700 4250 2    50   ~ 0
+DQMH
+Wire Wire Line
+	6600 5950 6800 5950
+Text Label 6800 5950 2    50   ~ 0
+RD2r
+Text Label 6700 4150 2    50   ~ 0
+DQML
+Wire Wire Line
+	6500 4150 6700 4150
+Wire Wire Line
+	6500 4250 6700 4250
+$Comp
+L power:GND #PWR?
+U 1 1 6094BA81
+P 6800 1950
+F 0 "#PWR?" H 6800 1700 50  0001 C CNN
+F 1 "GND" H 6800 1800 50  0000 C CNN
+F 2 "" H 6800 1950 50  0001 C CNN
+F 3 "" H 6800 1950 50  0001 C CNN
+	1    6800 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 1950 6500 1950
+$Comp
+L power:+1V2 #PWR?
+U 1 1 60CC99DE
+P 8600 3150
+F 0 "#PWR?" H 8600 3000 50  0001 C CNN
+F 1 "+1V2" H 8600 3300 50  0000 C CNN
+F 2 "" H 8600 3150 50  0001 C CNN
+F 3 "" H 8600 3150 50  0001 C CNN
+	1    8600 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+1V2 #PWR?
+U 1 1 60D524FA
+P 8600 750
+F 0 "#PWR?" H 8600 600 50  0001 C CNN
+F 1 "+1V2" H 8600 900 50  0000 C CNN
+F 2 "" H 8600 750 50  0001 C CNN
+F 3 "" H 8600 750 50  0001 C CNN
+	1    8600 750 
+	1    0    0    -1  
+$EndComp
 Wire Bus Line
 	8200 4250 8200 5350
 $EndSCHEMATC
