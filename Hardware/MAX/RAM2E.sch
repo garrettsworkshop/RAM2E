@@ -1508,7 +1508,7 @@ Wire Wire Line
 Wire Wire Line
 	6900 5450 7100 5450
 Wire Wire Line
-	7100 5250 6900 5250
+	7100 6050 6900 6050
 Wire Wire Line
 	7100 5350 6900 5350
 $Comp
@@ -1616,7 +1616,7 @@ Wire Wire Line
 	5900 1650 5800 1650
 Wire Wire Line
 	3600 3250 3400 3250
-Text Label 6900 5250 0    50   ~ 0
+Text Label 6900 6050 0    50   ~ 0
 RD7r
 Text Label 6900 5350 0    50   ~ 0
 RD1r
@@ -1642,14 +1642,14 @@ Wire Wire Line
 	6900 5750 7100 5750
 Text Label 6900 5750 0    50   ~ 0
 RD4r
-Text Label 6900 6050 0    50   ~ 0
+Text Label 6900 5250 0    50   ~ 0
 RD0r
 Text Label 6900 5950 0    50   ~ 0
 RD6r
 Text Label 6900 5850 0    50   ~ 0
 RD5r
 Wire Wire Line
-	7100 6050 6900 6050
+	7100 5250 6900 5250
 Wire Wire Line
 	7100 5950 6900 5950
 Wire Wire Line
@@ -2063,18 +2063,18 @@ Wire Wire Line
 	6600 5950 6800 5950
 Text Label 6800 5950 2    50   ~ 0
 RD2r
-Text Label 6800 5750 2    50   ~ 0
-RD0r
 Text Label 6800 5650 2    50   ~ 0
+RD0r
+Text Label 6800 5750 2    50   ~ 0
 RD7r
 Text Label 6800 5550 2    50   ~ 0
 RD6r
 Text Label 6800 5450 2    50   ~ 0
 RD5r
 Wire Wire Line
-	6600 5750 6800 5750
-Wire Wire Line
 	6600 5650 6800 5650
+Wire Wire Line
+	6600 5750 6800 5750
 Wire Wire Line
 	6600 5550 6800 5550
 Wire Wire Line
@@ -2601,17 +2601,17 @@ F 6 "Any manufacturer's part is acceptable." H 1900 7150 50  0001 C CNN "Notes"
 	1    1900 7150
 	-1   0    0    -1  
 $EndComp
-Wire Bus Line
-	8200 4250 8200 5350
 $Comp
-L power:+1V8 #PWR?
+L power:+1V8 #PWR0136
 U 1 1 60997BFF
 P 8600 750
-F 0 "#PWR?" H 8600 600 50  0001 C CNN
+F 0 "#PWR0136" H 8600 600 50  0001 C CNN
 F 1 "+1V8" H 8600 900 50  0000 C CNN
 F 2 "" H 8600 750 50  0001 C CNN
 F 3 "" H 8600 750 50  0001 C CNN
 	1    8600 750 
 	1    0    0    -1  
 $EndComp
+Wire Bus Line
+	8200 4250 8200 5350
 $EndSCHEMATC
