@@ -362,19 +362,6 @@ F 3 "" H 3400 1050 50  0001 C CNN
 	1    3400 1050
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR0104
-U 1 1 5E9BEAE2
-P 3600 850
-F 0 "#PWR0104" H 3600 600 50  0001 C CNN
-F 1 "GND" H 3600 700 50  0000 C CNN
-F 2 "" H 3600 850 50  0001 C CNN
-F 3 "" H 3600 850 50  0001 C CNN
-	1    3600 850 
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3500 850  3600 850 
 Wire Wire Line
 	3400 1150 3500 1150
 Text Label 9700 3850 2    50   ~ 0
@@ -537,13 +524,13 @@ Wire Wire Line
 Connection ~ 8500 3850
 Wire Wire Line
 	8500 5150 8300 5150
-Text Label 3800 1350 0    50   ~ 0
+Text Label 3400 1350 0    50   ~ 0
 ~C07X~in
 Text Label 3400 2950 0    50   ~ 0
 R~W~80in
 Text Label 3400 2850 0    50   ~ 0
 ~EN80~in
-Text Label 3800 1250 0    50   ~ 0
+Text Label 3400 1250 0    50   ~ 0
 R~W~in
 Text Label 3400 3150 0    50   ~ 0
 PHI1in
@@ -930,35 +917,35 @@ Text Label 2600 2750 2    50   ~ 0
 Text Label 2600 2850 2    50   ~ 0
 R~W~80
 Wire Wire Line
-	4000 1750 3800 1750
+	3600 1750 3400 1750
 Wire Wire Line
-	4000 1950 3800 1950
+	3600 1950 3400 1950
 Wire Wire Line
-	4000 1850 3800 1850
+	3600 1850 3400 1850
 Wire Wire Line
 	3600 3050 3400 3050
 Wire Wire Line
-	4000 1450 3800 1450
-Text Label 4000 1750 2    50   ~ 0
+	3600 1450 3400 1450
+Text Label 3600 1750 2    50   ~ 0
 Ain2
-Text Label 4000 1950 2    50   ~ 0
+Text Label 3600 1950 2    50   ~ 0
 Ain3
 Text Label 3600 3250 2    50   ~ 0
 Ain6
-Text Label 4000 1850 2    50   ~ 0
+Text Label 3600 1850 2    50   ~ 0
 Ain4
 Text Label 3600 3050 2    50   ~ 0
 Ain5
-Text Label 4000 1450 2    50   ~ 0
+Text Label 3600 1450 2    50   ~ 0
 Ain7
 Wire Wire Line
-	4000 1550 3800 1550
-Text Label 4000 1650 2    50   ~ 0
+	3600 1550 3400 1550
+Text Label 3600 1650 2    50   ~ 0
 Ain0
-Text Label 4000 1550 2    50   ~ 0
+Text Label 3600 1550 2    50   ~ 0
 Ain1
 Wire Wire Line
-	4000 1650 3800 1650
+	3600 1650 3400 1650
 Text Label 2600 1150 2    50   ~ 0
 R~W~
 Text Label 2600 1250 2    50   ~ 0
@@ -1298,24 +1285,6 @@ Connection ~ 8200 1950
 Connection ~ 8200 2150
 Connection ~ 8200 2350
 Connection ~ 8200 2550
-Text Label 7700 5250 2    50   ~ 0
-RD0
-Text Label 7700 6050 2    50   ~ 0
-RD7
-Text Label 7700 5850 2    50   ~ 0
-RD5
-Text Label 7700 5750 2    50   ~ 0
-RD4
-Text Label 7700 5450 2    50   ~ 0
-RD2
-Text Label 7700 5350 2    50   ~ 0
-RD1
-Text Label 7700 5950 2    50   ~ 0
-RD6
-Wire Wire Line
-	7500 5850 7700 5850
-Text Label 7700 5550 2    50   ~ 0
-RD3
 $Comp
 L power:GND #PWR0108
 U 1 1 603045A0
@@ -1443,8 +1412,6 @@ Text Label 4600 2750 2    50   ~ 0
 BA1
 Text Label 4600 2650 2    50   ~ 0
 ACLK
-Text Label 4150 2300 0    50   ~ 0
-RCLK
 Text Label 4600 2850 2    50   ~ 0
 RA9
 Text Label 4600 2950 2    50   ~ 0
@@ -1477,40 +1444,6 @@ Text Label 4600 4150 2    50   ~ 0
 Ain5
 Text Label 4600 4650 2    50   ~ 0
 Ain6
-$Comp
-L Device:R_Pack04 RN2
-U 1 1 5EA17AFE
-P 7300 5950
-F 0 "RN2" V 7000 5950 50  0000 C CNN
-F 1 "4x33" V 7500 5950 50  0000 C CNN
-F 2 "stdpads:R4_0402" V 7575 5950 50  0001 C CNN
-F 3 "~" H 7300 5950 50  0001 C CNN
-F 4 "C25501" H 7300 5950 50  0001 C CNN "LCSC Part"
-F 5 "Uniroyal 4D02WGJ0330TCE" H 7300 5950 50  0001 C CNN "Mfg. Part Numbers"
-F 6 "Any manufacturer's part is acceptable." H 7300 5950 50  0001 C CNN "Notes"
-	1    7300 5950
-	0    -1   1    0   
-$EndComp
-Wire Wire Line
-	7700 5350 7500 5350
-Wire Wire Line
-	7700 5250 7500 5250
-Wire Wire Line
-	7700 6050 7500 6050
-Wire Wire Line
-	7700 5950 7500 5950
-Wire Wire Line
-	7700 5750 7500 5750
-Wire Wire Line
-	7700 5450 7500 5450
-Wire Wire Line
-	7700 5550 7500 5550
-Wire Wire Line
-	6900 5450 7100 5450
-Wire Wire Line
-	7100 6050 6900 6050
-Wire Wire Line
-	7100 5350 6900 5350
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J2
 U 1 1 5EC5BECD
@@ -1616,63 +1549,15 @@ Wire Wire Line
 	5900 1650 5800 1650
 Wire Wire Line
 	3600 3250 3400 3250
-Text Label 6900 6050 0    50   ~ 0
-RD7r
-Text Label 6900 5350 0    50   ~ 0
-RD1r
 Wire Wire Line
 	6800 5150 6600 5150
 Wire Wire Line
 	6800 5250 6600 5250
-Text Label 6800 5150 2    50   ~ 0
-RD3r
-Text Label 6800 5250 2    50   ~ 0
-RD1r
-Text Label 6800 5350 2    50   ~ 0
-RD4r
 Wire Wire Line
 	6800 5350 6600 5350
-Text Label 6900 5450 0    50   ~ 0
-RD2r
-Text Label 6900 5550 0    50   ~ 0
-RD3r
-Wire Wire Line
-	6900 5550 7100 5550
-Wire Wire Line
-	6900 5750 7100 5750
-Text Label 6900 5750 0    50   ~ 0
-RD4r
-Text Label 6900 5250 0    50   ~ 0
-RD0r
-Text Label 6900 5950 0    50   ~ 0
-RD6r
-Text Label 6900 5850 0    50   ~ 0
-RD5r
-Wire Wire Line
-	7100 5250 6900 5250
-Wire Wire Line
-	7100 5950 6900 5950
-Wire Wire Line
-	6900 5850 7100 5850
 Connection ~ 5900 1650
 Wire Wire Line
 	5200 1650 5300 1650
-Text Label 4150 2600 0    50   ~ 0
-ACLK
-$Comp
-L Device:R_Pack04 RN3
-U 1 1 5F475CD8
-P 3950 2500
-F 0 "RN3" V 3600 2500 50  0000 C BNN
-F 1 "4x33" V 3650 2500 50  0000 C CNN
-F 2 "stdpads:R4_0402" V 4225 2500 50  0001 C CNN
-F 3 "~" H 3950 2500 50  0001 C CNN
-F 4 "C25501" H 3950 2500 50  0001 C CNN "LCSC Part"
-F 5 "Uniroyal 4D02WGJ0330TCE" H 3950 2500 50  0001 C CNN "Mfg. Part Numbers"
-F 6 "Any manufacturer's part is acceptable." H 3950 2500 50  0001 C CNN "Notes"
-	1    3950 2500
-	0    1    1    0   
-$EndComp
 Text Label 2400 6850 0    50   ~ 0
 MD0
 Text Label 2400 6750 0    50   ~ 0
@@ -1948,20 +1833,8 @@ Wire Wire Line
 	4400 5150 4600 5150
 Wire Wire Line
 	6800 2150 6600 2150
-Text Label 4400 5050 0    50   ~ 0
-Ain2
-Text Label 4400 5250 0    50   ~ 0
-Ain3
-Text Label 4400 5150 0    50   ~ 0
-Ain4
-Text Label 6800 2150 2    50   ~ 0
-Ain7
 Wire Wire Line
 	6800 2250 6600 2250
-Text Label 6800 2450 2    50   ~ 0
-Ain0
-Text Label 6800 2250 2    50   ~ 0
-Ain1
 Wire Wire Line
 	6800 2450 6600 2450
 Text Label 6800 2350 2    50   ~ 0
@@ -2061,16 +1934,6 @@ Text Label 6800 6050 2    50   ~ 0
 DQMH
 Wire Wire Line
 	6600 5950 6800 5950
-Text Label 6800 5950 2    50   ~ 0
-RD2r
-Text Label 6800 5650 2    50   ~ 0
-RD0r
-Text Label 6800 5750 2    50   ~ 0
-RD7r
-Text Label 6800 5550 2    50   ~ 0
-RD6r
-Text Label 6800 5450 2    50   ~ 0
-RD5r
 Wire Wire Line
 	6600 5650 6800 5650
 Wire Wire Line
@@ -2088,20 +1951,6 @@ Wire Wire Line
 Wire Wire Line
 	5900 6450 6000 6450
 Connection ~ 5200 6450
-$Comp
-L Device:R_Pack04 RN1
-U 1 1 5E9DBDA3
-P 7300 5450
-F 0 "RN1" V 6950 5450 50  0000 C BNN
-F 1 "4x33" V 7000 5450 50  0000 C CNN
-F 2 "stdpads:R4_0402" V 7575 5450 50  0001 C CNN
-F 3 "~" H 7300 5450 50  0001 C CNN
-F 4 "C25501" H 7300 5450 50  0001 C CNN "LCSC Part"
-F 5 "Uniroyal 4D02WGJ0330TCE" H 7300 5450 50  0001 C CNN "Mfg. Part Numbers"
-F 6 "Any manufacturer's part is acceptable." H 7300 5450 50  0001 C CNN "Notes"
-	1    7300 5450
-	0    -1   1    0   
-$EndComp
 $Comp
 L Device:R_Small R7
 U 1 1 5E94455C
@@ -2234,17 +2083,6 @@ $EndComp
 NoConn ~ 6600 4850
 NoConn ~ 6600 4950
 NoConn ~ 6600 5050
-Wire Wire Line
-	3750 2300 3700 2300
-Wire Wire Line
-	3700 2600 3750 2600
-NoConn ~ 4150 2400
-NoConn ~ 4150 2500
-NoConn ~ 3750 2400
-NoConn ~ 3750 2500
-Wire Wire Line
-	3650 2600 3700 2600
-Connection ~ 3700 2600
 $Comp
 L power:GND #PWR0146
 U 1 1 5FAF09E9
@@ -2337,10 +2175,6 @@ Wire Wire Line
 	9000 1350 8600 1350
 Wire Wire Line
 	8600 1750 8600 1650
-Wire Wire Line
-	3600 2550 3650 2600
-Wire Wire Line
-	3400 2550 3600 2550
 NoConn ~ 3400 2650
 Connection ~ 2600 3250
 Text Label 6600 2950 0    50   ~ 0
@@ -2479,56 +2313,24 @@ F 3 "" H 9300 750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9300 750  9200 750 
-$Comp
-L Device:R_Pack04 RN5
-U 1 1 5F6F2814
-P 3600 1850
-F 0 "RN5" V 3900 1850 50  0000 C BNN
-F 1 "4x33" V 3800 1850 50  0000 C CNN
-F 2 "stdpads:R4_0402" V 3875 1850 50  0001 C CNN
-F 3 "~" H 3600 1850 50  0001 C CNN
-F 4 "C25501" H 3600 1850 50  0001 C CNN "LCSC Part"
-F 5 "Uniroyal 4D02WGJ0330TCE" H 3600 1850 50  0001 C CNN "Mfg. Part Numbers"
-F 6 "Any manufacturer's part is acceptable." H 3600 1850 50  0001 C CNN "Notes"
-	1    3600 1850
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Pack04 RN4
-U 1 1 5F68B09A
-P 3600 1450
-F 0 "RN4" V 3250 1450 50  0000 C BNN
-F 1 "4x33" V 3300 1450 50  0000 C CNN
-F 2 "stdpads:R4_0402" V 3875 1450 50  0001 C CNN
-F 3 "~" H 3600 1450 50  0001 C CNN
-F 4 "C25501" H 3600 1450 50  0001 C CNN "LCSC Part"
-F 5 "Uniroyal 4D02WGJ0330TCE" H 3600 1450 50  0001 C CNN "Mfg. Part Numbers"
-F 6 "Any manufacturer's part is acceptable." H 3600 1450 50  0001 C CNN "Notes"
-	1    3600 1450
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3500 850  3500 1150
 Wire Wire Line
 	3500 2350 3500 2450
-Wire Wire Line
-	3700 2300 3700 2600
 $Comp
 L Device:R_Small R3
 U 1 1 6081D682
-P 3950 2750
-F 0 "R3" V 4000 2750 50  0000 C TNN
-F 1 "47" V 4100 2750 50  0000 C CNN
-F 2 "stdpads:R_0603" H 3950 2750 50  0001 C CNN
-F 3 "~" H 3950 2750 50  0001 C CNN
-F 4 "C23182" V 3950 2750 50  0001 C CNN "LCSC Part"
-F 5 "Any manufacturer's part is acceptable." H 3950 2750 50  0001 C CNN "Notes"
-F 6 "Uniroyal 0603WAF470JT5E" H 3950 2750 50  0001 C CNN "Mfg. Part Numbers"
-	1    3950 2750
-	0    1    1    0   
+P 3850 2850
+F 0 "R3" V 3900 2850 50  0000 C TNN
+F 1 "47" V 4000 2850 50  0000 C CNN
+F 2 "stdpads:R_0603" H 3850 2850 50  0001 C CNN
+F 3 "~" H 3850 2850 50  0001 C CNN
+F 4 "C23182" V 3850 2850 50  0001 C CNN "LCSC Part"
+F 5 "Any manufacturer's part is acceptable." H 3850 2850 50  0001 C CNN "Notes"
+F 6 "Uniroyal 0603WAF470JT5E" H 3850 2850 50  0001 C CNN "Mfg. Part Numbers"
+	1    3850 2850
+	0    1    -1   0   
 $EndComp
 Wire Wire Line
-	3400 2750 3850 2750
+	3400 2750 3750 2750
 $Comp
 L Connector_Generic:Conn_01x02 J3
 U 1 1 608879CA
@@ -2554,8 +2356,6 @@ F 3 "" H 1250 1250 50  0001 C CNN
 	1    1250 1250
 	1    0    0    -1  
 $EndComp
-Text Label 4050 2750 0    50   ~ 0
-C14MB
 $Comp
 L Device:R_Small R2
 U 1 1 6088A353
@@ -2612,6 +2412,90 @@ F 3 "" H 8600 750 50  0001 C CNN
 	1    8600 750 
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 60AFB4BD
+P 3850 2250
+F 0 "R4" V 3900 2250 50  0000 C TNN
+F 1 "47" V 4000 2250 50  0000 C CNN
+F 2 "stdpads:R_0603" H 3850 2250 50  0001 C CNN
+F 3 "~" H 3850 2250 50  0001 C CNN
+F 4 "C23182" V 3850 2250 50  0001 C CNN "LCSC Part"
+F 5 "Any manufacturer's part is acceptable." H 3850 2250 50  0001 C CNN "Notes"
+F 6 "Uniroyal 0603WAF470JT5E" H 3850 2250 50  0001 C CNN "Mfg. Part Numbers"
+	1    3850 2250
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 60AFB1EC
+P 3850 2550
+F 0 "R5" V 3900 2550 50  0000 C TNN
+F 1 "47" V 4000 2550 50  0000 C CNN
+F 2 "stdpads:R_0603" H 3850 2550 50  0001 C CNN
+F 3 "~" H 3850 2550 50  0001 C CNN
+F 4 "C23182" V 3850 2550 50  0001 C CNN "LCSC Part"
+F 5 "Any manufacturer's part is acceptable." H 3850 2550 50  0001 C CNN "Notes"
+F 6 "Uniroyal 0603WAF470JT5E" H 3850 2550 50  0001 C CNN "Mfg. Part Numbers"
+	1    3850 2550
+	0    1    -1   0   
+$EndComp
+Text Label 3950 2850 0    50   ~ 0
+C14MB
+Wire Wire Line
+	3750 2250 3750 2550
+Text Label 3950 2550 0    50   ~ 0
+ACLK
+Text Label 3950 2250 0    50   ~ 0
+RCLK
+Wire Wire Line
+	3400 2550 3750 2550
+Connection ~ 3750 2550
+Wire Wire Line
+	3750 2750 3750 2850
+Text Label 6800 2250 2    50   ~ 0
+Ain1
+Text Label 4400 5250 0    50   ~ 0
+Ain3
+Text Label 4400 5150 0    50   ~ 0
+Ain4
+Text Label 6800 2450 2    50   ~ 0
+Ain0
+Text Label 4400 5050 0    50   ~ 0
+Ain2
+$Comp
+L power:GND #PWR0104
+U 1 1 5E9BEAE2
+P 3600 950
+F 0 "#PWR0104" H 3600 700 50  0001 C CNN
+F 1 "GND" H 3600 800 50  0000 C CNN
+F 2 "" H 3600 950 50  0001 C CNN
+F 3 "" H 3600 950 50  0001 C CNN
+	1    3600 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 950  3600 950 
+Wire Wire Line
+	3500 950  3500 1150
+Text Label 6800 5150 2    50   ~ 0
+RD3
+Text Label 6800 5250 2    50   ~ 0
+RD1
+Text Label 6800 5350 2    50   ~ 0
+RD4
+Text Label 6800 5450 2    50   ~ 0
+RD5
+Text Label 6800 5550 2    50   ~ 0
+RD6
+Text Label 6800 5650 2    50   ~ 0
+RD0
+Text Label 6800 5750 2    50   ~ 0
+RD7
+Text Label 6800 5950 2    50   ~ 0
+RD2
+Text Label 6800 2150 2    50   ~ 0
+Ain7
 Wire Bus Line
 	8200 4250 8200 5350
 $EndSCHEMATC
