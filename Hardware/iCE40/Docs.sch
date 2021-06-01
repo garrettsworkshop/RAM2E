@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 2
-Title "GW4203B (RAM2E II)"
-Date "2020-12-25"
-Rev "1.3"
+Title "GW4203B (RAM2E II) - iCE40HX1K"
+Date "2021-05-30"
+Rev "2.0"
 Comp "Garrett's Workshop"
 Comment1 ""
 Comment2 ""
