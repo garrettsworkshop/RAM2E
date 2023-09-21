@@ -1,0 +1,183 @@
+<HTML>
+<HEAD><TITLE>I/O Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Top"></A><B><U><big>I/O Timing Report</big></U></B>
+Loading design for application iotiming from file ram2e_lcmxo2_640hc_impl1.ncd.
+Design name: RAM2E
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-640HC
+Package:     TQFP100
+Performance: 5
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+Loading design for application iotiming from file ram2e_lcmxo2_640hc_impl1.ncd.
+Design name: RAM2E
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-640HC
+Package:     TQFP100
+Performance: 6
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+Loading design for application iotiming from file ram2e_lcmxo2_640hc_impl1.ncd.
+Design name: RAM2E
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-640HC
+Package:     TQFP100
+Performance: M
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+// Design: RAM2E
+// Package: TQFP100
+// ncd File: ram2e_lcmxo2_640hc_impl1.ncd
+// Version: Diamond (64-bit) 3.12.1.454
+// Written on Thu Sep 21 05:35:10 2023
+// M: Minimum Performance Grade
+// iotiming RAM2E_LCMXO2_640HC_impl1.ncd RAM2E_LCMXO2_640HC_impl1.prf -gui -msgset //Mac/iCloud/Repos/RAM2E/CPLD/LCMXO2-640HC/promote.xml
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 6, 5, 4):
+
+// Input Setup and Hold Times
+
+Port   Clock Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+Ain[0] C14M  R     0.502      4       0.868     4
+Ain[1] C14M  R     2.364      4      -0.126     M
+Ain[2] C14M  R     2.421      4      -0.129     M
+Ain[3] C14M  R     0.574      4       0.786     4
+Ain[4] C14M  R     1.452      4       0.140     M
+Ain[5] C14M  R     2.076      4      -0.039     M
+Ain[6] C14M  R     1.515      4       0.124     M
+Ain[7] C14M  R     2.270      4      -0.095     M
+Din[0] C14M  R     9.252      4       1.162     4
+Din[1] C14M  R     8.868      4       0.657     4
+Din[2] C14M  R     8.368      4       0.864     4
+Din[3] C14M  R     8.749      4       1.339     4
+Din[4] C14M  R     9.095      4       0.770     4
+Din[5] C14M  R     8.195      4       1.176     4
+Din[6] C14M  R     6.162      4       0.760     4
+Din[7] C14M  R     7.060      4       1.093     4
+PHI1   C14M  R     2.045      4       3.047     4
+RD[0]  C14M  F     0.267      4       0.866     4
+RD[1]  C14M  F     0.173      4       1.383     4
+RD[2]  C14M  F     0.924      4       1.018     4
+RD[3]  C14M  F     0.267      4       0.866     4
+RD[4]  C14M  F     0.173      4       0.937     4
+RD[5]  C14M  F     0.267      4       0.866     4
+RD[6]  C14M  F     0.766      4       0.866     4
+RD[7]  C14M  F     0.267      4       1.312     4
+nC07X  C14M  R     0.077      4       1.144     4
+nEN80  C14M  R     6.415      4      -0.286     M
+nWE    C14M  R     0.691      4       0.684     4
+nWE80  C14M  R     2.845      4      -0.260     M
+
+
+// Clock to Output Delay
+
+Port    Clock Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+BA[0]   C14M  R     8.629         4        2.885          M
+BA[1]   C14M  R     8.629         4        2.885          M
+CKE     C14M  R     8.629         4        2.885          M
+DQMH    C14M  R     8.609         4        2.892          M
+DQML    C14M  R     8.609         4        2.892          M
+Dout[0] C14M  F     8.955         4        3.164          M
+Dout[1] C14M  F     8.955         4        3.164          M
+Dout[2] C14M  F     8.944         4        3.158          M
+Dout[3] C14M  F     8.955         4        3.164          M
+Dout[4] C14M  F     8.944         4        3.158          M
+Dout[5] C14M  F     8.944         4        3.158          M
+Dout[6] C14M  F     8.955         4        3.164          M
+Dout[7] C14M  F     8.955         4        3.164          M
+LED     C14M  R    19.941         4        8.191          M
+RA[0]   C14M  R    10.013         4        3.186          M
+RA[10]  C14M  R     8.629         4        2.885          M
+RA[11]  C14M  R     8.629         4        2.885          M
+RA[1]   C14M  R     8.695         4        2.890          M
+RA[2]   C14M  R     8.695         4        2.890          M
+RA[3]   C14M  R    10.013         4        3.186          M
+RA[4]   C14M  R     8.695         4        2.890          M
+RA[5]   C14M  R     8.695         4        2.890          M
+RA[6]   C14M  R     8.695         4        2.890          M
+RA[7]   C14M  R     8.695         4        2.890          M
+RA[8]   C14M  R     8.629         4        2.885          M
+RA[9]   C14M  R     8.629         4        2.885          M
+Vout[0] C14M  F     9.553         4        3.402          M
+Vout[1] C14M  F     9.553         4        3.402          M
+Vout[2] C14M  F     9.553         4        3.402          M
+Vout[3] C14M  F     9.553         4        3.402          M
+Vout[4] C14M  F     9.553         4        3.402          M
+Vout[5] C14M  F     9.553         4        3.402          M
+Vout[6] C14M  F     9.553         4        3.402          M
+Vout[7] C14M  F     9.553         4        3.402          M
+nCAS    C14M  R     8.629         4        2.885          M
+nCS     C14M  R     8.629         4        2.885          M
+nDOE    C14M  R    11.976         4        3.776          M
+nRAS    C14M  R     8.629         4        2.885          M
+nRWE    C14M  R     8.629         4        2.885          M
+WARNING: you must also run trce with hold speed: 4
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

@@ -1,0 +1,152 @@
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: ZANEMACWIN11
+
+Implementation : impl1
+
+# Written on Thu Sep 21 05:34:37 2023
+
+##### DESIGN INFO #######################################################
+
+Top View:                "RAM2E"
+Constraint File(s):      "\\Mac\iCloud\Repos\RAM2E\CPLD\RAM2E.sdc"
+
+
+
+
+##### SUMMARY ############################################################
+
+Found 0 issues in 0 out of 1 constraints
+
+
+##### DETAILS ############################################################
+
+
+
+Clock Relationships
+*******************
+
+Starting     Ending     |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
+-----------------------------------------------------------------------------------------------------------------------------------
+System       C14M       |     69.841           |     No paths         |     No paths         |     No paths                         
+C14M         System     |     69.841           |     No paths         |     No paths         |     No paths                         
+C14M         C14M       |     69.841           |     No paths         |     34.920           |     No paths                         
+===================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+Unconstrained Start/End Points
+******************************
+
+p:Ain[0]
+p:Ain[1]
+p:Ain[2]
+p:Ain[3]
+p:Ain[4]
+p:Ain[5]
+p:Ain[6]
+p:Ain[7]
+p:BA[0]
+p:BA[1]
+p:CKE
+p:DQMH
+p:DQML
+p:Din[0]
+p:Din[1]
+p:Din[2]
+p:Din[3]
+p:Din[4]
+p:Din[5]
+p:Din[6]
+p:Din[7]
+p:Dout[0]
+p:Dout[1]
+p:Dout[2]
+p:Dout[3]
+p:Dout[4]
+p:Dout[5]
+p:Dout[6]
+p:Dout[7]
+p:LED
+p:PHI1
+p:RA[0]
+p:RA[1]
+p:RA[2]
+p:RA[3]
+p:RA[4]
+p:RA[5]
+p:RA[6]
+p:RA[7]
+p:RA[8]
+p:RA[9]
+p:RA[10]
+p:RA[11]
+p:RD[0] (bidir end point)
+p:RD[0] (bidir start point)
+p:RD[1] (bidir end point)
+p:RD[1] (bidir start point)
+p:RD[2] (bidir end point)
+p:RD[2] (bidir start point)
+p:RD[3] (bidir end point)
+p:RD[3] (bidir start point)
+p:RD[4] (bidir end point)
+p:RD[4] (bidir start point)
+p:RD[5] (bidir end point)
+p:RD[5] (bidir start point)
+p:RD[6] (bidir end point)
+p:RD[6] (bidir start point)
+p:RD[7] (bidir end point)
+p:RD[7] (bidir start point)
+p:Vout[0]
+p:Vout[1]
+p:Vout[2]
+p:Vout[3]
+p:Vout[4]
+p:Vout[5]
+p:Vout[6]
+p:Vout[7]
+p:nC07X
+p:nCAS
+p:nCS
+p:nDOE
+p:nEN80
+p:nRAS
+p:nRWE
+p:nVOE
+p:nWE
+p:nWE80
+
+
+Inapplicable constraints
+************************
+
+(none)
+
+
+Applicable constraints with issues
+**********************************
+
+(none)
+
+
+Constraints with matching wildcard expressions
+**********************************************
+
+(none)
+
+
+Library Report
+**************
+
+
+# End of Constraint Checker Report

@@ -1,0 +1,78 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Thu Sep 21 05:35:24 2023 *
+NOTE DESIGN NAME: RAM2E *
+NOTE DEVICE NAME: LCMXO2-640HC-4TQFP100 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS RD[0] : 36 : inout *
+NOTE PINS LED : 35 : out *
+NOTE PINS C14M : 62 : in *
+NOTE PINS DQMH : 49 : out *
+NOTE PINS DQML : 48 : out *
+NOTE PINS RD[7] : 43 : inout *
+NOTE PINS RD[6] : 42 : inout *
+NOTE PINS RD[5] : 41 : inout *
+NOTE PINS RD[4] : 40 : inout *
+NOTE PINS RD[3] : 39 : inout *
+NOTE PINS RD[2] : 38 : inout *
+NOTE PINS RD[1] : 37 : inout *
+NOTE PINS RA[11] : 59 : out *
+NOTE PINS RA[10] : 64 : out *
+NOTE PINS RA[9] : 63 : out *
+NOTE PINS RA[8] : 65 : out *
+NOTE PINS RA[7] : 67 : out *
+NOTE PINS RA[6] : 69 : out *
+NOTE PINS RA[5] : 71 : out *
+NOTE PINS RA[4] : 75 : out *
+NOTE PINS RA[3] : 74 : out *
+NOTE PINS RA[2] : 70 : out *
+NOTE PINS RA[1] : 68 : out *
+NOTE PINS RA[0] : 66 : out *
+NOTE PINS BA[1] : 60 : out *
+NOTE PINS BA[0] : 58 : out *
+NOTE PINS nRWE : 51 : out *
+NOTE PINS nCAS : 52 : out *
+NOTE PINS nRAS : 54 : out *
+NOTE PINS nCS : 57 : out *
+NOTE PINS CKE : 53 : out *
+NOTE PINS nVOE : 10 : out *
+NOTE PINS Vout[7] : 12 : out *
+NOTE PINS Vout[6] : 14 : out *
+NOTE PINS Vout[5] : 16 : out *
+NOTE PINS Vout[4] : 19 : out *
+NOTE PINS Vout[3] : 13 : out *
+NOTE PINS Vout[2] : 17 : out *
+NOTE PINS Vout[1] : 15 : out *
+NOTE PINS Vout[0] : 18 : out *
+NOTE PINS nDOE : 20 : out *
+NOTE PINS Dout[7] : 32 : out *
+NOTE PINS Dout[6] : 31 : out *
+NOTE PINS Dout[5] : 21 : out *
+NOTE PINS Dout[4] : 24 : out *
+NOTE PINS Dout[3] : 28 : out *
+NOTE PINS Dout[2] : 25 : out *
+NOTE PINS Dout[1] : 27 : out *
+NOTE PINS Dout[0] : 30 : out *
+NOTE PINS Din[7] : 87 : in *
+NOTE PINS Din[6] : 88 : in *
+NOTE PINS Din[5] : 99 : in *
+NOTE PINS Din[4] : 1 : in *
+NOTE PINS Din[3] : 9 : in *
+NOTE PINS Din[2] : 98 : in *
+NOTE PINS Din[1] : 97 : in *
+NOTE PINS Din[0] : 96 : in *
+NOTE PINS Ain[7] : 8 : in *
+NOTE PINS Ain[6] : 86 : in *
+NOTE PINS Ain[5] : 84 : in *
+NOTE PINS Ain[4] : 78 : in *
+NOTE PINS Ain[3] : 4 : in *
+NOTE PINS Ain[2] : 7 : in *
+NOTE PINS Ain[1] : 2 : in *
+NOTE PINS Ain[0] : 3 : in *
+NOTE PINS nC07X : 34 : in *
+NOTE PINS nEN80 : 82 : in *
+NOTE PINS nWE80 : 83 : in *
+NOTE PINS nWE : 29 : in *
+NOTE PINS PHI1 : 85 : in *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *
