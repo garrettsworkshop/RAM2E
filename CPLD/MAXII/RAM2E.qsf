@@ -1,0 +1,248 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2019  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+# Date created = 07:26:23  August 20, 2023
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		RAM2E_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "MAX II"
+set_global_assignment -name DEVICE EPM240T100C5
+set_global_assignment -name TOP_LEVEL_ENTITY RAM2E
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 19.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "07:26:23  AUGUST 20, 2023"
+set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PACKAGE TQFP
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 100
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 5
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
+set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 4
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS OUTPUT DRIVING GROUND"
+
+set_location_assignment PIN_12 -to C14M
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to C14M
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to C14M
+
+set_location_assignment PIN_37 -to PHI1
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to PHI1
+set_instance_assignment -name PAD_TO_CORE_DELAY 1 -to PHI1
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to PHI1
+
+set_location_assignment PIN_51 -to nWE
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nWE
+set_instance_assignment -name PAD_TO_CORE_DELAY 0 -to nWE
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to nWE
+
+set_location_assignment PIN_28 -to nEN80
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nEN80
+set_instance_assignment -name PAD_TO_CORE_DELAY 0 -to nEN80
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to nEN80
+
+set_location_assignment PIN_33 -to nWE80
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nWE80
+set_instance_assignment -name PAD_TO_CORE_DELAY 0 -to nWE80
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to nWE80
+
+set_location_assignment PIN_52 -to nC07X
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nC07X
+set_instance_assignment -name PAD_TO_CORE_DELAY 0 -to nC07X
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to nC07X
+
+set_location_assignment PIN_56 -to Ain[0]
+set_location_assignment PIN_54 -to Ain[1]
+set_location_assignment PIN_43 -to Ain[2]
+set_location_assignment PIN_47 -to Ain[3]
+set_location_assignment PIN_44 -to Ain[4]
+set_location_assignment PIN_34 -to Ain[5]
+set_location_assignment PIN_39 -to Ain[6]
+set_location_assignment PIN_53 -to Ain[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to Ain
+set_instance_assignment -name PAD_TO_CORE_DELAY 0 -to Ain
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to Ain
+
+set_location_assignment PIN_38 -to Din[0]
+set_location_assignment PIN_40 -to Din[1]
+set_location_assignment PIN_42 -to Din[2]
+set_location_assignment PIN_41 -to Din[3]
+set_location_assignment PIN_48 -to Din[4]
+set_location_assignment PIN_49 -to Din[5]
+set_location_assignment PIN_36 -to Din[6]
+set_location_assignment PIN_35 -to Din[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to Din
+set_instance_assignment -name PAD_TO_CORE_DELAY 0 -to Din
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to Din
+
+set_location_assignment PIN_55 -to nDOE
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nDOE
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nDOE
+set_instance_assignment -name SLOW_SLEW_RATE ON -to nDOE
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nDOE
+
+set_location_assignment PIN_77 -to Dout[0]
+set_location_assignment PIN_76 -to Dout[1]
+set_location_assignment PIN_74 -to Dout[2]
+set_location_assignment PIN_75 -to Dout[3]
+set_location_assignment PIN_73 -to Dout[4]
+set_location_assignment PIN_72 -to Dout[5]
+set_location_assignment PIN_84 -to Dout[6]
+set_location_assignment PIN_85 -to Dout[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to Dout
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to Dout
+set_instance_assignment -name SLOW_SLEW_RATE ON -to Dout
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to Dout
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to Dout
+
+set_location_assignment PIN_50 -to nVOE
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nVOE
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nVOE
+set_instance_assignment -name SLOW_SLEW_RATE ON -to nVOE
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nVOE
+
+set_location_assignment PIN_70 -to Vout[0]
+set_location_assignment PIN_67 -to Vout[1]
+set_location_assignment PIN_69 -to Vout[2]
+set_location_assignment PIN_62 -to Vout[3]
+set_location_assignment PIN_71 -to Vout[4]
+set_location_assignment PIN_68 -to Vout[5]
+set_location_assignment PIN_58 -to Vout[6]
+set_location_assignment PIN_57 -to Vout[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to Vout
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to Vout
+set_instance_assignment -name SLOW_SLEW_RATE ON -to Vout
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to Vout
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to Vout
+
+set_location_assignment PIN_4 -to CKE
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CKE
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to CKE
+set_instance_assignment -name SLOW_SLEW_RATE ON -to CKE
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to CKE
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to CKE
+
+set_location_assignment PIN_8 -to nCS
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nCS
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nCS
+set_instance_assignment -name SLOW_SLEW_RATE ON -to nCS
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to nCS
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to nCS
+
+set_location_assignment PIN_2 -to nRWE
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nRWE
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nRWE
+set_instance_assignment -name SLOW_SLEW_RATE ON -to nRWE
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to nRWE
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to nRWE
+
+set_location_assignment PIN_5 -to nRAS
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nRAS
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nRAS
+set_instance_assignment -name SLOW_SLEW_RATE ON -to nRAS
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to nRAS
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to nRAS
+
+set_location_assignment PIN_3 -to nCAS
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nCAS
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nCAS
+set_instance_assignment -name SLOW_SLEW_RATE ON -to nCAS
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to nCAS
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to nCAS
+
+set_location_assignment PIN_6 -to BA[0]
+set_location_assignment PIN_14 -to BA[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to BA
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to BA
+set_instance_assignment -name SLOW_SLEW_RATE ON -to BA
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to BA
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to BA
+
+set_location_assignment PIN_18 -to RA[0]
+set_location_assignment PIN_20 -to RA[1]
+set_location_assignment PIN_30 -to RA[2]
+set_location_assignment PIN_27 -to RA[3]
+set_location_assignment PIN_26 -to RA[4]
+set_location_assignment PIN_29 -to RA[5]
+set_location_assignment PIN_21 -to RA[6]
+set_location_assignment PIN_19 -to RA[7]
+set_location_assignment PIN_17 -to RA[8]
+set_location_assignment PIN_15 -to RA[9]
+set_location_assignment PIN_16 -to RA[10]
+set_location_assignment PIN_7 -to RA[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to RA
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to RA
+set_instance_assignment -name SLOW_SLEW_RATE ON -to RA
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to RA
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to RA
+
+set_location_assignment PIN_100 -to DQMH
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to DQMH
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to DQMH
+set_instance_assignment -name SLOW_SLEW_RATE ON -to DQMH
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to DQMH
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to DQMH
+
+set_location_assignment PIN_98 -to DQML
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to DQML
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to DQML
+set_instance_assignment -name SLOW_SLEW_RATE ON -to DQML
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to DQML
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to DQML
+
+set_location_assignment PIN_97 -to RD[0]
+set_location_assignment PIN_90 -to RD[1]
+set_location_assignment PIN_99 -to RD[2]
+set_location_assignment PIN_89 -to RD[3]
+set_location_assignment PIN_91 -to RD[4]
+set_location_assignment PIN_92 -to RD[5]
+set_location_assignment PIN_95 -to RD[6]
+set_location_assignment PIN_96 -to RD[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to RD
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to RD
+set_instance_assignment -name SLOW_SLEW_RATE ON -to RD
+set_instance_assignment -name PAD_TO_CORE_DELAY 0 -to RD
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY ON -to RD
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to RD
+
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
+set_global_assignment -name VERILOG_FILE "../RAM2E-MAX.v"
+set_global_assignment -name QIP_FILE UFM.qip
+set_global_assignment -name MIF_FILE ../RAM2E.mif
+set_global_assignment -name SDC_FILE ../RAM2E.sdc
+set_global_assignment -name SDC_FILE "../RAM2E-MAX.sdc"
+set_location_assignment PIN_88 -to LED
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED
+set_instance_assignment -name SLOW_SLEW_RATE ON -to LED

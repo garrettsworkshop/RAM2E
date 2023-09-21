@@ -1,0 +1,41 @@
+----------------------------------------------------------------------
+Report for cell RAM2E.verilog
+
+Register bits: 111 of 640 (17%)
+PIC Latch:       0
+I/O cells:       70
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                 BB        8       100.0
+                              CCU2D        9       100.0
+                                EFB        1       100.0
+                            FD1P3AX       48       100.0
+                            FD1P3IX        1       100.0
+                            FD1S3AX       22       100.0
+                            FD1S3IX        4       100.0
+                                GSR        1       100.0
+                                 IB       22       100.0
+                           IFS1P3DX        1       100.0
+                                INV        1       100.0
+                                 OB       40       100.0
+                           OFS1P3BX        6       100.0
+                           OFS1P3DX       27       100.0
+                           OFS1P3IX        2       100.0
+                           ORCALUT4      221       100.0
+                                PUR        1       100.0
+                                VHI        2       100.0
+                                VLO        2       100.0
+SUB MODULES 
+                               REFB        1       100.0
+                            
+                         TOTAL           420           
+----------------------------------------------------------------------
+Report for cell REFB.netlist
+     Instance path:  ufmefb
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                EFB        1       100.0
+                                VHI        1        50.0
+                                VLO        1        50.0
+                            
+                         TOTAL             3           
