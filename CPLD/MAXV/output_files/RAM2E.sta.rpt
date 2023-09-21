@@ -1,0 +1,732 @@
+Timing Analyzer report for RAM2E
+Thu Sep 21 05:34:46 2023
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Fmax Summary
+  7. Setup Summary
+  8. Hold Summary
+  9. Recovery Summary
+ 10. Removal Summary
+ 11. Minimum Pulse Width Summary
+ 12. Setup: 'DRCLK'
+ 13. Setup: 'ARCLK'
+ 14. Setup: 'C14M'
+ 15. Hold: 'ARCLK'
+ 16. Hold: 'DRCLK'
+ 17. Hold: 'C14M'
+ 18. Setup Transfers
+ 19. Hold Transfers
+ 20. Report TCCS
+ 21. Report RSKM
+ 22. Unconstrained Paths Summary
+ 23. Clock Status Summary
+ 24. Unconstrained Input Ports
+ 25. Unconstrained Output Ports
+ 26. Unconstrained Input Ports
+ 27. Unconstrained Output Ports
+ 28. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; RAM2E                                               ;
+; Device Family         ; MAX V                                               ;
+; Device Name           ; 5M240ZT100C5                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------+
+; SDC File List                                        ;
++------------------+--------+--------------------------+
+; SDC File Path    ; Status ; Read at                  ;
++------------------+--------+--------------------------+
+; ../RAM2E.sdc     ; OK     ; Thu Sep 21 05:34:45 2023 ;
+; ../RAM2E-MAX.sdc ; OK     ; Thu Sep 21 05:34:45 2023 ;
++------------------+--------+--------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                              ;
++------------+------+---------+-----------+-------+---------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period  ; Frequency ; Rise  ; Fall    ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+---------+-----------+-------+---------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; ARCLK      ; Base ; 200.000 ; 5.0 MHz   ; 0.000 ; 100.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ARCLK } ;
+; C14M       ; Base ; 69.841  ; 14.32 MHz ; 0.000 ; 34.920  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { C14M }  ;
+; DRCLK      ; Base ; 200.000 ; 5.0 MHz   ; 0.000 ; 100.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { DRCLK } ;
++------------+------+---------+-----------+-------+---------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++-------------------------------------------------+
+; Fmax Summary                                    ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 10.0 MHz  ; 10.0 MHz        ; ARCLK      ;      ;
+; 10.0 MHz  ; 10.0 MHz        ; DRCLK      ;      ;
+; 25.52 MHz ; 25.52 MHz       ; C14M       ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Setup Summary                   ;
++-------+---------+---------------+
+; Clock ; Slack   ; End Point TNS ;
++-------+---------+---------------+
+; DRCLK ; -24.019 ; -24.019       ;
+; ARCLK ; -23.863 ; -23.863       ;
+; C14M  ; -15.767 ; -176.992      ;
++-------+---------+---------------+
+
+
++---------------------------------+
+; Hold Summary                    ;
++-------+---------+---------------+
+; Clock ; Slack   ; End Point TNS ;
++-------+---------+---------------+
+; ARCLK ; -16.136 ; -16.136       ;
+; DRCLK ; -15.980 ; -15.980       ;
+; C14M  ; 2.440   ; 0.000         ;
++-------+---------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++--------------------------------+
+; Minimum Pulse Width Summary    ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; C14M  ; 34.581 ; 0.000         ;
+; ARCLK ; 70.000 ; 0.000         ;
+; DRCLK ; 70.000 ; 0.000         ;
++-------+--------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'DRCLK'                                                                                                                                                                                                                                                            ;
++---------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                                                                                   ; To Node                                                                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -24.019 ; DRDIn                                                                                       ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; C14M         ; DRCLK       ; 0.001        ; -1.057     ; 2.963      ;
+; -24.019 ; DRShift                                                                                     ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; C14M         ; DRCLK       ; 0.001        ; -1.057     ; 2.963      ;
+; 100.000 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; DRCLK        ; DRCLK       ; 200.000      ; 0.000      ; 80.000     ;
++---------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'ARCLK'                                                                                                                                                                                                                                                                                    ;
++---------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                                                                                               ; To Node                                                                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -23.863 ; ARShift                                                                                                 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; C14M         ; ARCLK       ; 0.001        ; -0.901     ; 2.963      ;
+; 100.000 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; ARCLK        ; ARCLK       ; 200.000      ; 0.000      ; 80.000     ;
++---------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'C14M'                                                                                                                                                                              ;
++---------+---------------------------------------------------------------------------------------------+--------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                                                                                   ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+---------------------------------------------------------------------------------------------+--------------+--------------+-------------+--------------+------------+------------+
+; -15.767 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; UFMReqErase  ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 16.504     ;
+; -15.215 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; RWMask[4]    ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 15.952     ;
+; -15.215 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; RWMask[5]    ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 15.952     ;
+; -15.215 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; RWMask[7]    ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 15.952     ;
+; -15.215 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; RWMask[0]    ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 15.952     ;
+; -15.215 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; RWMask[1]    ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 15.952     ;
+; -15.215 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; RWMask[2]    ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 15.952     ;
+; -15.215 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; RWMask[3]    ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 15.952     ;
+; -15.215 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; RWMask[6]    ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 15.952     ;
+; -14.411 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; LEDEN        ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 15.148     ;
+; -13.177 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; UFMInitDone  ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 13.914     ;
+; -11.917 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; UFMD[8]      ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 12.654     ;
+; 16.803  ; S[1]                                                                                        ; Dout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.796     ;
+; 16.803  ; S[1]                                                                                        ; Dout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.796     ;
+; 16.803  ; S[1]                                                                                        ; Dout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.796     ;
+; 16.803  ; S[1]                                                                                        ; Dout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.796     ;
+; 16.803  ; S[1]                                                                                        ; Dout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.796     ;
+; 16.803  ; S[1]                                                                                        ; Dout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.796     ;
+; 16.806  ; S[1]                                                                                        ; Dout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.793     ;
+; 16.809  ; S[1]                                                                                        ; Dout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.790     ;
+; 18.727  ; S[2]                                                                                        ; Dout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.872     ;
+; 18.727  ; S[2]                                                                                        ; Dout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.872     ;
+; 18.727  ; S[2]                                                                                        ; Dout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.872     ;
+; 18.727  ; S[2]                                                                                        ; Dout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.872     ;
+; 18.727  ; S[2]                                                                                        ; Dout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.872     ;
+; 18.727  ; S[2]                                                                                        ; Dout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.872     ;
+; 18.730  ; S[2]                                                                                        ; Dout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.869     ;
+; 18.733  ; S[2]                                                                                        ; Dout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.866     ;
+; 19.149  ; S[3]                                                                                        ; Vout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.450     ;
+; 19.149  ; S[3]                                                                                        ; Vout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.450     ;
+; 19.196  ; S[3]                                                                                        ; Vout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.403     ;
+; 19.196  ; S[3]                                                                                        ; Vout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.403     ;
+; 19.196  ; S[3]                                                                                        ; Vout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.403     ;
+; 19.260  ; S[0]                                                                                        ; Vout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.339     ;
+; 19.260  ; S[0]                                                                                        ; Vout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.339     ;
+; 19.307  ; S[0]                                                                                        ; Vout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.292     ;
+; 19.307  ; S[0]                                                                                        ; Vout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.292     ;
+; 19.307  ; S[0]                                                                                        ; Vout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.292     ;
+; 20.893  ; S[0]                                                                                        ; Dout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 13.706     ;
+; 20.893  ; S[0]                                                                                        ; Dout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 13.706     ;
+; 20.893  ; S[0]                                                                                        ; Dout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 13.706     ;
+; 20.893  ; S[0]                                                                                        ; Dout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 13.706     ;
+; 20.893  ; S[0]                                                                                        ; Dout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 13.706     ;
+; 20.893  ; S[0]                                                                                        ; Dout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 13.706     ;
+; 20.896  ; S[0]                                                                                        ; Dout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 13.703     ;
+; 20.899  ; S[0]                                                                                        ; Dout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 13.700     ;
+; 22.101  ; S[3]                                                                                        ; Vout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 12.498     ;
+; 22.101  ; S[3]                                                                                        ; Vout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 12.498     ;
+; 22.101  ; S[3]                                                                                        ; Vout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 12.498     ;
+; 22.212  ; S[0]                                                                                        ; Vout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 12.387     ;
+; 22.212  ; S[0]                                                                                        ; Vout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 12.387     ;
+; 22.212  ; S[0]                                                                                        ; Vout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 12.387     ;
+; 23.092  ; S[3]                                                                                        ; Dout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.507     ;
+; 23.092  ; S[3]                                                                                        ; Dout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.507     ;
+; 23.092  ; S[3]                                                                                        ; Dout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.507     ;
+; 23.092  ; S[3]                                                                                        ; Dout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.507     ;
+; 23.092  ; S[3]                                                                                        ; Dout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.507     ;
+; 23.092  ; S[3]                                                                                        ; Dout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.507     ;
+; 23.095  ; S[3]                                                                                        ; Dout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.504     ;
+; 23.098  ; S[3]                                                                                        ; Dout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.501     ;
+; 23.710  ; S[1]                                                                                        ; Vout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 10.889     ;
+; 23.710  ; S[1]                                                                                        ; Vout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 10.889     ;
+; 23.757  ; S[1]                                                                                        ; Vout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 10.842     ;
+; 23.757  ; S[1]                                                                                        ; Vout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 10.842     ;
+; 23.757  ; S[1]                                                                                        ; Vout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 10.842     ;
+; 24.349  ; S[2]                                                                                        ; Vout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 10.250     ;
+; 24.349  ; S[2]                                                                                        ; Vout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 10.250     ;
+; 24.396  ; S[2]                                                                                        ; Vout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 10.203     ;
+; 24.396  ; S[2]                                                                                        ; Vout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 10.203     ;
+; 24.396  ; S[2]                                                                                        ; Vout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 10.203     ;
+; 26.662  ; S[1]                                                                                        ; Vout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 7.937      ;
+; 26.662  ; S[1]                                                                                        ; Vout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 7.937      ;
+; 26.662  ; S[1]                                                                                        ; Vout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 7.937      ;
+; 27.301  ; S[2]                                                                                        ; Vout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 7.298      ;
+; 27.301  ; S[2]                                                                                        ; Vout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 7.298      ;
+; 27.301  ; S[2]                                                                                        ; Vout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 7.298      ;
+; 30.659  ; FS[15]                                                                                      ; nRAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 38.861     ;
+; 31.593  ; FS[14]                                                                                      ; nRAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 37.927     ;
+; 32.392  ; FS[15]                                                                                      ; nCS~reg0     ; C14M         ; C14M        ; 69.841       ; 0.000      ; 37.128     ;
+; 32.513  ; FS[2]                                                                                       ; nRAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 37.007     ;
+; 33.326  ; FS[14]                                                                                      ; nCS~reg0     ; C14M         ; C14M        ; 69.841       ; 0.000      ; 36.194     ;
+; 33.452  ; FS[15]                                                                                      ; nCAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 36.068     ;
+; 33.715  ; S[1]                                                                                        ; CmdEraseMAX  ; C14M         ; C14M        ; 69.841       ; 0.000      ; 35.805     ;
+; 34.111  ; FS[1]                                                                                       ; nRAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 35.409     ;
+; 34.246  ; FS[2]                                                                                       ; nCS~reg0     ; C14M         ; C14M        ; 69.841       ; 0.000      ; 35.274     ;
+; 34.386  ; FS[14]                                                                                      ; nCAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 35.134     ;
+; 35.112  ; FS[11]                                                                                      ; nRAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 34.408     ;
+; 35.288  ; FS[10]                                                                                      ; nRAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 34.232     ;
+; 35.392  ; S[1]                                                                                        ; CmdPrgmMAX   ; C14M         ; C14M        ; 69.841       ; 0.000      ; 34.128     ;
+; 35.639  ; S[2]                                                                                        ; CmdEraseMAX  ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.881     ;
+; 35.844  ; FS[1]                                                                                       ; nCS~reg0     ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.676     ;
+; 36.147  ; FS[8]                                                                                       ; nRAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.373     ;
+; 36.765  ; FS[9]                                                                                       ; nRAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 32.755     ;
+; 36.845  ; FS[11]                                                                                      ; nCS~reg0     ; C14M         ; C14M        ; 69.841       ; 0.000      ; 32.675     ;
+; 37.021  ; FS[10]                                                                                      ; nCS~reg0     ; C14M         ; C14M        ; 69.841       ; 0.000      ; 32.499     ;
+; 37.152  ; FS[4]                                                                                       ; nRAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 32.368     ;
+; 37.316  ; S[2]                                                                                        ; CmdPrgmMAX   ; C14M         ; C14M        ; 69.841       ; 0.000      ; 32.204     ;
+; 37.805  ; S[0]                                                                                        ; CmdEraseMAX  ; C14M         ; C14M        ; 69.841       ; 0.000      ; 31.715     ;
+; 37.880  ; FS[8]                                                                                       ; nCS~reg0     ; C14M         ; C14M        ; 69.841       ; 0.000      ; 31.640     ;
+; 37.905  ; FS[11]                                                                                      ; nCAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 31.615     ;
++---------+---------------------------------------------------------------------------------------------+--------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'ARCLK'                                                                                                                                                                                                                                                                                     ;
++---------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                                                                                               ; To Node                                                                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -16.136 ; ARShift                                                                                                 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; C14M         ; ARCLK       ; 0.000        ; -0.901     ; 2.963      ;
+; 60.000  ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; ARCLK        ; ARCLK       ; 0.000        ; 0.000      ; 80.000     ;
++---------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'DRCLK'                                                                                                                                                                                                                                                             ;
++---------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                                                                                   ; To Node                                                                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -15.980 ; DRDIn                                                                                       ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; C14M         ; DRCLK       ; 0.000        ; -1.057     ; 2.963      ;
+; -15.980 ; DRShift                                                                                     ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; C14M         ; DRCLK       ; 0.000        ; -1.057     ; 2.963      ;
+; 60.000  ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; DRCLK        ; DRCLK       ; 0.000        ; 0.000      ; 80.000     ;
++---------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Hold: 'C14M'                                                                                                    ;
++-------+---------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+-------------------+--------------+-------------+--------------+------------+------------+
+; 2.440 ; UFMBusyReg    ; UFMErase          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 2.479      ;
+; 3.130 ; UFMD[12]      ; UFMD[13]          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.169      ;
+; 3.153 ; UFMD[9]       ; UFMD[10]          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.192      ;
+; 3.166 ; UFMD[14]      ; UFMD[15]          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.205      ;
+; 3.170 ; UFMD[13]      ; UFMD[14]          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.209      ;
+; 3.385 ; UFMD[10]      ; UFMD[11]          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.424      ;
+; 3.414 ; FS[0]         ; FS[0]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.453      ;
+; 3.442 ; CmdEraseMAX   ; CmdEraseMAX       ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.481      ;
+; 3.443 ; S[2]          ; S[2]              ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.482      ;
+; 3.451 ; S[2]          ; DOEEN             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.490      ;
+; 3.451 ; CmdTout[0]    ; CmdTout[0]        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.490      ;
+; 3.453 ; CmdTout[0]    ; CmdTout[1]        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.492      ;
+; 3.454 ; CmdTout[0]    ; CmdTout[2]        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.493      ;
+; 3.528 ; CS[0]         ; CS[0]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.567      ;
+; 3.538 ; CS[0]         ; CS[1]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.577      ;
+; 3.740 ; S[0]          ; S[0]              ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.779      ;
+; 3.740 ; DRDIn         ; DRDIn             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.779      ;
+; 3.741 ; RTPBusyReg    ; UFMErase          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.780      ;
+; 3.779 ; RWSel         ; RWSel             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.818      ;
+; 3.810 ; S[1]          ; S[1]              ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.849      ;
+; 3.827 ; CmdPrgmMAX    ; UFMProgram        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.866      ;
+; 3.831 ; S[1]          ; DOEEN             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.870      ;
+; 3.833 ; CmdTout[1]    ; CmdTout[1]        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.872      ;
+; 3.839 ; CmdTout[1]    ; CmdTout[2]        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.878      ;
+; 3.843 ; CS[2]         ; CS[2]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.882      ;
+; 4.011 ; PHI1reg       ; S[0]              ; C14M         ; C14M        ; 0.000        ; 0.000      ; 4.050      ;
+; 4.210 ; UFMD[8]       ; UFMD[9]           ; C14M         ; C14M        ; 0.000        ; 0.000      ; 4.249      ;
+; 4.278 ; CmdEraseMAX   ; UFMErase          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 4.317      ;
+; 4.279 ; UFMD[11]      ; UFMD[12]          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 4.318      ;
+; 5.056 ; RTPBusyReg    ; UFMProgram        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.095      ;
+; 5.228 ; LEDEN         ; LEDEN             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.267      ;
+; 5.241 ; FS[15]        ; FS[15]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.280      ;
+; 5.243 ; FS[5]         ; FS[5]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.282      ;
+; 5.252 ; FS[8]         ; FS[8]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.291      ;
+; 5.268 ; Ready         ; Ready             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.307      ;
+; 5.272 ; FS[7]         ; FS[7]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.311      ;
+; 5.278 ; FS[10]        ; FS[10]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.317      ;
+; 5.281 ; FS[9]         ; FS[9]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.320      ;
+; 5.286 ; CmdPrgmMAX    ; CmdPrgmMAX        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.325      ;
+; 5.360 ; CS[1]         ; CS[1]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.399      ;
+; 5.361 ; CS[1]         ; CS[2]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.400      ;
+; 5.440 ; FS[3]         ; FS[3]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.479      ;
+; 5.441 ; FS[4]         ; FS[4]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.480      ;
+; 5.441 ; FS[2]         ; FS[2]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.480      ;
+; 5.442 ; FS[11]        ; FS[11]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.481      ;
+; 5.452 ; FS[1]         ; FS[1]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.491      ;
+; 5.464 ; FS[14]        ; FS[14]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.503      ;
+; 5.473 ; UFMErase      ; UFMErase          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.512      ;
+; 5.474 ; UFMProgram    ; UFMProgram        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.513      ;
+; 5.475 ; FS[13]        ; FS[13]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.514      ;
+; 5.476 ; FS[12]        ; FS[12]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.515      ;
+; 5.476 ; FS[6]         ; FS[6]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.515      ;
+; 5.478 ; UFMInitDone   ; UFMInitDone       ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.517      ;
+; 5.486 ; CmdTout[2]    ; CmdTout[2]        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.525      ;
+; 5.541 ; S[3]          ; S[3]              ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.580      ;
+; 5.613 ; CS[0]         ; CS[2]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.652      ;
+; 5.664 ; RWBank[2]     ; RA[10]~reg0       ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.703      ;
+; 5.753 ; CmdPrgmMAX    ; UFMErase          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.792      ;
+; 5.978 ; FS[5]         ; FS[6]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.017      ;
+; 5.987 ; FS[8]         ; FS[9]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.026      ;
+; 6.013 ; FS[10]        ; FS[11]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.052      ;
+; 6.016 ; FS[9]         ; FS[10]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.055      ;
+; 6.122 ; FS[5]         ; FS[7]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.161      ;
+; 6.131 ; FS[8]         ; FS[10]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.170      ;
+; 6.157 ; FS[10]        ; FS[12]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.196      ;
+; 6.160 ; FS[9]         ; FS[11]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.199      ;
+; 6.229 ; DRCLKPulse    ; DRCLK             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.268      ;
+; 6.275 ; FS[8]         ; FS[11]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.314      ;
+; 6.304 ; FS[9]         ; FS[12]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.343      ;
+; 6.419 ; FS[8]         ; FS[12]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.458      ;
+; 6.442 ; FS[3]         ; FS[4]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.481      ;
+; 6.443 ; FS[4]         ; FS[5]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.482      ;
+; 6.444 ; FS[11]        ; FS[12]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.483      ;
+; 6.454 ; FS[1]         ; FS[2]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.493      ;
+; 6.466 ; FS[14]        ; FS[15]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.505      ;
+; 6.477 ; FS[13]        ; FS[14]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.516      ;
+; 6.478 ; FS[6]         ; FS[7]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.517      ;
+; 6.507 ; RWBank[5]     ; BA[1]~reg0        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.546      ;
+; 6.533 ; CmdBitbangMAX ; DRCLKPulse        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.572      ;
+; 6.586 ; FS[3]         ; FS[5]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.625      ;
+; 6.587 ; FS[4]         ; FS[6]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.626      ;
+; 6.621 ; FS[13]        ; FS[15]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.660      ;
+; 6.651 ; UFMD[11]      ; RWMask[3]         ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.690      ;
+; 6.724 ; RWMask[4]     ; RWBank[4]         ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.763      ;
+; 6.730 ; FS[3]         ; FS[6]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.769      ;
+; 6.731 ; FS[4]         ; FS[7]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.770      ;
+; 6.774 ; RWMask[3]     ; RWBank[3]         ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.813      ;
+; 6.793 ; FS[10]        ; FS[13]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.832      ;
+; 6.793 ; FS[10]        ; FS[14]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.832      ;
+; 6.793 ; FS[10]        ; FS[15]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.832      ;
+; 6.816 ; UFMD[15]      ; RWMask[7]         ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.855      ;
+; 6.836 ; CS[0]         ; CmdRWMaskSet      ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.875      ;
+; 6.843 ; CS[0]         ; CmdSetRWBankFFLED ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.882      ;
+; 6.874 ; FS[3]         ; FS[7]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.913      ;
+; 6.895 ; CmdEraseMAX   ; UFMProgram        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.934      ;
+; 6.940 ; FS[9]         ; FS[13]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.979      ;
+; 6.940 ; FS[9]         ; FS[14]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.979      ;
+; 6.940 ; FS[9]         ; FS[15]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.979      ;
+; 6.998 ; FS[2]         ; FS[4]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 7.037      ;
+; 6.998 ; FS[2]         ; FS[3]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 7.037      ;
++-------+---------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; ARCLK      ; ARCLK    ; 1        ; 0        ; 0        ; 0        ;
+; C14M       ; ARCLK    ; 1        ; 0        ; 0        ; 0        ;
+; C14M       ; C14M     ; 1607     ; 0        ; 64       ; 0        ;
+; DRCLK      ; C14M     ; 13       ; 0        ; 0        ; 0        ;
+; C14M       ; DRCLK    ; 2        ; 0        ; 0        ; 0        ;
+; DRCLK      ; DRCLK    ; 1        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; ARCLK      ; ARCLK    ; 1        ; 0        ; 0        ; 0        ;
+; C14M       ; ARCLK    ; 1        ; 0        ; 0        ; 0        ;
+; C14M       ; C14M     ; 1607     ; 0        ; 64       ; 0        ;
+; DRCLK      ; C14M     ; 13       ; 0        ; 0        ; 0        ;
+; C14M       ; DRCLK    ; 2        ; 0        ; 0        ; 0        ;
+; DRCLK      ; DRCLK    ; 1        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 29    ; 29   ;
+; Unconstrained Input Port Paths  ; 169   ; 169  ;
+; Unconstrained Output Ports      ; 48    ; 48   ;
+; Unconstrained Output Port Paths ; 67    ; 67   ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; ARCLK  ; ARCLK ; Base ; Constrained ;
+; C14M   ; C14M  ; Base ; Constrained ;
+; DRCLK  ; DRCLK ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; Ain[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Ain[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Ain[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Ain[3]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Ain[4]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Ain[5]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Ain[6]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Ain[7]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Din[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Din[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Din[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Din[3]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Din[4]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Din[5]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Din[6]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Din[7]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; PHI1       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[3]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[4]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[5]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[6]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[7]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nC07X      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nEN80      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nWE        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nWE80      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; BA[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; BA[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; CKE         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DQMH        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DQML        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Dout[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Dout[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Dout[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Dout[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Dout[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Dout[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Dout[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Dout[7]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[7]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[8]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[9]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[10]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[11]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[7]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Vout[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Vout[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Vout[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Vout[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Vout[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Vout[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Vout[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Vout[7]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nCAS        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nCS         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nDOE        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nRAS        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nRWE        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nVOE        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; Ain[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Ain[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Ain[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Ain[3]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Ain[4]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Ain[5]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Ain[6]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Ain[7]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Din[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Din[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Din[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Din[3]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Din[4]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Din[5]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Din[6]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Din[7]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; PHI1       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[3]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[4]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[5]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[6]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[7]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nC07X      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nEN80      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nWE        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nWE80      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; BA[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; BA[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; CKE         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DQMH        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DQML        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Dout[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Dout[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Dout[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Dout[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Dout[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Dout[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Dout[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Dout[7]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[7]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[8]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[9]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[10]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RA[11]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RD[7]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Vout[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Vout[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Vout[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Vout[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Vout[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Vout[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Vout[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Vout[7]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nCAS        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nCS         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nDOE        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nRAS        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nRWE        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nVOE        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Processing started: Thu Sep 21 05:34:43 2023
+Info: Command: quartus_sta RAM2E-MAXV -c RAM2E
+Info: qsta_default_script.tcl version: #1
+Info (20032): Parallel compilation is enabled and will use up to 4 processors
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332104): Reading SDC File: '../RAM2E.sdc'
+Info (332104): Reading SDC File: '../RAM2E-MAX.sdc'
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Warning (332009): The launch and latch times for the relationship between source clock: C14M and destination clock: ARCLK are outside of the legal time range. The relationship difference is correct, however the launch time is set to 0.
+Warning (332009): The launch and latch times for the relationship between source clock: C14M and destination clock: DRCLK are outside of the legal time range. The relationship difference is correct, however the launch time is set to 0.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -24.019
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -24.019             -24.019 DRCLK 
+    Info (332119):   -23.863             -23.863 ARCLK 
+    Info (332119):   -15.767            -176.992 C14M 
+Info (332146): Worst-case hold slack is -16.136
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -16.136             -16.136 ARCLK 
+    Info (332119):   -15.980             -15.980 DRCLK 
+    Info (332119):     2.440               0.000 C14M 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 34.581
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    34.581               0.000 C14M 
+    Info (332119):    70.000               0.000 ARCLK 
+    Info (332119):    70.000               0.000 DRCLK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Warning (332009): The launch and latch times for the relationship between source clock: C14M and destination clock: ARCLK are outside of the legal time range. The relationship difference is correct, however the launch time is set to 0.
+Warning (332009): The launch and latch times for the relationship between source clock: C14M and destination clock: DRCLK are outside of the legal time range. The relationship difference is correct, however the launch time is set to 0.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 13092 megabytes
+    Info: Processing ended: Thu Sep 21 05:34:46 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+
