@@ -1,0 +1,22 @@
+Reference, Quantity, Value, Footprint, Datasheet, LCSC Part, Mfg. Part Numbers, Notes
+C7 C8 C9 C10 C11 C12 C13 C14 C15 C16 C17 C18 C19 C20 C21 C22 C23 C24 C25 C26 C27 C28 ,22,2u2,stdpads:C_0603,,C23630,Samsung CL10A225KO8NNNC,"10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred."
+C1 C2 C3 C4 C5 C6 C29 ,7,10u,stdpads:C_0805,,C15850,Samsung CL21A106KAYNNNE,"10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred."
+D1 ,1,White,stdpads:LED_0805,,C34499,Hubei Kento C34499,Any manufacturer's part is acceptable.
+FID1 FID2 FID3 FID4 ,4,Fiducial,stdpads:Fiducial,,,,DNP - SMT vision system fiducial
+H1 H2 H3 H4 ,4, ,stdpads:PasteHole_1.152mm_NPTH,,,,DNP - mounting hole for solder paste printing
+H5 ,1, ,stdpads:PasteHole_1.1mm_PTH,,,,DNP - mounting hole
+J1 ,1,AppleIIeAux,stdpads:AppleIIeAux_Edge,,,,DNP - edge connector
+J2 ,1,JTAG,stdpads:TC2050,,,,DNP - test pad connector
+J3 ,1,C14M,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,,,,DNP
+R1 ,1,0,stdpads:R_0805,,C17477,Uniroyal 0805W8F0000T5E,Any manufacturer's part is acceptable.
+R2 R3 R4 R5 ,4,47,stdpads:R_0603,,C23182,Uniroyal 0603WAF470JT5E,Any manufacturer's part is acceptable.
+R6 ,1,0,stdpads:R_0805,,C17477,Uniroyal 0805W8F0000T5E,Any manufacturer's part is acceptable.
+R7 ,1,DNP,stdpads:R_0805,,,,
+R8 ,1,220,stdpads:R_0805,,C17557,Uniroyal 0805W8F2200T5E,Any manufacturer's part is acceptable.
+R9 R10 ,2,22k,stdpads:R_0805,,C17560,Uniroyal 0805W8F2202T5E,Any manufacturer's part is acceptable.
+U1 ,1,EPM240T100,stdpads:TQFP-100_14x14mm_P0.5mm,,C10041,"Altera EPM240T100C5N, Altera EPM240T100C4N, Altera EPM240T100C3N, Altera EPM240T100I5N, Altera EPM240T100I4N, Altera EPM240T100A5N, Altera EPM240T100A4N",
+U2 ,1,W9812G6KH-6,stdpads:TSOP-II-54_22.2x10.16mm_P0.8mm,,C62379,"Winbond W9812G6KH-6, Winbond W9812G6KH-6I, Winbond W9825G6KH-6, Winbond W9825G6KH-6I, ISSI IS42S16160J-6TL, ISSI IS42S16160J-6TLI, Micron MT48LC16M16A2P-6A :G, Micron MT48LC16M16A2P-6A IT:G",Most 166 MHz 128/256 Mbit x16 SDRAM is acceptable.
+U3 U4 U5 ,3,74LVC245APW,stdpads:TSSOP-20_4.4x6.5mm_P0.65mm,,C6082,"NXP 74LVC245APW, TI SN74LVC245APW, NXP 74AHC245PW, NXP 74AHC245APW, TI SN74AHC245PW",Most 74LVC245 or 74AHC245 in TSSOP-20 package is acceptable.
+U6 U7 ,2,74AHCT245PW,stdpads:TSSOP-20_4.4x6.5mm_P0.65mm,,C173388,"NXP 74AHCT245PW, NXP 74AHCT245APW, TI SN74AHCT245PW",Most 74AHCT245 in TSSOP-20 package is acceptable.
+U8 ,1,XC6206P332MR,stdpads:SOT-23,,C5446,Torex XC6206P332MR,Most 3.3V regulator in SOT-23 package is acceptable.
+U9 ,1,AP2127K-1.8TRG1,stdpads:SOT-23-5,,C151375,"Diodes AP2127K-1.8TRG1, Torex XC6228D182VR",Most 1.8V regulator in SOT-23-5 package is acceptable.

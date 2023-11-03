@@ -91,8 +91,8 @@ module RAM2E(C14M, PHI1, LED,
         .drdout (DRDOut),
         .osc (UFMOsc),
         .rtpbusy (RTPBusy));
-    reg UFMBusyReg = 0; // UFMBusy registered to sync with C14M
-    reg RTPBusyReg = 0; // RTPBusy registered to sync with C14M
+    reg UFMRTPBusy = 0;
+    always @(posedge C14M) begin UFMRTPBusy <= UFMBusy || RTPBusy;
 
     /* UFM State and User Command Triggers */
     reg UFMInitDone = 0; // 1 if UFM initialization finished
@@ -123,9 +123,7 @@ module RAM2E(C14M, PHI1, LED,
     end
 
     /* UFM Control */
-    always @(posedge C14M) begin // Synchronize asynchronous UFM signals
-        UFMBusyReg <= UFMBusy; RTPBusyReg <= RTPBusy;
-    end
+    reg UFMProgStart;
     always @(posedge C14M) begin
         if (S==4'h0) begin
             if ((FS[15:13]==3'b101) || (FS[15:13]==3'b111 && UFMReqErase)) begin
@@ -188,6 +186,8 @@ module RAM2E(C14M, PHI1, LED,
             UFMProgram <= 1'b0;
             // Keep DRCLK pulse control disabled during init
             DRCLKPulse <= 1'b0;
+            // Reset UFMProgStart
+            UFMProgStart <= 1'b0; 
         end else begin
             // Can only shift UFM data register now
             ARCLK <= 1'b0;
@@ -213,11 +213,16 @@ module RAM2E(C14M, PHI1, LED,
             end
 
             // UFM programming sequence
-            if (CmdPrgmMAX || CmdEraseMAX) begin
-                if (!UFMBusyReg && !RTPBusyReg) begin
-                    if (UFMReqErase || CmdEraseMAX) UFMErase <= 1'b1;
-                    else if (CmdPrgmMAX) UFMProgram <= 1'b1;
-                end else if (UFMBusyReg) UFMReqErase <= 1'b0;
+            if (S==4'h1) begin
+                if (!UFMProgStart && !UFMRTPBusy) begin
+                    if (CmdPrgmMAX) begin
+                        UFMErase <= UFMReqErase;
+                        UFMProgStart <= 1;
+                    end else if (CmdEraseMAX) UFMErase <= 1;
+                end else if (UFMProgStart && !UFMRTPBusy) begin
+                    UFMErase <= 0;
+                    if (!UFMErase) UFMProgram <= 1;
+                end
             end
         end
     end
@@ -586,8 +591,10 @@ module RAM2E(C14M, PHI1, LED,
                     //CmdBitbangMXO2 <= Din[7:0]==8'hEC;
                     //CmdExecMXO2 <= Din[7:0]==8'hED;
 
-                    if (Din[7:0]==8'hEE) CmdEraseMAX <= 1;
-                    if (Din[7:0]==8'hEF) CmdPrgmMAX <= 1;
+                    if (!CmdEraseMAX && !CmdPrgmMAX) begin
+                        if (Din[7:0]==8'hEE) CmdEraseMAX <= 1;
+                        if (Din[7:0]==8'hEF) CmdPrgmMAX <= 1;
+                    end
                 end else begin // Reset command triggers
                     CmdSetRWBankFFMAX <= 0;
                     //CmdSetRWBankFFSPI <= 0;
