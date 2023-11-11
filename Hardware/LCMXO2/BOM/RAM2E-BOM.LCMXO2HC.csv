@@ -2,7 +2,7 @@ Reference, Quantity, Value, Footprint, Datasheet, LCSC Part, Mfg. Part Numbers, 
 C7 C8 C9 C10 C11 C12 C13 C14 C15 C16 C17 C18 C19 C20 C21 C22 C23 C24 C25 C26 C27 C28 C30 ,23,2u2,stdpads:C_0603,,C23630,Samsung CL10A225KO8NNNC,"10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred."
 C1 C2 C3 C4 C5 C6 C29 ,7,10u,stdpads:C_0805,,C15850,Samsung CL21A106KAYNNNE,"10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred."
 C31 ,1,15p,stdpads:C_0603,,C1644,Samsung CL10C150JB8NNNC,"10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred."
-D1 ,1,White,stdpads:LED_0805,,C34499,Hubei Kento C34499,Any manufacturer's part is acceptable.
+D1 ,1,Amber,stdpads:LED_0805,,C34499,Hubei Kento C34499,Any manufacturer's part is acceptable.
 FID1 FID2 FID3 FID4 ,4,Fiducial,stdpads:Fiducial,,,,DNP - SMT vision system fiducial
 H1 H2 H3 H4 ,4, ,stdpads:PasteHole_1.152mm_NPTH,,,,DNP - mounting hole for solder paste printing
 H5 ,1, ,stdpads:PasteHole_1.1mm_PTH,,,,DNP - mounting hole
