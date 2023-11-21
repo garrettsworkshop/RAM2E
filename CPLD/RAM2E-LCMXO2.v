@@ -7,18 +7,18 @@ module RAM2E(C14M, PHI1, LED,
     /* Clocks */
     input C14M, PHI1;
     
+    /* SDRAM clock output */
+    output RCLK;
+    ODDRXE rclk_oddr(.D0(1'b0), .D1(1'b1), 
+        .SCLK(C14M), .RST(1'b0), .Q(RCLK));
+    
     /* Control inputs */
     input nWE, nWE80, nEN80, nC07X;
-    
-    /* Delay for EN80 signal */
-    //output DelayOut = 1'b0;
-    //input DelayIn;
-    wire EN80 = !nEN80;
 
     /* Activity LED */
     reg LEDEN = 0;
     output LED;
-    assign LED = !(!nEN80 && LEDEN);
+    assign LED = !(!nEN80 && LEDEN && Ready);
 
     /* Address Bus */
     input [7:0] Ain; // Multiplexed DRAM address input
@@ -27,7 +27,7 @@ module RAM2E(C14M, PHI1, LED,
     input [7:0] Din; // 6502 data bus inputs
     reg DOEEN = 0; // 6502 data bus output enable from state machine
     output nDOE;
-    assign nDOE = !(EN80 && nWE && DOEEN); // 6502 data bus output enable
+    assign nDOE = !(!nEN80 && nWE && DOEEN); // 6502 data bus output enable
     output reg [7:0] Dout; // 6502 data Bus output
     
     /* Video Data Bus */
@@ -37,11 +37,13 @@ module RAM2E(C14M, PHI1, LED,
 
     /* SDRAM */
     output reg CKE = 0;
-    output reg nCS = 1, nRAS = 1, nCAS = 1, nRWE = 1;
+    output nCS;
+    assign nCS = 0;
+    output reg nRAS = 1, nCAS = 1, nRWE = 1;
     output reg [1:0] BA;
     output reg [11:0] RA;
     output reg DQML = 1, DQMH = 1;
-    wire RDOE = EN80 && !nWE80;
+    wire RDOE = !nEN80 && !nWE80;
     inout [7:0] RD;
     assign RD[7:0] = RDOE ? Din[7:0] : 8'bZ;
     
@@ -592,7 +594,7 @@ module RAM2E(C14M, PHI1, LED,
             DOEEN <= 1'b0;
         end else if (S==4'h8) begin
             // Enable clock if '245 output enabled
-            CKE <= EN80;
+            CKE <= !nEN80;
             
             // Activate if '245 output enabled
             nCS <= nEN80;
@@ -613,7 +615,7 @@ module RAM2E(C14M, PHI1, LED,
             DOEEN <= 1'b0;
         end else if (S==4'h9) begin
             // Enable clock if '245 output enabled
-            CKE <= EN80;
+            CKE <= !nEN80;
             
             // Read/Write if '245 output enabled
             nCS <= nEN80;
@@ -641,7 +643,7 @@ module RAM2E(C14M, PHI1, LED,
             DOEEN <= 1'b0;
         end else if (S==4'hA) begin
             // Enable clock if '245 output enabled
-            CKE <= EN80;
+            CKE <= !nEN80;
             
             // NOP
             nCS <= 1'b1;
