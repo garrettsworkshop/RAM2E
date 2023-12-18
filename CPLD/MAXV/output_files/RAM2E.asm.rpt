@@ -1,6 +1,6 @@
 Assembler report for RAM2E
-Tue Nov 21 06:54:42 2023
-Quartus Prime Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
+Thu Sep 21 05:34:42 2023
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
 ---------------------
@@ -10,7 +10,7 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Editio
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: Y:/Repos/RAM2E/CPLD/MAXV/output_files/RAM2E.pof
+  5. Assembler Device Options: /Repos/RAM2E/CPLD/MAXV/output_files/RAM2E.pof
   6. Assembler Messages
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Nov 21 06:54:42 2023 ;
+; Assembler Status      ; Successful - Thu Sep 21 05:34:42 2023 ;
 ; Revision Name         ; RAM2E                                 ;
 ; Top-level Entity Name ; RAM2E                                 ;
 ; Family                ; MAX V                                 ;
@@ -53,23 +53,23 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+-------------------------------------------------+
-; Assembler Generated Files                       ;
-+-------------------------------------------------+
-; File Name                                       ;
-+-------------------------------------------------+
-; Y:/Repos/RAM2E/CPLD/MAXV/output_files/RAM2E.pof ;
-+-------------------------------------------------+
++-----------------------------------------------+
+; Assembler Generated Files                     ;
++-----------------------------------------------+
+; File Name                                     ;
++-----------------------------------------------+
+; /Repos/RAM2E/CPLD/MAXV/output_files/RAM2E.pof ;
++-----------------------------------------------+
 
 
-+---------------------------------------------------------------------------+
-; Assembler Device Options: Y:/Repos/RAM2E/CPLD/MAXV/output_files/RAM2E.pof ;
-+----------------+----------------------------------------------------------+
-; Option         ; Setting                                                  ;
-+----------------+----------------------------------------------------------+
-; JTAG usercode  ; 0x0016BE3C                                               ;
-; Checksum       ; 0x0016C1A4                                               ;
-+----------------+----------------------------------------------------------+
++-------------------------------------------------------------------------+
+; Assembler Device Options: /Repos/RAM2E/CPLD/MAXV/output_files/RAM2E.pof ;
++----------------+--------------------------------------------------------+
+; Option         ; Setting                                                ;
++----------------+--------------------------------------------------------+
+; JTAG usercode  ; 0x0016B5DB                                             ;
+; Checksum       ; 0x0016B84B                                             ;
++----------------+--------------------------------------------------------+
 
 
 +--------------------+
@@ -77,14 +77,14 @@ https://fpgasoftware.intel.com/eula.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
-    Info: Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
-    Info: Processing started: Tue Nov 21 06:54:41 2023
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Processing started: Thu Sep 21 05:34:41 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off RAM2E-MAXV -c RAM2E
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 13070 megabytes
-    Info: Processing ended: Tue Nov 21 06:54:42 2023
+    Info: Peak virtual memory: 13092 megabytes
+    Info: Processing ended: Thu Sep 21 05:34:42 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
