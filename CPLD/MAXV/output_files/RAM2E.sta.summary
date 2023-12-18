@@ -3,27 +3,27 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Setup 'DRCLK'
-Slack : -25.523
-TNS   : -25.523
+Slack : -24.019
+TNS   : -24.019
 
 Type  : Setup 'ARCLK'
-Slack : -25.433
-TNS   : -25.433
+Slack : -23.863
+TNS   : -23.863
 
 Type  : Setup 'C14M'
-Slack : -10.080
-TNS   : -10.080
+Slack : -15.767
+TNS   : -176.992
 
 Type  : Hold 'ARCLK'
-Slack : -14.566
-TNS   : -14.566
+Slack : -16.136
+TNS   : -16.136
 
 Type  : Hold 'DRCLK'
-Slack : -14.550
-TNS   : -14.550
+Slack : -15.980
+TNS   : -15.980
 
 Type  : Hold 'C14M'
-Slack : 3.107
+Slack : 2.440
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'C14M'

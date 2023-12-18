@@ -1,4 +1,4 @@
-module RAM2E(C14M, RCLK, PHI1, LED, 
+module RAM2E(C14M, PHI1, LED, 
              nWE, nWE80, nEN80, nC07X,
              Ain, Din, Dout, nDOE, Vout, nVOE,
              CKE, nCS, nRAS, nCAS, nRWE,
@@ -7,21 +7,18 @@ module RAM2E(C14M, RCLK, PHI1, LED,
     /* Clocks */
     input C14M, PHI1;
     
-    /* SDRAM clock output */
-    output RCLK;
-    reg RCLKx0;
-    reg RCLKx1;
-    always @(negedge C14M) RCLKx1 <= !RCLKx1;
-    always @(posedge C14M) RCLKx0 <=  RCLKx1;
-    assign RCLK = RCLKx0 ^ RCLKx1;
-
     /* Control inputs */
     input nWE, nWE80, nEN80, nC07X;
+    
+    /* Delay for EN80 signal */
+    //output DelayOut = 1'b0;
+    //input DelayIn;
+    wire EN80 = !nEN80;
 
     /* Activity LED */
     reg LEDEN = 0;
     output LED;
-    assign LED = !(!nEN80 && LEDEN && Ready);
+    assign LED = !(!nEN80 && LEDEN);
 
     /* Address Bus */
     input [7:0] Ain; // Multiplexed DRAM address input
@@ -30,7 +27,7 @@ module RAM2E(C14M, RCLK, PHI1, LED,
     input [7:0] Din; // 6502 data bus inputs
     reg DOEEN = 0; // 6502 data bus output enable from state machine
     output nDOE;
-    assign nDOE = !(!nEN80 && nWE && DOEEN); // 6502 data bus output enable
+    assign nDOE = !(EN80 && nWE && DOEEN); // 6502 data bus output enable
     output reg [7:0] Dout; // 6502 data Bus output
     
     /* Video Data Bus */
@@ -40,13 +37,11 @@ module RAM2E(C14M, RCLK, PHI1, LED,
 
     /* SDRAM */
     output reg CKE = 0;
-    output nCS;
-    assign nCS = 0;
-    output reg nRAS = 1, nCAS = 1, nRWE = 1;
+    output reg nCS = 1, nRAS = 1, nCAS = 1, nRWE = 1;
     output reg [1:0] BA;
     output reg [11:0] RA;
     output reg DQML = 1, DQMH = 1;
-    wire RDOE = !nEN80 && !nWE80;
+    wire RDOE = EN80 && !nWE80;
     inout [7:0] RD;
     assign RD[7:0] = RDOE ? Din[7:0] : 8'bZ;
     
@@ -68,7 +63,7 @@ module RAM2E(C14M, RCLK, PHI1, LED,
     reg [2:0] CmdTout = 0; // Command sequence timeout
 
     /* UFM Interface */
-    reg [15:7] UFMD = 0; // *Parallel* UFM data register
+    reg [15:8] UFMD = 0; // *Parallel* UFM data register
     reg ARCLK = 0; // UFM address register clock
     // UFM address register data input tied to 0
     reg ARShift = 0; // 1 to Shift UFM address in, 0 to increment
@@ -97,7 +92,7 @@ module RAM2E(C14M, RCLK, PHI1, LED,
         .osc (UFMOsc),
         .rtpbusy (RTPBusy));
     reg UFMRTPBusy = 0;
-    always @(posedge C14M) UFMRTPBusy <= UFMBusy || RTPBusy;
+    always @(posedge C14M) begin UFMRTPBusy <= UFMBusy || RTPBusy;
 
     /* UFM State and User Command Triggers */
     reg UFMInitDone = 0; // 1 if UFM initialization finished
@@ -147,42 +142,37 @@ module RAM2E(C14M, RCLK, PHI1, LED,
                 ARShift <= 1'b0; // Don't care ARShift
                 DRDIn <= 1'b0; // Don't care DRDIn
                 DRShift <= 1'b0; // Don't care DRShift
-            end else if (!UFMInitDone && FS[15:13]==3'b110 && (FS[4:1]==4'h6 || FS[4:1]==4'h7 || FS[4:1]==4'h8 || FS[4:1]==4'h9 || FS[4:1]==4'hA || FS[4:1]==4'hB || FS[4:1]==4'hC || FS[4:1]==4'hD || FS[4:1]==4'hE)) begin
-                // In states CXXX-DXXX (substeps 6-E)
-                // Shift out UFMD[15:7] (repeat 256x 9x)
-                ARCLK <= 1'b0; // Don't clock address register
+            end else if (!UFMInitDone && FS[15:13]==3'b110 && (FS[4:1]==4'h7 || FS[4]==1'b1)) begin
+                // In states CXXX-DXXX (substeps 8-F)
+                // Save UFM D15-8, shift out D14-7 (repeat 256x 8x)
                 DRCLK <= FS[0]; // Clock data register
                 ARShift <= 1'b0; // ARShift is 0 because we want to increment
                 DRDIn <= 1'b0; // Don't care what to shift into data register
                 DRShift <= 1'b1; // Shift data register
                 // Shift into UFMD
-                if (FS[0]) UFMD[15:7] <= {UFMD[14:7], DRDOut};
-            end else if (!UFMInitDone && FS[15:13]==3'b110 && FS[4:1]==4'hF) begin
-                // In states CXXX-DXXX (substep F)
-                // Check and save mask, compute and save LEDEN
-                DRCLK <= 1'b0; // Don't clock data register
-                ARShift <= 1'b0; // ARShift is 0 because we want to increment
-                DRDIn <= 1'b0; // Don't care what to shift into data register
-                DRShift <= 1'b1; // Shift data register
-                // Set settings
-                // If byte is erased (0xFF, i.e. all 1's, is erased)...
-                if (UFMD[15:8]==8'hFF && UFMD[7]==1'b1) begin
-                    // Current UFM address is where we want to store
-                    UFMInitDone <= 1'b1; // Quit iterating
-                    ARCLK <= 1'b0; // Don't increment address register
-                // Otherwise byte is valid setting (i.e. some bit is 0)...
-                end else begin
-                    // Set RWMask, but if saved mask is 0x80, set for FF
-                    if (UFMD[15:8]==8'b10000000) RWMask[7:0] <= {1'b1, 7'h00};
-                    else RWMask[7:0] <= {UFMD[15], ~UFMD[14:8]};
-                    // Set LED setting
-                    LEDEN <= UFMD[15] ^ UFMD[7];
-                    // If last byte in sector...
-                    if (FS[12:5]==8'hFF) begin
-                        UFMReqErase <= 1'b1; // Need to erase
-                        ARCLK <= 1'b0; // Don't increment address register
-                    end else ARCLK <= FS[0]; // Increment if not last byte
-                end
+                if (FS[0]) UFMD[15:8] <= {UFMD[14:8], DRDOut};
+
+                // Compare and store mask
+                if (FS[4:1]==4'hF) begin
+                    ARCLK <= FS[0]; // Clock address register to increment
+                    // If byte is erased (0xFF, i.e. all 1's, is erased)...
+                    if (UFMD[15:8]==8'hFF && DRDOut==1'b1) begin
+                        // Current UFM address is where we want to store
+                        UFMInitDone <= 1'b1; // Quit iterating
+                    // Otherwise byte is valid setting (i.e. some bit is 0)...
+                    end else begin
+                        // Set RWMask, but if saved mask is 0x80, store ~0xFF
+                        if (UFMD[15:8]==8'b10000000) begin
+                            RWMask[7:0] <= {1'b1, ~7'h7F};
+                        end else RWMask[7:0] <= {UFMD[15], ~UFMD[14:8]};
+                        // Set LED setting
+                        LEDEN <= DRDOut ^ UFMD[15];
+                        // If last byte in sector...
+                        if (FS[12:5]==8'hFF) begin
+                            UFMReqErase <= 1'b1; // Mark need to erase
+                        end
+                    end
+                end else ARCLK <= 1'b0; // Don't clock address register
             end else begin
                 ARCLK <= 1'b0;
                 DRCLK <= 1'b0;
@@ -223,21 +213,15 @@ module RAM2E(C14M, RCLK, PHI1, LED,
             end
 
             // UFM programming sequence
-            if (S==4'h1 && !UFMRTPBusy) begin
-                if (!UFMProgStart) begin
+            if (S==4'h1) begin
+                if (!UFMProgStart && !UFMRTPBusy) begin
                     if (CmdPrgmMAX) begin
                         UFMErase <= UFMReqErase;
-                        UFMProgram <= 0;
                         UFMProgStart <= 1;
-                    end else if (CmdEraseMAX) begin
-                        UFMErase <= 1;
-                        UFMProgram <= 0;
-                        UFMProgStart <= 1;
-                    end
-                end else begin
+                    end else if (CmdEraseMAX) UFMErase <= 1;
+                end else if (UFMProgStart && !UFMRTPBusy) begin
                     UFMErase <= 0;
-                    UFMProgram <= !UFMErase;
-                    UFMProgStart <= 1;
+                    if (!UFMErase) UFMProgram <= 1;
                 end
             end
         end
@@ -249,30 +233,35 @@ module RAM2E(C14M, RCLK, PHI1, LED,
             // SDRAM initialization
             if (FS[15:0]==16'hFFC0) begin
                 // Precharge All
+                nCS <= 1'b0;
                 nRAS <= 1'b0;
                 nCAS <= 1'b1;
                 nRWE <= 1'b0;
                 RA[10] <= 1'b1; // "all"
             end else if (FS[15:4]==16'hFFD && FS[0]==1'b0) begin // Repeat 8x
                 // Auto-refresh
+                nCS <= 1'b0;    
                 nRAS <= 1'b0;
                 nCAS <= 1'b0;
                 nRWE <= 1'b1;
                 RA[10] <= 1'b0;
             end else if (FS[15:0]==16'hFFE8) begin
                 // Set Mode Register
+                nCS <= 1'b0;
                 nRAS <= 1'b0;
                 nCAS <= 1'b0;
                 nRWE <= 1'b0;
                 RA[10] <= 1'b0; // Reserved in mode register
             end else if (FS[15:4]==12'hFFF && FS[0]==1'b0) begin // Repeat 8x
                 // Auto-refresh
+                nCS <= 1'b0;
                 nRAS <= 1'b0;
                 nCAS <= 1'b0;
                 nRWE <= 1'b1;
                 RA[10] <= 1'b0;
             end else begin // Otherwise send no-op
                 // NOP
+                nCS <= 1'b1;
                 nRAS <= 1'b1;
                 nCAS <= 1'b1;
                 nRWE <= 1'b1;
@@ -306,6 +295,7 @@ module RAM2E(C14M, RCLK, PHI1, LED,
             CKE <= 1'b1;
 
             // NOP
+            nCS <= 1'b1;
             nRAS <= 1'b1;
             nCAS <= 1'b1;
             nRWE <= 1'b1;
@@ -325,6 +315,7 @@ module RAM2E(C14M, RCLK, PHI1, LED,
             CKE <= 1'b1;
             
             // Activate
+            nCS <= 1'b0;
             nRAS <= 1'b0;
             nCAS <= 1'b1;
             nRWE <= 1'b1;
@@ -345,6 +336,7 @@ module RAM2E(C14M, RCLK, PHI1, LED,
             CKE <= 1'b1;
             
             // Read
+            nCS <= 1'b0;
             nRAS <= 1'b1;
             nCAS <= 1'b0;
             nRWE <= 1'b1;
@@ -369,6 +361,7 @@ module RAM2E(C14M, RCLK, PHI1, LED,
             CKE <= 1'b1;
             
             // NOP
+            nCS <= 1'b1;
             nRAS <= 1'b1;
             nCAS <= 1'b1;
             nRWE <= 1'b1;
@@ -388,6 +381,7 @@ module RAM2E(C14M, RCLK, PHI1, LED,
             CKE <= 1'b1;
             
             // NOP
+            nCS <= 1'b1;
             nRAS <= 1'b1;
             nCAS <= 1'b1;
             nRWE <= 1'b1;
@@ -408,11 +402,13 @@ module RAM2E(C14M, RCLK, PHI1, LED,
             
             if (FS[5:4]==0) begin
                 // Auto-refresh
+                nCS <= 1'b0;
                 nRAS <= 1'b0;
                 nCAS <= 1'b0;
                 nRWE <= 1'b1;
             end else begin
                 // NOP
+                nCS <= 1'b1;
                 nRAS <= 1'b1;
                 nCAS <= 1'b1;
                 nRWE <= 1'b1;
@@ -433,6 +429,7 @@ module RAM2E(C14M, RCLK, PHI1, LED,
             CKE <= 1'b1;
             
             // NOP
+            nCS <= 1'b1;
             nRAS <= 1'b1;
             nCAS <= 1'b1;
             nRWE <= 1'b1;
@@ -451,10 +448,11 @@ module RAM2E(C14M, RCLK, PHI1, LED,
             DOEEN <= 1'b0;
         end else if (S==4'h8) begin
             // Enable clock if '245 output enabled
-            CKE <= !nEN80;
+            CKE <= EN80;
             
             // Activate if '245 output enabled
-            nRAS <= nEN80;
+            nCS <= nEN80;
+            nRAS <= 1'b0;
             nCAS <= 1'b1;
             nRWE <= 1'b1;
 
@@ -470,21 +468,14 @@ module RAM2E(C14M, RCLK, PHI1, LED,
             // Inhibit data bus output
             DOEEN <= 1'b0;
         end else if (S==4'h9) begin
-            // Keep CKE same as last clock
+            // Enable clock if '245 output enabled
+            CKE <= EN80;
             
             // Read/Write if '245 output enabled
-            
-            if (CKE) begin
-                // Read/Write if CKE ('245 output enabled)
-                nRAS <= 1'b1;
-                nCAS <= 1'b0;
-                nRWE <= nWE80;
-            end else begin
-                // NOP
-                nRAS <= 1'b1;
-                nCAS <= 1'b1;
-                nRWE <= 1'b1;
-            end
+            nCS <= nEN80;
+            nRAS <= 1'b1;
+            nCAS <= 1'b0;
+            nRWE <= nWE80;
 
             // SDRAM bank still determined by RamWorks, RA[11,9:8] don't care
             BA[1:0] <= RWBank[5:4];
@@ -505,9 +496,11 @@ module RAM2E(C14M, RCLK, PHI1, LED,
             // Inhibit data bus output
             DOEEN <= 1'b0;
         end else if (S==4'hA) begin
-            // Keep CKE same as last clock
+            // Enable clock if '245 output enabled
+            CKE <= EN80;
             
             // NOP
+            nCS <= 1'b1;
             nRAS <= 1'b1;
             nCAS <= 1'b1;
             nRWE <= 1'b1;
@@ -527,6 +520,7 @@ module RAM2E(C14M, RCLK, PHI1, LED,
             CKE <= 1'b0;
             
             // NOP
+            nCS <= 1'b1;
             nRAS <= 1'b1;
             nCAS <= 1'b1;
             nRWE <= 1'b1;
@@ -546,6 +540,7 @@ module RAM2E(C14M, RCLK, PHI1, LED,
             CKE <= 1'b0;
             
             // NOP
+            nCS <= 1'b1;
             nRAS <= 1'b1;
             nCAS <= 1'b1;
             nRWE <= 1'b1;
@@ -625,6 +620,7 @@ module RAM2E(C14M, RCLK, PHI1, LED,
             CKE <= 1'b0;
             
             // NOP
+            nCS <= 1'b1;
             nRAS <= 1'b1;
             nCAS <= 1'b1;
             nRWE <= 1'b1;
@@ -644,6 +640,7 @@ module RAM2E(C14M, RCLK, PHI1, LED,
             CKE <= 1'b0;
             
             // NOP
+            nCS <= 1'b1;
             nRAS <= 1'b1;
             nCAS <= 1'b1;
             nRWE <= 1'b1;
@@ -665,6 +662,7 @@ module RAM2E(C14M, RCLK, PHI1, LED,
             CKE <= 1'b0;
             
             // NOP
+            nCS <= 1'b1;
             nRAS <= 1'b1;
             nCAS <= 1'b1;
             nRWE <= 1'b1;

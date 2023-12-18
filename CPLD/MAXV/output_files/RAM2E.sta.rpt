@@ -1,6 +1,6 @@
 Timing Analyzer report for RAM2E
-Tue Nov 21 06:54:45 2023
-Quartus Prime Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
+Thu Sep 21 05:34:46 2023
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
 ---------------------
@@ -57,18 +57,18 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                                     ;
-+-----------------------+---------------------------------------------------------------------+
-; Quartus Prime Version ; Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition ;
-; Timing Analyzer       ; Legacy Timing Analyzer                                              ;
-; Revision Name         ; RAM2E                                                               ;
-; Device Family         ; MAX V                                                               ;
-; Device Name           ; 5M240ZT100C5                                                        ;
-; Timing Models         ; Final                                                               ;
-; Delay Model           ; Slow Model                                                          ;
-; Rise/Fall Delays      ; Unavailable                                                         ;
-+-----------------------+---------------------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; RAM2E                                               ;
+; Device Family         ; MAX V                                               ;
+; Device Name           ; 5M240ZT100C5                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
 
 
 +------------------------------------------+
@@ -84,7 +84,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -93,8 +93,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------+--------+--------------------------+
 ; SDC File Path    ; Status ; Read at                  ;
 +------------------+--------+--------------------------+
-; ../RAM2E.sdc     ; OK     ; Tue Nov 21 06:54:45 2023 ;
-; ../RAM2E-MAX.sdc ; OK     ; Tue Nov 21 06:54:45 2023 ;
+; ../RAM2E.sdc     ; OK     ; Thu Sep 21 05:34:45 2023 ;
+; ../RAM2E-MAX.sdc ; OK     ; Thu Sep 21 05:34:45 2023 ;
 +------------------+--------+--------------------------+
 
 
@@ -116,7 +116,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------+-----------------+------------+------+
 ; 10.0 MHz  ; 10.0 MHz        ; ARCLK      ;      ;
 ; 10.0 MHz  ; 10.0 MHz        ; DRCLK      ;      ;
-; 26.52 MHz ; 26.52 MHz       ; C14M       ;      ;
+; 25.52 MHz ; 25.52 MHz       ; C14M       ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -126,9 +126,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+---------+---------------+
 ; Clock ; Slack   ; End Point TNS ;
 +-------+---------+---------------+
-; DRCLK ; -25.523 ; -25.523       ;
-; ARCLK ; -25.433 ; -25.433       ;
-; C14M  ; -10.080 ; -10.080       ;
+; DRCLK ; -24.019 ; -24.019       ;
+; ARCLK ; -23.863 ; -23.863       ;
+; C14M  ; -15.767 ; -176.992      ;
 +-------+---------+---------------+
 
 
@@ -137,9 +137,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+---------+---------------+
 ; Clock ; Slack   ; End Point TNS ;
 +-------+---------+---------------+
-; ARCLK ; -14.566 ; -14.566       ;
-; DRCLK ; -14.550 ; -14.550       ;
-; C14M  ; 3.107   ; 0.000         ;
+; ARCLK ; -16.136 ; -16.136       ;
+; DRCLK ; -15.980 ; -15.980       ;
+; C14M  ; 2.440   ; 0.000         ;
 +-------+---------+---------------+
 
 
@@ -171,8 +171,8 @@ No paths to report.
 +---------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack   ; From Node                                                                                   ; To Node                                                                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +---------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -25.523 ; DRShift                                                                                     ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; C14M         ; DRCLK       ; 0.001        ; -1.050     ; 4.474      ;
-; -25.449 ; DRDIn                                                                                       ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; C14M         ; DRCLK       ; 0.001        ; -1.050     ; 4.400      ;
+; -24.019 ; DRDIn                                                                                       ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; C14M         ; DRCLK       ; 0.001        ; -1.057     ; 2.963      ;
+; -24.019 ; DRShift                                                                                     ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; C14M         ; DRCLK       ; 0.001        ; -1.057     ; 2.963      ;
 ; 100.000 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; DRCLK        ; DRCLK       ; 200.000      ; 0.000      ; 80.000     ;
 +---------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
@@ -182,7 +182,7 @@ No paths to report.
 +---------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack   ; From Node                                                                                               ; To Node                                                                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +---------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -25.433 ; ARShift                                                                                                 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; C14M         ; ARCLK       ; 0.001        ; -1.042     ; 4.392      ;
+; -23.863 ; ARShift                                                                                                 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; C14M         ; ARCLK       ; 0.001        ; -0.901     ; 2.963      ;
 ; 100.000 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; ARCLK        ; ARCLK       ; 200.000      ; 0.000      ; 80.000     ;
 +---------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
@@ -192,106 +192,106 @@ No paths to report.
 +---------+---------------------------------------------------------------------------------------------+--------------+--------------+-------------+--------------+------------+------------+
 ; Slack   ; From Node                                                                                   ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +---------+---------------------------------------------------------------------------------------------+--------------+--------------+-------------+--------------+------------+------------+
-; -10.080 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; UFMD[7]      ; DRCLK        ; C14M        ; 0.001        ; 1.050      ; 10.810     ;
-; 16.312  ; S[3]                                                                                        ; Dout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 18.287     ;
-; 16.390  ; S[3]                                                                                        ; Dout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 18.209     ;
-; 16.452  ; S[3]                                                                                        ; Dout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 18.147     ;
-; 16.452  ; S[3]                                                                                        ; Dout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 18.147     ;
-; 16.452  ; S[3]                                                                                        ; Dout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 18.147     ;
-; 16.452  ; S[3]                                                                                        ; Dout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 18.147     ;
-; 16.452  ; S[3]                                                                                        ; Dout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 18.147     ;
-; 16.452  ; S[3]                                                                                        ; Dout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 18.147     ;
-; 16.979  ; S[2]                                                                                        ; Dout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.620     ;
-; 17.057  ; S[2]                                                                                        ; Dout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.542     ;
-; 17.119  ; S[2]                                                                                        ; Dout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.480     ;
-; 17.119  ; S[2]                                                                                        ; Dout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.480     ;
-; 17.119  ; S[2]                                                                                        ; Dout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.480     ;
-; 17.119  ; S[2]                                                                                        ; Dout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.480     ;
-; 17.119  ; S[2]                                                                                        ; Dout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.480     ;
-; 17.119  ; S[2]                                                                                        ; Dout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.480     ;
-; 17.747  ; S[0]                                                                                        ; Dout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 16.852     ;
-; 17.825  ; S[0]                                                                                        ; Dout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 16.774     ;
-; 17.887  ; S[0]                                                                                        ; Dout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 16.712     ;
-; 17.887  ; S[0]                                                                                        ; Dout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 16.712     ;
-; 17.887  ; S[0]                                                                                        ; Dout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 16.712     ;
-; 17.887  ; S[0]                                                                                        ; Dout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 16.712     ;
-; 17.887  ; S[0]                                                                                        ; Dout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 16.712     ;
-; 17.887  ; S[0]                                                                                        ; Dout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 16.712     ;
-; 17.922  ; S[1]                                                                                        ; Dout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 16.677     ;
-; 18.000  ; S[1]                                                                                        ; Dout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 16.599     ;
-; 18.062  ; S[1]                                                                                        ; Dout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 16.537     ;
-; 18.062  ; S[1]                                                                                        ; Dout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 16.537     ;
-; 18.062  ; S[1]                                                                                        ; Dout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 16.537     ;
-; 18.062  ; S[1]                                                                                        ; Dout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 16.537     ;
-; 18.062  ; S[1]                                                                                        ; Dout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 16.537     ;
-; 18.062  ; S[1]                                                                                        ; Dout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 16.537     ;
-; 19.364  ; S[0]                                                                                        ; Vout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.235     ;
-; 19.364  ; S[0]                                                                                        ; Vout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.235     ;
-; 19.411  ; S[0]                                                                                        ; Vout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.188     ;
-; 19.411  ; S[0]                                                                                        ; Vout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.188     ;
-; 19.411  ; S[0]                                                                                        ; Vout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.188     ;
-; 20.431  ; S[2]                                                                                        ; Vout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 14.168     ;
-; 20.431  ; S[2]                                                                                        ; Vout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 14.168     ;
-; 20.478  ; S[2]                                                                                        ; Vout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 14.121     ;
-; 20.478  ; S[2]                                                                                        ; Vout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 14.121     ;
-; 20.478  ; S[2]                                                                                        ; Vout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 14.121     ;
-; 21.781  ; S[1]                                                                                        ; Vout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 12.818     ;
-; 21.781  ; S[1]                                                                                        ; Vout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 12.818     ;
-; 21.828  ; S[1]                                                                                        ; Vout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 12.771     ;
-; 21.828  ; S[1]                                                                                        ; Vout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 12.771     ;
-; 21.828  ; S[1]                                                                                        ; Vout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 12.771     ;
-; 22.329  ; S[0]                                                                                        ; Vout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 12.270     ;
-; 22.329  ; S[0]                                                                                        ; Vout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 12.270     ;
-; 22.329  ; S[0]                                                                                        ; Vout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 12.270     ;
-; 23.278  ; S[3]                                                                                        ; Vout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.321     ;
-; 23.278  ; S[3]                                                                                        ; Vout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.321     ;
-; 23.325  ; S[3]                                                                                        ; Vout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.274     ;
-; 23.325  ; S[3]                                                                                        ; Vout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.274     ;
-; 23.325  ; S[3]                                                                                        ; Vout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.274     ;
-; 23.396  ; S[2]                                                                                        ; Vout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.203     ;
-; 23.396  ; S[2]                                                                                        ; Vout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.203     ;
-; 23.396  ; S[2]                                                                                        ; Vout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.203     ;
-; 24.746  ; S[1]                                                                                        ; Vout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 9.853      ;
-; 24.746  ; S[1]                                                                                        ; Vout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 9.853      ;
-; 24.746  ; S[1]                                                                                        ; Vout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 9.853      ;
-; 26.243  ; S[3]                                                                                        ; Vout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 8.356      ;
-; 26.243  ; S[3]                                                                                        ; Vout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 8.356      ;
-; 26.243  ; S[3]                                                                                        ; Vout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 8.356      ;
-; 31.403  ; RCLKx1                                                                                      ; RCLKx0       ; C14M         ; C14M        ; 34.921       ; 0.000      ; 3.197      ;
-; 32.128  ; FS[14]                                                                                      ; RA[10]~reg0  ; C14M         ; C14M        ; 69.841       ; 0.000      ; 37.392     ;
-; 32.516  ; FS[14]                                                                                      ; nRAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 37.004     ;
-; 32.522  ; FS[14]                                                                                      ; nCAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 36.998     ;
-; 33.737  ; FS[15]                                                                                      ; RA[10]~reg0  ; C14M         ; C14M        ; 69.841       ; 0.000      ; 35.783     ;
-; 34.125  ; FS[15]                                                                                      ; nRAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 35.395     ;
-; 34.131  ; FS[15]                                                                                      ; nCAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 35.389     ;
-; 34.931  ; FS[14]                                                                                      ; nRWE~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 34.589     ;
-; 35.247  ; UFMD[10]                                                                                    ; RWMask[4]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 34.273     ;
-; 35.247  ; UFMD[10]                                                                                    ; RWMask[5]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 34.273     ;
-; 35.247  ; UFMD[10]                                                                                    ; RWMask[7]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 34.273     ;
-; 35.247  ; UFMD[10]                                                                                    ; RWMask[0]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 34.273     ;
-; 35.247  ; UFMD[10]                                                                                    ; RWMask[1]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 34.273     ;
-; 35.247  ; UFMD[10]                                                                                    ; RWMask[2]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 34.273     ;
-; 35.247  ; UFMD[10]                                                                                    ; RWMask[3]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 34.273     ;
-; 35.247  ; UFMD[10]                                                                                    ; RWMask[6]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 34.273     ;
-; 35.722  ; S[3]                                                                                        ; RWMask[4]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.798     ;
-; 35.722  ; S[3]                                                                                        ; RWMask[5]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.798     ;
-; 35.722  ; S[3]                                                                                        ; RWMask[7]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.798     ;
-; 35.722  ; S[3]                                                                                        ; RWMask[0]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.798     ;
-; 35.722  ; S[3]                                                                                        ; RWMask[1]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.798     ;
-; 35.722  ; S[3]                                                                                        ; RWMask[2]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.798     ;
-; 35.722  ; S[3]                                                                                        ; RWMask[3]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.798     ;
-; 35.722  ; S[3]                                                                                        ; RWMask[6]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.798     ;
-; 36.008  ; UFMD[10]                                                                                    ; ARCLK        ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.512     ;
-; 36.389  ; S[2]                                                                                        ; RWMask[4]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.131     ;
-; 36.389  ; S[2]                                                                                        ; RWMask[5]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.131     ;
-; 36.389  ; S[2]                                                                                        ; RWMask[7]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.131     ;
-; 36.389  ; S[2]                                                                                        ; RWMask[0]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.131     ;
-; 36.389  ; S[2]                                                                                        ; RWMask[1]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.131     ;
-; 36.389  ; S[2]                                                                                        ; RWMask[2]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.131     ;
-; 36.389  ; S[2]                                                                                        ; RWMask[3]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.131     ;
-; 36.389  ; S[2]                                                                                        ; RWMask[6]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.131     ;
-; 36.540  ; FS[15]                                                                                      ; nRWE~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 32.980     ;
-; 36.850  ; S[1]                                                                                        ; RWMask[4]    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 32.670     ;
+; -15.767 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; UFMReqErase  ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 16.504     ;
+; -15.215 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; RWMask[4]    ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 15.952     ;
+; -15.215 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; RWMask[5]    ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 15.952     ;
+; -15.215 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; RWMask[7]    ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 15.952     ;
+; -15.215 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; RWMask[0]    ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 15.952     ;
+; -15.215 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; RWMask[1]    ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 15.952     ;
+; -15.215 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; RWMask[2]    ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 15.952     ;
+; -15.215 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; RWMask[3]    ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 15.952     ;
+; -15.215 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; RWMask[6]    ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 15.952     ;
+; -14.411 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; LEDEN        ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 15.148     ;
+; -13.177 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; UFMInitDone  ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 13.914     ;
+; -11.917 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; UFMD[8]      ; DRCLK        ; C14M        ; 0.001        ; 1.057      ; 12.654     ;
+; 16.803  ; S[1]                                                                                        ; Dout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.796     ;
+; 16.803  ; S[1]                                                                                        ; Dout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.796     ;
+; 16.803  ; S[1]                                                                                        ; Dout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.796     ;
+; 16.803  ; S[1]                                                                                        ; Dout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.796     ;
+; 16.803  ; S[1]                                                                                        ; Dout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.796     ;
+; 16.803  ; S[1]                                                                                        ; Dout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.796     ;
+; 16.806  ; S[1]                                                                                        ; Dout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.793     ;
+; 16.809  ; S[1]                                                                                        ; Dout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 17.790     ;
+; 18.727  ; S[2]                                                                                        ; Dout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.872     ;
+; 18.727  ; S[2]                                                                                        ; Dout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.872     ;
+; 18.727  ; S[2]                                                                                        ; Dout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.872     ;
+; 18.727  ; S[2]                                                                                        ; Dout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.872     ;
+; 18.727  ; S[2]                                                                                        ; Dout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.872     ;
+; 18.727  ; S[2]                                                                                        ; Dout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.872     ;
+; 18.730  ; S[2]                                                                                        ; Dout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.869     ;
+; 18.733  ; S[2]                                                                                        ; Dout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.866     ;
+; 19.149  ; S[3]                                                                                        ; Vout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.450     ;
+; 19.149  ; S[3]                                                                                        ; Vout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.450     ;
+; 19.196  ; S[3]                                                                                        ; Vout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.403     ;
+; 19.196  ; S[3]                                                                                        ; Vout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.403     ;
+; 19.196  ; S[3]                                                                                        ; Vout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.403     ;
+; 19.260  ; S[0]                                                                                        ; Vout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.339     ;
+; 19.260  ; S[0]                                                                                        ; Vout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.339     ;
+; 19.307  ; S[0]                                                                                        ; Vout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.292     ;
+; 19.307  ; S[0]                                                                                        ; Vout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.292     ;
+; 19.307  ; S[0]                                                                                        ; Vout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 15.292     ;
+; 20.893  ; S[0]                                                                                        ; Dout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 13.706     ;
+; 20.893  ; S[0]                                                                                        ; Dout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 13.706     ;
+; 20.893  ; S[0]                                                                                        ; Dout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 13.706     ;
+; 20.893  ; S[0]                                                                                        ; Dout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 13.706     ;
+; 20.893  ; S[0]                                                                                        ; Dout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 13.706     ;
+; 20.893  ; S[0]                                                                                        ; Dout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 13.706     ;
+; 20.896  ; S[0]                                                                                        ; Dout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 13.703     ;
+; 20.899  ; S[0]                                                                                        ; Dout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 13.700     ;
+; 22.101  ; S[3]                                                                                        ; Vout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 12.498     ;
+; 22.101  ; S[3]                                                                                        ; Vout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 12.498     ;
+; 22.101  ; S[3]                                                                                        ; Vout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 12.498     ;
+; 22.212  ; S[0]                                                                                        ; Vout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 12.387     ;
+; 22.212  ; S[0]                                                                                        ; Vout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 12.387     ;
+; 22.212  ; S[0]                                                                                        ; Vout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 12.387     ;
+; 23.092  ; S[3]                                                                                        ; Dout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.507     ;
+; 23.092  ; S[3]                                                                                        ; Dout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.507     ;
+; 23.092  ; S[3]                                                                                        ; Dout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.507     ;
+; 23.092  ; S[3]                                                                                        ; Dout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.507     ;
+; 23.092  ; S[3]                                                                                        ; Dout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.507     ;
+; 23.092  ; S[3]                                                                                        ; Dout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.507     ;
+; 23.095  ; S[3]                                                                                        ; Dout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.504     ;
+; 23.098  ; S[3]                                                                                        ; Dout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 11.501     ;
+; 23.710  ; S[1]                                                                                        ; Vout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 10.889     ;
+; 23.710  ; S[1]                                                                                        ; Vout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 10.889     ;
+; 23.757  ; S[1]                                                                                        ; Vout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 10.842     ;
+; 23.757  ; S[1]                                                                                        ; Vout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 10.842     ;
+; 23.757  ; S[1]                                                                                        ; Vout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 10.842     ;
+; 24.349  ; S[2]                                                                                        ; Vout[0]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 10.250     ;
+; 24.349  ; S[2]                                                                                        ; Vout[4]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 10.250     ;
+; 24.396  ; S[2]                                                                                        ; Vout[1]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 10.203     ;
+; 24.396  ; S[2]                                                                                        ; Vout[2]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 10.203     ;
+; 24.396  ; S[2]                                                                                        ; Vout[5]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 10.203     ;
+; 26.662  ; S[1]                                                                                        ; Vout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 7.937      ;
+; 26.662  ; S[1]                                                                                        ; Vout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 7.937      ;
+; 26.662  ; S[1]                                                                                        ; Vout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 7.937      ;
+; 27.301  ; S[2]                                                                                        ; Vout[3]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 7.298      ;
+; 27.301  ; S[2]                                                                                        ; Vout[6]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 7.298      ;
+; 27.301  ; S[2]                                                                                        ; Vout[7]~reg0 ; C14M         ; C14M        ; 34.920       ; 0.000      ; 7.298      ;
+; 30.659  ; FS[15]                                                                                      ; nRAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 38.861     ;
+; 31.593  ; FS[14]                                                                                      ; nRAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 37.927     ;
+; 32.392  ; FS[15]                                                                                      ; nCS~reg0     ; C14M         ; C14M        ; 69.841       ; 0.000      ; 37.128     ;
+; 32.513  ; FS[2]                                                                                       ; nRAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 37.007     ;
+; 33.326  ; FS[14]                                                                                      ; nCS~reg0     ; C14M         ; C14M        ; 69.841       ; 0.000      ; 36.194     ;
+; 33.452  ; FS[15]                                                                                      ; nCAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 36.068     ;
+; 33.715  ; S[1]                                                                                        ; CmdEraseMAX  ; C14M         ; C14M        ; 69.841       ; 0.000      ; 35.805     ;
+; 34.111  ; FS[1]                                                                                       ; nRAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 35.409     ;
+; 34.246  ; FS[2]                                                                                       ; nCS~reg0     ; C14M         ; C14M        ; 69.841       ; 0.000      ; 35.274     ;
+; 34.386  ; FS[14]                                                                                      ; nCAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 35.134     ;
+; 35.112  ; FS[11]                                                                                      ; nRAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 34.408     ;
+; 35.288  ; FS[10]                                                                                      ; nRAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 34.232     ;
+; 35.392  ; S[1]                                                                                        ; CmdPrgmMAX   ; C14M         ; C14M        ; 69.841       ; 0.000      ; 34.128     ;
+; 35.639  ; S[2]                                                                                        ; CmdEraseMAX  ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.881     ;
+; 35.844  ; FS[1]                                                                                       ; nCS~reg0     ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.676     ;
+; 36.147  ; FS[8]                                                                                       ; nRAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 33.373     ;
+; 36.765  ; FS[9]                                                                                       ; nRAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 32.755     ;
+; 36.845  ; FS[11]                                                                                      ; nCS~reg0     ; C14M         ; C14M        ; 69.841       ; 0.000      ; 32.675     ;
+; 37.021  ; FS[10]                                                                                      ; nCS~reg0     ; C14M         ; C14M        ; 69.841       ; 0.000      ; 32.499     ;
+; 37.152  ; FS[4]                                                                                       ; nRAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 32.368     ;
+; 37.316  ; S[2]                                                                                        ; CmdPrgmMAX   ; C14M         ; C14M        ; 69.841       ; 0.000      ; 32.204     ;
+; 37.805  ; S[0]                                                                                        ; CmdEraseMAX  ; C14M         ; C14M        ; 69.841       ; 0.000      ; 31.715     ;
+; 37.880  ; FS[8]                                                                                       ; nCS~reg0     ; C14M         ; C14M        ; 69.841       ; 0.000      ; 31.640     ;
+; 37.905  ; FS[11]                                                                                      ; nCAS~reg0    ; C14M         ; C14M        ; 69.841       ; 0.000      ; 31.615     ;
 +---------+---------------------------------------------------------------------------------------------+--------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -300,7 +300,7 @@ No paths to report.
 +---------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack   ; From Node                                                                                               ; To Node                                                                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +---------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -14.566 ; ARShift                                                                                                 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; C14M         ; ARCLK       ; 0.000        ; -1.042     ; 4.392      ;
+; -16.136 ; ARShift                                                                                                 ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; C14M         ; ARCLK       ; 0.000        ; -0.901     ; 2.963      ;
 ; 60.000  ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; ARCLK        ; ARCLK       ; 0.000        ; 0.000      ; 80.000     ;
 +---------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
@@ -310,8 +310,8 @@ No paths to report.
 +---------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack   ; From Node                                                                                   ; To Node                                                                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +---------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -14.550 ; DRDIn                                                                                       ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; C14M         ; DRCLK       ; 0.000        ; -1.050     ; 4.400      ;
-; -14.476 ; DRShift                                                                                     ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; C14M         ; DRCLK       ; 0.000        ; -1.050     ; 4.474      ;
+; -15.980 ; DRDIn                                                                                       ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; C14M         ; DRCLK       ; 0.000        ; -1.057     ; 2.963      ;
+; -15.980 ; DRShift                                                                                     ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; C14M         ; DRCLK       ; 0.000        ; -1.057     ; 2.963      ;
 ; 60.000  ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component|wire_maxii_ufm_block1_drdout ; DRCLK        ; DRCLK       ; 0.000        ; 0.000      ; 80.000     ;
 +---------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
@@ -321,106 +321,106 @@ No paths to report.
 +-------+---------------+-------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node     ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------+-------------------+--------------+-------------+--------------+------------+------------+
-; 3.107 ; UFMD[7]       ; UFMD[8]           ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.146      ;
-; 3.119 ; UFMD[10]      ; UFMD[11]          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.158      ;
-; 3.155 ; UFMD[11]      ; UFMD[12]          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.194      ;
-; 3.364 ; Ready         ; Ready             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.403      ;
-; 3.382 ; UFMD[8]       ; UFMD[9]           ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.421      ;
-; 3.402 ; CmdPrgmMAX    ; CmdPrgmMAX        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.441      ;
-; 3.412 ; CmdBitbangMAX ; DRCLKPulse        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.451      ;
-; 3.414 ; UFMD[13]      ; UFMD[14]          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.453      ;
-; 3.443 ; CS[0]         ; CS[0]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.482      ;
-; 3.500 ; CmdTout[0]    ; CmdTout[0]        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.539      ;
-; 3.500 ; CmdTout[0]    ; CmdTout[1]        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.539      ;
-; 3.510 ; CmdTout[0]    ; CmdTout[2]        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.549      ;
-; 3.740 ; FS[0]         ; FS[0]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.779      ;
-; 3.754 ; RWMask[4]     ; RWBank[4]         ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.793      ;
-; 3.756 ; RWMask[1]     ; RWBank[1]         ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.795      ;
-; 3.779 ; RWBank[5]     ; BA[1]~reg0        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.818      ;
-; 3.791 ; RCLKx1        ; RCLKx1            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.830      ;
-; 3.801 ; CS[1]         ; CS[1]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.840      ;
-; 3.803 ; CS[1]         ; CS[2]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.842      ;
-; 3.835 ; UFMProgStart  ; UFMProgStart      ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.874      ;
-; 3.842 ; UFMProgStart  ; UFMErase          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.881      ;
-; 3.843 ; UFMProgStart  ; UFMProgram        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.882      ;
-; 4.088 ; PHI1reg       ; S[0]              ; C14M         ; C14M        ; 0.000        ; 0.000      ; 4.127      ;
-; 4.524 ; S[3]          ; DOEEN             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 4.563      ;
-; 4.997 ; CmdEraseMAX   ; CmdEraseMAX       ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.036      ;
-; 5.217 ; CS[2]         ; CS[2]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.256      ;
-; 5.229 ; FS[5]         ; FS[5]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.268      ;
-; 5.242 ; FS[15]        ; FS[15]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.281      ;
-; 5.248 ; FS[7]         ; FS[7]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.287      ;
+; 2.440 ; UFMBusyReg    ; UFMErase          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 2.479      ;
+; 3.130 ; UFMD[12]      ; UFMD[13]          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.169      ;
+; 3.153 ; UFMD[9]       ; UFMD[10]          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.192      ;
+; 3.166 ; UFMD[14]      ; UFMD[15]          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.205      ;
+; 3.170 ; UFMD[13]      ; UFMD[14]          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.209      ;
+; 3.385 ; UFMD[10]      ; UFMD[11]          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.424      ;
+; 3.414 ; FS[0]         ; FS[0]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.453      ;
+; 3.442 ; CmdEraseMAX   ; CmdEraseMAX       ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.481      ;
+; 3.443 ; S[2]          ; S[2]              ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.482      ;
+; 3.451 ; S[2]          ; DOEEN             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.490      ;
+; 3.451 ; CmdTout[0]    ; CmdTout[0]        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.490      ;
+; 3.453 ; CmdTout[0]    ; CmdTout[1]        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.492      ;
+; 3.454 ; CmdTout[0]    ; CmdTout[2]        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.493      ;
+; 3.528 ; CS[0]         ; CS[0]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.567      ;
+; 3.538 ; CS[0]         ; CS[1]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.577      ;
+; 3.740 ; S[0]          ; S[0]              ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.779      ;
+; 3.740 ; DRDIn         ; DRDIn             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.779      ;
+; 3.741 ; RTPBusyReg    ; UFMErase          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.780      ;
+; 3.779 ; RWSel         ; RWSel             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.818      ;
+; 3.810 ; S[1]          ; S[1]              ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.849      ;
+; 3.827 ; CmdPrgmMAX    ; UFMProgram        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.866      ;
+; 3.831 ; S[1]          ; DOEEN             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.870      ;
+; 3.833 ; CmdTout[1]    ; CmdTout[1]        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.872      ;
+; 3.839 ; CmdTout[1]    ; CmdTout[2]        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.878      ;
+; 3.843 ; CS[2]         ; CS[2]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 3.882      ;
+; 4.011 ; PHI1reg       ; S[0]              ; C14M         ; C14M        ; 0.000        ; 0.000      ; 4.050      ;
+; 4.210 ; UFMD[8]       ; UFMD[9]           ; C14M         ; C14M        ; 0.000        ; 0.000      ; 4.249      ;
+; 4.278 ; CmdEraseMAX   ; UFMErase          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 4.317      ;
+; 4.279 ; UFMD[11]      ; UFMD[12]          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 4.318      ;
+; 5.056 ; RTPBusyReg    ; UFMProgram        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.095      ;
+; 5.228 ; LEDEN         ; LEDEN             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.267      ;
+; 5.241 ; FS[15]        ; FS[15]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.280      ;
+; 5.243 ; FS[5]         ; FS[5]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.282      ;
 ; 5.252 ; FS[8]         ; FS[8]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.291      ;
-; 5.254 ; RWBank[7]     ; RA[8]~reg0        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.293      ;
-; 5.267 ; FS[10]        ; FS[10]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.306      ;
-; 5.270 ; FS[9]         ; FS[9]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.309      ;
-; 5.288 ; UFMErase      ; UFMProgram        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.327      ;
-; 5.337 ; CmdTout[1]    ; CmdTout[1]        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.376      ;
-; 5.351 ; CmdTout[1]    ; CmdTout[2]        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.390      ;
-; 5.416 ; DRDIn         ; DRDIn             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.455      ;
-; 5.420 ; RWBank[0]     ; RA[8]~reg0        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.459      ;
-; 5.453 ; UFMInitDone   ; UFMInitDone       ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.492      ;
-; 5.455 ; FS[11]        ; FS[11]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.494      ;
+; 5.268 ; Ready         ; Ready             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.307      ;
+; 5.272 ; FS[7]         ; FS[7]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.311      ;
+; 5.278 ; FS[10]        ; FS[10]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.317      ;
+; 5.281 ; FS[9]         ; FS[9]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.320      ;
+; 5.286 ; CmdPrgmMAX    ; CmdPrgmMAX        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.325      ;
+; 5.360 ; CS[1]         ; CS[1]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.399      ;
+; 5.361 ; CS[1]         ; CS[2]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.400      ;
+; 5.440 ; FS[3]         ; FS[3]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.479      ;
+; 5.441 ; FS[4]         ; FS[4]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.480      ;
+; 5.441 ; FS[2]         ; FS[2]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.480      ;
+; 5.442 ; FS[11]        ; FS[11]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.481      ;
+; 5.452 ; FS[1]         ; FS[1]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.491      ;
 ; 5.464 ; FS[14]        ; FS[14]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.503      ;
-; 5.464 ; FS[4]         ; FS[4]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.503      ;
-; 5.466 ; FS[6]         ; FS[6]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.505      ;
-; 5.472 ; FS[1]         ; FS[1]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.511      ;
-; 5.474 ; FS[3]         ; FS[3]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.513      ;
+; 5.473 ; UFMErase      ; UFMErase          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.512      ;
+; 5.474 ; UFMProgram    ; UFMProgram        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.513      ;
 ; 5.475 ; FS[13]        ; FS[13]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.514      ;
 ; 5.476 ; FS[12]        ; FS[12]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.515      ;
-; 5.477 ; FS[2]         ; FS[2]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.516      ;
-; 5.477 ; CmdPrgmMAX    ; CmdEraseMAX       ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.516      ;
-; 5.477 ; CmdTout[2]    ; CmdTout[2]        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.516      ;
-; 5.525 ; CS[0]         ; CS[2]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.564      ;
-; 5.526 ; CS[0]         ; CS[1]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.565      ;
-; 5.949 ; PHI1reg       ; S[3]              ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.988      ;
-; 5.954 ; PHI1reg       ; S[1]              ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.993      ;
-; 5.958 ; PHI1reg       ; S[2]              ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.997      ;
-; 5.964 ; FS[5]         ; FS[6]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.003      ;
+; 5.476 ; FS[6]         ; FS[6]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.515      ;
+; 5.478 ; UFMInitDone   ; UFMInitDone       ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.517      ;
+; 5.486 ; CmdTout[2]    ; CmdTout[2]        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.525      ;
+; 5.541 ; S[3]          ; S[3]              ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.580      ;
+; 5.613 ; CS[0]         ; CS[2]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.652      ;
+; 5.664 ; RWBank[2]     ; RA[10]~reg0       ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.703      ;
+; 5.753 ; CmdPrgmMAX    ; UFMErase          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 5.792      ;
+; 5.978 ; FS[5]         ; FS[6]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.017      ;
 ; 5.987 ; FS[8]         ; FS[9]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.026      ;
-; 6.002 ; FS[10]        ; FS[11]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.041      ;
-; 6.005 ; FS[9]         ; FS[10]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.044      ;
-; 6.035 ; S[1]          ; S[2]              ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.074      ;
-; 6.086 ; UFMD[14]      ; UFMD[15]          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.125      ;
-; 6.108 ; FS[5]         ; FS[7]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.147      ;
+; 6.013 ; FS[10]        ; FS[11]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.052      ;
+; 6.016 ; FS[9]         ; FS[10]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.055      ;
+; 6.122 ; FS[5]         ; FS[7]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.161      ;
 ; 6.131 ; FS[8]         ; FS[10]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.170      ;
-; 6.146 ; FS[10]        ; FS[12]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.185      ;
-; 6.149 ; FS[9]         ; FS[11]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.188      ;
-; 6.251 ; CS[1]         ; CmdSetRWBankFFMAX ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.290      ;
+; 6.157 ; FS[10]        ; FS[12]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.196      ;
+; 6.160 ; FS[9]         ; FS[11]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.199      ;
+; 6.229 ; DRCLKPulse    ; DRCLK             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.268      ;
 ; 6.275 ; FS[8]         ; FS[11]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.314      ;
-; 6.293 ; FS[9]         ; FS[12]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.332      ;
-; 6.386 ; CmdLEDGet     ; RWBank[3]         ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.425      ;
-; 6.390 ; LEDEN         ; LEDEN             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.429      ;
-; 6.401 ; S[1]          ; DOEEN             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.440      ;
+; 6.304 ; FS[9]         ; FS[12]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.343      ;
 ; 6.419 ; FS[8]         ; FS[12]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.458      ;
-; 6.457 ; FS[11]        ; FS[12]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.496      ;
+; 6.442 ; FS[3]         ; FS[4]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.481      ;
+; 6.443 ; FS[4]         ; FS[5]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.482      ;
+; 6.444 ; FS[11]        ; FS[12]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.483      ;
+; 6.454 ; FS[1]         ; FS[2]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.493      ;
 ; 6.466 ; FS[14]        ; FS[15]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.505      ;
-; 6.466 ; FS[4]         ; FS[5]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.505      ;
-; 6.468 ; FS[6]         ; FS[7]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.507      ;
-; 6.474 ; FS[1]         ; FS[2]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.513      ;
-; 6.476 ; FS[3]         ; FS[4]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.515      ;
 ; 6.477 ; FS[13]        ; FS[14]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.516      ;
-; 6.586 ; RWMask[7]     ; RWBank[7]         ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.625      ;
-; 6.587 ; S[2]          ; BA[1]~reg0        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.626      ;
-; 6.588 ; UFMReqErase   ; UFMReqErase       ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.627      ;
-; 6.590 ; UFMD[9]       ; UFMD[10]          ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.629      ;
-; 6.610 ; FS[4]         ; FS[6]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.649      ;
-; 6.620 ; FS[3]         ; FS[5]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.659      ;
+; 6.478 ; FS[6]         ; FS[7]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.517      ;
+; 6.507 ; RWBank[5]     ; BA[1]~reg0        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.546      ;
+; 6.533 ; CmdBitbangMAX ; DRCLKPulse        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.572      ;
+; 6.586 ; FS[3]         ; FS[5]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.625      ;
+; 6.587 ; FS[4]         ; FS[6]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.626      ;
 ; 6.621 ; FS[13]        ; FS[15]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.660      ;
-; 6.627 ; RWMask[5]     ; RWBank[5]         ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.666      ;
-; 6.634 ; S[0]          ; S[0]              ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.673      ;
-; 6.663 ; RWMask[3]     ; RWBank[3]         ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.702      ;
-; 6.676 ; CmdEraseMAX   ; CmdPrgmMAX        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.715      ;
-; 6.724 ; UFMD[12]      ; RWMask[4]         ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.763      ;
-; 6.754 ; FS[4]         ; FS[7]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.793      ;
-; 6.764 ; FS[3]         ; FS[6]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.803      ;
-; 6.782 ; FS[10]        ; FS[13]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.821      ;
-; 6.782 ; FS[10]        ; FS[14]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.821      ;
-; 6.782 ; FS[10]        ; FS[15]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.821      ;
-; 6.908 ; FS[3]         ; FS[7]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.947      ;
-; 6.929 ; FS[9]         ; FS[13]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.968      ;
-; 6.929 ; FS[9]         ; FS[14]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.968      ;
-; 6.929 ; FS[9]         ; FS[15]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.968      ;
+; 6.651 ; UFMD[11]      ; RWMask[3]         ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.690      ;
+; 6.724 ; RWMask[4]     ; RWBank[4]         ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.763      ;
+; 6.730 ; FS[3]         ; FS[6]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.769      ;
+; 6.731 ; FS[4]         ; FS[7]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.770      ;
+; 6.774 ; RWMask[3]     ; RWBank[3]         ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.813      ;
+; 6.793 ; FS[10]        ; FS[13]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.832      ;
+; 6.793 ; FS[10]        ; FS[14]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.832      ;
+; 6.793 ; FS[10]        ; FS[15]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.832      ;
+; 6.816 ; UFMD[15]      ; RWMask[7]         ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.855      ;
+; 6.836 ; CS[0]         ; CmdRWMaskSet      ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.875      ;
+; 6.843 ; CS[0]         ; CmdSetRWBankFFLED ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.882      ;
+; 6.874 ; FS[3]         ; FS[7]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.913      ;
+; 6.895 ; CmdEraseMAX   ; UFMProgram        ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.934      ;
+; 6.940 ; FS[9]         ; FS[13]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.979      ;
+; 6.940 ; FS[9]         ; FS[14]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.979      ;
+; 6.940 ; FS[9]         ; FS[15]            ; C14M         ; C14M        ; 0.000        ; 0.000      ; 6.979      ;
+; 6.998 ; FS[2]         ; FS[4]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 7.037      ;
+; 6.998 ; FS[2]         ; FS[3]             ; C14M         ; C14M        ; 0.000        ; 0.000      ; 7.037      ;
 +-------+---------------+-------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -431,8 +431,8 @@ No paths to report.
 +------------+----------+----------+----------+----------+----------+
 ; ARCLK      ; ARCLK    ; 1        ; 0        ; 0        ; 0        ;
 ; C14M       ; ARCLK    ; 1        ; 0        ; 0        ; 0        ;
-; C14M       ; C14M     ; 1715     ; 1        ; 64       ; 1        ;
-; DRCLK      ; C14M     ; 1        ; 0        ; 0        ; 0        ;
+; C14M       ; C14M     ; 1607     ; 0        ; 64       ; 0        ;
+; DRCLK      ; C14M     ; 13       ; 0        ; 0        ; 0        ;
 ; C14M       ; DRCLK    ; 2        ; 0        ; 0        ; 0        ;
 ; DRCLK      ; DRCLK    ; 1        ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
@@ -446,8 +446,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; ARCLK      ; ARCLK    ; 1        ; 0        ; 0        ; 0        ;
 ; C14M       ; ARCLK    ; 1        ; 0        ; 0        ; 0        ;
-; C14M       ; C14M     ; 1715     ; 1        ; 64       ; 1        ;
-; DRCLK      ; C14M     ; 1        ; 0        ; 0        ; 0        ;
+; C14M       ; C14M     ; 1607     ; 0        ; 64       ; 0        ;
+; DRCLK      ; C14M     ; 13       ; 0        ; 0        ; 0        ;
 ; C14M       ; DRCLK    ; 2        ; 0        ; 0        ; 0        ;
 ; DRCLK      ; DRCLK    ; 1        ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
@@ -476,7 +476,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Input Ports       ; 29    ; 29   ;
 ; Unconstrained Input Port Paths  ; 169   ; 169  ;
 ; Unconstrained Output Ports      ; 48    ; 48   ;
-; Unconstrained Output Port Paths ; 69    ; 69   ;
+; Unconstrained Output Port Paths ; 67    ; 67   ;
 +---------------------------------+-------+------+
 
 
@@ -559,7 +559,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; RA[9]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; RA[10]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; RA[11]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; RCLK        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; RD[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; RD[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; RD[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -577,6 +576,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Vout[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; Vout[7]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; nCAS        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nCS         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; nDOE        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; nRAS        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; nRWE        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -652,7 +652,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; RA[9]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; RA[10]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; RA[11]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; RCLK        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; RD[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; RD[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; RD[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -670,6 +669,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Vout[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; Vout[7]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; nCAS        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nCS         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; nDOE        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; nRAS        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; nRWE        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -682,8 +682,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
-    Info: Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
-    Info: Processing started: Tue Nov 21 06:54:43 2023
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Processing started: Thu Sep 21 05:34:43 2023
 Info: Command: quartus_sta RAM2E-MAXV -c RAM2E
 Info: qsta_default_script.tcl version: #1
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
@@ -698,18 +698,18 @@ Info: Can't run Report Timing Closure Recommendations. The current device family
 Warning (332009): The launch and latch times for the relationship between source clock: C14M and destination clock: ARCLK are outside of the legal time range. The relationship difference is correct, however the launch time is set to 0.
 Warning (332009): The launch and latch times for the relationship between source clock: C14M and destination clock: DRCLK are outside of the legal time range. The relationship difference is correct, however the launch time is set to 0.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -25.523
+Info (332146): Worst-case setup slack is -24.019
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -25.523             -25.523 DRCLK 
-    Info (332119):   -25.433             -25.433 ARCLK 
-    Info (332119):   -10.080             -10.080 C14M 
-Info (332146): Worst-case hold slack is -14.566
+    Info (332119):   -24.019             -24.019 DRCLK 
+    Info (332119):   -23.863             -23.863 ARCLK 
+    Info (332119):   -15.767            -176.992 C14M 
+Info (332146): Worst-case hold slack is -16.136
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -14.566             -14.566 ARCLK 
-    Info (332119):   -14.550             -14.550 DRCLK 
-    Info (332119):     3.107               0.000 C14M 
+    Info (332119):   -16.136             -16.136 ARCLK 
+    Info (332119):   -15.980             -15.980 DRCLK 
+    Info (332119):     2.440               0.000 C14M 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is 34.581
@@ -724,9 +724,9 @@ Warning (332009): The launch and latch times for the relationship between source
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 13066 megabytes
-    Info: Processing ended: Tue Nov 21 06:54:45 2023
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 13092 megabytes
+    Info: Processing ended: Thu Sep 21 05:34:46 2023
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 
