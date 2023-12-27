@@ -1,59 +1,76 @@
 module RAM2E(C14M, PHI1, LED, 
              nWE, nWE80, nEN80, nC07X,
              Ain, Din, Dout, nDOE, Vout, nVOE,
-             CKE, nCS, nRAS, nCAS, nRWE,
-             BA, RA, RD, DQML, DQMH);
+             CKEout, nCSout, nRASout, nCASout, nRWEout,
+             BA, RAout, DQML, DQMH, RD);
 
     /* Clocks */
     input C14M, PHI1;
     
     /* Control inputs */
     input nWE, nWE80, nEN80, nC07X;
-    
-    /* Delay for EN80 signal */
-    //output DelayOut = 1'b0;
-    //input DelayIn;
-    wire EN80 = !nEN80;
 
     /* Activity LED */
     reg LEDEN = 0;
-    output LED;
-    assign LED = !(!nEN80 && LEDEN);
+    output LED; assign LED = !(!nEN80 && LEDEN && Ready);
 
     /* Address Bus */
     input [7:0] Ain; // Multiplexed DRAM address input
     
     /* 6502 Data Bus */
     input [7:0] Din; // 6502 data bus inputs
-    reg DOEEN = 0; // 6502 data bus output enable from state machine
-    output nDOE;
-    assign nDOE = !(EN80 && nWE && DOEEN); // 6502 data bus output enable
-    output reg [7:0] Dout; // 6502 data Bus output
+    reg DOEEN; 
+    always @(posedge C14M) begin
+        DOEEN <= /*(S==4'h8) || (S==4'h9) || (S==4'hA) ||*/ (S==4'hB) ||
+                   (S==4'hC) || (S==4'hD) || (S==4'hE) ||   (S==4'hF);
+    end
+    output nDOE; assign nDOE = !(!nEN80 && nWE && DOEEN);
+    output [7:0] Dout; assign Dout[7:0] = RD[7:0];
     
     /* Video Data Bus */
-    output nVOE;
-    assign nVOE = !(!PHI1); /// Video data bus output enable
+    reg VOEEN;
+    always @(posedge C14M) begin
+        VOEEN <=                                   (S==4'h7) ||
+            (S==4'h8) || (S==4'h9) || (S==4'hA) || (S==4'hB) ||
+            (S==4'hC) || (S==4'hD) || (S==4'hE) || (S==4'hF);
+    end
+    output nVOE; assign nVOE = !(!PHI1 && VOEEN);
     output reg [7:0] Vout; // Video data bus
+    always @(posedge C14M) if (S==4'h6) Vout[7:0] <= RD[7:0];
 
     /* SDRAM */
-    output reg CKE = 0;
-    output reg nCS = 1, nRAS = 1, nCAS = 1, nRWE = 1;
+    reg CKE = 1;
+	//reg nCS = 1;
+    reg nRAS = 1, nCAS = 1, nRWE = 1;
     output reg [1:0] BA;
-    output reg [11:0] RA;
+    reg [11:0] RA;
     output reg DQML = 1, DQMH = 1;
-    wire RDOE = EN80 && !nWE80;
     inout [7:0] RD;
-    assign RD[7:0] = RDOE ? Din[7:0] : 8'bZ;
+    assign RD[7:0] = Ready ? (!nWE80 ? Din[7:0] : 8'bZ) : 8'h00;
+
+    /* SDRAM falling edge outputs */
+	output reg CKEout;
+    output nCSout; assign nCSout = 0;
+    output reg nRASout = 1, nCASout = 1, nRWEout = 1;
+    output reg [11:0] RAout;
+    always @(negedge C14M) begin
+        CKEout <= CKE;
+        nRASout <= nRAS;
+        nCASout <= nCAS;
+        nRWEout <= nRWE;
+        RAout <= RA;
+    end
     
     /* RAMWorks Bank Register and Capacity Mask */
     reg [7:0] RWBank = 0; // RAMWorks bank register
     reg [7:0] RWMask = 0; // RAMWorks bank reg. capacity mask
     reg RWSel = 0; // RAMWorks bank register select
+    always @(posedge C14M) begin
+        if (S==4'h9) RWSel <= RA[0] && !RA[3] && !nWE && !nC07X;
+    end
     reg CmdRWMaskSet = 0; // RAMWorks Mask register set flag
     // Causes RWBank to be zeroed next RWSel access
-    reg CmdSetRWBankFFMAX = 0;
-    //reg CmdSetRWBankFFSPI = 0;
-    //reg CmdSetRWBankFFMXO2 = 0;
+    reg CmdSetRWBankFFChip = 0;
     reg CmdSetRWBankFFLED = 0;
     reg CmdLEDSet = 0;
     reg CmdLEDGet = 0;
@@ -92,23 +109,24 @@ module RAM2E(C14M, PHI1, LED,
         .osc (UFMOsc),
         .rtpbusy (RTPBusy));
     reg UFMRTPBusy = 0;
-    always @(posedge C14M) begin UFMRTPBusy <= UFMBusy || RTPBusy;
-
-    /* UFM State and User Command Triggers */
+    always @(posedge C14M) UFMRTPBusy <= UFMBusy || RTPBusy;
     reg UFMInitDone = 0; // 1 if UFM initialization finished
     reg UFMReqErase = 0; // 1 if UFM requires erase
+    reg DRCLKPulse = 0; // Set by user command. Causes DRCLK pulse next C14M
+
+    /* User Command Triggers */
     reg CmdBitbangMAX = 0; // Set by user command. Loads UFM outputs next RWSel
     //reg CmdBitbangSPI = 0;
     //reg CmdBitbangMXO2 = 0;
     //reg CmdExecMXO2 = 0;
     reg CmdPrgmMAX = 0; // Set by user command. Programs UFM
     reg CmdEraseMAX = 0; // Set by user command. Erases UFM
-    reg DRCLKPulse = 0; // Set by user command. Causes DRCLK pulse next C14M
 
     /* State Counters */
     reg PHI1reg = 0; // Saved PHI1 at last rising clock edge
     reg Ready = 0; // 1 if done with init sequence (S0) and enter S1-S15
     reg [15:0] FS = 0; // Fast state counter
+    wire RefReq = FS[5:4]==0; // Refresh request based on fast state counter
     reg [3:0] S = 0; // IIe State counter
 
     /* State Counters */
@@ -118,8 +136,32 @@ module RAM2E(C14M, PHI1, LED,
         // Synchronize Apple state counter to S1 when just entering PHI1
         PHI1reg <= PHI1; // Save old PHI1
         S <= (PHI1 && !PHI1reg && Ready) ? 4'h1 : 
-            S==4'h0 ? 4'h0 :
-            S==4'hF ? 4'hF : S+4'h1;
+             (S==4'h0) ? 4'h0 :
+             (S==4'hF) ? 4'hF : S+4'h1;
+        // Begin normal operation after 64k init cycles (~4.59ms)
+        if (FS[15:0]==16'hFFFF) Ready <= 1'b1;
+    end
+
+    /* Command sequence control */
+    always @(posedge C14M) begin
+        if (S==4'hC) begin
+            if (RWSel) begin
+                CmdTout <= 0; // Reset command timeout if RWSel accessed
+                // Recognize command sequence and advance CS state
+                if ((CS==3'h0 && Din[7:0]==8'hFF) ||
+                    (CS==3'h1 && Din[7:0]==8'h00) ||
+                    (CS==3'h2 && Din[7:0]==8'h55) ||
+                    (CS==3'h3 && Din[7:0]==8'hAA) ||
+                    (CS==3'h4 && Din[7:0]==8'hC1) ||
+                    (CS==3'h5 && Din[7:0]==8'hAD) ||
+                     CS==3'h6 || CS==3'h7) CS <= CS+3'h1;
+                else CS <= 0; // Back to beginning if it's not right
+            end else begin
+                CmdTout <= CmdTout+3'h1; // Increment command timeout
+                // If command sequence times out, reset sequence state
+                if (CmdTout==3'h7) CS <= 0;
+            end
+        end
     end
 
     /* UFM Control */
@@ -204,10 +246,10 @@ module RAM2E(C14M, PHI1, LED,
                 DRCLK <= DRCLKPulse;
             end
 
+            // Volatile settings command execution
             if (RWSel && S==4'hC) begin
                 // LED control
                 if (CmdLEDSet) LEDEN <= Din[0];
-                
                 // Set capacity mask
                 if (CmdRWMaskSet) RWMask[7:0] <= {Din[7], ~Din[6:0]};
             end
@@ -226,464 +268,373 @@ module RAM2E(C14M, PHI1, LED,
             end
         end
     end
+    
+    /* RAMWorks register control - bank, LED, etc. */
+    always @(posedge C14M) begin
+        if (S==4'hC && RWSel) begin
+            // Latch RAMWorks bank if accessed
+            if ((CmdSetRWBankFFLED) ||
+                (CmdSetRWBankFFChip) ||
+                (CmdLEDGet && LEDEN)) RWBank <= 8'hFF;
+            else RWBank <= Din[7:0] & {RWMask[7], ~RWMask[6:0]};
+            
+            if (CS==3'h6) begin // Recognize and submit command in CS6
+                // Board has LED detect command
+                CmdSetRWBankFFLED <= Din[7:0]==8'hF0;
+
+                // Volatile commands
+                CmdRWMaskSet <=      Din[7:0]==8'hE0;
+                CmdLEDSet <=         Din[7:0]==8'hE2;
+                CmdLEDGet <=         Din[7:0]==8'hE3;
+            end else begin // Reset command triggers
+                CmdSetRWBankFFLED <= 0;
+                CmdRWMaskSet <= 0;
+                CmdLEDSet <= 0;
+                CmdLEDGet <= 0;
+            end
+        end
+    end
+
+    /* RAMWorks register control - Altera MAX */
+    always @(posedge C14M) begin
+        if (S==4'hC && RWSel) begin
+            if (CS==3'h6) begin // Recognize and submit command in CS6
+                // Chip detection commands
+                CmdSetRWBankFFChip <= Din[7:0]==8'hFF; // MAX
+                //CmdSetRWBankFFChip <= Din[7:0]==8'hFE; // SPI
+                //CmdSetRWBankFFChip <= Din[7:0]==8'hFD; // MachXO2
+
+                // Altera MAX II/V commands
+                CmdBitbangMAX <=  Din[7:0]==8'hEA;
+                if (!CmdEraseMAX && !CmdPrgmMAX) begin
+                    if (Din[7:0]==8'hEE) CmdEraseMAX <= 1;
+                    if (Din[7:0]==8'hEF) CmdPrgmMAX <= 1;
+                end
+
+                // SPI commands
+                //CmdBitbangSPI <= Din[7:0]==8'hEB;
+
+                // MachXO2 commands
+                //CmdBitbangMXO2 <= Din[7:0]==8'hEC;
+                //CmdExecMXO2 <= Din[7:0]==8'hED;
+            end else begin // Reset command triggers
+                CmdSetRWBankFFChip <= 0;
+                CmdBitbangMAX <= 0;
+                //CmdBitbangSPI <= 0;
+                //CmdBitbangMXO2 <= 0;
+                //CmdExecMXO2 <= 0;
+            end
+        end
+    end
 
     /* SDRAM Control */
-    always @(posedge C14M) begin
-        if (S==4'h0) begin 
-            // SDRAM initialization
-            if (FS[15:0]==16'hFFC0) begin
-                // Precharge All
-                nCS <= 1'b0;
-                nRAS <= 1'b0;
-                nCAS <= 1'b1;
-                nRWE <= 1'b0;
-                RA[10] <= 1'b1; // "all"
-            end else if (FS[15:4]==16'hFFD && FS[0]==1'b0) begin // Repeat 8x
-                // Auto-refresh
-                nCS <= 1'b0;    
-                nRAS <= 1'b0;
-                nCAS <= 1'b0;
-                nRWE <= 1'b1;
-                RA[10] <= 1'b0;
-            end else if (FS[15:0]==16'hFFE8) begin
-                // Set Mode Register
-                nCS <= 1'b0;
-                nRAS <= 1'b0;
-                nCAS <= 1'b0;
-                nRWE <= 1'b0;
-                RA[10] <= 1'b0; // Reserved in mode register
-            end else if (FS[15:4]==12'hFFF && FS[0]==1'b0) begin // Repeat 8x
-                // Auto-refresh
-                nCS <= 1'b0;
-                nRAS <= 1'b0;
-                nCAS <= 1'b0;
-                nRWE <= 1'b1;
-                RA[10] <= 1'b0;
-            end else begin // Otherwise send no-op
+    always @(posedge C14M) case (S)
+        4'h0: begin
+            CKE <= 1'b1;
+            if (!FS[15] || FS[0]) begin
                 // NOP
-                nCS <= 1'b1;
                 nRAS <= 1'b1;
                 nCAS <= 1'b1;
                 nRWE <= 1'b1;
-                RA[10] <= 1'b0;
-            end
-            // Enable SDRAM clock after 65,280 cycles (~4.56ms)
-            CKE <= FS[15:8] == 8'hFF;
-
-            // Mode register contents
-            BA[1:0] <= 2'b00;       // Reserved
-            RA[11] <= 1'b0;         // Reserved
-            // RA[10] set above ^
-            RA[9] <= 1'b1;          // "1" for single write mode
-            RA[8] <= 1'b0;          // Reserved
-            RA[7] <= 1'b0;          // "0" for not test mode
-            RA[6:4] <= 3'b010;      // "2" for CAS latency 2
-            RA[3] <= 1'b0;          // "0" for sequential burst (not used)
-            RA[2:0] <= 3'b000;      // "0" for burst length 1 (no burst)
-
-            // Mask everything
-            DQML <= 1'b1;
-            DQMH <= 1'b1;
-            
-            // Inhibit data bus output
-            DOEEN <= 1'b0;
-
-            // Begin normal operation after 128k init cycles (~9.15ms)
-            if (FS == 16'hFFFF) Ready <= 1'b1;
-        end else if (S==4'h1) begin
-            // Enable clock
+            end else case (FS[4:1])
+                4'h0: begin
+                    // PC all
+                    nRAS <= 1'b0;
+                    nCAS <= 1'b1;
+                    nRWE <= 1'b0;
+                end 4'h1: begin
+                    // LDM
+                    nRAS <= 1'b0;
+                    nCAS <= 1'b0;
+                    nRWE <= 1'b0;
+                end 4'h2: begin
+                    // NOP
+                    nRAS <= 1'b1;
+                    nCAS <= 1'b1;
+                    nRWE <= 1'b1;
+                end 4'h3, 4'h4, 4'h5, 4'h6, 
+                    4'h7, 4'h8, 4'h9, 4'hA: begin
+                    // AREF
+                    nRAS <= 1'b0;
+                    nCAS <= 1'b0;
+                    nRWE <= 1'b1;
+                end 4'hB: begin
+                    // ACT
+                    nRAS <= 1'b0;
+                    nCAS <= 1'b1;
+                    nRWE <= 1'b1;
+                end 4'hC, 4'hD: begin
+                    // WR
+                    nRAS <= 1'b1;
+                    nCAS <= 1'b0;
+                    nRWE <= 1'b0;
+                end 4'hE: begin
+                    // NOP
+                    nRAS <= 1'b1;
+                    nCAS <= 1'b1;
+                    nRWE <= 1'b1;
+                end 4'hF: begin
+                    // PC all
+                    nRAS <= 1'b0;
+                    nCAS <= 1'b1;
+                    nRWE <= 1'b0;
+                end
+            endcase
+            case (FS[4:3])
+                2'b00, 2'b01: begin
+                    // Mode register contents
+                    BA[1:0] <= 2'b00;   // Reserved
+                    RA[11] <= 1'b0;     // Reserved
+                    RA[10] <= !FS[1];   // reserved / "all"
+                    RA[9] <= 1'b1;      // "1" for single write mode
+                    RA[8] <= 1'b0;      // Reserved
+                    RA[7] <= 1'b0;      // "0" for not test mode
+                    RA[6:4] <= 3'b010;  // "2" for CAS latency 2
+                    RA[3] <= 1'b0;      // "0" for sequential burst (not used)
+                    RA[2:0] <= 3'b000;  // "0" for burst length 1 (no burst)
+                end 2'b10: begin
+                    BA[1:0] <= 2'b00;
+                    RA[11:8] <= 4'h0;
+                    RA[7:0] <= FS[14:7];
+                end 2'b11: begin
+                    BA[1:0] <= 2'b00;
+                    RA[11:3] <= 9'h000;
+                    RA[2:1] <= FS[6:5];
+                    RA[0] <= FS[1];
+                end
+            endcase
+            DQML <= !FS[15];
+            DQMH <= !FS[15];
+        end 4'h1: begin
+            // NOP CKE
             CKE <= 1'b1;
-
-            // NOP
-            nCS <= 1'b1;
             nRAS <= 1'b1;
             nCAS <= 1'b1;
             nRWE <= 1'b1;
-
-            // Don't care bank, RA[11:8]
             BA[1:0] <= 2'b00;
             RA[11:8] <= 4'b0000;
-
-            // Mask everything
-            DQML <= 1'b1;
+            // Hold RA[7:0]
+            DQML <= 1'b0;
             DQMH <= 1'b1;
-            
-            // Inhibit data bus output
-            DOEEN <= 1'b0;
-        end else if (S==4'h2) begin
-            // Enable clock
+        end 4'h2: begin
+            // ACT CKE
             CKE <= 1'b1;
-            
-            // Activate
-            nCS <= 1'b0;
             nRAS <= 1'b0;
             nCAS <= 1'b1;
             nRWE <= 1'b1;
-
-            // SDRAM bank 0, high-order row address is 0
-            BA[1:0] <= 2'b00;
-            RA[11:8] <= 4'b0000;
-            // Row address is as previously latched
-
-            // Mask everything
-            DQML <= 1'b1;
-            DQMH <= 1'b1;
-            
-            // Inhibit data bus output
-            DOEEN <= 1'b0;
-        end else if (S==4'h3) begin
-            // Enable clock
+            // Hold BA
+            // Hold RA
+            // Hold DQMs
+        end 4'h3: begin
+            // RD CKE
             CKE <= 1'b1;
-            
-            // Read
-            nCS <= 1'b0;
             nRAS <= 1'b1;
             nCAS <= 1'b0;
             nRWE <= 1'b1;
-
-            // SDRAM bank 0, RA[11,9:8] don't care
-            BA[1:0] <= 2'b00;
-            RA[11] <= 1'b0;
-            RA[10] <= 1'b1; // (A10 set to auto-precharge)
-            RA[9] <= 1'b0;
-            RA[8] <= 1'b0;
-            // Latch column address for read command
+            // Hold BA
+            // Hold RA[11:8]
             RA[7:0] <= Ain[7:0];
-
-            // Read low byte (high byte is +4MB in ramworks)
-            DQML <= 1'b0;
-            DQMH <= 1'b1;
-            
-            // Inhibit data bus output
-            DOEEN <= 1'b0;
-        end else if (S==4'h4) begin
-            // Enable clock
+            // Hold DQMs
+        end 4'h4: begin
+            // PC all CKE
             CKE <= 1'b1;
-            
-            // NOP
-            nCS <= 1'b1;
-            nRAS <= 1'b1;
+            nRAS <= 1'b0;
             nCAS <= 1'b1;
-            nRWE <= 1'b1;
-
-            // Don't care bank, RA[11:8]
-            BA[1:0] <= 2'b00;
-            RA[11:8] <= 4'b0000;
-
-            // Mask everything
-            DQML <= 1'b1;
-            DQMH <= 1'b1;
-            
-            // Inhibit data bus output
-            DOEEN <= 1'b0;
-        end else if (S==4'h5) begin
-            // Enable clock
-            CKE <= 1'b1;
-            
-            // NOP
-            nCS <= 1'b1;
-            nRAS <= 1'b1;
-            nCAS <= 1'b1;
-            nRWE <= 1'b1;
-
-            // Don't care bank, RA[11:8]
-            BA[1:0] <= 2'b00;
-            RA[11:8] <= 4'b0000;
-
-            // Mask everything
-            DQML <= 1'b1;
-            DQMH <= 1'b1;
-            
-            // Inhibit data bus output
-            DOEEN <= 1'b0;
-        end else if (S==4'h6) begin
-            // Enable clock
-            CKE <= 1'b1;
-            
-            if (FS[5:4]==0) begin
-                // Auto-refresh
-                nCS <= 1'b0;
+            nRWE <= 1'b0;
+            // Hold BA
+            // Hold RA[11]
+            RA[10] <= 1'b1; // "all"
+            // Hold RA[9:0]
+            // Hold DQMs
+        end 4'h5: begin
+            if (RefReq) begin
+                // AREF CKE
+                CKE <= 1'b1;
                 nRAS <= 1'b0;
                 nCAS <= 1'b0;
                 nRWE <= 1'b1;
             end else begin
-                // NOP
-                nCS <= 1'b1;
+                // NOP CKD
+                CKE <= 1'b0;
                 nRAS <= 1'b1;
                 nCAS <= 1'b1;
                 nRWE <= 1'b1;
             end
-
-            // Don't care bank, RA[11:8]
-            BA[1:0] <= 2'b00;
-            RA[11:8] <= 4'b0000;
-
-            // Mask everything
-            DQML <= 1'b1;
-            DQMH <= 1'b1;
-            
-            // Inhibit data bus output
-            DOEEN <= 1'b0;
-        end else if (S==4'h7) begin
-            // Enable clock
-            CKE <= 1'b1;
-            
-            // NOP
-            nCS <= 1'b1;
-            nRAS <= 1'b1;
-            nCAS <= 1'b1;
-            nRWE <= 1'b1;
-
-            // Don't care bank, RA[11:8]
-            BA[1:0] <= 2'b00;
-            RA[11:8] <= 4'b0000;
-            // Latch row address for activate command
-            RA[7:0] <= Ain[7:0];
-
-            // Mask everything
-            DQML <= 1'b1;
-            DQMH <= 1'b1;
-            
-            // Inhibit data bus output
-            DOEEN <= 1'b0;
-        end else if (S==4'h8) begin
-            // Enable clock if '245 output enabled
-            CKE <= EN80;
-            
-            // Activate if '245 output enabled
-            nCS <= nEN80;
-            nRAS <= 1'b0;
-            nCAS <= 1'b1;
-            nRWE <= 1'b1;
-
-            // SDRAM bank, RA[11:8] determine by RamWorks bank
-            BA[1:0] <= RWBank[5:4];
-            RA[11:8] <= RWBank[3:0];
-            // Row address is as previously latched
-
-            // Mask everything
-            DQML <= 1'b1;
-            DQMH <= 1'b1;
-            
-            // Inhibit data bus output
-            DOEEN <= 1'b0;
-        end else if (S==4'h9) begin
-            // Enable clock if '245 output enabled
-            CKE <= EN80;
-            
-            // Read/Write if '245 output enabled
-            nCS <= nEN80;
-            nRAS <= 1'b1;
-            nCAS <= 1'b0;
-            nRWE <= nWE80;
-
-            // SDRAM bank still determined by RamWorks, RA[11,9:8] don't care
-            BA[1:0] <= RWBank[5:4];
-            RA[11] <= 1'b0;
-            RA[10] <= 1'b1; // (A10 set to auto-precharge)
-            RA[9] <= 1'b0;
-            RA[8] <= RWBank[7];
-            // Latch column address for R/W command
-            RA[7:0] <= Ain[7:0];
-
-            // Latch RAMWorks low nybble write select using old row address
-            RWSel <= RA[0] && !RA[3] && !nWE && !nC07X;
-
-            // Mask according to RAMWorks bank (high byte is +4MB)
-            DQML <=  RWBank[6];
-            DQMH <= !RWBank[6];
-            
-            // Inhibit data bus output
-            DOEEN <= 1'b0;
-        end else if (S==4'hA) begin
-            // Enable clock if '245 output enabled
-            CKE <= EN80;
-            
-            // NOP
-            nCS <= 1'b1;
-            nRAS <= 1'b1;
-            nCAS <= 1'b1;
-            nRWE <= 1'b1;
-
-            // Don't care bank, RA[11:8]
-            BA[1:0] <= 2'b00;
-            RA[11:8] <= 4'b0000;
-
-            // Mask everything
-            DQML <= 1'b1;
-            DQMH <= 1'b1;
-            
-            // Inhibit data bus output
-            DOEEN <= 1'b0;
-        end else if (S==4'hB) begin
-            // Disable clock
+            // Hold BA
+            // Hold RA
+            // Hold DQMs
+        end 4'h6: begin
+            // NOP CKD
             CKE <= 1'b0;
-            
-            // NOP
-            nCS <= 1'b1;
             nRAS <= 1'b1;
             nCAS <= 1'b1;
             nRWE <= 1'b1;
-
-            // Don't care bank, RA[11:8]
-            BA[1:0] <= 2'b00;
-            RA[11:8] <= 4'b0000;
-
-            // Mask everything
-            DQML <= 1'b1;
-            DQMH <= 1'b1;
-            
-            // Enable data bus output
-            DOEEN <= 1'b1;
-        end else if (S==4'hC) begin
-            // Disable clock
-            CKE <= 1'b0;
-            
-            // NOP
-            nCS <= 1'b1;
-            nRAS <= 1'b1;
-            nCAS <= 1'b1;
-            nRWE <= 1'b1;
-
-            // Don't care bank, RA[11:8]
-            BA[1:0] <= 2'b00;
-            RA[11:8] <= 4'b0000;
-
-            // Mask everything
-            DQML <= 1'b1;
-            DQMH <= 1'b1;
-            
-            // Enable data bus output
-            DOEEN <= 1'b1;
-
-            // RAMWorks Bank Register Select
-            if (RWSel) begin
-                // Latch RAMWorks bank if accessed
-                if (CmdSetRWBankFFLED ||
-                    CmdSetRWBankFFMAX ||
-                    //CmdSetRWBankFFSPI ||
-                    //CmdSetRWBankFFMXO2 ||
-                     (CmdLEDGet && LEDEN)) RWBank <= 8'hFF;
-                else RWBank <= Din[7:0] & {RWMask[7], ~RWMask[6:0]};
-
-                // Recognize command sequence and advance CS state
-                if ((CS==3'h0 && Din[7:0]==8'hFF) ||
-                    (CS==3'h1 && Din[7:0]==8'h00) ||
-                    (CS==3'h2 && Din[7:0]==8'h55) ||
-                    (CS==3'h3 && Din[7:0]==8'hAA) ||
-                    (CS==3'h4 && Din[7:0]==8'hC1) ||
-                    (CS==3'h5 && Din[7:0]==8'hAD) ||
-                     CS==3'h6 || CS==3'h7) CS <= CS+3'h1;
-                else CS <= 0; // Back to beginning if it's not right
-                
-                if (CS==3'h6) begin // Recognize and submit command in CS6
-                    CmdSetRWBankFFMAX <=  Din[7:0]==8'hFF;
-                    //CmdSetRWBankFFSPI <=  Din[7:0]==8'hFE;
-                    //CmdSetRWBankFFMXO2 <= Din[7:0]==8'hFD;
-                    CmdSetRWBankFFLED <=  Din[7:0]==8'hF0;
-
-                    CmdRWMaskSet <= Din[7:0]==8'hE0;
-                    CmdLEDSet <=    Din[7:0]==8'hE2;
-                    CmdLEDGet <=    Din[7:0]==8'hE3;
-
-                    CmdBitbangMAX <=  Din[7:0]==8'hEA;
-                    //CmdBitbangSPI <=  Din[7:0]==8'hEB;
-                    //CmdBitbangMXO2 <= Din[7:0]==8'hEC;
-                    //CmdExecMXO2 <= Din[7:0]==8'hED;
-
-                    if (!CmdEraseMAX && !CmdPrgmMAX) begin
-                        if (Din[7:0]==8'hEE) CmdEraseMAX <= 1;
-                        if (Din[7:0]==8'hEF) CmdPrgmMAX <= 1;
-                    end
-                end else begin // Reset command triggers
-                    CmdSetRWBankFFMAX <= 0;
-                    //CmdSetRWBankFFSPI <= 0;
-                    //CmdSetRWBankFFMXO2 <= 0;
-                    CmdSetRWBankFFLED <= 0;
-                    CmdRWMaskSet <= 0;
-                    CmdLEDSet <= 0;
-                    CmdLEDGet <= 0;
-                    CmdBitbangMAX <= 0;
-                    //CmdBitbangSPI <= 0;
-                    //CmdBitbangMXO2 <= 0;
-                    //CmdExecMXO2 <= 0;
-                end
-
-                CmdTout <= 0; // Reset command timeout if RWSel accessed
-            end else begin 
-                CmdTout <= CmdTout+3'h1; // Increment command timeout
-                // If command sequence times out, reset sequence state
-                if (CmdTout==3'h7) CS <= 0;
+            // Hold BA
+            // Hold RA
+            // Hold DQMs
+        end 4'h7: begin
+            // Can't check EN80 at this time
+            if (nWE) begin // Read / idle
+                // NOP CKE
+                CKE <= 1'b1;
+                nRAS <= 1'b1;
+                nCAS <= 1'b1;
+                nRWE <= 1'b1;
+            end else begin // Write / idle
+                // NOP CKD
+                CKE <= 1'b0;
+                nRAS <= 1'b1;
+                nCAS <= 1'b1;
+                nRWE <= 1'b1;
             end
-        end else if (S==4'hD) begin
-            // Disable clock
-            CKE <= 1'b0;
-            
-            // NOP
-            nCS <= 1'b1;
-            nRAS <= 1'b1;
-            nCAS <= 1'b1;
-            nRWE <= 1'b1;
-
-            // Don't care bank, RA[11:8]
-            BA[1:0] <= 2'b00;
-            RA[11:8] <= 4'b0000;
-
-            // Mask everything
-            DQML <= 1'b1;
-            DQMH <= 1'b1;
-            
-            // Enable data bus output
-            DOEEN <= 1'b1;
-        end else if (S==4'hE) begin
-            // Disable clock
-            CKE <= 1'b0;
-            
-            // NOP
-            nCS <= 1'b1;
-            nRAS <= 1'b1;
-            nCAS <= 1'b1;
-            nRWE <= 1'b1;
-
-            // Don't care bank, RA[11:8]
-            BA[1:0] <= 2'b00;
-            RA[11:8] <= 4'b0000;
-            // Latch row address for next video read
+            BA[1:0] <= RWBank[6:5];
+            RA[11:8] <= RWBank[4:1];
             RA[7:0] <= Ain[7:0];
-
-            // Mask everything
-            DQML <= 1'b1;
-            DQMH <= 1'b1;
-            
-            // Enable data bus output
-            DOEEN <= 1'b1;
-        end else if (S==4'hF) begin
-            // Disable clock
+            // Hold DQMs
+        end 4'h8: begin
+            if (nEN80) begin // Idle
+                // NOP CKD
+                CKE <= 1'b0;
+                nRAS <= 1'b1;
+                nCAS <= 1'b1;
+                nRWE <= 1'b1;
+            end else if (nWE) begin // Read
+                // ACT CKE
+                CKE <= 1'b1;
+                nRAS <= 1'b0;
+                nCAS <= 1'b1;
+                nRWE <= 1'b1;
+            end else begin // Write
+                // NOP CKE
+                CKE <= 1'b1;
+                nRAS <= 1'b1;
+                nCAS <= 1'b1;
+                nRWE <= 1'b1;
+            end
+            // Hold BA
+            // Hold RA
+            // Hold DQMs
+        end 4'h9: begin
+            if (nEN80) begin // Idle
+                // NOP CKD
+                CKE <= 1'b0;
+                nRAS <= 1'b1;
+                nCAS <= 1'b1;
+                nRWE <= 1'b1;
+            end else if (nWE) begin // Read
+                // RD CKE
+                CKE <= 1'b1;
+                nRAS <= 1'b1;
+                nCAS <= 1'b0;
+                nRWE <= 1'b1;
+            end else begin // Write
+                // ACT CKE
+                CKE <= 1'b1;
+                nRAS <= 1'b0;
+                nCAS <= 1'b1;
+                nRWE <= 1'b1;
+            end
+            // Hold BA
+            RA[11:9] <= 3'b000; // no auto-precharge
+            RA[8] <= RWBank[7];
+            RA[7:0] <= Ain[7:0];
+            DQMH <= !RWBank[0];
+            DQMH <=  RWBank[0];
+        end 4'hA: begin
+            if (nEN80) begin // Idle
+                // NOP CKD
+                CKE <= 1'b0;
+                nRAS <= 1'b1;
+                nCAS <= 1'b1;
+                nRWE <= 1'b1;
+                // Hold RA[10]
+            end else if (nWE) begin // Read
+                // PC all CKD
+                CKE <= 1'b0;
+                nRAS <= 1'b0;
+                nCAS <= 1'b1;
+                nRWE <= 1'b0;
+                RA[10] <= 1'b1;
+            end else begin // Write
+                // WR CKE
+                CKE <= 1'b1;
+                nRAS <= 1'b1;
+                nCAS <= 1'b0;
+                nRWE <= 1'b0;
+                RA[10] <= 1'b0;
+            end
+            // Hold BA
+            // Hold RA[11,9:0]
+            // Hold DQMs
+        end 4'hB: begin
+            if (nEN80) begin // Idle
+                // NOP CKD
+                CKE <= 1'b0;
+                nRAS <= 1'b1;
+                nCAS <= 1'b1;
+                nRWE <= 1'b1;
+            end else if (nWE) begin // Read
+                // NOP CKD
+                CKE <= 1'b0;
+                nRAS <= 1'b1;
+                nCAS <= 1'b1;
+                nRWE <= 1'b1;
+            end else begin // Write
+                // NOP CKE
+                CKE <= 1'b1;
+                nRAS <= 1'b1;
+                nCAS <= 1'b1;
+                nRWE <= 1'b1;
+            end
+            // Hold BA
+            // Hold RA[11:0]
+            // Hold DQMs
+        end 4'hC: begin
+            if (nEN80) begin // Idle
+                // NOP CKD
+                CKE <= 1'b0;
+                nRAS <= 1'b1;
+                nCAS <= 1'b1;
+                nRWE <= 1'b1;
+                // Hold RA[10]
+            end else if (nWE) begin // Read
+                // NOP CKD
+                CKE <= 1'b0;
+                nRAS <= 1'b1;
+                nCAS <= 1'b1;
+                nRWE <= 1'b1;
+                // Hold RA[10]
+            end else begin // Write
+                // PC all CKD
+                CKE <= 1'b0;
+                nRAS <= 1'b0;
+                nCAS <= 1'b1;
+                nRWE <= 1'b0;
+                RA[10] <= 1'b1; // "all"
+            end
+            // Hold BA
+            // Hold RA[11,9:0]
+            // Hold RA[7:0]
+            // Hold DQMs
+        end 4'hD: begin
+            // NOP CKD
             CKE <= 1'b0;
-            
-            // NOP
-            nCS <= 1'b1;
             nRAS <= 1'b1;
             nCAS <= 1'b1;
             nRWE <= 1'b1;
-
-            // Don't care bank, RA[11:8]
-            BA[1:0] <= 2'b00;
-            RA[11:8] <= 4'b0000;
-            // Latch row address for next video read
-            RA[7:0] <= Ain[7:0];
-
-            // Mask everything
-            DQML <= 1'b1;
-            DQMH <= 1'b1;
-            
-            // Enable data bus output
-            DOEEN <= 1'b1;
-        end 
-    end
-    always @(negedge C14M) begin
-        // Latch video and read data outputs
-        if (S==4'h6) Vout[7:0] <= RD[7:0];
-        if (S==4'hC) Dout[7:0] <= RD[7:0];
-    end
+            // Hold BA
+            // Hold RA[11:0]
+            // Hold DQMs
+        end 4'hE, 4'hF: begin
+            // NOP CKD
+            CKE <= 1'b0;
+            nRAS <= 1'b1;
+            nCAS <= 1'b1;
+            nRWE <= 1'b1;
+            // Hold BA
+            // Hold RA[11:8]
+            RA[7:0] <= Ain[7:0]; // Latch row address for next video read
+            // Hold DQMs
+        end
+    endcase
 endmodule
