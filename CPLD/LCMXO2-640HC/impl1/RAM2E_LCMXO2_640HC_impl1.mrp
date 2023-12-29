@@ -15,7 +15,7 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO2-640HCTQFP100
 Target Performance:   4
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.12.1.454
-Mapped on:  12/28/23  23:09:57
+Mapped on:  12/28/23  23:23:28
 
 Design Summary
 --------------
@@ -66,7 +66,7 @@ Design Summary
 
 
 
-Design:  RAM2E                                         Date:  12/28/23  23:09:57
+Design:  RAM2E                                         Date:  12/28/23  23:23:28
 
 Design Summary (cont)
 ---------------------
@@ -132,7 +132,7 @@ IO (PIO) Attributes
 
 
 
-Design:  RAM2E                                         Date:  12/28/23  23:09:57
+Design:  RAM2E                                         Date:  12/28/23  23:23:28
 
 IO (PIO) Attributes (cont)
 --------------------------
@@ -198,7 +198,7 @@ IO (PIO) Attributes (cont)
 
 
 
-Design:  RAM2E                                         Date:  12/28/23  23:09:57
+Design:  RAM2E                                         Date:  12/28/23  23:23:28
 
 IO (PIO) Attributes (cont)
 --------------------------
@@ -264,7 +264,7 @@ IO (PIO) Attributes (cont)
 
 
 
-Design:  RAM2E                                         Date:  12/28/23  23:09:57
+Design:  RAM2E                                         Date:  12/28/23  23:23:28
 
 IO (PIO) Attributes (cont)
 --------------------------
@@ -330,7 +330,7 @@ Signal ram2e_ufm/ufmefb/SPIMCSN0 undriven or does not drive anything - clipped.
 
 
 
-Design:  RAM2E                                         Date:  12/28/23  23:09:57
+Design:  RAM2E                                         Date:  12/28/23  23:23:28
 
 Removed logic (cont)
 --------------------
@@ -396,7 +396,7 @@ Embedded Functional Block Connection Summary
 
 
 
-Design:  RAM2E                                         Date:  12/28/23  23:09:57
+Design:  RAM2E                                         Date:  12/28/23  23:23:28
 
 Embedded Functional Block Connection Summary (cont)
 ---------------------------------------------------

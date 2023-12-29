@@ -15,7 +15,7 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO2-1200HCTQFP100
 Target Performance:   4
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.12.1.454
-Mapped on:  12/28/23  23:09:57
+Mapped on:  12/28/23  23:23:27
 
 Design Summary
 --------------
@@ -66,7 +66,7 @@ Design Summary
 
 
 
-Design:  RAM2E                                         Date:  12/28/23  23:09:57
+Design:  RAM2E                                         Date:  12/28/23  23:23:27
 
 Design Summary (cont)
 ---------------------
@@ -132,7 +132,7 @@ WARNING - map: IO buffer missing for top level port nWE80...logic will be
 
 
 
-Design:  RAM2E                                         Date:  12/28/23  23:09:57
+Design:  RAM2E                                         Date:  12/28/23  23:23:27
 
 
 IO (PIO) Attributes
@@ -198,7 +198,7 @@ IO (PIO) Attributes
 
 
 
-Design:  RAM2E                                         Date:  12/28/23  23:09:57
+Design:  RAM2E                                         Date:  12/28/23  23:23:27
 
 IO (PIO) Attributes (cont)
 --------------------------
@@ -264,7 +264,7 @@ IO (PIO) Attributes (cont)
 
 
 
-Design:  RAM2E                                         Date:  12/28/23  23:09:57
+Design:  RAM2E                                         Date:  12/28/23  23:23:27
 
 IO (PIO) Attributes (cont)
 --------------------------
@@ -330,7 +330,7 @@ Signal ram2e_ufm/ufmefb/SPIMCSN4 undriven or does not drive anything - clipped.
 
 
 
-Design:  RAM2E                                         Date:  12/28/23  23:09:57
+Design:  RAM2E                                         Date:  12/28/23  23:23:27
 
 Removed logic (cont)
 --------------------
@@ -396,7 +396,7 @@ Embedded Functional Block Connection Summary
 
 
 
-Design:  RAM2E                                         Date:  12/28/23  23:09:57
+Design:  RAM2E                                         Date:  12/28/23  23:23:27
 
 Embedded Functional Block Connection Summary (cont)
 ---------------------------------------------------
@@ -443,7 +443,7 @@ Instance Name: ram2e_ufm/ufmefb/EFBInst_0
 Run Time and Memory Usage
 -------------------------
 
-   Total CPU Time: 1 secs  
+   Total CPU Time: 0 secs  
    Total REAL Time: 0 secs  
    Peak Memory Usage: 64 MB
         
