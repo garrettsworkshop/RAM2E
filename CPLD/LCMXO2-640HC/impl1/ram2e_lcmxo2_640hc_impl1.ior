@@ -29,7 +29,7 @@ Performance Hardware Data Status:   Final          Version 34.4.
 // Package: TQFP100
 // ncd File: ram2e_lcmxo2_640hc_impl1.ncd
 // Version: Diamond (64-bit) 3.12.1.454
-// Written on Thu Dec 28 23:10:19 2023
+// Written on Thu Dec 28 23:23:47 2023
 // M: Minimum Performance Grade
 // iotiming RAM2E_LCMXO2_640HC_impl1.ncd RAM2E_LCMXO2_640HC_impl1.prf -gui -msgset //Mac/iCloud/Repos/ram2e/CPLD/LCMXO2-640HC/promote.xml
 

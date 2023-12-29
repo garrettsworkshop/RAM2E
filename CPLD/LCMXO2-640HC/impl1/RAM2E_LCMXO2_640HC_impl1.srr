@@ -3,7 +3,7 @@
 #OS: Windows 8 6.2
 #Hostname: ZANEMACWIN11
 
-# Thu Dec 28 23:09:44 2023
+# Thu Dec 28 23:23:17 2023
 
 #Implementation: impl1
 
@@ -52,19 +52,21 @@ Synopsys Verilog Compiler, Version comp202103synp2, Build 093R, Built Aug 10 202
 @I::"\\Mac\iCloud\Repos\ram2e\CPLD\UFM-LCMXO2.v" (library work)
 @I::"\\Mac\iCloud\Repos\ram2e\CPLD\LCMXO2-640HC\REFB.v" (library work)
 Verilog syntax check successful!
+File \\Mac\iCloud\Repos\ram2e\CPLD\RAM2E.v changed - recompiling
+File \\Mac\iCloud\Repos\ram2e\CPLD\UFM-LCMXO2.v changed - recompiling
 Selecting top level module RAM2E
 @N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo2.v":1120:7:1120:9|Synthesizing module VHI in library work.
 Running optimization stage 1 on VHI .......
-Finished optimization stage 1 on VHI (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 98MB)
+Finished optimization stage 1 on VHI (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
 @N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo2.v":1124:7:1124:9|Synthesizing module VLO in library work.
 Running optimization stage 1 on VLO .......
-Finished optimization stage 1 on VLO (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 98MB)
+Finished optimization stage 1 on VLO (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
 @N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo2.v":1800:7:1800:9|Synthesizing module EFB in library work.
 Running optimization stage 1 on EFB .......
-Finished optimization stage 1 on EFB (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+Finished optimization stage 1 on EFB (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 99MB)
 @N: CG364 :"\\Mac\iCloud\Repos\ram2e\CPLD\LCMXO2-640HC\REFB.v":8:7:8:10|Synthesizing module REFB in library work.
 Running optimization stage 1 on REFB .......
-Finished optimization stage 1 on REFB (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+Finished optimization stage 1 on REFB (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 99MB)
 @N: CG364 :"\\Mac\iCloud\Repos\ram2e\CPLD\UFM-LCMXO2.v":1:7:1:15|Synthesizing module RAM2E_UFM in library work.
 Running optimization stage 1 on RAM2E_UFM .......
 Finished optimization stage 1 on RAM2E_UFM (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 101MB)
@@ -73,25 +75,25 @@ Running optimization stage 1 on RAM2E .......
 Finished optimization stage 1 on RAM2E (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 101MB)
 Running optimization stage 2 on RAM2E .......
 @N: CL159 :"\\Mac\iCloud\Repos\ram2e\CPLD\RAM2E.v":11:15:11:19|Input nWE80 is unused.
-Finished optimization stage 2 on RAM2E (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 101MB)
+Finished optimization stage 2 on RAM2E (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 102MB)
 Running optimization stage 2 on RAM2E_UFM .......
 @N: CL159 :"\\Mac\iCloud\Repos\ram2e\CPLD\UFM-LCMXO2.v":10:7:10:11|Input Ready is unused.
-Finished optimization stage 2 on RAM2E_UFM (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 102MB)
+Finished optimization stage 2 on RAM2E_UFM (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 102MB)
 Running optimization stage 2 on REFB .......
-Finished optimization stage 2 on REFB (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 102MB)
+Finished optimization stage 2 on REFB (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 102MB)
 Running optimization stage 2 on EFB .......
-Finished optimization stage 2 on EFB (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 102MB)
+Finished optimization stage 2 on EFB (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 102MB)
 Running optimization stage 2 on VLO .......
-Finished optimization stage 2 on VLO (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 102MB)
+Finished optimization stage 2 on VLO (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 102MB)
 Running optimization stage 2 on VHI .......
-Finished optimization stage 2 on VHI (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 102MB)
+Finished optimization stage 2 on VHI (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 102MB)
 
-At c_ver Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 102MB)
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 102MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Thu Dec 28 23:09:45 2023
+# Thu Dec 28 23:23:18 2023
 
 ###########################################################]
 ###########################################################[
@@ -112,13 +114,14 @@ Implementation : impl1
 Synopsys Synopsys Netlist Linker, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
 
 @N|Running in 64-bit mode
+File \\Mac\iCloud\Repos\ram2e\CPLD\LCMXO2-640HC\impl1\synwork\layer0.srs changed - recompiling
 
 At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 99MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Thu Dec 28 23:09:45 2023
+# Thu Dec 28 23:23:18 2023
 
 ###########################################################]
 
@@ -128,12 +131,12 @@ For a summary of runtime and memory usage for all design units, please see file:
 
 @END
 
-At c_hdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 30MB peak: 31MB)
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 31MB peak: 31MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Thu Dec 28 23:09:46 2023
+# Thu Dec 28 23:23:18 2023
 
 ###########################################################]
 ###########################################################[
@@ -161,10 +164,10 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Thu Dec 28 23:09:47 2023
+# Thu Dec 28 23:23:19 2023
 
 ###########################################################]
-# Thu Dec 28 23:09:47 2023
+# Thu Dec 28 23:23:19 2023
 
 
 Copyright (C) 1994-2021 Synopsys, Inc.
@@ -204,7 +207,7 @@ Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0
 Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 149MB peak: 149MB)
 
 
-Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 150MB peak: 152MB)
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 150MB peak: 151MB)
 
 @N: FX493 |Applying initial value "0" on instance CmdBitbangMXO2.
 @W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
@@ -231,20 +234,20 @@ Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h
 @N: FX493 |Applying initial value "1" on instance nRAS.
 @N: FX493 |Applying initial value "1" on instance nRASout.
 
-Starting clock optimization phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 181MB peak: 181MB)
+Starting clock optimization phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 181MB peak: 181MB)
 
 
-Finished clock optimization phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 182MB peak: 182MB)
+Finished clock optimization phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 182MB peak: 182MB)
 
 
-Starting clock optimization report phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 182MB peak: 182MB)
+Starting clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 182MB peak: 182MB)
 
 
-Finished clock optimization report phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 182MB peak: 182MB)
+Finished clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 182MB peak: 182MB)
 
 @N: FX1184 |Applying syn_allowed_resources blockrams=2 on top level netlist RAM2E 
 
-Finished netlist restructuring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 182MB peak: 182MB)
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 182MB peak: 182MB)
 
 
 
@@ -300,7 +303,7 @@ Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample I
 @N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
 Finished Pre Mapping Phase.
 
-Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 183MB peak: 183MB)
+Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 182MB peak: 182MB)
 
 
 Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 183MB peak: 183MB)
@@ -313,10 +316,10 @@ Pre-mapping successful!
 At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 99MB peak: 185MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Thu Dec 28 23:09:49 2023
+# Thu Dec 28 23:23:21 2023
 
 ###########################################################]
-# Thu Dec 28 23:09:49 2023
+# Thu Dec 28 23:23:21 2023
 
 
 Copyright (C) 1994-2021 Synopsys, Inc.
@@ -350,19 +353,19 @@ Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0
 Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 143MB peak: 143MB)
 
 
-Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 144MB peak: 146MB)
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 145MB peak: 146MB)
 
 
 
 Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 178MB peak: 178MB)
 
 
-Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 183MB peak: 183MB)
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 183MB peak: 183MB)
 
 @N: MO231 :"\\mac\icloud\repos\ram2e\cpld\ram2e.v":14:23:14:28|Found counter in view:work.RAM2E(verilog) instance FS[15:0] 
 @W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
 
-Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 186MB peak: 186MB)
+Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 186MB peak: 186MB)
 
 
 Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 190MB peak: 190MB)
@@ -384,7 +387,7 @@ Finished Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elaps
 Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 190MB peak: 191MB)
 
 
-Finished preparing to map (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 191MB peak: 191MB)
+Finished preparing to map (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 191MB peak: 191MB)
 
 
 Finished technology mapping (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 211MB peak: 211MB)
@@ -402,30 +405,30 @@ Finished technology timing optimizations and critical path resynthesis (Real Tim
 Finished restoring hierarchy (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 212MB peak: 212MB)
 
 
-Start Writing Netlists (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 174MB peak: 212MB)
+Start Writing Netlists (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 174MB peak: 212MB)
 
 Writing Analyst data base \\Mac\iCloud\Repos\ram2e\CPLD\LCMXO2-640HC\impl1\synwork\RAM2E_LCMXO2_640HC_impl1_m.srm
 
-Finished Writing Netlist Databases (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 212MB peak: 212MB)
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 212MB peak: 212MB)
 
 Writing EDIF Netlist and constraint files
 @N: FX1056 |Writing EDF file: \\Mac\iCloud\Repos\ram2e\CPLD\LCMXO2-640HC\impl1\RAM2E_LCMXO2_640HC_impl1.edi
 @N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
 
-Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:03s; Memory used current: 217MB peak: 217MB)
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 217MB peak: 217MB)
 
 
-Finished Writing Netlists (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:03s; Memory used current: 217MB peak: 217MB)
+Finished Writing Netlists (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 217MB peak: 217MB)
 
 
-Start final timing analysis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 215MB peak: 217MB)
+Start final timing analysis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:03s; Memory used current: 215MB peak: 217MB)
 
 @W: MT246 :"\\mac\icloud\repos\ram2e\cpld\lcmxo2-640hc\refb.v":78:8:78:16|Blackbox EFB is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
 @N: MT615 |Found clock C14M with period 69.84ns 
 
 
 ##### START OF TIMING REPORT #####[
-# Timing report written on Thu Dec 28 23:09:54 2023
+# Timing report written on Thu Dec 28 23:23:25 2023
 #
 
 
@@ -647,10 +650,10 @@ ram2e_ufm.RWMask[0]                               FD1P3AX      SP         In    
 
 Timing exceptions that could not be applied
 
-Finished final timing analysis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 216MB peak: 217MB)
+Finished final timing analysis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:03s; Memory used current: 216MB peak: 217MB)
 
 
-Finished timing report (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 216MB peak: 217MB)
+Finished timing report (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:03s; Memory used current: 216MB peak: 217MB)
 
 ---------------------------------------
 Resource Usage Report
@@ -685,9 +688,9 @@ VHI:            3
 VLO:            3
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 79MB peak: 217MB)
+At Mapper Exit (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 78MB peak: 217MB)
 
 Process took 0h:00m:04s realtime, 0h:00m:04s cputime
-# Thu Dec 28 23:09:54 2023
+# Thu Dec 28 23:23:25 2023
 
 ###########################################################]
