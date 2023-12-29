@@ -38,9 +38,9 @@ Performance Hardware Data Status:   Final          Version 34.4.
 // Package: TQFP100
 // ncd File: ram2e_lcmxo2_640hc_impl1.ncd
 // Version: Diamond (64-bit) 3.12.1.454
-// Written on Thu Sep 21 05:35:10 2023
+// Written on Thu Dec 28 23:10:19 2023
 // M: Minimum Performance Grade
-// iotiming RAM2E_LCMXO2_640HC_impl1.ncd RAM2E_LCMXO2_640HC_impl1.prf -gui -msgset //Mac/iCloud/Repos/RAM2E/CPLD/LCMXO2-640HC/promote.xml
+// iotiming RAM2E_LCMXO2_640HC_impl1.ncd RAM2E_LCMXO2_640HC_impl1.prf -gui -msgset //Mac/iCloud/Repos/ram2e/CPLD/LCMXO2-640HC/promote.xml
 
 I/O Timing Report (All units are in ns)
 
@@ -50,81 +50,82 @@ Worst Case Results across Performance Grades (M, 6, 5, 4):
 
 Port   Clock Edge  Setup Performance_Grade  Hold Performance_Grade
 ----------------------------------------------------------------------
-Ain[0] C14M  R     0.502      4       0.868     4
-Ain[1] C14M  R     2.364      4      -0.126     M
-Ain[2] C14M  R     2.421      4      -0.129     M
-Ain[3] C14M  R     0.574      4       0.786     4
-Ain[4] C14M  R     1.452      4       0.140     M
-Ain[5] C14M  R     2.076      4      -0.039     M
-Ain[6] C14M  R     1.515      4       0.124     M
-Ain[7] C14M  R     2.270      4      -0.095     M
-Din[0] C14M  R     9.252      4       1.162     4
-Din[1] C14M  R     8.868      4       0.657     4
-Din[2] C14M  R     8.368      4       0.864     4
-Din[3] C14M  R     8.749      4       1.339     4
-Din[4] C14M  R     9.095      4       0.770     4
-Din[5] C14M  R     8.195      4       1.176     4
-Din[6] C14M  R     6.162      4       0.760     4
-Din[7] C14M  R     7.060      4       1.093     4
-PHI1   C14M  R     2.045      4       3.047     4
-RD[0]  C14M  F     0.267      4       0.866     4
-RD[1]  C14M  F     0.173      4       1.383     4
-RD[2]  C14M  F     0.924      4       1.018     4
-RD[3]  C14M  F     0.267      4       0.866     4
-RD[4]  C14M  F     0.173      4       0.937     4
-RD[5]  C14M  F     0.267      4       0.866     4
-RD[6]  C14M  F     0.766      4       0.866     4
-RD[7]  C14M  F     0.267      4       1.312     4
-nC07X  C14M  R     0.077      4       1.144     4
-nEN80  C14M  R     6.415      4      -0.286     M
-nWE    C14M  R     0.691      4       0.684     4
-nWE80  C14M  R     2.845      4      -0.260     M
+Ain[0] C14M  R     2.463      4      -0.066     M
+Ain[1] C14M  R     1.330      4       0.135     6
+Ain[2] C14M  R     1.221      4       0.223     4
+Ain[3] C14M  R     2.776      4      -0.165     M
+Ain[4] C14M  R     1.603      4       0.140     M
+Ain[5] C14M  R     0.021      6       1.287     4
+Ain[6] C14M  R     1.444      4       0.205     M
+Ain[7] C14M  R     1.816      4       0.114     M
+Din[0] C14M  R     8.919      4       0.723     4
+Din[1] C14M  R     8.410      4       1.156     4
+Din[2] C14M  R     8.503      4       1.181     4
+Din[3] C14M  R     8.783      4       0.110     M
+Din[4] C14M  R    10.420      4       1.022     4
+Din[5] C14M  R     8.001      4       0.566     4
+Din[6] C14M  R     9.731      4       1.050     4
+Din[7] C14M  R    10.052      4       0.862     4
+PHI1   C14M  R     2.579      4       3.047     4
+RD[0]  C14M  R     0.267      4       0.866     4
+RD[1]  C14M  R     0.173      4       0.937     4
+RD[2]  C14M  R     0.100      4       1.018     4
+RD[3]  C14M  R     0.267      4       0.866     4
+RD[4]  C14M  R     0.172      4       0.936     4
+RD[5]  C14M  R     0.267      4       0.866     4
+RD[6]  C14M  R     0.766      4       0.420     4
+RD[7]  C14M  R     0.267      4       0.866     4
+nC07X  C14M  R     0.998      4       0.405     6
+nEN80  C14M  R     6.107      4       0.114     M
+nWE    C14M  R     6.726      4       0.069     M
 
 
 // Clock to Output Delay
 
-Port    Clock Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+Port      Clock Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
 ------------------------------------------------------------------------
-BA[0]   C14M  R     8.629         4        2.885          M
-BA[1]   C14M  R     8.629         4        2.885          M
-CKE     C14M  R     8.629         4        2.885          M
-DQMH    C14M  R     8.609         4        2.892          M
-DQML    C14M  R     8.609         4        2.892          M
-Dout[0] C14M  F     8.955         4        3.164          M
-Dout[1] C14M  F     8.955         4        3.164          M
-Dout[2] C14M  F     8.944         4        3.158          M
-Dout[3] C14M  F     8.955         4        3.164          M
-Dout[4] C14M  F     8.944         4        3.158          M
-Dout[5] C14M  F     8.944         4        3.158          M
-Dout[6] C14M  F     8.955         4        3.164          M
-Dout[7] C14M  F     8.955         4        3.164          M
-LED     C14M  R    19.941         4        8.191          M
-RA[0]   C14M  R    10.013         4        3.186          M
-RA[10]  C14M  R     8.629         4        2.885          M
-RA[11]  C14M  R     8.629         4        2.885          M
-RA[1]   C14M  R     8.695         4        2.890          M
-RA[2]   C14M  R     8.695         4        2.890          M
-RA[3]   C14M  R    10.013         4        3.186          M
-RA[4]   C14M  R     8.695         4        2.890          M
-RA[5]   C14M  R     8.695         4        2.890          M
-RA[6]   C14M  R     8.695         4        2.890          M
-RA[7]   C14M  R     8.695         4        2.890          M
-RA[8]   C14M  R     8.629         4        2.885          M
-RA[9]   C14M  R     8.629         4        2.885          M
-Vout[0] C14M  F     9.553         4        3.402          M
-Vout[1] C14M  F     9.553         4        3.402          M
-Vout[2] C14M  F     9.553         4        3.402          M
-Vout[3] C14M  F     9.553         4        3.402          M
-Vout[4] C14M  F     9.553         4        3.402          M
-Vout[5] C14M  F     9.553         4        3.402          M
-Vout[6] C14M  F     9.553         4        3.402          M
-Vout[7] C14M  F     9.553         4        3.402          M
-nCAS    C14M  R     8.629         4        2.885          M
-nCS     C14M  R     8.629         4        2.885          M
-nDOE    C14M  R    11.976         4        3.776          M
-nRAS    C14M  R     8.629         4        2.885          M
-nRWE    C14M  R     8.629         4        2.885          M
+BA[0]     C14M  R     8.629         4        2.885          M
+BA[1]     C14M  R     8.629         4        2.885          M
+CKEout    C14M  F     8.629         4        2.885          M
+DQMH      C14M  R     8.609         4        2.892          M
+DQML      C14M  R     8.609         4        2.892          M
+LED       C14M  R    19.935         4        8.161          M
+RAout[0]  C14M  F     8.695         4        2.890          M
+RAout[10] C14M  F     8.629         4        2.885          M
+RAout[11] C14M  F     8.629         4        2.885          M
+RAout[1]  C14M  F     8.695         4        2.890          M
+RAout[2]  C14M  F     8.695         4        2.890          M
+RAout[3]  C14M  F     8.695         4        2.890          M
+RAout[4]  C14M  F     8.695         4        2.890          M
+RAout[5]  C14M  F     8.695         4        2.890          M
+RAout[6]  C14M  F     8.695         4        2.890          M
+RAout[7]  C14M  F     8.695         4        2.890          M
+RAout[8]  C14M  F     8.629         4        2.885          M
+RAout[9]  C14M  F     8.629         4        2.885          M
+RD[0]     C14M  R    11.414         4        3.265          M
+RD[1]     C14M  R    11.811         4        3.265          M
+RD[2]     C14M  R    11.925         4        3.265          M
+RD[3]     C14M  R    11.384         4        3.265          M
+RD[4]     C14M  R    12.301         4        3.371          M
+RD[5]     C14M  R    12.767         4        3.371          M
+RD[6]     C14M  R    12.010         4        3.371          M
+RD[7]     C14M  R    12.313         4        3.371          M
+Vout[0]   C14M  R     9.553         4        3.402          M
+Vout[1]   C14M  R     9.553         4        3.402          M
+Vout[2]   C14M  R     9.553         4        3.402          M
+Vout[3]   C14M  R     9.553         4        3.402          M
+Vout[4]   C14M  R     9.553         4        3.402          M
+Vout[5]   C14M  R     9.553         4        3.402          M
+Vout[6]   C14M  R     9.553         4        3.402          M
+Vout[7]   C14M  R     9.553         4        3.402          M
+nCASout   C14M  F     8.629         4        2.885          M
+nDOE      C14M  R    12.048         4        3.811          M
+nRASout   C14M  F     8.629         4        2.885          M
+nRWEout   C14M  F     8.629         4        2.885          M
+nVOE      C14M  R    12.164         4        3.783          M
 WARNING: you must also run trce with hold speed: 4
+WARNING: you must also run trce with setup speed: 6
+WARNING: you must also run trce with hold speed: 6
 
 
 

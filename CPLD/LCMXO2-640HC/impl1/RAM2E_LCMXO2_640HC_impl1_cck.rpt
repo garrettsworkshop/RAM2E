@@ -13,12 +13,12 @@ Hostname: ZANEMACWIN11
 
 Implementation : impl1
 
-# Written on Thu Sep 21 05:34:37 2023
+# Written on Thu Dec 28 23:09:49 2023
 
 ##### DESIGN INFO #######################################################
 
 Top View:                "RAM2E"
-Constraint File(s):      "\\Mac\iCloud\Repos\RAM2E\CPLD\RAM2E.sdc"
+Constraint File(s):      "\\Mac\iCloud\Repos\ram2e\CPLD\RAM2E.sdc"
 
 
 
@@ -58,7 +58,7 @@ p:Ain[6]
 p:Ain[7]
 p:BA[0]
 p:BA[1]
-p:CKE
+p:CKEout
 p:DQMH
 p:DQML
 p:Din[0]
@@ -79,18 +79,18 @@ p:Dout[6]
 p:Dout[7]
 p:LED
 p:PHI1
-p:RA[0]
-p:RA[1]
-p:RA[2]
-p:RA[3]
-p:RA[4]
-p:RA[5]
-p:RA[6]
-p:RA[7]
-p:RA[8]
-p:RA[9]
-p:RA[10]
-p:RA[11]
+p:RAout[0]
+p:RAout[1]
+p:RAout[2]
+p:RAout[3]
+p:RAout[4]
+p:RAout[5]
+p:RAout[6]
+p:RAout[7]
+p:RAout[8]
+p:RAout[9]
+p:RAout[10]
+p:RAout[11]
 p:RD[0] (bidir end point)
 p:RD[0] (bidir start point)
 p:RD[1] (bidir end point)
@@ -116,12 +116,12 @@ p:Vout[5]
 p:Vout[6]
 p:Vout[7]
 p:nC07X
-p:nCAS
-p:nCS
+p:nCASout
+p:nCSout
 p:nDOE
 p:nEN80
-p:nRAS
-p:nRWE
+p:nRASout
+p:nRWEout
 p:nVOE
 p:nWE
 p:nWE80

@@ -14,7 +14,6 @@ module RAM2E(C14M, PHI1, LED,
     reg [15:0] FS = 0; always @(posedge C14M) FS <= FS+16'h0001;
     reg Ready = 0;
     always @(posedge C14M) if (FS[15:0]==16'hFFFF) Ready <= 1'b1;
-    wire RefReq = FS[5:4]==0; // Refresh request based on fast state counter
 
     /* IIe state counter */
     reg [3:0] S = 0;
@@ -23,6 +22,16 @@ module RAM2E(C14M, PHI1, LED,
         S <= (PHI1 && !PHI1r && Ready) ? 4'h1 : 
              (S==4'h0) ? 4'h0 :
              (S==4'hF) ? 4'hF : S+4'h1;
+    end
+
+    /* Refresh counter */
+    reg [2:0] RC;
+    wire RefReq = RC==0;
+    always @(posedge C14M) begin
+        if (S==4'h1) begin
+            if (RC[2] && RC[1]) RC <= 0; // RC==6 || RC==7
+            else RC <= RC+3'h1;
+        end
     end
 
     /* Activity LED */
@@ -53,15 +62,16 @@ module RAM2E(C14M, PHI1, LED,
     output reg [7:0] Vout; // Video data bus
     always @(posedge C14M) if (S==4'h6) Vout[7:0] <= RD[7:0];
 
-    /* SDRAM */
+    /* SDRAM bus */
     reg CKE = 1;
-	//reg nCS = 1;
     reg nRAS = 1, nCAS = 1, nRWE = 1;
     output reg [1:0] BA;
     reg [11:0] RA;
     output reg DQML = 1, DQMH = 1;
     inout [7:0] RD;
-    assign RD[7:0] = Ready ? (!nWE80 ? Din[7:0] : 8'bZ) : 8'h00;
+    wire [7:0] RDout = Ready ? Din[7:0] : 8'h00;
+    wire RDOE = (!Ready) || (!nEN80 && !nWE);
+    assign RD[7:0] = RDOE ? RDout[7:0] : 8'bZ;
 
     /* SDRAM falling edge outputs */
 	output reg CKEout;
@@ -84,7 +94,6 @@ module RAM2E(C14M, PHI1, LED,
         if (S==4'h9) RWSel <= RA[0] && !RA[3] && !nWE && !nC07X;
     end
     reg CmdRWMaskSet = 0; // RAMWorks Mask register set flag
-    // Causes RWBank to be zeroed next RWSel access
     wire CmdSetRWBankFFChip;
     reg CmdSetRWBankFFLED = 0;
     reg CmdLEDSet = 0;
@@ -96,7 +105,7 @@ module RAM2E(C14M, PHI1, LED,
 
     /* Chip-specific UFM interface */
     RAM2E_UFM ram2e_ufm (
-        .C14M(C14M), .S(S), .FS(FS), .CS(CS), 
+        .C14M(C14M), .S(S), .FS(FS), .CS(CS), .Ready(Ready),
         .RWSel(RWSel), .D(Din),
         .RWMask(RWMask), .LEDEN(LEDEN),
         .CmdRWMaskSet(CmdRWMaskSet), .CmdLEDSet(CmdLEDSet),
@@ -259,24 +268,32 @@ module RAM2E(C14M, PHI1, LED,
             RA[7:0] <= Ain[7:0];
             // Hold DQMs
         end 4'h4: begin
-            // PC all CKE
-            CKE <= 1'b1;
-            nRAS <= 1'b0;
-            nCAS <= 1'b1;
-            nRWE <= 1'b0;
+            if (RefReq) begin // Refresh request
+                // PC all CKE
+                CKE <= 1'b1;
+                nRAS <= 1'b0;
+                nCAS <= 1'b1;
+                nRWE <= 1'b0;
+            end else begin // No refresh request
+                // PC all CKD
+                CKE <= 1'b0;
+                nRAS <= 1'b0;
+                nCAS <= 1'b1;
+                nRWE <= 1'b0;
+            end
             // Hold BA
             // Hold RA[11]
             RA[10] <= 1'b1; // "all"
             // Hold RA[9:0]
             // Hold DQMs
         end 4'h5: begin
-            if (RefReq) begin
+            if (RefReq) begin // Refresh request
                 // AREF CKE
                 CKE <= 1'b1;
                 nRAS <= 1'b0;
                 nCAS <= 1'b0;
                 nRWE <= 1'b1;
-            end else begin
+            end else begin // No refresh request
                 // NOP CKD
                 CKE <= 1'b0;
                 nRAS <= 1'b1;
@@ -297,21 +314,13 @@ module RAM2E(C14M, PHI1, LED,
             // Hold DQMs
         end 4'h7: begin
             // Can't check EN80 at this time
-            if (nWE) begin // Read / idle
-                // NOP CKE
-                CKE <= 1'b1;
-                nRAS <= 1'b1;
-                nCAS <= 1'b1;
-                nRWE <= 1'b1;
-            end else begin // Write / idle
-                // NOP CKD
-                CKE <= 1'b0;
-                nRAS <= 1'b1;
-                nCAS <= 1'b1;
-                nRWE <= 1'b1;
-            end
-            BA[1:0] <= RWBank[6:5];
-            RA[11:8] <= RWBank[4:1];
+            // NOP CKE
+            CKE <= 1'b1;
+            nRAS <= 1'b1;
+            nCAS <= 1'b1;
+            nRWE <= 1'b1;
+            // Hold BA
+            // Hold RA[11:8]
             RA[7:0] <= Ain[7:0];
             // Hold DQMs
         end 4'h8: begin
@@ -328,14 +337,15 @@ module RAM2E(C14M, PHI1, LED,
                 nCAS <= 1'b1;
                 nRWE <= 1'b1;
             end else begin // Write
-                // NOP CKE
-                CKE <= 1'b1;
-                nRAS <= 1'b1;
+                // ACT CKD
+                CKE <= 1'b0;
+                nRAS <= 1'b0;
                 nCAS <= 1'b1;
                 nRWE <= 1'b1;
             end
-            // Hold BA
-            // Hold RA
+            BA[1:0] <= RWBank[6:5];
+            RA[11:8] <= RWBank[4:1];
+            // Hold RA[7:0]
             // Hold DQMs
         end 4'h9: begin
             if (nEN80) begin // Idle
@@ -351,9 +361,9 @@ module RAM2E(C14M, PHI1, LED,
                 nCAS <= 1'b0;
                 nRWE <= 1'b1;
             end else begin // Write
-                // ACT CKE
+                // NOP CKE
                 CKE <= 1'b1;
-                nRAS <= 1'b0;
+                nRAS <= 1'b1;
                 nCAS <= 1'b1;
                 nRWE <= 1'b1;
             end
@@ -361,8 +371,8 @@ module RAM2E(C14M, PHI1, LED,
             RA[11:9] <= 3'b000; // no auto-precharge
             RA[8] <= RWBank[7];
             RA[7:0] <= Ain[7:0];
+            DQML <=  RWBank[0];
             DQMH <= !RWBank[0];
-            DQMH <=  RWBank[0];
         end 4'hA: begin
             if (nEN80) begin // Idle
                 // NOP CKD
@@ -370,21 +380,21 @@ module RAM2E(C14M, PHI1, LED,
                 nRAS <= 1'b1;
                 nCAS <= 1'b1;
                 nRWE <= 1'b1;
-                // Hold RA[10]
+                RA[10] <= 1'b0;
             end else if (nWE) begin // Read
                 // PC all CKD
                 CKE <= 1'b0;
                 nRAS <= 1'b0;
                 nCAS <= 1'b1;
                 nRWE <= 1'b0;
-                RA[10] <= 1'b1;
+                RA[10] <= 1'b1; // "all"
             end else begin // Write
                 // WR CKE
                 CKE <= 1'b1;
                 nRAS <= 1'b1;
                 nCAS <= 1'b0;
                 nRWE <= 1'b0;
-                RA[10] <= 1'b0;
+                RA[10] <= 1'b0; // no auto-precharge
             end
             // Hold BA
             // Hold RA[11,9:0]
@@ -419,14 +429,14 @@ module RAM2E(C14M, PHI1, LED,
                 nRAS <= 1'b1;
                 nCAS <= 1'b1;
                 nRWE <= 1'b1;
-                // Hold RA[10]
+                RA[10] <= 1'b0;
             end else if (nWE) begin // Read
                 // NOP CKD
                 CKE <= 1'b0;
                 nRAS <= 1'b1;
                 nCAS <= 1'b1;
                 nRWE <= 1'b1;
-                // Hold RA[10]
+                RA[10] <= 1'b1;
             end else begin // Write
                 // PC all CKD
                 CKE <= 1'b0;

@@ -1,6 +1,6 @@
 Flow report for RAM2E
-Thu Sep 21 05:34:45 2023
-Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Thu Dec 28 23:09:50 2023
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
 
 
 ---------------------
@@ -38,21 +38,21 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------+
-; Flow Summary                                                        ;
-+-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Thu Sep 21 05:34:41 2023       ;
-; Quartus Prime Version ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
-; Revision Name         ; RAM2E                                       ;
-; Top-level Entity Name ; RAM2E                                       ;
-; Family                ; MAX II                                      ;
-; Device                ; EPM240T100C5                                ;
-; Timing Models         ; Final                                       ;
-; Total logic elements  ; 197 / 240 ( 82 % )                          ;
-; Total pins            ; 70 / 80 ( 88 % )                            ;
-; Total virtual pins    ; 0                                           ;
-; UFM blocks            ; 1 / 1 ( 100 % )                             ;
-+-----------------------+---------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Flow Summary                                                                        ;
++-----------------------+-------------------------------------------------------------+
+; Flow Status           ; Successful - Thu Dec 28 23:09:46 2023                       ;
+; Quartus Prime Version ; 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition ;
+; Revision Name         ; RAM2E                                                       ;
+; Top-level Entity Name ; RAM2E                                                       ;
+; Family                ; MAX II                                                      ;
+; Device                ; EPM240T100C5                                                ;
+; Timing Models         ; Final                                                       ;
+; Total logic elements  ; 238 / 240 ( 99 % )                                          ;
+; Total pins            ; 70 / 80 ( 88 % )                                            ;
+; Total virtual pins    ; 0                                                           ;
+; UFM blocks            ; 1 / 1 ( 100 % )                                             ;
++-----------------------+-------------------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -60,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/21/2023 05:33:57 ;
+; Start date & time ; 12/28/2023 23:09:12 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RAM2E               ;
 +-------------------+---------------------+
@@ -71,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------+------------------------------+---------------+-------------+------------+
 ; Assignment Name                       ; Value                        ; Default Value ; Entity Name ; Section Id ;
 +---------------------------------------+------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID                 ; 121381084694.169528883703908 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID                 ; 121381084694.170382295203604 ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP                ; 85                           ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP                ; 0                            ; --            ; --          ; --         ;
 ; NUM_PARALLEL_PROCESSORS               ; 4                            ; --            ; --          ; --         ;
@@ -86,11 +86,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:35     ; 1.0                     ; 13144 MB            ; 00:00:49                           ;
-; Fitter               ; 00:00:04     ; 1.0                     ; 13770 MB            ; 00:00:04                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 13091 MB            ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 13089 MB            ; 00:00:02                           ;
-; Total                ; 00:00:43     ; --                      ; --                  ; 00:00:56                           ;
+; Analysis & Synthesis ; 00:00:28     ; 1.0                     ; 13113 MB            ; 00:00:42                           ;
+; Fitter               ; 00:00:04     ; 1.0                     ; 13747 MB            ; 00:00:04                           ;
+; Assembler            ; 00:00:00     ; 1.0                     ; 13067 MB            ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 13064 MB            ; 00:00:02                           ;
+; Total                ; 00:00:34     ; --                      ; --                  ; 00:00:49                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
