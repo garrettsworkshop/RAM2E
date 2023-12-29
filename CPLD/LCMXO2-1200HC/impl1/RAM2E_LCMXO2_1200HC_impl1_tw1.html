@@ -22,7 +22,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 <A name="Map_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454</big></U></B>
-Thu Sep 21 05:34:48 2023
+Thu Dec 28 23:09:59 2023
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -41,8 +41,8 @@ Report level:    verbose report, limited to 1 item per preference
 
 <A name="mtw1_set_ps"></A><B><U><big>Preference Summary</big></U></B>
 
-<LI><A href='#map_twr_pref_0_0' Target='right'>FREQUENCY PORT "C14M" 14.300000 MHz (0 errors)</A></LI>            1491 items scored, 0 timing errors detected.
-Report:   87.268MHz is the maximum frequency for this preference.
+<LI><A href='#map_twr_pref_0_0' Target='right'>FREQUENCY PORT "C14M" 14.300000 MHz (0 errors)</A></LI>            1611 items scored, 0 timing errors detected.
+Report:   90.967MHz is the maximum frequency for this preference.
 
 BLOCK ASYNCPATHS
 BLOCK RESETPATHS
@@ -52,48 +52,48 @@ BLOCK RESETPATHS
 
 ================================================================================
 <A name="map_twr_pref_0_0"></A>Preference: FREQUENCY PORT "C14M" 14.300000 MHz ;
-            1491 items scored, 0 timing errors detected.
+            1611 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Passed: The following path meets requirements by 58.471ns
+Passed: The following path meets requirements by 58.937ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              FS[11]  (from C14M_c +)
-   Destination:    FF         Data in        nRWE_0io  (to C14M_c +)
+   Source:         FF         Q              S[2]  (from C14M_c +)
+   Destination:    FF         Data in        ram2e_ufm/wb_adr[0]  (to C14M_c +)
 
-   Delay:              11.306ns  (30.3% logic, 69.7% route), 7 logic levels.
+   Delay:              10.827ns  (31.6% logic, 68.4% route), 7 logic levels.
 
  Constraint Details:
 
-     11.306ns physical path delay SLICE_3 to nRWE_MGIOL meets
+     10.827ns physical path delay SLICE_34 to ram2e_ufm/SLICE_47 meets
      69.930ns delay constraint less
-      0.153ns DO_SET requirement (totaling 69.777ns) by 58.471ns
+      0.166ns DIN_SET requirement (totaling 69.764ns) by 58.937ns
 
  Physical Path Details:
 
-      Data path SLICE_3 to nRWE_MGIOL:
+      Data path SLICE_34 to ram2e_ufm/SLICE_47:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452    SLICE_3.CLK to     SLICE_3.Q0 SLICE_3 (from C14M_c)
-ROUTE        19   e 1.234     SLICE_3.Q0 to    SLICE_64.A1 FS[11]
-CTOF_DEL    ---     0.495    SLICE_64.A1 to    SLICE_64.F1 SLICE_64
-ROUTE         4   e 1.234    SLICE_64.F1 to    SLICE_97.D0 N_577
-CTOF_DEL    ---     0.495    SLICE_97.D0 to    SLICE_97.F0 SLICE_97
-ROUTE         3   e 1.234    SLICE_97.F0 to    SLICE_75.D1 N_489
-CTOF_DEL    ---     0.495    SLICE_75.D1 to    SLICE_75.F1 SLICE_75
-ROUTE         3   e 0.480    SLICE_75.F1 to    SLICE_75.A0 N_628
-CTOF_DEL    ---     0.495    SLICE_75.A0 to    SLICE_75.F0 SLICE_75
-ROUTE         2   e 1.234    SLICE_75.F0 to    SLICE_71.C1 N_640
-CTOF_DEL    ---     0.495    SLICE_71.C1 to    SLICE_71.F1 SLICE_71
-ROUTE         1   e 1.234    SLICE_71.F1 to   SLICE_115.A0 un1_nCS61_1_i
-CTOF_DEL    ---     0.495   SLICE_115.A0 to   SLICE_115.F0 SLICE_115
-ROUTE         1   e 1.234   SLICE_115.F0 to *WE_MGIOL.OPOS nRWE_r_0 (to C14M_c)
+REG_DEL     ---     0.452   SLICE_34.CLK to    SLICE_34.Q0 SLICE_34 (from C14M_c)
+ROUTE        50   e 1.234    SLICE_34.Q0 to    SLICE_35.A0 S[2]
+CTOF_DEL    ---     0.495    SLICE_35.A0 to    SLICE_35.F0 SLICE_35
+ROUTE         7   e 1.234    SLICE_35.F0 to *m/SLICE_80.D1 N_551
+CTOF_DEL    ---     0.495 *m/SLICE_80.D1 to *m/SLICE_80.F1 ram2e_ufm/SLICE_80
+ROUTE         8   e 1.234 *m/SLICE_80.F1 to *m/SLICE_98.B1 ram2e_ufm/N_777
+CTOF_DEL    ---     0.495 *m/SLICE_98.B1 to *m/SLICE_98.F1 ram2e_ufm/SLICE_98
+ROUTE         5   e 1.234 *m/SLICE_98.F1 to *m/SLICE_99.C0 ram2e_ufm/N_781
+CTOF_DEL    ---     0.495 *m/SLICE_99.C0 to *m/SLICE_99.F0 ram2e_ufm/SLICE_99
+ROUTE         1   e 1.234 *m/SLICE_99.F0 to *m/SLICE_86.C0 ram2e_ufm/wb_adr_7_i_i_1[0]
+CTOF_DEL    ---     0.495 *m/SLICE_86.C0 to *m/SLICE_86.F0 ram2e_ufm/SLICE_86
+ROUTE         1   e 1.234 *m/SLICE_86.F0 to *m/SLICE_47.C0 ram2e_ufm/wb_adr_7_i_i_4[0]
+CTOF_DEL    ---     0.495 *m/SLICE_47.C0 to *m/SLICE_47.F0 ram2e_ufm/SLICE_47
+ROUTE         1   e 0.001 *m/SLICE_47.F0 to */SLICE_47.DI0 ram2e_ufm/wb_adr_7_i_i[0] (to C14M_c)
                   --------
-                   11.306   (30.3% logic, 69.7% route), 7 logic levels.
+                   10.827   (31.6% logic, 68.4% route), 7 logic levels.
 
-Report:   87.268MHz is the maximum frequency for this preference.
+Report:   90.967MHz is the maximum frequency for this preference.
 
 <A name="mtw1_set_rs"></A><B><U><big>Report Summary</big></U></B>
 --------------
@@ -101,7 +101,7 @@ Report:   87.268MHz is the maximum frequency for this preference.
 Preference                              |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
-FREQUENCY PORT "C14M" 14.300000 MHz ;   |   14.300 MHz|   87.268 MHz|   7  
+FREQUENCY PORT "C14M" 14.300000 MHz ;   |   14.300 MHz|   90.967 MHz|   7  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -114,7 +114,7 @@ All preferences were met.
 
 Found 1 clocks:
 
-Clock Domain: C14M_c   Source: C14M.PAD   Loads: 84
+Clock Domain: C14M_c   Source: C14M.PAD   Loads: 89
    Covered under: FREQUENCY PORT "C14M" 14.300000 MHz ;
 
 
@@ -124,11 +124,11 @@ Clock Domain: C14M_c   Source: C14M.PAD   Loads: 84
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 1491 paths, 1 nets, and 933 connections (82.86% coverage)
+Constraints cover 1611 paths, 1 nets, and 1095 connections (82.33% coverage)
 
 --------------------------------------------------------------------------------
 <A name="Map_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454</big></U></B>
-Thu Sep 21 05:34:49 2023
+Thu Dec 28 23:09:59 2023
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -147,7 +147,7 @@ Report level:    verbose report, limited to 1 item per preference
 
 <A name="mtw1_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
 
-<LI><A href='#map_twr_pref_1_0' Target='right'>FREQUENCY PORT "C14M" 14.300000 MHz (0 errors)</A></LI>            1491 items scored, 0 timing errors detected.
+<LI><A href='#map_twr_pref_1_0' Target='right'>FREQUENCY PORT "C14M" 14.300000 MHz (0 errors)</A></LI>            1611 items scored, 0 timing errors detected.
 
 BLOCK ASYNCPATHS
 BLOCK RESETPATHS
@@ -157,7 +157,7 @@ BLOCK RESETPATHS
 
 ================================================================================
 <A name="map_twr_pref_1_0"></A>Preference: FREQUENCY PORT "C14M" 14.300000 MHz ;
-            1491 items scored, 0 timing errors detected.
+            1611 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
@@ -182,7 +182,7 @@ Passed: The following path meets requirements by 0.447ns
 
    Name    Fanout   Delay (ns)          Site               Resource
 REG_DEL     ---     0.133    SLICE_0.CLK to     SLICE_0.Q1 SLICE_0 (from C14M_c)
-ROUTE         5   e 0.199     SLICE_0.Q1 to     SLICE_0.A1 FS[0]
+ROUTE         6   e 0.199     SLICE_0.Q1 to     SLICE_0.A1 FS[0]
 CTOF_DEL    ---     0.101     SLICE_0.A1 to     SLICE_0.F1 SLICE_0
 ROUTE         1   e 0.001     SLICE_0.F1 to    SLICE_0.DI1 FS_s[0] (to C14M_c)
                   --------
@@ -207,7 +207,7 @@ All preferences were met.
 
 Found 1 clocks:
 
-Clock Domain: C14M_c   Source: C14M.PAD   Loads: 84
+Clock Domain: C14M_c   Source: C14M.PAD   Loads: 89
    Covered under: FREQUENCY PORT "C14M" 14.300000 MHz ;
 
 
@@ -217,7 +217,7 @@ Clock Domain: C14M_c   Source: C14M.PAD   Loads: 84
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 1491 paths, 1 nets, and 933 connections (82.86% coverage)
+Constraints cover 1611 paths, 1 nets, and 1095 connections (82.33% coverage)
 
 
 

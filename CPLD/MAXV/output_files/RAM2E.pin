@@ -58,41 +58,41 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
 CHIP  "RAM2E"  ASSIGNED TO AN: 5M240ZT100C5
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
 GND                          : 1         : gnd    :                   :         :           :                
-nRWE                         : 2         : output : 3.3-V LVCMOS      :         : 1         : Y              
-nCAS                         : 3         : output : 3.3-V LVCMOS      :         : 1         : Y              
-CKE                          : 4         : output : 3.3-V LVCMOS      :         : 1         : Y              
-nRAS                         : 5         : output : 3.3-V LVCMOS      :         : 1         : Y              
+nRWEout                      : 2         : output : 3.3-V LVCMOS      :         : 1         : Y              
+nCASout                      : 3         : output : 3.3-V LVCMOS      :         : 1         : Y              
+CKEout                       : 4         : output : 3.3-V LVCMOS      :         : 1         : Y              
+nRASout                      : 5         : output : 3.3-V LVCMOS      :         : 1         : Y              
 BA[0]                        : 6         : output : 3.3-V LVCMOS      :         : 1         : Y              
-RA[11]                       : 7         : output : 3.3-V LVCMOS      :         : 1         : Y              
-nCS                          : 8         : output : 3.3-V LVCMOS      :         : 1         : Y              
+RAout[11]                    : 7         : output : 3.3-V LVCMOS      :         : 1         : Y              
+nCSout                       : 8         : output : 3.3-V LVCMOS      :         : 1         : Y              
 VCCIO1                       : 9         : power  :                   : 3.3V    : 1         :                
 GND                          : 10        : gnd    :                   :         :           :                
 GND                          : 11        : gnd    :                   :         :           :                
 C14M                         : 12        : input  : 3.3-V LVCMOS      :         : 1         : Y              
 VCCINT                       : 13        : power  :                   : 1.8V    :           :                
 BA[1]                        : 14        : output : 3.3-V LVCMOS      :         : 1         : Y              
-RA[9]                        : 15        : output : 3.3-V LVCMOS      :         : 1         : Y              
-RA[10]                       : 16        : output : 3.3-V LVCMOS      :         : 1         : Y              
-RA[8]                        : 17        : output : 3.3-V LVCMOS      :         : 1         : Y              
-RA[0]                        : 18        : output : 3.3-V LVCMOS      :         : 1         : Y              
-RA[7]                        : 19        : output : 3.3-V LVCMOS      :         : 1         : Y              
-RA[1]                        : 20        : output : 3.3-V LVCMOS      :         : 1         : Y              
-RA[6]                        : 21        : output : 3.3-V LVCMOS      :         : 1         : Y              
+RAout[9]                     : 15        : output : 3.3-V LVCMOS      :         : 1         : Y              
+RAout[10]                    : 16        : output : 3.3-V LVCMOS      :         : 1         : Y              
+RAout[8]                     : 17        : output : 3.3-V LVCMOS      :         : 1         : Y              
+RAout[0]                     : 18        : output : 3.3-V LVCMOS      :         : 1         : Y              
+RAout[7]                     : 19        : output : 3.3-V LVCMOS      :         : 1         : Y              
+RAout[1]                     : 20        : output : 3.3-V LVCMOS      :         : 1         : Y              
+RAout[6]                     : 21        : output : 3.3-V LVCMOS      :         : 1         : Y              
 TMS                          : 22        : input  :                   :         : 1         :                
 TDI                          : 23        : input  :                   :         : 1         :                
 TCK                          : 24        : input  :                   :         : 1         :                
 TDO                          : 25        : output :                   :         : 1         :                
-RA[4]                        : 26        : output : 3.3-V LVCMOS      :         : 1         : Y              
-RA[3]                        : 27        : output : 3.3-V LVCMOS      :         : 1         : Y              
+RAout[4]                     : 26        : output : 3.3-V LVCMOS      :         : 1         : Y              
+RAout[3]                     : 27        : output : 3.3-V LVCMOS      :         : 1         : Y              
 nEN80                        : 28        : input  : 3.3-V LVCMOS      :         : 1         : Y              
-RA[5]                        : 29        : output : 3.3-V LVCMOS      :         : 1         : Y              
-RA[2]                        : 30        : output : 3.3-V LVCMOS      :         : 1         : Y              
+RAout[5]                     : 29        : output : 3.3-V LVCMOS      :         : 1         : Y              
+RAout[2]                     : 30        : output : 3.3-V LVCMOS      :         : 1         : Y              
 VCCIO1                       : 31        : power  :                   : 3.3V    : 1         :                
 GND                          : 32        : gnd    :                   :         :           :                
 nWE80                        : 33        : input  : 3.3-V LVCMOS      :         : 1         : Y              

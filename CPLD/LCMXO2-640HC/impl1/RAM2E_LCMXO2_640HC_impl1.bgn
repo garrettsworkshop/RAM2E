@@ -4,10 +4,10 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Sep 21 05:35:20 2023
+Thu Dec 28 23:10:28 2023
 
 
-Command: bitgen -g RamCfg:Reset -path //Mac/iCloud/Repos/RAM2E/CPLD/LCMXO2-640HC -w -jedec -gui -msgset //Mac/iCloud/Repos/RAM2E/CPLD/LCMXO2-640HC/promote.xml RAM2E_LCMXO2_640HC_impl1.ncd RAM2E_LCMXO2_640HC_impl1.prf 
+Command: bitgen -g RamCfg:Reset -path //Mac/iCloud/Repos/ram2e/CPLD/LCMXO2-640HC -w -jedec -gui -msgset //Mac/iCloud/Repos/ram2e/CPLD/LCMXO2-640HC/promote.xml RAM2E_LCMXO2_640HC_impl1.ncd RAM2E_LCMXO2_640HC_impl1.prf 
 
 Loading design for application Bitgen from file RAM2E_LCMXO2_640HC_impl1.ncd.
 Design name: RAM2E

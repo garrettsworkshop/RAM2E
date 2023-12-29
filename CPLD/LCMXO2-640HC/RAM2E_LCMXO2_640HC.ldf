@@ -3,8 +3,11 @@
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="synplify" default_strategy="Strategy1">
         <Options def_top="RAM2E" top="RAM2E"/>
-        <Source name="../RAM2E-LCMXO2.v" type="Verilog" type_short="Verilog">
+        <Source name="../RAM2E.v" type="Verilog" type_short="Verilog">
             <Options top_module="RAM2E"/>
+        </Source>
+        <Source name="../UFM-LCMXO2.v" type="Verilog" type_short="Verilog">
+            <Options/>
         </Source>
         <Source name="REFB.v" type="Verilog" type_short="Verilog">
             <Options/>
