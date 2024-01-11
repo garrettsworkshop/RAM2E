@@ -1,5 +1,5 @@
 Fitter report for RAM2E
-Thu Dec 28 23:09:45 2023
+Thu Jan 11 09:29:24 2024
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
 
 
@@ -57,7 +57,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +-----------------------+-------------------------------------------------------------+
-; Fitter Status         ; Successful - Thu Dec 28 23:09:45 2023                       ;
+; Fitter Status         ; Successful - Thu Jan 11 09:29:24 2024                       ;
 ; Quartus Prime Version ; 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition ;
 ; Revision Name         ; RAM2E                                                       ;
 ; Top-level Entity Name ; RAM2E                                                       ;
@@ -129,13 +129,13 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.03        ;
+; Average used               ; 1.04        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.0%      ;
-;     Processors 3-4         ;   0.9%      ;
+;     Processor 2            ;   1.6%      ;
+;     Processors 3-4         ;   1.2%      ;
 +----------------------------+-------------+
 
 
@@ -720,7 +720,7 @@ Info (176234): Starting register packing
 Info (186468): Started processing fast register assignments
 Info (186469): Finished processing fast register assignments
 Info (176235): Finished register packing
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -732,13 +732,13 @@ Info (170195): Router estimated average interconnect usage is 23% of the availab
     Info (170196): Router estimated peak interconnect usage is 23% of the available device resources in the region that extends from location X0_Y0 to location X8_Y5
 Info (170202): The Fitter performed an Auto Fit compilation.  No optimizations were skipped because the design's timing and routability requirements required full optimization.
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.67 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.40 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Info (144001): Generated suppressed messages file Y:/Repos/RAM2E/CPLD/MAXV/output_files/RAM2E.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 13748 megabytes
-    Info: Processing ended: Thu Dec 28 23:09:45 2023
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 13751 megabytes
+    Info: Processing ended: Thu Jan 11 09:29:24 2024
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:04
 
 
