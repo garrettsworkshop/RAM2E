@@ -1,5 +1,5 @@
 Assembler report for RAM2E
-Thu Dec 28 23:09:48 2023
+Thu Jan 11 09:29:26 2024
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Dec 28 23:09:48 2023 ;
+; Assembler Status      ; Successful - Thu Jan 11 09:29:26 2024 ;
 ; Revision Name         ; RAM2E                                 ;
 ; Top-level Entity Name ; RAM2E                                 ;
 ; Family                ; MAX V                                 ;
@@ -78,13 +78,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
-    Info: Processing started: Thu Dec 28 23:09:47 2023
+    Info: Processing started: Thu Jan 11 09:29:25 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off RAM2E-MAXV -c RAM2E
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 13070 megabytes
-    Info: Processing ended: Thu Dec 28 23:09:48 2023
+    Info: Peak virtual memory: 13073 megabytes
+    Info: Processing ended: Thu Jan 11 09:29:26 2024
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
