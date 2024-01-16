@@ -2,7 +2,7 @@ module RAM2E_UFM(C14M, S, FS, CS, Ready,
                  RWSel, D,
                  RWMask, LEDEN,
                  CmdRWMaskSet, CmdLEDSet,
-                 CmdSetRWBankFFChip);
+                 ChipCmdNum);
     input C14M;
     input [3:0] S;
     input [15:0] FS;
@@ -14,19 +14,19 @@ module RAM2E_UFM(C14M, S, FS, CS, Ready,
     output reg LEDEN;
     input CmdRWMaskSet;
     input CmdLEDSet;
-    output reg CmdSetRWBankFFChip;
+
+    /* Chip ID */
+    //output [7:0] ChipCmdNum; assign ChipCmdNum[7:0] = 8'hFF; // MAX
+    //output [7:0] ChipCmdNum; assign ChipCmdNum[7:0] = 8'hFE; // SPI
+    output [7:0] ChipCmdNum; assign ChipCmdNum[7:0] = 8'hFD; // MachXO2
 
     /* RAMWorks register control - Lattice MachXO2 */
     reg CmdBitbangMXO2 = 0;
     reg CmdExecMXO2 = 0;
     always @(posedge C14M) begin
+
         if (S==4'hC && RWSel) begin
             if (CS==3'h6) begin // Recognize and submit command in CS6
-                // Chip detection commands
-                //CmdSetRWBankFFChip <= D[7:0]==8'hFF; // MAX
-                //CmdSetRWBankFFChip <= D[7:0]==8'hFE; // SPI
-                CmdSetRWBankFFChip <= D[7:0]==8'hFD; // MachXO2
-
                 // Altera MAX II/V commands
                 //CmdBitbangMAX <=  D[7:0]==8'hEA;
                 //if (!CmdEraseMAX && !CmdPrgmMAX) begin
@@ -41,7 +41,6 @@ module RAM2E_UFM(C14M, S, FS, CS, Ready,
                 CmdBitbangMXO2 <= D[7:0]==8'hEC;
                 CmdExecMXO2 <= D[7:0]==8'hED;
             end else begin // Reset command triggers
-                CmdSetRWBankFFChip <= 0;
                 CmdBitbangMXO2 <= 0;
                 CmdExecMXO2 <= 0;
             end
@@ -85,22 +84,22 @@ module RAM2E_UFM(C14M, S, FS, CS, Ready,
                         wb_adr[7:0] <= 8'h70;
                         wb_dati[7:0] <= 8'h80;
                         wb_req <= 1;
-                    end 1: begin // Enable configuration interface - command
+                    end 1: begin // Enable config interface - command
                         wb_we <= 1'b1;
                         wb_adr[7:0] <= 8'h71;
                         wb_dati[7:0] <= 8'h74;
                         wb_req <= 1;
-                    end 2: begin // Enable configuration interface - operand 1/3
+                    end 2: begin // Enable config interface - operand 1/3
                         wb_we <= 1'b1;
                         wb_adr[7:0] <= 8'h71;
                         wb_dati[7:0] <= 8'h08;
                         wb_req <= 1;
-                    end 3: begin // Enable configuration interface - operand 2/3
+                    end 3: begin // Enable config interface - operand 2/3
                         wb_we <= 1'b1;
                         wb_adr[7:0] <= 8'h71;
                         wb_dati[7:0] <= 8'h00;
                         wb_req <= 1;
-                    end 4: begin // Enable configuration interface - operand 3/3
+                    end 4: begin // Enable config interface - operand 3/3
                         wb_we <= 1'b1;
                         wb_adr[7:0] <= 8'h71;
                         wb_dati[7:0] <= 8'h00;
@@ -254,17 +253,17 @@ module RAM2E_UFM(C14M, S, FS, CS, Ready,
                         wb_adr[7:0] <= 8'h70;
                         wb_dati[7:0] <= 8'h80;
                         wb_req <= 1;
-                    end 49: begin // Disable configuration interface - command
+                    end 49: begin // Disable config interface - command
                         wb_we <= 1'b1;
                         wb_adr[7:0] <= 8'h71;
                         wb_dati[7:0] <= 8'h26;
                         wb_req <= 1;
-                    end 50: begin // Disable configuration interface - operand 1/2
+                    end 50: begin // Disable config interface - operand 1/2
                         wb_we <= 1'b1;
                         wb_adr[7:0] <= 8'h71;
                         wb_dati[7:0] <= 8'h00;
                         wb_req <= 1;
-                    end 51: begin // Disable configuration interface - operand 2/2
+                    end 51: begin // Disable config interface - operand 2/2
                         wb_we <= 1'b1;
                         wb_adr[7:0] <= 8'h71;
                         wb_dati[7:0] <= 8'h00;
@@ -310,13 +309,16 @@ module RAM2E_UFM(C14M, S, FS, CS, Ready,
             wb_rst <= 1'b0;
             wb_req <= 1'b0;
 
+            // Volatile settings command execution
             if (RWSel && S==4'hC) begin
                 // LED control
                 if (CmdLEDSet) LEDEN <= D[0];
-                
                 // Set capacity mask
                 if (CmdRWMaskSet) RWMask[7:0] <= {D[7], ~D[6:0]};
+            end
 
+            // EFB commands
+            if (RWSel && S==4'hC) begin
                 // Set EFB address
                 if (CmdBitbangMXO2) begin
                     wb_adr[7:0] <= D[7:0];

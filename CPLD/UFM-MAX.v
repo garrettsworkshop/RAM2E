@@ -2,7 +2,7 @@ module RAM2E_UFM(C14M, S, FS, CS, Ready,
                  RWSel, D,
                  RWMask, LEDEN,
 				 CmdRWMaskSet, CmdLEDSet,
-                 CmdSetRWBankFFChip);
+                 ChipCmdNum);
 	input C14M;
 	input [3:0] S;
     input [15:0] FS;
@@ -14,7 +14,11 @@ module RAM2E_UFM(C14M, S, FS, CS, Ready,
     output reg LEDEN;
     input CmdRWMaskSet;
     input CmdLEDSet;
-	output reg CmdSetRWBankFFChip;
+
+    /* Chip ID */
+    output [7:0] ChipCmdNum; assign ChipCmdNum[7:0] = 8'hFF; // MAX
+    //output [7:0] ChipCmdNum; assign ChipCmdNum[7:0] = 8'hFE; // SPI
+    //output [7:0] ChipCmdNum; assign ChipCmdNum[7:0] = 8'hFD; // MachXO2
     
     /* RAMWorks register control - Altera MAX */
     reg CmdBitbangMAX = 0; // Set by user command. Loads UFM outputs next RWSel
@@ -23,11 +27,6 @@ module RAM2E_UFM(C14M, S, FS, CS, Ready,
     always @(posedge C14M) begin
         if (S==4'hC && RWSel) begin
             if (CS==3'h6) begin // Recognize and submit command in CS6
-                // Chip detection commands
-                CmdSetRWBankFFChip <= D[7:0]==8'hFF; // MAX
-                //CmdSetRWBankFFChip <= D[7:0]==8'hFE; // SPI
-                //CmdSetRWBankFFChip <= D[7:0]==8'hFD; // MachXO2
-
                 // Altera MAX II/V commands
                 CmdBitbangMAX <=  D[7:0]==8'hEA;
                 if (!CmdEraseMAX && !CmdPrgmMAX) begin
@@ -42,11 +41,11 @@ module RAM2E_UFM(C14M, S, FS, CS, Ready,
                 //CmdBitbangMXO2 <= D[7:0]==8'hEC;
                 //CmdExecMXO2 <= D[7:0]==8'hED;
             end else begin // Reset command triggers
-                CmdSetRWBankFFChip <= 0;
                 CmdBitbangMAX <= 0;
             end
         end
     end
+
 
     /* UFM Interface */
     reg [15:8] UFMD = 0; // *Parallel* UFM data register
@@ -87,7 +86,8 @@ module RAM2E_UFM(C14M, S, FS, CS, Ready,
     reg UFMProgStart;
     always @(posedge C14M) begin
         if (S==4'h0) begin
-            if ((FS[15:13]==3'b101) || (FS[15:13]==3'b111 && UFMReqErase)) begin
+            if ((FS[15:13]==3'b101) || 
+                (FS[15:13]==3'b111 && UFMReqErase)) begin
                 // In states AXXX-BXXX and also EXXX-FXXX if erase/wrap req'd
                 // shift in 0's to address register
                 ARCLK <= FS[0]; // Clock address register
@@ -95,7 +95,8 @@ module RAM2E_UFM(C14M, S, FS, CS, Ready,
                 ARShift <= 1'b1; // Shift address registers
                 DRDIn <= 1'b0; // Don't care DRDIn
                 DRShift <= 1'b0; // Don't care DRDShift
-            end else if (!UFMInitDone && FS[15:13]==3'b110 && FS[4:1]==4'h4) begin
+            end else if (!UFMInitDone && 
+                FS[15:13]==3'b110 && FS[4:1]==4'h4) begin
                 // In states CXXX-DXXX (substep 4)
                 // Xfer to data reg (repeat 256x 1x)
                 ARCLK <= 1'b0; // Don't clock address register
@@ -103,7 +104,8 @@ module RAM2E_UFM(C14M, S, FS, CS, Ready,
                 ARShift <= 1'b0; // Don't care ARShift
                 DRDIn <= 1'b0; // Don't care DRDIn
                 DRShift <= 1'b0; // Don't care DRShift
-            end else if (!UFMInitDone && FS[15:13]==3'b110 && (FS[4:1]==4'h7 || FS[4]==1'b1)) begin
+            end else if (!UFMInitDone && 
+                FS[15:13]==3'b110 && (FS[4:1]==4'h7 || FS[4]==1'b1)) begin
                 // In states CXXX-DXXX (substeps 8-F)
                 // Save UFM D15-8, shift out D14-7 (repeat 256x 8x)
                 DRCLK <= FS[0]; // Clock data register

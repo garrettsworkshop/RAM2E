@@ -19,34 +19,32 @@ module RAM2E(C14M, PHI1, LED,
     reg [3:0] S = 0;
     reg PHI1r = 0; always @(posedge C14M) PHI1r <= PHI1;
     always @(posedge C14M) begin
-        S <= (PHI1 && !PHI1r && Ready) ? 4'h1 : 
+        S <= (PHI1 && !PHI1r && Ready) ? 4'h1 :
              (S==4'h0) ? 4'h0 :
              (S==4'hF) ? 4'hF : S+4'h1;
     end
 
     /* Refresh counter */
     reg [2:0] RC;
-    wire RefReq = RC==0;
-    always @(posedge C14M) begin
-        if (S==4'h1) begin
-            if (RC[2] && RC[1]) RC <= 0; // RC==6 || RC==7
-            else RC <= RC+3'h1;
-        end
+    reg RefReq;
+    always @(negedge PHI1) begin
+        if (RC[2] && RC[1]) RC <= 0; // RC==6 || RC==7
+        else RC <= RC+3'h1;
+        RefReq <= RC==0;
     end
 
     /* Activity LED */
     wire LEDEN;
     output LED; assign LED = !(!nEN80 && LEDEN && Ready);
 
-    /* Address Bus */
-    input [7:0] Ain; // Multiplexed DRAM address input
+    /* DRAM multiplexed address bus input */
+    input [7:0] Ain;
     
-    /* 6502 Data Bus */
-    input [7:0] Din; // 6502 data bus inputs
+    /* 6502 data bus input/output */
+    input [7:0] Din;
     reg DOEEN; 
     always @(posedge C14M) begin
-        DOEEN <= /*(S==4'h8) || (S==4'h9) || (S==4'hA) ||*/ (S==4'hB) ||
-                   (S==4'hC) || (S==4'hD) || (S==4'hE) ||   (S==4'hF);
+        DOEEN <= S==4'hB || S==4'hC || S==4'hD || S==4'hE || S==4'hF ;
     end
     output nDOE; assign nDOE = !(!nEN80 && nWE && DOEEN);
     output [7:0] Dout; assign Dout[7:0] = RD[7:0];
@@ -54,37 +52,43 @@ module RAM2E(C14M, PHI1, LED,
     /* Video Data Bus */
     reg VOEEN;
     always @(posedge C14M) begin
-        VOEEN <=                                   (S==4'h7) ||
-            (S==4'h8) || (S==4'h9) || (S==4'hA) || (S==4'hB) ||
-            (S==4'hC) || (S==4'hD) || (S==4'hE) || (S==4'hF);
+        VOEEN <=                             S==4'h7 ||
+            S==4'h8 || S==4'h9 || S==4'hA || S==4'hB ||
+            S==4'hC || S==4'hD || S==4'hE || S==4'hF;
     end
     output nVOE; assign nVOE = !(!PHI1 && VOEEN);
     output reg [7:0] Vout; // Video data bus
-    always @(posedge C14M) if (S==4'h6) Vout[7:0] <= RD[7:0];
+    always @(negedge C14M) if (S==4'h6) Vout[7:0] <= RD[7:0];
 
     /* SDRAM bus */
-    reg CKE = 1;
-    reg nRAS = 1, nCAS = 1, nRWE = 1;
+    reg CKE = 1, nRAS = 1, nCAS = 1, nRWE = 1;
     output reg [1:0] BA;
     reg [11:0] RA;
     output reg DQML = 1, DQMH = 1;
     inout [7:0] RD;
     wire [7:0] RDout = Ready ? Din[7:0] : 8'h00;
-    wire RDOE = (!Ready) || (!nEN80 && !nWE);
+    reg RDOE;
+    always @(posedge C14M) begin 
+        RDOE <= (!Ready) || (!nEN80 && !nWE && (S==4'hA || S==4'hB));
+    end
     assign RD[7:0] = RDOE ? RDout[7:0] : 8'bZ;
 
-    /* SDRAM falling edge outputs */
-	output reg CKEout;
+    /* SDRAM falling edge command outputs */
     output nCSout; assign nCSout = 0;
-    output reg nRASout = 1, nCASout = 1, nRWEout = 1;
-    output reg [11:0] RAout;
+    output reg CKEout = 1, nRASout = 1, nCASout = 1, nRWEout = 1;
     always @(negedge C14M) begin
         CKEout <= CKE;
         nRASout <= nRAS;
         nCASout <= nCAS;
         nRWEout <= nRWE;
-        RAout <= RA;
     end
+
+    /* SDRAM address outputs */
+    output [11:0] RAout;
+    reg [11:0] RAr; always @(negedge C14M) RAr <= RA;
+    reg RAT; always @(negedge C14M) RAT <= S==4'hA;
+    assign RAout[11:8] = RAr[11:8];
+    assign RAout[7:0] = RAT ? Ain[7:0] : RAr[7:0];
     
     /* RAMWorks Bank Register and Capacity Mask */
     reg [7:0] RWBank = 0; // RAMWorks bank register
@@ -94,7 +98,6 @@ module RAM2E(C14M, PHI1, LED,
         if (S==4'h9) RWSel <= RA[0] && !RA[3] && !nWE && !nC07X;
     end
     reg CmdRWMaskSet = 0; // RAMWorks Mask register set flag
-    wire CmdSetRWBankFFChip;
     reg CmdSetRWBankFFLED = 0;
     reg CmdLEDSet = 0;
     reg CmdLEDGet = 0;
@@ -102,14 +105,6 @@ module RAM2E(C14M, PHI1, LED,
     /* Command Sequence Detector */
     reg [2:0] CS = 0; // Command sequence state
     reg [2:0] CmdTout = 0; // Command sequence timeout
-
-    /* Chip-specific UFM interface */
-    RAM2E_UFM ram2e_ufm (
-        .C14M(C14M), .S(S), .FS(FS), .CS(CS), .Ready(Ready),
-        .RWSel(RWSel), .D(Din),
-        .RWMask(RWMask), .LEDEN(LEDEN),
-        .CmdRWMaskSet(CmdRWMaskSet), .CmdLEDSet(CmdLEDSet),
-        .CmdSetRWBankFFChip(CmdSetRWBankFFChip));
 
     /* Command sequence control */
     always @(posedge C14M) begin
@@ -133,7 +128,17 @@ module RAM2E(C14M, PHI1, LED,
         end
     end
 
+    /* Chip-specific UFM interface */
+    wire [7:0] ChipCmdNum;
+    RAM2E_UFM ram2e_ufm (
+        .C14M(C14M), .S(S), .FS(FS), .CS(CS), .Ready(Ready),
+        .RWSel(RWSel), .D(Din),
+        .RWMask(RWMask), .LEDEN(LEDEN),
+        .CmdRWMaskSet(CmdRWMaskSet), .CmdLEDSet(CmdLEDSet),
+        .ChipCmdNum(ChipCmdNum));
+
     /* RAMWorks register control - bank, LED, etc. */
+    reg CmdSetRWBankFFChip;
     always @(posedge C14M) begin
         if (S==4'hC && RWSel) begin
             // Latch RAMWorks bank if accessed
@@ -142,15 +147,16 @@ module RAM2E(C14M, PHI1, LED,
             else RWBank <= Din[7:0] & {RWMask[7], ~RWMask[6:0]};
             
             if (CS==3'h6) begin // Recognize and submit command in CS6
-                // LED detect command
+                // Chip detection command
+                CmdSetRWBankFFChip <= Din[7:0]==ChipCmdNum[7:0];
+                // LED exists detect command
                 CmdSetRWBankFFLED <= Din[7:0]==8'hF0;
-
-                // Volatile commands
-                CmdSetRWBankFFLED <= Din[7:0]==8'hF0;
+                // Volatile settings commands
                 CmdRWMaskSet <=      Din[7:0]==8'hE0;
                 CmdLEDSet <=         Din[7:0]==8'hE2;
                 CmdLEDGet <=         Din[7:0]==8'hE3;
             end else begin // Reset command triggers
+                CmdSetRWBankFFChip <= 0;
                 CmdSetRWBankFFLED <= 0;
                 CmdRWMaskSet <= 0;
                 CmdLEDSet <= 0;
@@ -282,9 +288,8 @@ module RAM2E(C14M, PHI1, LED,
                 nRWE <= 1'b0;
             end
             // Hold BA
-            // Hold RA[11]
+            // Hold RA[11,9:0]
             RA[10] <= 1'b1; // "all"
-            // Hold RA[9:0]
             // Hold DQMs
         end 4'h5: begin
             if (RefReq) begin // Refresh request
@@ -370,7 +375,7 @@ module RAM2E(C14M, PHI1, LED,
             // Hold BA
             RA[11:9] <= 3'b000; // no auto-precharge
             RA[8] <= RWBank[7];
-            RA[7:0] <= Ain[7:0];
+            // RA[7:0] is transparent
             DQML <=  RWBank[0];
             DQMH <= !RWBank[0];
         end 4'hA: begin
@@ -397,7 +402,8 @@ module RAM2E(C14M, PHI1, LED,
                 RA[10] <= 1'b0; // no auto-precharge
             end
             // Hold BA
-            // Hold RA[11,9:0]
+            // Hold RA[11,9:8]x
+            RA[7:0] <= Ain[7:0];
             // Hold DQMs
         end 4'hB: begin
             if (nEN80) begin // Idle
@@ -429,14 +435,12 @@ module RAM2E(C14M, PHI1, LED,
                 nRAS <= 1'b1;
                 nCAS <= 1'b1;
                 nRWE <= 1'b1;
-                RA[10] <= 1'b0;
             end else if (nWE) begin // Read
                 // NOP CKD
                 CKE <= 1'b0;
                 nRAS <= 1'b1;
                 nCAS <= 1'b1;
                 nRWE <= 1'b1;
-                RA[10] <= 1'b1;
             end else begin // Write
                 // PC all CKD
                 CKE <= 1'b0;
