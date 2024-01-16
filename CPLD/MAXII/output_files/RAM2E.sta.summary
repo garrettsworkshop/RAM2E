@@ -2,28 +2,28 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Setup 'ram2e_ufm|DRCLK|regout'
-Slack : -23.738
-TNS   : -23.738
-
 Type  : Setup 'ram2e_ufm|ARCLK|regout'
-Slack : -23.720
-TNS   : -23.720
+Slack : -23.682
+TNS   : -23.682
+
+Type  : Setup 'ram2e_ufm|DRCLK|regout'
+Slack : -23.562
+TNS   : -23.562
 
 Type  : Setup 'C14M'
-Slack : -9.644
-TNS   : -106.641
+Slack : -8.731
+TNS   : -96.469
 
 Type  : Hold 'ram2e_ufm|DRCLK|regout'
-Slack : -16.287
-TNS   : -16.287
+Slack : -16.461
+TNS   : -16.461
 
 Type  : Hold 'ram2e_ufm|ARCLK|regout'
-Slack : -16.279
-TNS   : -16.279
+Slack : -16.317
+TNS   : -16.317
 
 Type  : Hold 'C14M'
-Slack : 1.421
+Slack : 1.433
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'C14M'
