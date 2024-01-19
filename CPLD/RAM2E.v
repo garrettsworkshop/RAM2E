@@ -402,7 +402,7 @@ module RAM2E(C14M, PHI1, LED,
                 RA[10] <= 1'b0; // no auto-precharge
             end
             // Hold BA
-            // Hold RA[11,9:8]x
+            // Hold RA[11,9:8]
             RA[7:0] <= Ain[7:0];
             // Hold DQMs
         end 4'hB: begin
