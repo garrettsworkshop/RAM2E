@@ -435,12 +435,14 @@ module RAM2E(C14M, PHI1, LED,
                 nRAS <= 1'b1;
                 nCAS <= 1'b1;
                 nRWE <= 1'b1;
+                // Hold RA[10]
             end else if (nWE) begin // Read
                 // NOP CKD
                 CKE <= 1'b0;
                 nRAS <= 1'b1;
                 nCAS <= 1'b1;
                 nRWE <= 1'b1;
+                // Hold RA[10]
             end else begin // Write
                 // PC all CKD
                 CKE <= 1'b0;
