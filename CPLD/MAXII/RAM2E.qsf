@@ -109,8 +109,8 @@ set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to Din
 set_location_assignment PIN_55 -to nDOE
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nDOE
 set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nDOE
-set_instance_assignment -name SLOW_SLEW_RATE ON -to nDOE
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nDOE
+set_instance_assignment -name SLOW_SLEW_RATE OFF -to nDOE
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to nDOE
 
 set_location_assignment PIN_77 -to Dout[0]
 set_location_assignment PIN_76 -to Dout[1]
@@ -128,8 +128,8 @@ set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to Dout
 set_location_assignment PIN_50 -to nVOE
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nVOE
 set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nVOE
-set_instance_assignment -name SLOW_SLEW_RATE ON -to nVOE
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nVOE
+set_instance_assignment -name SLOW_SLEW_RATE OFF -to nVOE
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to nVOE
 
 set_location_assignment PIN_70 -to Vout[0]
 set_location_assignment PIN_67 -to Vout[1]
