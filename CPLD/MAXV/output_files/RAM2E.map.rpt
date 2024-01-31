@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RAM2E
-Tue Jan 16 14:27:56 2024
+Wed Jan 31 09:41:31 2024
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
 
 
@@ -46,7 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                              ;
 +-----------------------------+-------------------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Jan 16 14:27:56 2024                       ;
+; Analysis & Synthesis Status ; Successful - Wed Jan 31 09:41:31 2024                       ;
 ; Quartus Prime Version       ; 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition ;
 ; Revision Name               ; RAM2E                                                       ;
 ; Top-level Entity Name       ; RAM2E                                                       ;
@@ -169,9 +169,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- Combinational with a register        ; 93    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 115   ;
-;     -- 3 input functions                    ; 55    ;
-;     -- 2 input functions                    ; 45    ;
+;     -- 4 input functions                    ; 116   ;
+;     -- 3 input functions                    ; 53    ;
+;     -- 2 input functions                    ; 46    ;
 ;     -- 1 input functions                    ; 3     ;
 ;     -- 0 input functions                    ; 1     ;
 ;                                             ;       ;
@@ -199,8 +199,8 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                                   ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                       ; Entity Name         ; Library Name ;
 +--------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------------------+---------------------+--------------+
-; |RAM2E                                                       ; 252 (192)   ; 126          ; 1          ; 70   ; 0            ; 126 (98)     ; 33 (25)           ; 93 (69)          ; 15 (15)         ; 0 (0)      ; |RAM2E                                                                                    ; RAM2E               ; work         ;
-;    |RAM2E_UFM:ram2e_ufm|                                     ; 60 (60)     ; 32           ; 1          ; 0    ; 0            ; 28 (28)      ; 8 (8)             ; 24 (24)          ; 0 (0)           ; 0 (0)      ; |RAM2E|RAM2E_UFM:ram2e_ufm                                                                ; RAM2E_UFM           ; work         ;
+; |RAM2E                                                       ; 252 (191)   ; 126          ; 1          ; 70   ; 0            ; 126 (97)     ; 33 (25)           ; 93 (69)          ; 15 (15)         ; 0 (0)      ; |RAM2E                                                                                    ; RAM2E               ; work         ;
+;    |RAM2E_UFM:ram2e_ufm|                                     ; 61 (61)     ; 32           ; 1          ; 0    ; 0            ; 29 (29)      ; 8 (8)             ; 24 (24)          ; 0 (0)           ; 0 (0)      ; |RAM2E|RAM2E_UFM:ram2e_ufm                                                                ; RAM2E_UFM           ; work         ;
 ;       |UFM:UFM_inst|                                         ; 0 (0)       ; 0            ; 1          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |RAM2E|RAM2E_UFM:ram2e_ufm|UFM:UFM_inst                                                   ; UFM                 ; work         ;
 ;          |UFM_altufm_none_p8r:UFM_altufm_none_p8r_component| ; 0 (0)       ; 0            ; 1          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |RAM2E|RAM2E_UFM:ram2e_ufm|UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component ; UFM_altufm_none_p8r ; work         ;
 +--------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------------------+---------------------+--------------+
@@ -282,7 +282,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
-    Info: Processing started: Tue Jan 16 14:27:31 2024
+    Info: Processing started: Wed Jan 31 09:40:54 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RAM2E-MAXV -c RAM2E
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 1 design units, including 1 entities, in source file /repos/ram2e/cpld/ram2e.v
@@ -293,11 +293,11 @@ Info (12021): Found 2 design units, including 2 entities, in source file ufm.v
     Info (12023): Found entity 1: UFM_altufm_none_p8r File: Y:/Repos/RAM2E/CPLD/MAXV/UFM.v Line: 47
     Info (12023): Found entity 2: UFM File: Y:/Repos/RAM2E/CPLD/MAXV/UFM.v Line: 166
 Info (12127): Elaborating entity "RAM2E" for the top level hierarchy
-Info (12128): Elaborating entity "RAM2E_UFM" for hierarchy "RAM2E_UFM:ram2e_ufm" File: Y:/Repos/RAM2E/CPLD/RAM2E.v Line: 138
+Info (12128): Elaborating entity "RAM2E_UFM" for hierarchy "RAM2E_UFM:ram2e_ufm" File: Y:/Repos/RAM2E/CPLD/RAM2E.v Line: 137
 Info (12128): Elaborating entity "UFM" for hierarchy "RAM2E_UFM:ram2e_ufm|UFM:UFM_inst" File: Y:/Repos/RAM2E/CPLD/UFM-MAX.v Line: 78
 Info (12128): Elaborating entity "UFM_altufm_none_p8r" for hierarchy "RAM2E_UFM:ram2e_ufm|UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component" File: Y:/Repos/RAM2E/CPLD/MAXV/UFM.v Line: 217
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "nCSout" is stuck at GND File: Y:/Repos/RAM2E/CPLD/RAM2E.v Line: 77
+    Warning (13410): Pin "nCSout" is stuck at GND File: Y:/Repos/RAM2E/CPLD/RAM2E.v Line: 76
 Warning (14632): Output pin "Dout[0]" driven by bidirectional pin "RD[0]" cannot be tri-stated File: Y:/Repos/RAM2E/CPLD/RAM2E.v Line: 50
 Warning (14632): Output pin "Dout[1]" driven by bidirectional pin "RD[1]" cannot be tri-stated File: Y:/Repos/RAM2E/CPLD/RAM2E.v Line: 50
 Warning (14632): Output pin "Dout[2]" driven by bidirectional pin "RD[2]" cannot be tri-stated File: Y:/Repos/RAM2E/CPLD/RAM2E.v Line: 50
@@ -316,10 +316,10 @@ Info (21057): Implemented 323 device resources after synthesis - the final resou
     Info (21070): Implemented 1 User Flash Memory blocks
 Info (144001): Generated suppressed messages file Y:/Repos/RAM2E/CPLD/MAXV/output_files/RAM2E.map.smsg
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 13116 megabytes
-    Info: Processing ended: Tue Jan 16 14:27:56 2024
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:42
+    Info: Peak virtual memory: 13129 megabytes
+    Info: Processing ended: Wed Jan 31 09:41:31 2024
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:00:51
 
 
 +------------------------------------------+

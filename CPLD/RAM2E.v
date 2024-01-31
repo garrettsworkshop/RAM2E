@@ -50,13 +50,12 @@ module RAM2E(C14M, PHI1, LED,
     output [7:0] Dout; assign Dout[7:0] = RD[7:0];
     
     /* Video Data Bus */
-    reg VOEENf, VOEENr;
-    always @(negedge C14M) VOEENf <= S==4'h7;
+	 reg VOE;
     always @(negedge C14M) begin
-        VOEENr <= S==4'h7 || S==4'h8 || S==4'h9 ||
-                  S==4'hA || S==4'hB || S==4'hC;
+        VOE <= S==4'h7 || S==4'h8 || S==4'h9 ||
+               S==4'hA || S==4'hB || S==4'hC;
     end
-    output nVOE; assign nVOE = !(VOEENf && VOEENr);
+    output nVOE; assign nVOE = !VOE;
     output reg [7:0] Vout; // Video data bus
     always @(negedge C14M) if (S==4'h6) Vout[7:0] <= RD[7:0];
 
