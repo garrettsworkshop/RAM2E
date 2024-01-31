@@ -51,7 +51,7 @@ Hardware/MAX/gerber Hardware/LCMXO2/gerber:
 	cp $(F_POS) $(F_POS_JUMPER)
 	sed -i '' '/"R1"/d' $(F_POS_VCORE)
 	sed -i '' '/"U9"/d' $(F_POS_JUMPER)
-	rm $(F_ZIP)
+	rm -f $(F_ZIP)
 	zip -r $(F_ZIP) $@/
 Hardware/MAX/Documentation Hardware/LCMXO2/Documentation:
 	mkdir -p $@
