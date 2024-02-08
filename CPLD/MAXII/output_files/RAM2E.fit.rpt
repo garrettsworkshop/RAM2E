@@ -1,6 +1,6 @@
 Fitter report for RAM2E
-Wed Jan 31 09:41:38 2024
-Quartus Prime Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
+Wed Feb 07 19:21:16 2024
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
 ---------------------
@@ -54,21 +54,21 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------------+
-; Fitter Summary                                                                      ;
-+-----------------------+-------------------------------------------------------------+
-; Fitter Status         ; Successful - Wed Jan 31 09:41:38 2024                       ;
-; Quartus Prime Version ; 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition ;
-; Revision Name         ; RAM2E                                                       ;
-; Top-level Entity Name ; RAM2E                                                       ;
-; Family                ; MAX II                                                      ;
-; Device                ; EPM240T100C5                                                ;
-; Timing Models         ; Final                                                       ;
-; Total logic elements  ; 238 / 240 ( 99 % )                                          ;
-; Total pins            ; 70 / 80 ( 88 % )                                            ;
-; Total virtual pins    ; 0                                                           ;
-; UFM blocks            ; 1 / 1 ( 100 % )                                             ;
-+-----------------------+-------------------------------------------------------------+
++---------------------------------------------------------------------+
+; Fitter Summary                                                      ;
++-----------------------+---------------------------------------------+
+; Fitter Status         ; Successful - Wed Feb 07 19:21:16 2024       ;
+; Quartus Prime Version ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Revision Name         ; RAM2E                                       ;
+; Top-level Entity Name ; RAM2E                                       ;
+; Family                ; MAX II                                      ;
+; Device                ; EPM240T100C5                                ;
+; Timing Models         ; Final                                       ;
+; Total logic elements  ; 238 / 240 ( 99 % )                          ;
+; Total pins            ; 70 / 80 ( 88 % )                            ;
+; Total virtual pins    ; 0                                           ;
+; UFM blocks            ; 1 / 1 ( 100 % )                             ;
++-----------------------+---------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
@@ -129,20 +129,20 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.04        ;
+; Average used               ; 1.02        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.4%      ;
-;     Processors 3-4         ;   1.1%      ;
+;     Processor 2            ;   1.0%      ;
+;     Processors 3-4         ;   0.6%      ;
 +----------------------------+-------------+
 
 
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in Y:/Repos/RAM2E/CPLD/MAXII/output_files/RAM2E.pin.
+The pin-out file can be found in /Repos/RAM2E/CPLD/MAXII/output_files/RAM2E.pin.
 
 
 +---------------------------------------------------------------------+
@@ -710,23 +710,23 @@ Info (332111): Found 3 clocks
     Info (332111):  200.000 ram2e_ufm|ARCLK|regout
     Info (332111):  200.000 ram2e_ufm|DRCLK|regout
 Info (186079): Completed User Assigned Global Signals Promotion Operation
-Info (186215): Automatically promoted signal "C14M" to use Global clock in PIN 12 File: Y:/Repos/RAM2E/CPLD/RAM2E.v Line: 8
-Info (186216): Automatically promoted some destinations of signal "PHI1" to use Global clock File: Y:/Repos/RAM2E/CPLD/RAM2E.v Line: 8
-    Info (186217): Destination "PHI1r" may be non-global or may not use global clock File: Y:/Repos/RAM2E/CPLD/RAM2E.v Line: 20
-    Info (186217): Destination "S~0" may be non-global or may not use global clock File: Y:/Repos/RAM2E/CPLD/RAM2E.v Line: 19
-Info (186228): Pin "PHI1" drives global clock, but is not placed in a dedicated clock pin position File: Y:/Repos/RAM2E/CPLD/RAM2E.v Line: 8
+Info (186215): Automatically promoted signal "C14M" to use Global clock in PIN 12 File: //Mac/Home/Repos/RAM2E/CPLD/RAM2E.v Line: 8
+Info (186216): Automatically promoted some destinations of signal "PHI1" to use Global clock File: //Mac/Home/Repos/RAM2E/CPLD/RAM2E.v Line: 8
+    Info (186217): Destination "PHI1r" may be non-global or may not use global clock File: //Mac/Home/Repos/RAM2E/CPLD/RAM2E.v Line: 20
+    Info (186217): Destination "S~0" may be non-global or may not use global clock File: //Mac/Home/Repos/RAM2E/CPLD/RAM2E.v Line: 19
+Info (186228): Pin "PHI1" drives global clock, but is not placed in a dedicated clock pin position File: //Mac/Home/Repos/RAM2E/CPLD/RAM2E.v Line: 8
 Info (186079): Completed Auto Global Promotion Operation
 Info (176234): Starting register packing
 Info (186468): Started processing fast register assignments
 Warning (186473): Ignored the FAST_OUTPUT_REGISTER assignment made to the following nodes
-    Warning (186484): Ignored assignment to node "RAout[0]" because node "RAr[0]", which is feeding it, is not a register File: Y:/Repos/RAM2E/CPLD/RAM2E.v Line: 86
-    Warning (186484): Ignored assignment to node "RAout[1]" because node "RAr[1]", which is feeding it, is not a register File: Y:/Repos/RAM2E/CPLD/RAM2E.v Line: 86
-    Warning (186484): Ignored assignment to node "RAout[2]" because node "RAr[2]", which is feeding it, is not a register File: Y:/Repos/RAM2E/CPLD/RAM2E.v Line: 86
-    Warning (186484): Ignored assignment to node "RAout[3]" because node "RAr[3]", which is feeding it, is not a register File: Y:/Repos/RAM2E/CPLD/RAM2E.v Line: 86
-    Warning (186484): Ignored assignment to node "RAout[4]" because node "RAr[4]", which is feeding it, is not a register File: Y:/Repos/RAM2E/CPLD/RAM2E.v Line: 86
-    Warning (186484): Ignored assignment to node "RAout[5]" because node "RAr[5]", which is feeding it, is not a register File: Y:/Repos/RAM2E/CPLD/RAM2E.v Line: 86
-    Warning (186484): Ignored assignment to node "RAout[6]" because node "RAr[6]", which is feeding it, is not a register File: Y:/Repos/RAM2E/CPLD/RAM2E.v Line: 86
-    Warning (186484): Ignored assignment to node "RAout[7]" because node "RAr[7]", which is feeding it, is not a register File: Y:/Repos/RAM2E/CPLD/RAM2E.v Line: 86
+    Warning (186484): Ignored assignment to node "RAout[0]" because node "RAr[0]", which is feeding it, is not a register File: //Mac/Home/Repos/RAM2E/CPLD/RAM2E.v Line: 86
+    Warning (186484): Ignored assignment to node "RAout[1]" because node "RAr[1]", which is feeding it, is not a register File: //Mac/Home/Repos/RAM2E/CPLD/RAM2E.v Line: 86
+    Warning (186484): Ignored assignment to node "RAout[2]" because node "RAr[2]", which is feeding it, is not a register File: //Mac/Home/Repos/RAM2E/CPLD/RAM2E.v Line: 86
+    Warning (186484): Ignored assignment to node "RAout[3]" because node "RAr[3]", which is feeding it, is not a register File: //Mac/Home/Repos/RAM2E/CPLD/RAM2E.v Line: 86
+    Warning (186484): Ignored assignment to node "RAout[4]" because node "RAr[4]", which is feeding it, is not a register File: //Mac/Home/Repos/RAM2E/CPLD/RAM2E.v Line: 86
+    Warning (186484): Ignored assignment to node "RAout[5]" because node "RAr[5]", which is feeding it, is not a register File: //Mac/Home/Repos/RAM2E/CPLD/RAM2E.v Line: 86
+    Warning (186484): Ignored assignment to node "RAout[6]" because node "RAr[6]", which is feeding it, is not a register File: //Mac/Home/Repos/RAM2E/CPLD/RAM2E.v Line: 86
+    Warning (186484): Ignored assignment to node "RAout[7]" because node "RAr[7]", which is feeding it, is not a register File: //Mac/Home/Repos/RAM2E/CPLD/RAM2E.v Line: 86
 Info (186469): Finished processing fast register assignments
 Info (176235): Finished register packing
 Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
@@ -742,19 +742,19 @@ Info (170195): Router estimated average interconnect usage is 26% of the availab
     Info (170196): Router estimated peak interconnect usage is 26% of the available device resources in the region that extends from location X0_Y0 to location X8_Y5
 Info (170202): The Fitter performed an Auto Fit compilation.  No optimizations were skipped because the design's timing and routability requirements required full optimization.
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.46 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.52 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
-Info (144001): Generated suppressed messages file Y:/Repos/RAM2E/CPLD/MAXII/output_files/RAM2E.fit.smsg
+Info (144001): Generated suppressed messages file /Repos/RAM2E/CPLD/MAXII/output_files/RAM2E.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 13751 megabytes
-    Info: Processing ended: Wed Jan 31 09:41:38 2024
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 13729 megabytes
+    Info: Processing ended: Wed Feb 07 19:21:16 2024
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:05
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in Y:/Repos/RAM2E/CPLD/MAXII/output_files/RAM2E.fit.smsg.
+The suppressed messages can be found in /Repos/RAM2E/CPLD/MAXII/output_files/RAM2E.fit.smsg.
 
 
