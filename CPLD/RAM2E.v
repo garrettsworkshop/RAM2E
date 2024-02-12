@@ -44,16 +44,15 @@ module RAM2E(C14M, PHI1, LED,
     input [7:0] Din;
     reg DOEEN; 
     always @(posedge C14M) begin
-        DOEEN <= S==4'hB || S==4'hC || S==4'hD || S==4'hE || S==4'hF ;
+        DOEEN <= S==4'hB || S==4'hC || S==4'hD || S==4'hE || S==4'hF;
     end
     output nDOE; assign nDOE = !(!nEN80 && nWE && DOEEN);
     output [7:0] Dout; assign Dout[7:0] = RD[7:0];
     
     /* Video Data Bus */
-	 reg VOE;
+	reg VOE;
     always @(negedge C14M) begin
-        VOE <= S==4'h7 || S==4'h8 || S==4'h9 ||
-               S==4'hA || S==4'hB || S==4'hC;
+        VOE <= S==4'h7 || S==4'h8 || S==4'h9 || S==4'hA || S==4'hB || S==4'hC;
     end
     output nVOE; assign nVOE = !VOE;
     output reg [7:0] Vout; // Video data bus
