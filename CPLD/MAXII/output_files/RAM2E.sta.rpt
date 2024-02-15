@@ -1,5 +1,5 @@
 Timing Analyzer report for RAM2E
-Mon Feb 12 17:00:24 2024
+Thu Feb 15 04:16:31 2024
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -93,8 +93,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------+--------+--------------------------+
 ; SDC File Path    ; Status ; Read at                  ;
 +------------------+--------+--------------------------+
-; ../RAM2E.sdc     ; OK     ; Mon Feb 12 17:00:24 2024 ;
-; ../RAM2E-MAX.sdc ; OK     ; Mon Feb 12 17:00:24 2024 ;
+; ../RAM2E.sdc     ; OK     ; Thu Feb 15 04:16:31 2024 ;
+; ../RAM2E-MAX.sdc ; OK     ; Thu Feb 15 04:16:31 2024 ;
 +------------------+--------+--------------------------+
 
 
@@ -680,7 +680,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Mon Feb 12 17:00:23 2024
+    Info: Processing started: Thu Feb 15 04:16:29 2024
 Info: Command: quartus_sta RAM2E-MAXII -c RAM2E
 Info: qsta_default_script.tcl version: #1
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
@@ -721,9 +721,9 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 13090 megabytes
-    Info: Processing ended: Mon Feb 12 17:00:24 2024
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 13089 megabytes
+    Info: Processing ended: Thu Feb 15 04:16:31 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
