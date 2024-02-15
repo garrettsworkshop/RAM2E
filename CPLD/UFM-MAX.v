@@ -1,4 +1,4 @@
-module RAM2E_UFM(C14M, S, FS, CS, Ready,
+module RAM2E_UFM(C14M, S, FS, CS,
                  RWSel, D,
                  RWMask, LEDEN,
 				 CmdRWMaskSet, CmdLEDSet,
@@ -7,7 +7,6 @@ module RAM2E_UFM(C14M, S, FS, CS, Ready,
 	input [3:0] S;
     input [15:0] FS;
     input [2:0] CS;
-    input Ready;
 	input RWSel;
 	input [7:0] D;
     output reg [7:0] RWMask;

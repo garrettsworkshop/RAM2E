@@ -66,7 +66,7 @@ module RAM2E(C14M, PHI1, LED,
     inout [7:0] RD;
     wire [7:0] RDout = Ready ? Din[7:0] : 8'h00;
     reg RDOE;
-    always @(posedge C14M) begin 
+    always @(posedge C14M) begin
         RDOE <= (!Ready) || (!nEN80 && !nWE && (S==4'hA || S==4'hB));
     end
     assign RD[7:0] = RDOE ? RDout[7:0] : 8'bZ;
@@ -129,7 +129,7 @@ module RAM2E(C14M, PHI1, LED,
     /* Chip-specific UFM interface */
     wire [7:0] ChipCmdNum;
     RAM2E_UFM ram2e_ufm (
-        .C14M(C14M), .S(S), .FS(FS), .CS(CS), .Ready(Ready),
+        .C14M(C14M), .S(S), .FS(FS), .CS(CS),
         .RWSel(RWSel), .D(Din),
         .RWMask(RWMask), .LEDEN(LEDEN),
         .CmdRWMaskSet(CmdRWMaskSet), .CmdLEDSet(CmdLEDSet),
@@ -148,11 +148,11 @@ module RAM2E(C14M, PHI1, LED,
                 // Chip detection command
                 CmdSetRWBankFFChip <= Din[7:0]==ChipCmdNum[7:0];
                 // LED exists detect command
-                CmdSetRWBankFFLED <= Din[7:0]==8'hF0;
+                CmdSetRWBankFFLED <=  Din[7:0]==8'hF0;
                 // Volatile settings commands
-                CmdRWMaskSet <=      Din[7:0]==8'hE0;
-                CmdLEDSet <=         Din[7:0]==8'hE2;
-                CmdLEDGet <=         Din[7:0]==8'hE3;
+                CmdRWMaskSet <=       Din[7:0]==8'hE0;
+                CmdLEDSet <=          Din[7:0]==8'hE2;
+                CmdLEDGet <=          Din[7:0]==8'hE3;
             end else begin // Reset command triggers
                 CmdSetRWBankFFChip <= 0;
                 CmdSetRWBankFFLED <= 0;
@@ -216,10 +216,10 @@ module RAM2E(C14M, PHI1, LED,
                     nRWE <= 1'b0;
                 end
             endcase
+            BA[1:0] <= 2'b00;
             case (FS[4:3])
                 2'b00, 2'b01: begin
                     // Mode register contents
-                    BA[1:0] <= 2'b00;   // Reserved
                     RA[11] <= 1'b0;     // Reserved
                     RA[10] <= !FS[1];   // reserved / "all"
                     RA[9] <= 1'b1;      // "1" for single write mode
@@ -229,11 +229,9 @@ module RAM2E(C14M, PHI1, LED,
                     RA[3] <= 1'b0;      // "0" for sequential burst (not used)
                     RA[2:0] <= 3'b000;  // "0" for burst length 1 (no burst)
                 end 2'b10: begin
-                    BA[1:0] <= 2'b00;
                     RA[11:8] <= 4'h0;
                     RA[7:0] <= FS[14:7];
                 end 2'b11: begin
-                    BA[1:0] <= 2'b00;
                     RA[11:3] <= 9'h000;
                     RA[2:1] <= FS[6:5];
                     RA[0] <= FS[1];

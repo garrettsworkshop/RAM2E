@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RAM2E
-Mon Feb 12 17:00:15 2024
+Thu Feb 15 04:16:13 2024
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -46,7 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Feb 12 17:00:15 2024       ;
+; Analysis & Synthesis Status ; Successful - Thu Feb 15 04:16:13 2024       ;
 ; Quartus Prime Version       ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name               ; RAM2E                                       ;
 ; Top-level Entity Name       ; RAM2E                                       ;
@@ -282,7 +282,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Mon Feb 12 16:59:51 2024
+    Info: Processing started: Thu Feb 15 04:15:26 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RAM2E-MAXII -c RAM2E
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 1 design units, including 1 entities, in source file //mac/home/repos/ram2e/cpld/ram2e.v
@@ -294,7 +294,7 @@ Info (12021): Found 2 design units, including 2 entities, in source file ufm.v
     Info (12023): Found entity 2: UFM File: //Mac/Home/Repos/RAM2E/CPLD/MAXII/UFM.v Line: 166
 Info (12127): Elaborating entity "RAM2E" for the top level hierarchy
 Info (12128): Elaborating entity "RAM2E_UFM" for hierarchy "RAM2E_UFM:ram2e_ufm" File: //Mac/Home/Repos/RAM2E/CPLD/RAM2E.v Line: 136
-Info (12128): Elaborating entity "UFM" for hierarchy "RAM2E_UFM:ram2e_ufm|UFM:UFM_inst" File: //Mac/Home/Repos/RAM2E/CPLD/UFM-MAX.v Line: 78
+Info (12128): Elaborating entity "UFM" for hierarchy "RAM2E_UFM:ram2e_ufm|UFM:UFM_inst" File: //Mac/Home/Repos/RAM2E/CPLD/UFM-MAX.v Line: 77
 Info (12128): Elaborating entity "UFM_altufm_none_lbr" for hierarchy "RAM2E_UFM:ram2e_ufm|UFM:UFM_inst|UFM_altufm_none_lbr:UFM_altufm_none_lbr_component" File: //Mac/Home/Repos/RAM2E/CPLD/MAXII/UFM.v Line: 217
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "nCSout" is stuck at GND File: //Mac/Home/Repos/RAM2E/CPLD/RAM2E.v Line: 75
@@ -316,10 +316,10 @@ Info (21057): Implemented 323 device resources after synthesis - the final resou
     Info (21070): Implemented 1 User Flash Memory blocks
 Info (144001): Generated suppressed messages file /Repos/RAM2E/CPLD/MAXII/output_files/RAM2E.map.smsg
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 13133 megabytes
-    Info: Processing ended: Mon Feb 12 17:00:15 2024
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:40
+    Info: Peak virtual memory: 13146 megabytes
+    Info: Processing ended: Thu Feb 15 04:16:13 2024
+    Info: Elapsed time: 00:00:47
+    Info: Total CPU time (on all processors): 00:00:47
 
 
 +------------------------------------------+
