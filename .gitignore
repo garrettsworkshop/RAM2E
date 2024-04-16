@@ -40,3 +40,4 @@ CPLD/LCMXO*/impl1/*
 !CPLD/LCMXO*/impl1/*.twr
 !CPLD/LCMXO*/impl1/*.tw1
 *.bak
+*.lck
