@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2E/Hardware/LCMXO2/RAM2E.kicad_sch</source>
-    <date>Wednesday, April 24, 2024 at 04:09:30 AM</date>
+    <date>Wednesday, April 24, 2024 at 06:19:40 AM</date>
     <tool>Eeschema 7.0.10</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -1722,7 +1722,7 @@
       <node ref="U1" pin="80" pinfunction="VccIO0" pintype="power_in"/>
       <node ref="U1" pin="93" pinfunction="VccIO0" pintype="power_in"/>
       <node ref="U10" pin="10" pinfunction="~{DSR}" pintype="input"/>
-      <node ref="U10" pin="11" pinfunction="~{RI}" pintype="input"/>
+      <node ref="U10" pin="12" pinfunction="~{DCD}" pintype="input"/>
       <node ref="U10" pin="16" pinfunction="VCC" pintype="power_in"/>
       <node ref="U10" pin="3" pinfunction="RXD" pintype="input"/>
       <node ref="U10" pin="4" pinfunction="V3" pintype="passive"/>
@@ -2378,7 +2378,7 @@
       <node ref="U1" pin="79" pinfunction="GND" pintype="power_in"/>
       <node ref="U1" pin="92" pinfunction="GND" pintype="power_in"/>
       <node ref="U10" pin="1" pinfunction="GND" pintype="power_in"/>
-      <node ref="U10" pin="12" pinfunction="~{DCD}" pintype="input"/>
+      <node ref="U10" pin="11" pinfunction="~{RI}" pintype="input"/>
       <node ref="U10" pin="15" pinfunction="R232" pintype="input"/>
       <node ref="U11" pin="3" pinfunction="GND" pintype="power_in"/>
       <node ref="U2" pin="12" pinfunction="VSSQ" pintype="power_in"/>
