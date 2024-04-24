@@ -34,9 +34,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.0,
-          "height": 0.95,
-          "width": 0.7
+          "drill": 1.5,
+          "height": 2.65,
+          "width": 2.62
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -96,7 +96,7 @@
         "silk_over_copper": "warning",
         "silk_overlap": "warning",
         "skew_out_of_range": "error",
-        "solder_mask_bridge": "warning",
+        "solder_mask_bridge": "ignore",
         "starved_thermal": "error",
         "text_height": "warning",
         "text_thickness": "warning",
@@ -118,7 +118,7 @@
         "min_connection": 0.12,
         "min_copper_edge_clearance": 0.4064,
         "min_hole_clearance": 0.25,
-        "min_hole_to_hole": 0.254,
+        "min_hole_to_hole": 0.5,
         "min_microvia_diameter": 0.19999999999999998,
         "min_microvia_drill": 0.09999999999999999,
         "min_resolved_spokes": 2,
@@ -517,8 +517,12 @@
   },
   "sheets": [
     [
-      "ca91ccfe-7a99-4124-b7c6-e1f3ffab8bf1",
+      "0dd11af3-0465-4c84-bbb0-f3ae16a77316",
       ""
+    ],
+    [
+      "00000000-0000-0000-0000-00005e93a857",
+      "Docs"
     ]
   ],
   "text_variables": {}
