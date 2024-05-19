@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2E/Hardware/MAX/RAM2E.kicad_sch</source>
-    <date>Wednesday, April 24, 2024 at 06:19:37 AM</date>
+    <date>Sunday, May 19, 2024 at 08:04:38 AM</date>
     <tool>Eeschema 7.0.10</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -894,6 +894,36 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>1c02fbc8-da32-4b63-b3dd-16334cf226c0</tstamps>
     </comp>
+    <comp ref="R11">
+      <value>10k</value>
+      <footprint>stdpads:R_0603</footprint>
+      <fields>
+        <field name="LCSC Part">C25804</field>
+      </fields>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <property name="LCSC Part" value="C25804"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="RAM2E.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small symbol"/>
+      <property name="ki_keywords" value="R resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c711e853-18e3-4b93-9358-bdc826f42429</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>10k</value>
+      <footprint>stdpads:R_0603</footprint>
+      <fields>
+        <field name="LCSC Part">C25804</field>
+      </fields>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <property name="LCSC Part" value="C25804"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="RAM2E.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small symbol"/>
+      <property name="ki_keywords" value="R resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f6940c70-d714-4591-b167-9289e5842065</tstamps>
+    </comp>
     <comp ref="R13">
       <value>47</value>
       <footprint>stdpads:R_0603</footprint>
@@ -1674,6 +1704,8 @@
       <node ref="C9" pin="1" pintype="passive"/>
       <node ref="J5" pin="4" pinfunction="Pin_4" pintype="passive"/>
       <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
       <node ref="R6" pin="1" pintype="passive"/>
       <node ref="R8" pin="2" pintype="passive"/>
       <node ref="R9" pin="1" pintype="passive"/>
@@ -1868,6 +1900,7 @@
       <node ref="U7" pin="11" pinfunction="B7" pintype="bidirectional"/>
     </net>
     <net code="41" name="/D~{OE}">
+      <node ref="R12" pin="2" pintype="passive"/>
       <node ref="U1" pin="55" pinfunction="IO2_55" pintype="bidirectional"/>
       <node ref="U7" pin="19" pinfunction="~{OE}" pintype="input"/>
     </net>
@@ -2193,6 +2226,7 @@
       <node ref="U6" pin="18" pinfunction="B0" pintype="bidirectional"/>
     </net>
     <net code="119" name="/V~{OE}">
+      <node ref="R11" pin="2" pintype="passive"/>
       <node ref="U1" pin="50" pinfunction="IO1_50" pintype="bidirectional"/>
       <node ref="U6" pin="19" pinfunction="~{OE}" pintype="input"/>
     </net>
