@@ -5,13 +5,13 @@
       "Application": "Pcbnew",
       "Version": "7.0.10"
     },
-    "CreationDate": "2024-05-19T08:04:37-04:00"
+    "CreationDate": "2024-05-20T07:29:40-04:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "RAM2E",
       "GUID": "52414d32-452e-46b6-9963-61645f706362",
-      "Revision": "2.1"
+      "Revision": "1.0"
     },
     "Size": {
       "X": 78.382,

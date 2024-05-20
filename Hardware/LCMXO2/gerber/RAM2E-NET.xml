@@ -2,14 +2,14 @@
 <export version="E">
   <design>
     <source>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2E/Hardware/LCMXO2/RAM2E.kicad_sch</source>
-    <date>Sunday, May 19, 2024 at 08:04:41 AM</date>
+    <date>Monday, May 20, 2024 at 07:29:45 AM</date>
     <tool>Eeschema 7.0.10</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
-        <title>GW4203B (RAM2E II) - LCMXO2-640 / LCMXO2-1200</title>
+        <title>GW4203C (RAM2E II) - LCMXO2-640 / LCMXO2-1200</title>
         <company>Garrett's Workshop</company>
-        <rev>2.1</rev>
-        <date>2024-04-24</date>
+        <rev>1.0</rev>
+        <date>2024-05-20</date>
         <source>RAM2E.kicad_sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -24,10 +24,10 @@
     </sheet>
     <sheet number="2" name="/Docs/" tstamps="/00000000-0000-0000-0000-00005e93a857/">
       <title_block>
-        <title>GW4203B (RAM2E II) - LCMXO2-640 / LCMXO2-1200</title>
+        <title>GW4203C (RAM2E II) - LCMXO2-640 / LCMXO2-1200</title>
         <company>Garrett's Workshop</company>
-        <rev>2.1</rev>
-        <date>2024-04-24</date>
+        <rev>1.0</rev>
+        <date>2024-05-20</date>
         <source>Docs.kicad_sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -1005,13 +1005,13 @@
       <tstamps>ff524ce8-dc39-4434-941b-475ffcac5f7c</tstamps>
     </comp>
     <comp ref="U3">
-      <value>74AHC245PW</value>
+      <value>74LVC245APW</value>
       <footprint>stdpads:TSSOP-20_4.4x6.5mm_P0.65mm</footprint>
       <fields>
-        <field name="LCSC Part">C5516</field>
+        <field name="LCSC Part">C6082</field>
       </fields>
       <libsource lib="GW_Logic" part="74245" description=""/>
-      <property name="LCSC Part" value="C5516"/>
+      <property name="LCSC Part" value="C6082"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1031,13 +1031,13 @@
       <tstamps>2357aedc-213b-4440-813c-d09784b781b4</tstamps>
     </comp>
     <comp ref="U5">
-      <value>74AHC245PW</value>
+      <value>74LVC245APW</value>
       <footprint>stdpads:TSSOP-20_4.4x6.5mm_P0.65mm</footprint>
       <fields>
-        <field name="LCSC Part">C5516</field>
+        <field name="LCSC Part">C6082</field>
       </fields>
       <libsource lib="GW_Logic" part="74245" description=""/>
-      <property name="LCSC Part" value="C5516"/>
+      <property name="LCSC Part" value="C6082"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1484,7 +1484,7 @@
         <pin num="79" name="GND" type="power_in"/>
         <pin num="80" name="VccIO0" type="power_in"/>
         <pin num="81" name="~{PROGRAM}/PT10D" type="bidirectional"/>
-        <pin num="82" name="~{JTAGEN}/PT10C" type="bidirectional"/>
+        <pin num="82" name="JTAGEN/PT10C" type="bidirectional"/>
         <pin num="83" name="PT10B" type="bidirectional"/>
         <pin num="84" name="PT10A" type="bidirectional"/>
         <pin num="85" name="SDA/PCLKC0_0/PT9D" type="bidirectional"/>
@@ -2305,7 +2305,7 @@
       <node ref="U4" pin="5" pinfunction="A3" pintype="bidirectional"/>
     </net>
     <net code="130" name="/~{EN80}in">
-      <node ref="U1" pin="82" pinfunction="~{JTAGEN}/PT10C" pintype="bidirectional"/>
+      <node ref="U1" pin="82" pinfunction="JTAGEN/PT10C" pintype="bidirectional"/>
       <node ref="U4" pin="15" pinfunction="B3" pintype="bidirectional"/>
     </net>
     <net code="131" name="/~{ENTMG}">
@@ -2483,7 +2483,7 @@
       <node ref="J5" pin="10" pinfunction="Pin_10" pintype="passive+no_connect"/>
     </net>
     <net code="158" name="unconnected-(U1-PB14A-Pad45)">
-      <node ref="U1" pin="45" pinfunction="PB14A" pintype="bidirectional"/>
+      <node ref="U1" pin="45" pinfunction="PB14A" pintype="bidirectional+no_connect"/>
     </net>
     <net code="159" name="unconnected-(U4-B1-Pad17)">
       <node ref="U4" pin="17" pinfunction="B1" pintype="bidirectional+no_connect"/>

@@ -2,14 +2,14 @@
 <export version="E">
   <design>
     <source>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2E/Hardware/MAX/RAM2E.kicad_sch</source>
-    <date>Sunday, May 19, 2024 at 08:04:38 AM</date>
+    <date>Monday, May 20, 2024 at 07:29:41 AM</date>
     <tool>Eeschema 7.0.10</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
-        <title>GW4203B (RAM2E II) - EPM240 / 5M240Z / AG256</title>
+        <title>GW4203C (RAM2E II) - EPM240 / 5M240Z / AG256</title>
         <company>Garrett's Workshop</company>
-        <rev>2.1</rev>
-        <date>2024-04-24</date>
+        <rev>1.0</rev>
+        <date>2024-05-20</date>
         <source>RAM2E.kicad_sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -24,10 +24,10 @@
     </sheet>
     <sheet number="2" name="/Docs/" tstamps="/00000000-0000-0000-0000-00005e93a857/">
       <title_block>
-        <title>GW4203B (RAM2E II) - EPM240 / 5M240Z / AG256</title>
+        <title>GW4203C (RAM2E II) - EPM240 / 5M240Z / AG256</title>
         <company>Garrett's Workshop</company>
-        <rev>2.1</rev>
-        <date>2024-04-24</date>
+        <rev>1.0</rev>
+        <date>2024-05-20</date>
         <source>Docs.kicad_sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -966,13 +966,13 @@
       <tstamps>00000000-0000-0000-0000-00005e74fe5d</tstamps>
     </comp>
     <comp ref="U3">
-      <value>74AHC245PW</value>
+      <value>74LVC245APW</value>
       <footprint>stdpads:TSSOP-20_4.4x6.5mm_P0.65mm</footprint>
       <fields>
-        <field name="LCSC Part">C5516</field>
+        <field name="LCSC Part">C6082</field>
       </fields>
       <libsource lib="GW_Logic" part="74245" description=""/>
-      <property name="LCSC Part" value="C5516"/>
+      <property name="LCSC Part" value="C6082"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -992,13 +992,13 @@
       <tstamps>00000000-0000-0000-0000-00005f3a2248</tstamps>
     </comp>
     <comp ref="U5">
-      <value>74AHC245PW</value>
+      <value>74LVC245APW</value>
       <footprint>stdpads:TSSOP-20_4.4x6.5mm_P0.65mm</footprint>
       <fields>
-        <field name="LCSC Part">C5516</field>
+        <field name="LCSC Part">C6082</field>
       </fields>
       <libsource lib="GW_Logic" part="74245" description=""/>
-      <property name="LCSC Part" value="C5516"/>
+      <property name="LCSC Part" value="C6082"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>

@@ -5,9 +5,9 @@
   (paper "A4")
 
   (title_block
-    (title "GW4203B (RAM2E II) - EPM240 / 5M240Z / AG256")
-    (date "2024-04-24")
-    (rev "2.1")
+    (title "GW4203C (RAM2E II) - EPM240 / 5M240Z / AG256")
+    (date "2024-05-20")
+    (rev "1.0")
     (company "Garrett's Workshop")
   )
 
