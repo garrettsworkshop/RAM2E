@@ -13,9 +13,9 @@ F_POS_N = $@/RAM2E-top-pos
 F_POS = $(F_POS_N).csv
 F_POS_VCORE = $(F_POS_N).VCORE.csv
 F_POS_JUMPER = $(F_POS_N).JUMPER.csv
-F_ZIP = $@/RAM2E.4203B.$(CHIPTYPE)-gerber.zip
-F_SCHPDF = $@/RAM2E.4203B.$(CHIPTYPE)-Schematic.pdf
-F_PCBPDF = $@/RAM2E.4203B.$(CHIPTYPE)-Placement.pdf
+F_ZIP = $@/RAM2E.4203C.$(CHIPTYPE)-gerber.zip
+F_SCHPDF = $@/RAM2E.4203C.$(CHIPTYPE)-Schematic.pdf
+F_PCBPDF = $@/RAM2E.4203C.$(CHIPTYPE)-Placement.pdf
 
 
 OPT_GERBER = -l $(LAYERS) --subtract-soldermask --no-netlist --no-x2
