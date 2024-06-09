@@ -1,0 +1,59 @@
+----------------------------------------------------------------------
+Report for cell RAM2E.verilog
+
+Register bits: 125 of 1280 (10%)
+PIC Latch:       0
+I/O cells:       70
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                 BB        8       100.0
+                              CCU2D        9       100.0
+                                EFB        1       100.0
+                            FD1P3AX       58       100.0
+                            FD1P3IX        1       100.0
+                            FD1S3AX       31       100.0
+                            FD1S3AY        4       100.0
+                            FD1S3IX        9       100.0
+                                GSR        1       100.0
+                                 IB       21       100.0
+                           IFS1P3DX        1       100.0
+                                INV        4       100.0
+                                 OB       41       100.0
+                           OFS1P3BX        6       100.0
+                           OFS1P3DX       12       100.0
+                           OFS1P3IX        3       100.0
+                           ORCALUT4      275       100.0
+                                PUR        1       100.0
+                                VHI        3       100.0
+                                VLO        3       100.0
+SUB MODULES 
+                          RAM2E_UFM        1       100.0
+                               REFB        1       100.0
+                            
+                         TOTAL           494           
+----------------------------------------------------------------------
+Report for cell RAM2E_UFM.netlist
+     Instance path:  ram2e_ufm
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                EFB        1       100.0
+                            FD1P3AX       29        50.0
+                            FD1P3IX        1       100.0
+                            FD1S3IX        1        11.1
+                           ORCALUT4      268        97.5
+                                VHI        2        66.7
+                                VLO        2        66.7
+SUB MODULES 
+                               REFB        1       100.0
+                            
+                         TOTAL           305           
+----------------------------------------------------------------------
+Report for cell REFB.netlist
+     Instance path:  ram2e_ufm.ufmefb
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                EFB        1       100.0
+                                VHI        1        33.3
+                                VLO        1        33.3
+                            
+                         TOTAL             3           

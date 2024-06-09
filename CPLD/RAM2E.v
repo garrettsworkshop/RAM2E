@@ -1,4 +1,4 @@
-module RAM2E(C14M, PHI1, LED, 
+module RAM2E(C14M, PHI1, LED, nDHGROE,
              nWE, nWE80, nEN80, nC07X,
              Ain, Din, Dout, nDOE, Vout, nVOE,
              CKEout, nCSout, nRASout, nCASout, nRWEout,
@@ -128,12 +128,16 @@ module RAM2E(C14M, PHI1, LED,
 
     /* Chip-specific UFM interface */
     wire [7:0] ChipCmdNum;
-    RAM2E_UFM ram2e_ufm (
+    RAM2E_UFM ram2e_ufm(
         .C14M(C14M), .S(S), .FS(FS), .CS(CS),
         .RWSel(RWSel), .D(Din),
         .RWMask(RWMask), .LEDEN(LEDEN),
         .CmdRWMaskSet(CmdRWMaskSet), .CmdLEDSet(CmdLEDSet),
         .ChipCmdNum(ChipCmdNum));
+
+    /* DHGR enable/disable module */
+    output nDHGROE;
+    DHGR dhgr(nDHGROE);
 
     /* RAMWorks register control - bank, LED, etc. */
     reg CmdSetRWBankFFChip;
