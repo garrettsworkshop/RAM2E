@@ -1,6 +1,6 @@
 "Reference","Quantity","Value","Footprint","LCSC Part","DNP"
-"C1, C2, C3, C4, C5, C6","6","10u","stdpads:C_0805","C15850",""
-"C7, C8, C9, C10, C11, C12, C13, C14, C15, C16, C17, C18, C19, C20, C21, C22, C23, C24, C25, C26, C27, C28, C29, C30, C34, C36, C37","27","2u2","stdpads:C_0603","C23630",""
+"C1, C2, C3, C4, C5, C6, C29","7","10u","stdpads:C_0805","C15850",""
+"C7, C8, C9, C10, C11, C12, C13, C14, C15, C16, C17, C18, C19, C20, C21, C22, C23, C24, C25, C26, C27, C28, C30, C34, C36, C37","26","2u2","stdpads:C_0603","C23630",""
 "C31, C32, C33","3","22p","stdpads:C_0603","C1653",""
 "D1","1","Amber","stdpads:LED_0805","C284932",""
 "FID1, FID2, FID3, FID4","4","Fiducial","stdpads:Fiducial","",""

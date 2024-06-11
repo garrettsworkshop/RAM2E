@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2E/Hardware/LCMXO2/RAM2E.kicad_sch</source>
-    <date>Monday, May 20, 2024 at 07:29:45 AM</date>
+    <date>Tuesday, June 11, 2024 at 03:42:11 PM</date>
     <tool>Eeschema 7.0.10</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -463,19 +463,19 @@
       <tstamps>6ca7c643-5d3c-4df4-bdff-5feaa97a4bb5</tstamps>
     </comp>
     <comp ref="C29">
-      <value>2u2</value>
-      <footprint>stdpads:C_0603</footprint>
+      <value>10u</value>
+      <footprint>stdpads:C_0805</footprint>
       <fields>
-        <field name="LCSC Part">C23630</field>
+        <field name="LCSC Part">C15850</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
-      <property name="LCSC Part" value="C23630"/>
+      <property name="LCSC Part" value="C15850"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ee8d9912-6e99-4e91-b7b0-933c4c69ae97</tstamps>
+      <tstamps>d6fdda66-9f4b-48ce-add7-a282a41d8e53</tstamps>
     </comp>
     <comp ref="C30">
       <value>2u2</value>
