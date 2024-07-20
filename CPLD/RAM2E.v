@@ -95,10 +95,6 @@ module RAM2E(C14M, PHI1, LED, nDHGROE,
     always @(posedge C14M) begin
         if (S==4'h9) RWSel <= RA[0] && !RA[3] && !nWE && !nC07X;
     end
-    reg CmdRWMaskSet = 0; // RAMWorks Mask register set flag
-    reg CmdSetRWBankFFLED = 0;
-    reg CmdLEDSet = 0;
-    reg CmdLEDGet = 0;
     
     /* Command Sequence Detector */
     reg [2:0] CS = 0; // Command sequence state
@@ -140,26 +136,27 @@ module RAM2E(C14M, PHI1, LED, nDHGROE,
     DHGR dhgr(nDHGROE);
 
     /* RAMWorks register control - bank, LED, etc. */
-    reg CmdSetRWBankFFChip;
+    reg CmdSetRWBankFF = 0;
+    reg CmdRWMaskSet = 0; // RAMWorks Mask register set flag
+    reg CmdLEDSet = 0;
+    reg CmdLEDGet = 0;
     always @(posedge C14M) begin
         if (S==4'hC && RWSel) begin
             // Latch RAMWorks bank if accessed
-            if ((CmdSetRWBankFFLED) || (CmdSetRWBankFFChip) ||
-                (CmdLEDGet && LEDEN)) RWBank <= 8'hFF;
+            if ((CmdSetRWBankFF) || (CmdLEDGet && LEDEN)) RWBank <= 8'hFF;
             else RWBank <= Din[7:0] & {RWMask[7], ~RWMask[6:0]};
             
             if (CS==3'h6) begin // Recognize and submit command in CS6
-                // Chip detection command
-                CmdSetRWBankFFChip <= Din[7:0]==ChipCmdNum[7:0];
-                // LED exists detect command
-                CmdSetRWBankFFLED <=  Din[7:0]==8'hF0;
+                CmdSetRWBankFF <=
+                    Din[7:0]==ChipCmdNum[7:0] || // Chip detect command 
+                    Din[7:0]==8'hF0 || // LED exists detect command
+                    Din[7:0]==8'hF1; // Rev. C detect command
                 // Volatile settings commands
                 CmdRWMaskSet <=       Din[7:0]==8'hE0;
                 CmdLEDSet <=          Din[7:0]==8'hE2;
                 CmdLEDGet <=          Din[7:0]==8'hE3;
             end else begin // Reset command triggers
-                CmdSetRWBankFFChip <= 0;
-                CmdSetRWBankFFLED <= 0;
+                CmdSetRWBankFF <= 0;
                 CmdRWMaskSet <= 0;
                 CmdLEDSet <= 0;
                 CmdLEDGet <= 0;

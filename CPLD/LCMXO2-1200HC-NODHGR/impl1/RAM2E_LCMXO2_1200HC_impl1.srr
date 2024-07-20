@@ -3,7 +3,7 @@
 #OS: Windows 8 6.2
 #Hostname: ZANEMACWIN11
 
-# Fri Jun  7 20:49:56 2024
+# Fri Jul 12 16:07:01 2024
 
 #Implementation: impl1
 
@@ -52,6 +52,7 @@ Synopsys Verilog Compiler, Version comp2018q2p1, Build 461R, Built Apr  1 2019 0
 @I::"\\Mac\iCloud\Repos\RAM2E\CPLD\LCMXO2-1200HC-NODHGR\REFB.v" (library work)
 @I::"\\Mac\iCloud\Repos\RAM2E\CPLD\DHGR-OFF.v" (library work)
 Verilog syntax check successful!
+File \\Mac\iCloud\Repos\RAM2E\CPLD\RAM2E.v changed - recompiling
 Selecting top level module RAM2E
 @N: CG364 :"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\machxo2.v":1120:7:1120:9|Synthesizing module VHI in library work.
 Running optimization stage 1 on VHI .......
@@ -77,12 +78,12 @@ Running optimization stage 2 on EFB .......
 Running optimization stage 2 on VLO .......
 Running optimization stage 2 on VHI .......
 
-At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 73MB peak: 74MB)
+At c_ver Exit (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:00s; Memory used current: 73MB peak: 74MB)
 
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+Process took 0h:00m:05s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Fri Jun  7 20:49:57 2024
+# Fri Jul 12 16:07:10 2024
 
 ###########################################################]
 
@@ -102,13 +103,14 @@ Implementation : impl1
 Synopsys Synopsys Netlist Linker, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:17:43
 
 @N|Running in 64-bit mode
+File \\Mac\iCloud\Repos\RAM2E\CPLD\LCMXO2-1200HC-NODHGR\impl1\synwork\layer0.srs changed - recompiling
 
 At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Fri Jun  7 20:49:57 2024
+# Fri Jul 12 16:07:11 2024
 
 ###########################################################]
 
@@ -118,12 +120,12 @@ For a summary of runtime and memory usage for all design units, please see file:
 
 @END
 
-At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+At c_hdl Exit (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
 
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+Process took 0h:00m:08s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Fri Jun  7 20:49:57 2024
+# Fri Jul 12 16:07:11 2024
 
 ###########################################################]
 
@@ -143,18 +145,17 @@ Database state : \\Mac\iCloud\Repos\RAM2E\CPLD\LCMXO2-1200HC-NODHGR\impl1\synwor
 Synopsys Synopsys Netlist Linker, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:17:43
 
 @N|Running in 64-bit mode
+File \\Mac\iCloud\Repos\RAM2E\CPLD\LCMXO2-1200HC-NODHGR\impl1\synwork\RAM2E_LCMXO2_1200HC_impl1_comp.srs changed - recompiling
 
 At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Fri Jun  7 20:49:58 2024
+# Fri Jul 12 16:07:14 2024
 
 ###########################################################]
-Premap Report
-
-# Fri Jun  7 20:49:58 2024
+# Fri Jul 12 16:07:14 2024
 
 
 Copyright (C) 1994-2018 Synopsys, Inc.
@@ -199,7 +200,7 @@ Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h
 @A: FX681 :"\\mac\icloud\repos\ram2e\cpld\ram2e.v":21:4:21:9|Initial value on register S[3:0] is non-zero which can prevent the register from being packed into a block RAM or DSP.
 @N: MH105 |UMR3 is only supported for HAPS-80.
 @N: MH105 |UMR3 is only supported for HAPS-80.
-@N: BN115 :"\\mac\icloud\repos\ram2e\cpld\ram2e.v":140:9:140:12|Removing instance dhgr (in view: work.RAM2E(verilog)) of type view:work.DHGR(verilog) because it does not drive other instances.
+@N: BN115 :"\\mac\icloud\repos\ram2e\cpld\ram2e.v":136:9:136:12|Removing instance dhgr (in view: work.RAM2E(verilog)) of type view:work.DHGR(verilog) because it does not drive other instances.
 syn_allowed_resources : blockrams=7  set on top level netlist RAM2E
 
 Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 143MB)
@@ -212,7 +213,7 @@ Clock Summary
           Start          Requested     Requested     Clock        Clock                   Clock
 Level     Clock          Frequency     Period        Type         Group                   Load 
 -----------------------------------------------------------------------------------------------
-0 -       C14M           14.3 MHz      69.841        declared     default_clkgroup        121  
+0 -       C14M           14.3 MHz      69.841        declared     default_clkgroup        120  
                                                                                                
 0 -       System         100.0 MHz     10.000        system       system_clkgroup         0    
                                                                                                
@@ -227,7 +228,7 @@ Clock Load Summary
                Clock     Source         Clock Pin       Non-clock Pin     Non-clock Pin     
 Clock          Load      Pin            Seq Example     Seq Example       Comb Example      
 --------------------------------------------------------------------------------------------
-C14M           121       C14M(port)     RAT.C           -                 un1_C14M.I[0](inv)
+C14M           120       C14M(port)     RAT.C           -                 un1_C14M.I[0](inv)
                                                                                             
 System         0         -              -               -                 -                 
                                                                                             
@@ -247,14 +248,14 @@ Number of ICG latches not removed:	0
 
 #### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
 
-2 non-gated/non-generated clock tree(s) driving 125 clock pin(s) of sequential element(s)
+2 non-gated/non-generated clock tree(s) driving 124 clock pin(s) of sequential element(s)
 0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
 0 instances converted, 0 sequential instances remain driven by gated/generated clocks
 
 =========================== Non-Gated/Non-Generated Clocks ============================
 Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
 ---------------------------------------------------------------------------------------
-@KP:ckid0_0       C14M                port                   121        PHI1r          
+@KP:ckid0_0       C14M                port                   120        PHI1r          
 @KP:ckid0_1       PHI1                Unconstrained_port     4          RC[2:0]        
 =======================================================================================
 
@@ -264,27 +265,25 @@ Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample I
 @N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
 Finished Pre Mapping Phase.
 
-Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 143MB)
+Starting constraint checker (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 143MB)
 
 
-Finished constraint checker preprocessing (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 142MB peak: 143MB)
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:00s; Memory used current: 142MB peak: 143MB)
 
 None
 None
 
-Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 142MB peak: 143MB)
+Finished constraint checker (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:00s; Memory used current: 142MB peak: 143MB)
 
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 57MB peak: 143MB)
+At Mapper Exit (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:00s; Memory used current: 57MB peak: 143MB)
 
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Fri Jun  7 20:49:59 2024
+Process took 0h:00m:04s realtime, 0h:00m:01s cputime
+# Fri Jul 12 16:07:19 2024
 
 ###########################################################]
-Map & Optimize Report
-
-# Fri Jun  7 20:50:00 2024
+# Fri Jul 12 16:07:22 2024
 
 
 Copyright (C) 1994-2018 Synopsys, Inc.
@@ -313,18 +312,18 @@ Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:0
 Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
 
 
-Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
+Start loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
 
 
-Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 114MB)
+Finished loading timing files (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 114MB)
 
 @N: MF284 |Setting synthesis effort to medium for the design
 
 
-Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
 
 
 Available hyper_sources - for debug and ip models
@@ -333,61 +332,61 @@ Available hyper_sources - for debug and ip models
 @N: FX493 |Applying initial value "00000000" on instance RWBank[7:0].
 @N: FX493 |Applying initial value "0000" on instance S[3:0].
 
-Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+Finished RTL optimizations (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
 
 @N: MO231 :"\\mac\icloud\repos\ram2e\cpld\ram2e.v":14:23:14:28|Found counter in view:work.RAM2E(verilog) instance FS[15:0] 
 
-Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 142MB peak: 142MB)
+Starting factoring (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:00s; Memory used current: 142MB peak: 142MB)
 
 
-Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 145MB peak: 145MB)
+Finished factoring (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:00s; Memory used current: 145MB peak: 145MB)
 
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 146MB peak: 146MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:00s; Memory used current: 146MB peak: 146MB)
 
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 146MB peak: 146MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:01s; Memory used current: 146MB peak: 146MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 146MB peak: 146MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:01s; Memory used current: 146MB peak: 146MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 146MB peak: 146MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:01s; Memory used current: 146MB peak: 146MB)
 
 
-Finished preparing to map (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 146MB peak: 146MB)
+Finished preparing to map (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:01s; Memory used current: 146MB peak: 147MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 157MB peak: 160MB)
+Finished technology mapping (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:01s; Memory used current: 157MB peak: 160MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:01s		     6.90ns		 281 /       125
+   1		0h:00m:01s		     6.90ns		 280 /       124
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 157MB peak: 160MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:01s; Memory used current: 157MB peak: 160MB)
 
 @N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
-@A: BN291 :"\\mac\icloud\repos\ram2e\cpld\ram2e.v":171:4:171:9|Boundary register BA_1_.fb (in view: work.RAM2E(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
-@A: BN291 :"\\mac\icloud\repos\ram2e\cpld\ram2e.v":171:4:171:9|Boundary register BA_0_.fb (in view: work.RAM2E(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A: BN291 :"\\mac\icloud\repos\ram2e\cpld\ram2e.v":168:4:168:9|Boundary register BA_1_.fb (in view: work.RAM2E(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A: BN291 :"\\mac\icloud\repos\ram2e\cpld\ram2e.v":168:4:168:9|Boundary register BA_0_.fb (in view: work.RAM2E(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 158MB peak: 160MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:01s; Memory used current: 158MB peak: 160MB)
 
 
-Start Writing Netlists (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 122MB peak: 160MB)
+Start Writing Netlists (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:01s; Memory used current: 122MB peak: 160MB)
 
 Writing Analyst data base \\Mac\iCloud\Repos\RAM2E\CPLD\LCMXO2-1200HC-NODHGR\impl1\synwork\RAM2E_LCMXO2_1200HC_impl1_m.srm
 
-Finished Writing Netlist Databases (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 158MB peak: 160MB)
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:02s; Memory used current: 157MB peak: 160MB)
 
 Writing EDIF Netlist and constraint files
 @N: FX1056 |Writing EDF file: \\Mac\iCloud\Repos\RAM2E\CPLD\LCMXO2-1200HC-NODHGR\impl1\RAM2E_LCMXO2_1200HC_impl1.edi
 N-2018.03L-SP1-1
 @N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
 
-Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 162MB peak: 164MB)
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:02s; Memory used current: 161MB peak: 163MB)
 
 
-Start final timing analysis (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 161MB peak: 164MB)
+Start final timing analysis (Real Time elapsed 0h:00m:14s; CPU Time elapsed 0h:00m:03s; Memory used current: 160MB peak: 163MB)
 
 @W: MT246 :"\\mac\icloud\repos\ram2e\cpld\lcmxo2-1200hc-nodhgr\refb.v":78:8:78:16|Blackbox EFB is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
 @N: MT615 |Found clock C14M with period 69.84ns 
@@ -395,7 +394,7 @@ Start final timing analysis (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:0
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Fri Jun  7 20:50:03 2024
+# Timing Report written on Fri Jul 12 16:07:38 2024
 #
 
 
@@ -420,9 +419,9 @@ Worst slack in design: 6.897
                    Requested     Estimated     Requested     Estimated                Clock        Clock              
 Starting Clock     Frequency     Frequency     Period        Period        Slack      Type         Group              
 ----------------------------------------------------------------------------------------------------------------------
-C14M               14.3 MHz      112.1 MHz     69.841        8.918         31.599     declared     default_clkgroup   
+C14M               14.3 MHz      120.3 MHz     69.841        8.314         31.675     declared     default_clkgroup   
 RAM2E|PHI1         100.0 MHz     322.2 MHz     10.000        3.103         6.897      inferred     Inferred_clkgroup_0
-System             100.0 MHz     NA            10.000        NA            67.088     system       system_clkgroup    
+System             100.0 MHz     NA            10.000        NA            66.719     system       system_clkgroup    
 ======================================================================================================================
 Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
 
@@ -437,9 +436,9 @@ Clocks                  |    rise  to  rise    |    fall  to  fall   |    rise  
 ----------------------------------------------------------------------------------------------------------------
 Starting    Ending      |  constraint  slack   |  constraint  slack  |  constraint  slack   |  constraint  slack
 ----------------------------------------------------------------------------------------------------------------
-System      C14M        |  69.841      67.088  |  No paths    -      |  No paths    -       |  No paths    -    
+System      C14M        |  69.841      66.719  |  No paths    -      |  No paths    -       |  No paths    -    
 C14M        System      |  69.841      68.797  |  No paths    -      |  No paths    -       |  No paths    -    
-C14M        C14M        |  69.841      60.923  |  No paths    -      |  34.920      31.599  |  No paths    -    
+C14M        C14M        |  69.841      61.527  |  No paths    -      |  34.920      31.675  |  No paths    -    
 RAM2E|PHI1  C14M        |  No paths    -       |  No paths    -      |  No paths    -       |  Diff grp    -    
 RAM2E|PHI1  RAM2E|PHI1  |  No paths    -       |  10.000      6.897  |  No paths    -       |  No paths    -    
 ================================================================================================================
@@ -468,10 +467,10 @@ Starting Points with Worst Slack
 Instance     Reference     Type        Pin     Net       Time        Slack 
              Clock                                                         
 ---------------------------------------------------------------------------
-S[2]         C14M          FD1S3AX     Q       S[2]      1.366       31.599
-S[3]         C14M          FD1S3AX     Q       S[3]      1.345       31.619
-S[1]         C14M          FD1S3AX     Q       S[1]      1.344       31.800
-S[0]         C14M          FD1S3AX     Q       S[0]      1.305       31.838
+S[2]         C14M          FD1S3AX     Q       S[2]      1.353       31.675
+S[3]         C14M          FD1S3AX     Q       S[3]      1.337       31.691
+S[0]         C14M          FD1S3AX     Q       S[0]      1.319       32.182
+S[1]         C14M          FD1S3AX     Q       S[1]      1.344       32.656
 RA[0]        C14M          FD1P3AX     Q       RA[0]     1.108       33.707
 RA[3]        C14M          FD1P3AX     Q       RA[3]     1.108       33.707
 RA[1]        C14M          FD1P3AX     Q       RA[1]     1.044       33.771
@@ -484,21 +483,21 @@ RA[5]        C14M          FD1P3AX     Q       RA[5]     1.044       33.771
 Ending Points with Worst Slack
 ******************************
 
-                Starting                                        Required           
-Instance        Reference     Type         Pin     Net          Time         Slack 
-                Clock                                                              
------------------------------------------------------------------------------------
-VOE_i_0io       C14M          OFS1P3IX     CD      N_530        34.118       31.599
-VOE_i_0io       C14M          OFS1P3IX     D       VOE_ic_i     35.009       31.800
-Vout_0io[0]     C14M          OFS1P3DX     SP      Vout3        34.449       32.634
-Vout_0io[1]     C14M          OFS1P3DX     SP      Vout3        34.449       32.634
-Vout_0io[2]     C14M          OFS1P3DX     SP      Vout3        34.449       32.634
-Vout_0io[3]     C14M          OFS1P3DX     SP      Vout3        34.449       32.634
-Vout_0io[4]     C14M          OFS1P3DX     SP      Vout3        34.449       32.634
-Vout_0io[5]     C14M          OFS1P3DX     SP      Vout3        34.449       32.634
-Vout_0io[6]     C14M          OFS1P3DX     SP      Vout3        34.449       32.634
-Vout_0io[7]     C14M          OFS1P3DX     SP      Vout3        34.449       32.634
-===================================================================================
+                Starting                                       Required           
+Instance        Reference     Type         Pin     Net         Time         Slack 
+                Clock                                                             
+----------------------------------------------------------------------------------
+VOE_i_0io       C14M          OFS1P3IX     CD      N_523_1     34.118       31.675
+RAT             C14M          FD1S3IX      CD      RATc_i      34.118       32.147
+Vout_0io[0]     C14M          OFS1P3DX     SP      Vout3       34.449       32.647
+Vout_0io[1]     C14M          OFS1P3DX     SP      Vout3       34.449       32.647
+Vout_0io[2]     C14M          OFS1P3DX     SP      Vout3       34.449       32.647
+Vout_0io[3]     C14M          OFS1P3DX     SP      Vout3       34.449       32.647
+Vout_0io[4]     C14M          OFS1P3DX     SP      Vout3       34.449       32.647
+Vout_0io[5]     C14M          OFS1P3DX     SP      Vout3       34.449       32.647
+Vout_0io[6]     C14M          OFS1P3DX     SP      Vout3       34.449       32.647
+Vout_0io[7]     C14M          OFS1P3DX     SP      Vout3       34.449       32.647
+==================================================================================
 
 
 
@@ -512,9 +511,9 @@ Path information for path number 1:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         34.118
 
-    - Propagation time:                      2.519
+    - Propagation time:                      2.442
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 31.599
+    = Slack (non-critical) :                 31.675
 
     Number of logic level(s):                1
     Starting point:                          S[2] / Q
@@ -522,16 +521,16 @@ Path information for path number 1:
     The start point is clocked by            C14M [rising] on pin CK
     The end   point is clocked by            C14M [falling] on pin SCLK
 
-Instance / Net                                             Pin      Pin               Arrival     No. of    
-Name                                          Type         Name     Dir     Delay     Time        Fan Out(s)
-------------------------------------------------------------------------------------------------------------
-S[2]                                          FD1S3AX      Q        Out     1.366     1.366       -         
-S[2]                                          Net          -        -       -         -           58        
-ram2e_ufm.un1_wb_adr_0_sqmuxa_2_0_a2_0[0]     ORCALUT4     A        In      0.000     1.366       -         
-ram2e_ufm.un1_wb_adr_0_sqmuxa_2_0_a2_0[0]     ORCALUT4     Z        Out     1.153     2.519       -         
-N_530                                         Net          -        -       -         -           3         
-VOE_i_0io                                     OFS1P3IX     CD       In      0.000     2.519       -         
-============================================================================================================
+Instance / Net                        Pin      Pin               Arrival     No. of    
+Name                     Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------
+S[2]                     FD1S3AX      Q        Out     1.353     1.353       -         
+S[2]                     Net          -        -       -         -           50        
+ram2e_ufm.VOE_2_0_a2     ORCALUT4     A        In      0.000     1.353       -         
+ram2e_ufm.VOE_2_0_a2     ORCALUT4     Z        Out     1.089     2.442       -         
+N_523_1                  Net          -        -       -         -           2         
+VOE_i_0io                OFS1P3IX     CD       In      0.000     2.442       -         
+=======================================================================================
 
 
 
@@ -620,7 +619,7 @@ Starting Points with Worst Slack
 Instance                       Reference     Type     Pin         Net            Time        Slack 
                                Clock                                                               
 ---------------------------------------------------------------------------------------------------
-ram2e_ufm.ufmefb.EFBInst_0     System        EFB      WBACKO      wb_ack         0.000       67.088
+ram2e_ufm.ufmefb.EFBInst_0     System        EFB      WBACKO      wb_ack         0.000       66.719
 ram2e_ufm.ufmefb.EFBInst_0     System        EFB      WBDATO0     wb_dato[0]     0.000       69.313
 ram2e_ufm.ufmefb.EFBInst_0     System        EFB      WBDATO1     wb_dato[1]     0.000       69.313
 ram2e_ufm.ufmefb.EFBInst_0     System        EFB      WBDATO2     wb_dato[2]     0.000       69.313
@@ -635,21 +634,21 @@ ram2e_ufm.ufmefb.EFBInst_0     System        EFB      WBDATO7     wb_dato[7]    
 Ending Points with Worst Slack
 ******************************
 
-                         Starting                                    Required           
-Instance                 Reference     Type        Pin     Net       Time         Slack 
-                         Clock                                                          
-----------------------------------------------------------------------------------------
-ram2e_ufm.RWMask[0]      System        FD1P3AX     SP      N_104     69.369       67.088
-ram2e_ufm.RWMask[1]      System        FD1P3AX     SP      N_104     69.369       67.088
-ram2e_ufm.RWMask[2]      System        FD1P3AX     SP      N_104     69.369       67.088
-ram2e_ufm.RWMask[3]      System        FD1P3AX     SP      N_104     69.369       67.088
-ram2e_ufm.RWMask[4]      System        FD1P3AX     SP      N_104     69.369       67.088
-ram2e_ufm.RWMask[5]      System        FD1P3AX     SP      N_104     69.369       67.088
-ram2e_ufm.RWMask[6]      System        FD1P3AX     SP      N_104     69.369       67.088
-ram2e_ufm.RWMask[7]      System        FD1P3AX     SP      N_104     69.369       67.088
-ram2e_ufm.LEDEN          System        FD1P3AX     SP      N_98      69.369       67.736
-ram2e_ufm.wb_cyc_stb     System        FD1P3AX     SP      N_111     69.369       67.736
-========================================================================================
+                         Starting                                                           Required           
+Instance                 Reference     Type        Pin     Net                              Time         Slack 
+                         Clock                                                                                 
+---------------------------------------------------------------------------------------------------------------
+ram2e_ufm.wb_cyc_stb     System        FD1P3AX     SP      un1_CmdBitbangMXO212_1_i[0]      69.369       66.719
+ram2e_ufm.LEDEN          System        FD1P3AX     SP      un1_LEDEN_0_sqmuxa_1_i_0[0]      69.369       67.736
+ram2e_ufm.RWMask[0]      System        FD1P3AX     SP      un1_RWMask_0_sqmuxa_1_i_0[0]     69.369       68.105
+ram2e_ufm.RWMask[1]      System        FD1P3AX     SP      un1_RWMask_0_sqmuxa_1_i_0[0]     69.369       68.105
+ram2e_ufm.RWMask[2]      System        FD1P3AX     SP      un1_RWMask_0_sqmuxa_1_i_0[0]     69.369       68.105
+ram2e_ufm.RWMask[3]      System        FD1P3AX     SP      un1_RWMask_0_sqmuxa_1_i_0[0]     69.369       68.105
+ram2e_ufm.RWMask[4]      System        FD1P3AX     SP      un1_RWMask_0_sqmuxa_1_i_0[0]     69.369       68.105
+ram2e_ufm.RWMask[5]      System        FD1P3AX     SP      un1_RWMask_0_sqmuxa_1_i_0[0]     69.369       68.105
+ram2e_ufm.RWMask[6]      System        FD1P3AX     SP      un1_RWMask_0_sqmuxa_1_i_0[0]     69.369       68.105
+ram2e_ufm.RWMask[7]      System        FD1P3AX     SP      un1_RWMask_0_sqmuxa_1_i_0[0]     69.369       68.105
+===============================================================================================================
 
 
 
@@ -663,30 +662,33 @@ Path information for path number 1:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         69.369
 
-    - Propagation time:                      2.282
+    - Propagation time:                      2.650
     - Clock delay at starting point:         0.000 (ideal)
     - Estimated clock delay at start point:  -0.000
-    = Slack (non-critical) :                 67.088
+    = Slack (non-critical) :                 66.719
 
-    Number of logic level(s):                2
+    Number of logic level(s):                3
     Starting point:                          ram2e_ufm.ufmefb.EFBInst_0 / WBACKO
-    Ending point:                            ram2e_ufm.RWMask[0] / SP
+    Ending point:                            ram2e_ufm.wb_cyc_stb / SP
     The start point is clocked by            System [rising]
     The end   point is clocked by            C14M [rising] on pin CK
 
-Instance / Net                                               Pin        Pin               Arrival     No. of    
-Name                                            Type         Name       Dir     Delay     Time        Fan Out(s)
-----------------------------------------------------------------------------------------------------------------
-ram2e_ufm.ufmefb.EFBInst_0                      EFB          WBACKO     Out     0.000     0.000       -         
-wb_ack                                          Net          -          -       -         -           5         
-ram2e_ufm.un1_RWMask_0_sqmuxa_1_i_a2_0_0[0]     ORCALUT4     B          In      0.000     0.000       -         
-ram2e_ufm.un1_RWMask_0_sqmuxa_1_i_a2_0_0[0]     ORCALUT4     Z          Out     1.017     1.017       -         
-un1_RWMask_0_sqmuxa_1_i_a2_0_0[0]               Net          -          -       -         -           1         
-ram2e_ufm.un1_RWMask_0_sqmuxa_1_i_0[0]          ORCALUT4     D          In      0.000     1.017       -         
-ram2e_ufm.un1_RWMask_0_sqmuxa_1_i_0[0]          ORCALUT4     Z          Out     1.265     2.282       -         
-N_104                                           Net          -          -       -         -           8         
-ram2e_ufm.RWMask[0]                             FD1P3AX      SP         In      0.000     2.282       -         
-================================================================================================================
+Instance / Net                                              Pin        Pin               Arrival     No. of    
+Name                                           Type         Name       Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------
+ram2e_ufm.ufmefb.EFBInst_0                     EFB          WBACKO     Out     0.000     0.000       -         
+wb_ack                                         Net          -          -       -         -           4         
+ram2e_ufm.un1_CmdBitbangMXO212_1_0_0_tz[0]     ORCALUT4     B          In      0.000     0.000       -         
+ram2e_ufm.un1_CmdBitbangMXO212_1_0_0_tz[0]     ORCALUT4     Z          Out     1.017     1.017       -         
+un1_CmdBitbangMXO212_1_0_0_tz[0]               Net          -          -       -         -           1         
+ram2e_ufm.un1_CmdBitbangMXO212_1_0_0_0[0]      ORCALUT4     C          In      0.000     1.017       -         
+ram2e_ufm.un1_CmdBitbangMXO212_1_0_0_0[0]      ORCALUT4     Z          Out     1.017     2.034       -         
+un1_CmdBitbangMXO212_1_0_0_0[0]                Net          -          -       -         -           1         
+ram2e_ufm.wb_cyc_stb_RNO_0                     ORCALUT4     A          In      0.000     2.034       -         
+ram2e_ufm.wb_cyc_stb_RNO_0                     ORCALUT4     Z          Out     0.617     2.650       -         
+un1_CmdBitbangMXO212_1_i[0]                    Net          -          -       -         -           1         
+ram2e_ufm.wb_cyc_stb                           FD1P3AX      SP         In      0.000     2.650       -         
+===============================================================================================================
 
 
 
@@ -695,16 +697,16 @@ ram2e_ufm.RWMask[0]                             FD1P3AX      SP         In      
 Timing exceptions that could not be applied
 None
 
-Finished final timing analysis (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 161MB peak: 164MB)
+Finished final timing analysis (Real Time elapsed 0h:00m:17s; CPU Time elapsed 0h:00m:03s; Memory used current: 161MB peak: 163MB)
 
 
-Finished timing report (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 161MB peak: 164MB)
+Finished timing report (Real Time elapsed 0h:00m:17s; CPU Time elapsed 0h:00m:03s; Memory used current: 161MB peak: 163MB)
 
 ---------------------------------------
 Resource Usage Report
 Part: lcmxo2_1200hc-4
 
-Register bits: 125 of 1280 (10%)
+Register bits: 124 of 1280 (10%)
 PIC Latch:       0
 I/O cells:       70
 
@@ -713,7 +715,7 @@ Details:
 BB:             8
 CCU2D:          9
 EFB:            1
-FD1P3AX:        58
+FD1P3AX:        57
 FD1P3IX:        1
 FD1S3AX:        31
 FD1S3AY:        4
@@ -726,15 +728,16 @@ OB:             41
 OFS1P3BX:       6
 OFS1P3DX:       12
 OFS1P3IX:       3
-ORCALUT4:       275
+ORCALUT4:       268
+PFUMX:          10
 PUR:            1
 VHI:            3
 VLO:            3
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 32MB peak: 164MB)
+At Mapper Exit (Real Time elapsed 0h:00m:17s; CPU Time elapsed 0h:00m:03s; Memory used current: 32MB peak: 163MB)
 
-Process took 0h:00m:03s realtime, 0h:00m:03s cputime
-# Fri Jun  7 20:50:03 2024
+Process took 0h:00m:18s realtime, 0h:00m:03s cputime
+# Fri Jul 12 16:07:42 2024
 
 ###########################################################]

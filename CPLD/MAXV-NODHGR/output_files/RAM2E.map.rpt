@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RAM2E
-Sat Jun 08 01:44:10 2024
+Fri Jul 12 16:09:08 2024
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -46,12 +46,12 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sat Jun 08 01:44:10 2024       ;
+; Analysis & Synthesis Status ; Successful - Fri Jul 12 16:09:08 2024       ;
 ; Quartus Prime Version       ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name               ; RAM2E                                       ;
 ; Top-level Entity Name       ; RAM2E                                       ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 252                                         ;
+; Total logic elements        ; 247                                         ;
 ; Total pins                  ; 71                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 1 / 1 ( 100 % )                             ;
@@ -164,34 +164,34 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 252   ;
-;     -- Combinational with no register       ; 126   ;
+; Total logic elements                        ; 247   ;
+;     -- Combinational with no register       ; 122   ;
 ;     -- Register only                        ; 33    ;
-;     -- Combinational with a register        ; 93    ;
+;     -- Combinational with a register        ; 92    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 116   ;
-;     -- 3 input functions                    ; 53    ;
-;     -- 2 input functions                    ; 46    ;
+;     -- 4 input functions                    ; 111   ;
+;     -- 3 input functions                    ; 56    ;
+;     -- 2 input functions                    ; 43    ;
 ;     -- 1 input functions                    ; 3     ;
 ;     -- 0 input functions                    ; 1     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 238   ;
+;     -- normal mode                          ; 233   ;
 ;     -- arithmetic mode                      ; 14    ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
 ;     -- synchronous clear/load mode          ; 3     ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 126   ;
+; Total registers                             ; 125   ;
 ; Total logic cells in carry chains           ; 15    ;
 ; I/O pins                                    ; 71    ;
 ; UFM blocks                                  ; 1     ;
 ; Maximum fan-out node                        ; C14M  ;
-; Maximum fan-out                             ; 122   ;
-; Total fan-out                               ; 1001  ;
-; Average fan-out                             ; 3.09  ;
+; Maximum fan-out                             ; 121   ;
+; Total fan-out                               ; 982   ;
+; Average fan-out                             ; 3.08  ;
 +---------------------------------------------+-------+
 
 
@@ -200,7 +200,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                                   ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                       ; Entity Name         ; Library Name ;
 +--------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------------------+---------------------+--------------+
-; |RAM2E                                                       ; 252 (191)   ; 126          ; 1          ; 71   ; 0            ; 126 (97)     ; 33 (25)           ; 93 (69)          ; 15 (15)         ; 0 (0)      ; |RAM2E                                                                                    ; RAM2E               ; work         ;
+; |RAM2E                                                       ; 247 (186)   ; 125          ; 1          ; 71   ; 0            ; 122 (93)     ; 33 (25)           ; 92 (68)          ; 15 (15)         ; 0 (0)      ; |RAM2E                                                                                    ; RAM2E               ; work         ;
 ;    |RAM2E_UFM:ram2e_ufm|                                     ; 61 (61)     ; 32           ; 1          ; 0    ; 0            ; 29 (29)      ; 8 (8)             ; 24 (24)          ; 0 (0)           ; 0 (0)      ; |RAM2E|RAM2E_UFM:ram2e_ufm                                                                ; RAM2E_UFM           ; work         ;
 ;       |UFM:UFM_inst|                                         ; 0 (0)       ; 0            ; 1          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |RAM2E|RAM2E_UFM:ram2e_ufm|UFM:UFM_inst                                                   ; UFM                 ; work         ;
 ;          |UFM_altufm_none_p8r:UFM_altufm_none_p8r_component| ; 0 (0)       ; 0            ; 1          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |RAM2E|RAM2E_UFM:ram2e_ufm|UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component ; UFM_altufm_none_p8r ; work         ;
@@ -222,12 +222,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 126   ;
+; Total registers                              ; 125   ;
 ; Number of registers using Synchronous Clear  ; 3     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 59    ;
+; Number of registers using Clock Enable       ; 58    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -256,13 +256,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |RAM2E|S[2]                          ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |RAM2E|S[3]                          ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |RAM2E|CS[1]                         ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |RAM2E|RAM2E_UFM:ram2e_ufm|RWMask[5] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |RAM2E|RAM2E_UFM:ram2e_ufm|RWMask[4] ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 2 LEs                ; 18 LEs                 ; Yes        ; |RAM2E|BA[0]~reg0                    ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 8 LEs                ; 36 LEs                 ; Yes        ; |RAM2E|RA[6]                         ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |RAM2E|RA[1]                         ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |RAM2E|DQML~reg0                     ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 8 LEs                ; 36 LEs                 ; Yes        ; |RAM2E|RA[7]                         ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |RAM2E|RA[2]                         ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |RAM2E|DQMH~reg0                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
 
 
@@ -283,7 +283,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Sat Jun 08 01:43:27 2024
+    Info: Processing started: Fri Jul 12 16:07:38 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RAM2E-MAXV -c RAM2E
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 1 design units, including 1 entities, in source file //mac/icloud/repos/ram2e/cpld/ram2e.v
@@ -296,12 +296,12 @@ Info (12021): Found 2 design units, including 2 entities, in source file ufm.v
     Info (12023): Found entity 1: UFM_altufm_none_p8r File: //Mac/iCloud/Repos/RAM2E/CPLD/MAXV-NODHGR/UFM.v Line: 47
     Info (12023): Found entity 2: UFM File: //Mac/iCloud/Repos/RAM2E/CPLD/MAXV-NODHGR/UFM.v Line: 166
 Info (12127): Elaborating entity "RAM2E" for the top level hierarchy
-Info (12128): Elaborating entity "RAM2E_UFM" for hierarchy "RAM2E_UFM:ram2e_ufm" File: //Mac/iCloud/Repos/RAM2E/CPLD/RAM2E.v Line: 136
+Info (12128): Elaborating entity "RAM2E_UFM" for hierarchy "RAM2E_UFM:ram2e_ufm" File: //Mac/iCloud/Repos/RAM2E/CPLD/RAM2E.v Line: 132
 Info (12128): Elaborating entity "UFM" for hierarchy "RAM2E_UFM:ram2e_ufm|UFM:UFM_inst" File: //Mac/iCloud/Repos/RAM2E/CPLD/UFM-MAX.v Line: 77
 Info (12128): Elaborating entity "UFM_altufm_none_p8r" for hierarchy "RAM2E_UFM:ram2e_ufm|UFM:UFM_inst|UFM_altufm_none_p8r:UFM_altufm_none_p8r_component" File: //Mac/iCloud/Repos/RAM2E/CPLD/MAXV-NODHGR/UFM.v Line: 217
-Info (12128): Elaborating entity "DHGR" for hierarchy "DHGR:dhgr" File: //Mac/iCloud/Repos/RAM2E/CPLD/RAM2E.v Line: 140
+Info (12128): Elaborating entity "DHGR" for hierarchy "DHGR:dhgr" File: //Mac/iCloud/Repos/RAM2E/CPLD/RAM2E.v Line: 136
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "nDHGROE" is stuck at VCC File: //Mac/iCloud/Repos/RAM2E/CPLD/RAM2E.v Line: 139
+    Warning (13410): Pin "nDHGROE" is stuck at VCC File: //Mac/iCloud/Repos/RAM2E/CPLD/RAM2E.v Line: 135
     Warning (13410): Pin "nCSout" is stuck at GND File: //Mac/iCloud/Repos/RAM2E/CPLD/RAM2E.v Line: 75
 Warning (14632): Output pin "Dout[0]" driven by bidirectional pin "RD[0]" cannot be tri-stated File: //Mac/iCloud/Repos/RAM2E/CPLD/RAM2E.v Line: 50
 Warning (14632): Output pin "Dout[1]" driven by bidirectional pin "RD[1]" cannot be tri-stated File: //Mac/iCloud/Repos/RAM2E/CPLD/RAM2E.v Line: 50
@@ -313,18 +313,18 @@ Warning (14632): Output pin "Dout[6]" driven by bidirectional pin "RD[6]" cannot
 Warning (14632): Output pin "Dout[7]" driven by bidirectional pin "RD[7]" cannot be tri-stated File: //Mac/iCloud/Repos/RAM2E/CPLD/RAM2E.v Line: 50
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "nWE80" File: //Mac/iCloud/Repos/RAM2E/CPLD/RAM2E.v Line: 11
-Info (21057): Implemented 324 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 319 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 22 input pins
     Info (21059): Implemented 41 output pins
     Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 252 logic cells
+    Info (21061): Implemented 247 logic cells
     Info (21070): Implemented 1 User Flash Memory blocks
 Info (144001): Generated suppressed messages file /Repos/RAM2E/CPLD/MAXV-NODHGR/output_files/RAM2E.map.smsg
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 13149 megabytes
-    Info: Processing ended: Sat Jun 08 01:44:10 2024
-    Info: Elapsed time: 00:00:43
-    Info: Total CPU time (on all processors): 00:00:40
+    Info: Peak virtual memory: 13148 megabytes
+    Info: Processing ended: Fri Jul 12 16:09:08 2024
+    Info: Elapsed time: 00:01:30
+    Info: Total CPU time (on all processors): 00:00:41
 
 
 +------------------------------------------+

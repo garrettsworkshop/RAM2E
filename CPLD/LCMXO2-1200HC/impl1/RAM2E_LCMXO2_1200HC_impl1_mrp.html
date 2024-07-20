@@ -17,24 +17,25 @@ Command line:   map -a MachXO2 -p LCMXO2-1200HC -t TQFP100 -s 4 -oc Commercial
      RAM2E_LCMXO2_1200HC_impl1.ngd -o RAM2E_LCMXO2_1200HC_impl1_map.ncd -pr
      RAM2E_LCMXO2_1200HC_impl1.prf -mp RAM2E_LCMXO2_1200HC_impl1.mrp -lpf //Mac/
      iCloud/Repos/RAM2E/CPLD/LCMXO2-1200HC/impl1/RAM2E_LCMXO2_1200HC_impl1_synpl
-     ify.lpf -lpf //Mac/iCloud/Repos/RAM2E/CPLD/RAM2E-LCMXO2.lpf -c 0 -gui 
+     ify.lpf -lpf //Mac/iCloud/Repos/RAM2E/CPLD/RAM2E-LCMXO2.lpf -c 0 -gui
+     -msgset //Mac/iCloud/Repos/RAM2E/CPLD/LCMXO2-1200HC/promote.xml 
 Target Vendor:  LATTICE
 Target Device:  LCMXO2-1200HCTQFP100
 Target Performance:   4
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.11.3.469
-Mapped on:  06/07/24  20:50:13
+Mapped on:  07/12/24  16:08:07
 
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of registers:    125 out of  1520 (8%)
-      PFU registers:          103 out of  1280 (8%)
+   Number of registers:    124 out of  1520 (8%)
+      PFU registers:          102 out of  1280 (8%)
       PIO registers:           22 out of   240 (9%)
-   Number of SLICEs:       148 out of   640 (23%)
-      SLICEs as Logic/ROM:    148 out of   640 (23%)
+   Number of SLICEs:       145 out of   640 (23%)
+      SLICEs as Logic/ROM:    145 out of   640 (23%)
       SLICEs as RAM:            0 out of   480 (0%)
       SLICEs as Carry:          9 out of   640 (1%)
-   Number of LUT4s:        295 out of  1280 (23%)
-      Number used as logic LUTs:        277
+   Number of LUT4s:        288 out of  1280 (23%)
+      Number used as logic LUTs:        270
       Number used as distributed RAM:     0
       Number used as ripple logic:       18
       Number used as shift registers:     0
@@ -64,44 +65,45 @@ Mapped on:  06/07/24  20:50:13
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
    Number of clocks:  2
-     Net C14M_c: 85 loads, 63 rising, 22 falling (Driver: PIO C14M )
+     Net C14M_c: 84 loads, 62 rising, 22 falling (Driver: PIO C14M )
      Net PHI1_c: 3 loads, 0 rising, 3 falling (Driver: PIO PHI1 )
-   Number of Clock Enables:  13
 
-     Net N_117_i: 2 loads, 0 LSLICEs
-     Net RWBank14: 11 loads, 11 LSLICEs
+   Number of Clock Enables:  13
+     Net N_347_i: 2 loads, 0 LSLICEs
+     Net RWBank14: 10 loads, 10 LSLICEs
      Net ram2e_ufm/wb_adr_0_sqmuxa_1_i: 1 loads, 1 LSLICEs
-     Net un9_VOE_0_a2_0_a2: 1 loads, 1 LSLICEs
      Net un6_DOEEN_0_a2_0_a2: 2 loads, 2 LSLICEs
-     Net ram2e_ufm/un1_wb_adr_0_sqmuxa_2_i[0]: 8 loads, 8 LSLICEs
-     Net ram2e_ufm/un1_wb_cyc_stb_0_sqmuxa_1_i[0]: 1 loads, 1 LSLICEs
-     Net ram2e_ufm/N_111: 1 loads, 1 LSLICEs
-     Net ram2e_ufm/N_104: 4 loads, 4 LSLICEs
-     Net ram2e_ufm/N_98: 1 loads, 1 LSLICEs
-     Net un1_CKE48_0_i: 6 loads, 6 LSLICEs
-     Net N_389_i: 2 loads, 0 LSLICEs
+     Net ram2e_ufm/N_63: 1 loads, 1 LSLICEs
+     Net ram2e_ufm/un1_wb_adr_0_sqmuxa_2_i_0[0]: 8 loads, 8 LSLICEs
+     Net ram2e_ufm/un1_CmdBitbangMXO212_1_i[0]: 1 loads, 1 LSLICEs
+     Net ram2e_ufm/un1_RWMask_0_sqmuxa_1_i_0[0]: 4 loads, 4 LSLICEs
+     Net ram2e_ufm/un1_LEDEN_0_sqmuxa_1_i_0[0]: 1 loads, 1 LSLICEs
+     Net un9_VOE_0_a2: 1 loads, 1 LSLICEs
+     Net un1_CKE48_i: 6 loads, 6 LSLICEs
+     Net N_346_i: 2 loads, 0 LSLICEs
      Net Vout3: 8 loads, 0 LSLICEs
-   Number of LSRs:  8
-     Net N_148: 2 loads, 2 LSLICEs
-     Net N_430_i: 2 loads, 0 LSLICEs
+   Number of LSRs:  9
+     Net un1_CS_0_sqmuxa_i: 2 loads, 2 LSLICEs
+     Net ram2e_ufm.wb_rst13: 2 loads, 0 LSLICEs
      Net RC7: 2 loads, 2 LSLICEs
-     Net S[2]: 2 loads, 2 LSLICEs
+     Net S[1]: 1 loads, 1 LSLICEs
      Net ram2e_ufm/wb_rst: 1 loads, 0 LSLICEs
-     Net ram2e_ufm/nRWE_0_i_o3_RNIP8E61: 1 loads, 1 LSLICEs
-     Net N_530: 1 loads, 0 LSLICEs
-     Net N_301_i: 1 loads, 1 LSLICEs
+     Net ram2e_ufm/wb_rst6_i: 1 loads, 1 LSLICEs
+     Net N_523_1: 1 loads, 0 LSLICEs
+     Net N_727_0: 1 loads, 1 LSLICEs
+     Net RATc_i: 1 loads, 1 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net S[2]: 60 loads
-     Net S[3]: 48 loads
-     Net S[1]: 46 loads
-     Net S[0]: 31 loads
-     Net FS[11]: 24 loads
-     Net FS[10]: 23 loads
-     Net FS[12]: 23 loads
-     Net FS[9]: 23 loads
-     Net FS[13]: 21 loads
-     Net FS[8]: 18 loads
+     Net S[2]: 51 loads
+     Net S[1]: 44 loads
+     Net S[3]: 40 loads
+     Net S[0]: 32 loads
+     Net FS[8]: 29 loads
+     Net FS[9]: 26 loads
+     Net FS[10]: 25 loads
+     Net FS[11]: 23 loads
+     Net FS[13]: 20 loads
+     Net ram2e_ufm.wb_rst13: 17 loads
 
 
 
@@ -124,9 +126,9 @@ WARNING - map: UFM was enabled in EFB: Enabling the configuration interface will
      Functionality is restored after the Flash Memory (UFM/Configuration)
      Interface is disabled using Disable Configuration Interface command 0x26
      followed by Bypass command 0xFF. 
+
 WARNING - map: IO buffer missing for top level port nWE80...logic will be
      discarded.
-
 
 
 
@@ -182,11 +184,11 @@ WARNING - map: IO buffer missing for top level port nWE80...logic will be
 +---------------------+-----------+-----------+------------+
 | RAout[1]            | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
+
 | RAout[0]            | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | BA[1]               | OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-
 | BA[0]               | OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
 | nRWEout             | OUTPUT    | LVCMOS33  | OUT        |
@@ -239,11 +241,11 @@ WARNING - map: IO buffer missing for top level port nWE80...logic will be
 +---------------------+-----------+-----------+------------+
 | Din[6]              | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
+
 | Din[5]              | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | Din[4]              | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-
 | Din[3]              | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | Din[2]              | INPUT     | LVCMOS33  |            |
@@ -297,11 +299,11 @@ Signal ram2e_ufm/ufmefb/CFGSTDBY undriven or does not drive anything - clipped.
 Signal ram2e_ufm/ufmefb/CFGWAKE undriven or does not drive anything - clipped.
 Signal ram2e_ufm/ufmefb/wbc_ufm_irq undriven or does not drive anything -
      clipped.
+
 Signal ram2e_ufm/ufmefb/TCOC undriven or does not drive anything - clipped.
 Signal ram2e_ufm/ufmefb/TCINT undriven or does not drive anything - clipped.
 Signal ram2e_ufm/ufmefb/SPIIRQO undriven or does not drive anything - clipped.
 Signal ram2e_ufm/ufmefb/SPICSNEN undriven or does not drive anything - clipped.
-
 Signal ram2e_ufm/ufmefb/SPIMCSN7 undriven or does not drive anything - clipped.
 Signal ram2e_ufm/ufmefb/SPIMCSN6 undriven or does not drive anything - clipped.
 Signal ram2e_ufm/ufmefb/SPIMCSN5 undriven or does not drive anything - clipped.
@@ -354,10 +356,10 @@ Signal FS_cry_0_S0[0] undriven or does not drive anything - clipped.
 Signal N_1 undriven or does not drive anything - clipped.
 Block RefReq.CN was optimized away.
 Block RDOE_RNIAM8C was optimized away.
+
 Block nCASout.CN was optimized away.
 Block ram2e_ufm/ufmefb/VCC was optimized away.
 Block ram2e_ufm/ufmefb/GND was optimized away.
-
 
      
 
@@ -413,10 +415,63 @@ Instance Name: ram2e_ufm/ufmefb/EFBInst_0
 <A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
 -------------------------
 
-   Total CPU Time: 0 secs  
-   Total REAL Time: 2 secs  
+   Total CPU Time: 1 secs  
+   Total REAL Time: 12 secs  
    Peak Memory Usage: 64 MB
+
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

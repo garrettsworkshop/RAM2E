@@ -1,5 +1,5 @@
 Flow report for RAM2E
-Sat Jun 08 01:44:25 2024
+Fri Jul 12 16:09:21 2024
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,14 +41,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Sat Jun 08 01:44:21 2024       ;
+; Flow Status           ; Successful - Fri Jul 12 16:09:17 2024       ;
 ; Quartus Prime Version ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name         ; RAM2E                                       ;
 ; Top-level Entity Name ; RAM2E                                       ;
 ; Family                ; MAX II                                      ;
 ; Device                ; EPM240T100C5                                ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 238 / 240 ( 99 % )                          ;
+; Total logic elements  ; 233 / 240 ( 97 % )                          ;
 ; Total pins            ; 71 / 80 ( 89 % )                            ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 1 / 1 ( 100 % )                             ;
@@ -60,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/08/2024 01:43:24 ;
+; Start date & time ; 07/12/2024 16:07:46 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RAM2E               ;
 +-------------------+---------------------+
@@ -71,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------+------------------------------+---------------+-------------+------------+
 ; Assignment Name                       ; Value                        ; Default Value ; Entity Name ; Section Id ;
 +---------------------------------------+------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID                 ; 121380219419.171782540305852 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID                 ; 121380219419.172081486509296 ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP                ; 85                           ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP                ; 0                            ; --            ; --          ; --         ;
 ; NUM_PARALLEL_PROCESSORS               ; 4                            ; --            ; --          ; --         ;
@@ -86,11 +86,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:47     ; 1.0                     ; 13152 MB            ; 00:00:39                           ;
-; Fitter               ; 00:00:07     ; 1.0                     ; 13775 MB            ; 00:00:05                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 13098 MB            ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 13094 MB            ; 00:00:02                           ;
-; Total                ; 00:00:57     ; --                      ; --                  ; 00:00:47                           ;
+; Analysis & Synthesis ; 00:01:27     ; 1.0                     ; 13151 MB            ; 00:00:40                           ;
+; Fitter               ; 00:00:04     ; 1.0                     ; 13773 MB            ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 13105 MB            ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 13093 MB            ; 00:00:01                           ;
+; Total                ; 00:01:34     ; --                      ; --                  ; 00:00:46                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -1,5 +1,5 @@
 Flow report for RAM2E
-Sat Jun 08 01:44:25 2024
+Fri Jul 12 16:09:06 2024
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,14 +41,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Sat Jun 08 01:44:21 2024       ;
+; Flow Status           ; Successful - Fri Jul 12 16:08:52 2024       ;
 ; Quartus Prime Version ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name         ; RAM2E                                       ;
 ; Top-level Entity Name ; RAM2E                                       ;
 ; Family                ; MAX V                                       ;
 ; Device                ; 5M240ZT100C5                                ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 238 / 240 ( 99 % )                          ;
+; Total logic elements  ; 233 / 240 ( 97 % )                          ;
 ; Total pins            ; 71 / 79 ( 90 % )                            ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 1 / 1 ( 100 % )                             ;
@@ -60,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/08/2024 01:43:22 ;
+; Start date & time ; 07/12/2024 16:06:48 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RAM2E               ;
 +-------------------+---------------------+
@@ -71,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------+------------------------------+---------------+-------------+------------+
 ; Assignment Name               ; Value                        ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------+------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID         ; 121380219419.171782540209972 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID         ; 121380219419.172081480806028 ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP        ; 85                           ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP        ; 0                            ; --            ; --          ; --         ;
 ; NUM_PARALLEL_PROCESSORS       ; 4                            ; --            ; --          ; --         ;
@@ -85,11 +85,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:50     ; 1.0                     ; 13150 MB            ; 00:00:39                           ;
-; Fitter               ; 00:00:07     ; 1.0                     ; 13778 MB            ; 00:00:04                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 13098 MB            ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 13096 MB            ; 00:00:02                           ;
-; Total                ; 00:01:00     ; --                      ; --                  ; 00:00:46                           ;
+; Analysis & Synthesis ; 00:01:18     ; 1.0                     ; 13143 MB            ; 00:00:46                           ;
+; Fitter               ; 00:00:31     ; 1.0                     ; 13774 MB            ; 00:00:04                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 13097 MB            ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:10     ; 1.0                     ; 13087 MB            ; 00:00:02                           ;
+; Total                ; 00:02:03     ; --                      ; --                  ; 00:00:53                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -13,7 +13,7 @@ Hostname: ZANEMACWIN11
 
 Implementation : impl1
 
-# Written on Fri Jun  7 20:49:58 2024
+# Written on Fri Jul 12 16:07:14 2024
 
 ##### FILES SYNTAX CHECKED ##############################################
 Constraint File(s):      "\\Mac\iCloud\Repos\RAM2E\CPLD\RAM2E.sdc"
@@ -33,7 +33,7 @@ Clock Summary
           Start          Requested     Requested     Clock        Clock                   Clock
 Level     Clock          Frequency     Period        Type         Group                   Load 
 -----------------------------------------------------------------------------------------------
-0 -       C14M           14.3 MHz      69.841        declared     default_clkgroup        121  
+0 -       C14M           14.3 MHz      69.841        declared     default_clkgroup        120  
                                                                                                
 0 -       System         100.0 MHz     10.000        system       system_clkgroup         0    
                                                                                                
@@ -47,7 +47,7 @@ Clock Load Summary
                Clock     Source         Clock Pin       Non-clock Pin     Non-clock Pin     
 Clock          Load      Pin            Seq Example     Seq Example       Comb Example      
 --------------------------------------------------------------------------------------------
-C14M           121       C14M(port)     RAT.C           -                 un1_C14M.I[0](inv)
+C14M           120       C14M(port)     RAT.C           -                 un1_C14M.I[0](inv)
                                                                                             
 System         0         -              -               -                 -                 
                                                                                             
