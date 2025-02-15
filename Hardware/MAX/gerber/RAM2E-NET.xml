@@ -2,8 +2,8 @@
 <export version="E">
   <design>
     <source>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2E/Hardware/MAX/RAM2E.kicad_sch</source>
-    <date>Tuesday, June 11, 2024 at 03:42:08 PM</date>
-    <tool>Eeschema 7.0.10</tool>
+    <date>2025-02-15T01:56:59-0500</date>
+    <tool>Eeschema 8.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>GW4203C (RAM2E II) - EPM240 / 5M240Z / AG256</title>
@@ -47,13 +47,16 @@
       <footprint>stdpads:C_0805</footprint>
       <fields>
         <field name="LCSC Part">C15850</field>
+        <field name="Footprint">stdpads:C_0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C15850"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005d136b08</tstamps>
     </comp>
@@ -62,13 +65,16 @@
       <footprint>stdpads:C_0805</footprint>
       <fields>
         <field name="LCSC Part">C15850</field>
+        <field name="Footprint">stdpads:C_0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C15850"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005f4a1c4c</tstamps>
     </comp>
@@ -77,13 +83,16 @@
       <footprint>stdpads:C_0805</footprint>
       <fields>
         <field name="LCSC Part">C15850</field>
+        <field name="Footprint">stdpads:C_0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C15850"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005d14d1aa</tstamps>
     </comp>
@@ -92,13 +101,16 @@
       <footprint>stdpads:C_0805</footprint>
       <fields>
         <field name="LCSC Part">C15850</field>
+        <field name="Footprint">stdpads:C_0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C15850"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005c4f04d1</tstamps>
     </comp>
@@ -107,13 +119,16 @@
       <footprint>stdpads:C_0805</footprint>
       <fields>
         <field name="LCSC Part">C15850</field>
+        <field name="Footprint">stdpads:C_0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C15850"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005cb37aa0</tstamps>
     </comp>
@@ -122,13 +137,16 @@
       <footprint>stdpads:C_0805</footprint>
       <fields>
         <field name="LCSC Part">C15850</field>
+        <field name="Footprint">stdpads:C_0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C15850"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005f6b9584</tstamps>
     </comp>
@@ -137,13 +155,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005fad060f</tstamps>
     </comp>
@@ -152,13 +173,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005fb22aa7</tstamps>
     </comp>
@@ -167,13 +191,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005fdcd964</tstamps>
     </comp>
@@ -182,13 +209,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005fb36cb8</tstamps>
     </comp>
@@ -197,13 +227,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005fb36cf2</tstamps>
     </comp>
@@ -212,13 +245,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005fadea9c</tstamps>
     </comp>
@@ -227,13 +263,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005fb22aa1</tstamps>
     </comp>
@@ -242,13 +281,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005fb36cb2</tstamps>
     </comp>
@@ -257,13 +299,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005fb36cec</tstamps>
     </comp>
@@ -272,13 +317,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005fae0531</tstamps>
     </comp>
@@ -287,13 +335,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005fb22ab3</tstamps>
     </comp>
@@ -302,13 +353,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005fb36cc4</tstamps>
     </comp>
@@ -317,13 +371,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005fb36cfe</tstamps>
     </comp>
@@ -332,13 +389,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005fae052b</tstamps>
     </comp>
@@ -347,13 +407,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005fb22aad</tstamps>
     </comp>
@@ -362,13 +425,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005fb36cbe</tstamps>
     </comp>
@@ -377,13 +443,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005fb36cf8</tstamps>
     </comp>
@@ -392,13 +461,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005faec760</tstamps>
     </comp>
@@ -407,13 +479,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005fb22ab9</tstamps>
     </comp>
@@ -422,13 +497,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005fb36cca</tstamps>
     </comp>
@@ -437,13 +515,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-0000603a0244</tstamps>
     </comp>
@@ -452,13 +533,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-0000603a0238</tstamps>
     </comp>
@@ -467,13 +551,16 @@
       <footprint>stdpads:C_0805</footprint>
       <fields>
         <field name="LCSC Part">C15850</field>
+        <field name="Footprint">stdpads:C_0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C15850"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005fe97ed3</tstamps>
     </comp>
@@ -482,13 +569,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C1653</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C1653"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>9093302c-32ab-4ec3-b80f-bda6d8dfd743</tstamps>
     </comp>
@@ -497,13 +587,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C1653</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C1653"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>38cc6bcb-3d71-4398-8142-4914b4cfa0c1</tstamps>
     </comp>
@@ -512,13 +605,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C1653</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C1653"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>9af951c3-c232-4602-b06a-129a51c9ad03</tstamps>
     </comp>
@@ -527,13 +623,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>8888d22a-ee8d-4e9a-b0cf-39af113247f2</tstamps>
     </comp>
@@ -542,13 +641,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>30898c38-b78e-49d9-a071-ca76dbd76b01</tstamps>
     </comp>
@@ -557,13 +659,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>5eb3dc69-1b27-42cd-a095-a0e531a83d81</tstamps>
     </comp>
@@ -572,13 +677,16 @@
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C23630</field>
+        <field name="Footprint">stdpads:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="LCSC Part" value="C23630"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>12b85514-e0d1-4e68-b587-15f1e3116ef2</tstamps>
     </comp>
@@ -587,121 +695,175 @@
       <footprint>stdpads:LED_0805</footprint>
       <fields>
         <field name="LCSC Part">C284932</field>
+        <field name="Footprint">stdpads:LED_0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="LED_Small_ALT" description=""/>
       <property name="LCSC Part" value="C284932"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000060acd578</tstamps>
     </comp>
     <comp ref="FID1">
       <value>Fiducial</value>
       <footprint>stdpads:Fiducial</footprint>
+      <fields>
+        <field name="Footprint">stdpads:Fiducial</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
       <libsource lib="Mechanical" part="Fiducial" description="Fiducial Marker"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Fiducial Marker"/>
       <property name="ki_keywords" value="fiducial marker"/>
+      <property name="ki_fp_filters" value="Fiducial*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005cc47a28</tstamps>
     </comp>
     <comp ref="FID2">
       <value>Fiducial</value>
       <footprint>stdpads:Fiducial</footprint>
+      <fields>
+        <field name="Footprint">stdpads:Fiducial</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
       <libsource lib="Mechanical" part="Fiducial" description="Fiducial Marker"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Fiducial Marker"/>
       <property name="ki_keywords" value="fiducial marker"/>
+      <property name="ki_fp_filters" value="Fiducial*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005cc4921d</tstamps>
     </comp>
     <comp ref="FID3">
       <value>Fiducial</value>
       <footprint>stdpads:Fiducial</footprint>
+      <fields>
+        <field name="Footprint">stdpads:Fiducial</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
       <libsource lib="Mechanical" part="Fiducial" description="Fiducial Marker"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Fiducial Marker"/>
       <property name="ki_keywords" value="fiducial marker"/>
+      <property name="ki_fp_filters" value="Fiducial*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005cc4dbd8</tstamps>
     </comp>
     <comp ref="FID4">
       <value>Fiducial</value>
       <footprint>stdpads:Fiducial</footprint>
+      <fields>
+        <field name="Footprint">stdpads:Fiducial</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
       <libsource lib="Mechanical" part="Fiducial" description="Fiducial Marker"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Fiducial Marker"/>
       <property name="ki_keywords" value="fiducial marker"/>
+      <property name="ki_fp_filters" value="Fiducial*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005cc4dbdf</tstamps>
     </comp>
     <comp ref="H1">
-      <value> </value>
+      <value>~</value>
       <footprint>stdpads:PasteHole_1.152mm_NPTH</footprint>
+      <fields>
+        <field name="Footprint">stdpads:PasteHole_1.152mm_NPTH</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
       <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Mounting Hole without connection"/>
       <property name="ki_keywords" value="mounting hole"/>
+      <property name="ki_fp_filters" value="MountingHole*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005cc53461</tstamps>
     </comp>
     <comp ref="H2">
-      <value> </value>
+      <value>~</value>
       <footprint>stdpads:PasteHole_1.152mm_NPTH</footprint>
+      <fields>
+        <field name="Footprint">stdpads:PasteHole_1.152mm_NPTH</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
       <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Mounting Hole without connection"/>
       <property name="ki_keywords" value="mounting hole"/>
+      <property name="ki_fp_filters" value="MountingHole*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005cc795a2</tstamps>
     </comp>
     <comp ref="H3">
-      <value> </value>
+      <value>~</value>
       <footprint>stdpads:PasteHole_1.152mm_NPTH</footprint>
+      <fields>
+        <field name="Footprint">stdpads:PasteHole_1.152mm_NPTH</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
       <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Mounting Hole without connection"/>
       <property name="ki_keywords" value="mounting hole"/>
+      <property name="ki_fp_filters" value="MountingHole*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005cc7e0b9</tstamps>
     </comp>
     <comp ref="H4">
-      <value> </value>
+      <value>~</value>
       <footprint>stdpads:PasteHole_1.152mm_NPTH</footprint>
+      <fields>
+        <field name="Footprint">stdpads:PasteHole_1.152mm_NPTH</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
       <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Mounting Hole without connection"/>
       <property name="ki_keywords" value="mounting hole"/>
+      <property name="ki_fp_filters" value="MountingHole*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005cc7e0c0</tstamps>
     </comp>
     <comp ref="H5">
-      <value> </value>
+      <value>~</value>
       <footprint>stdpads:PasteHole_1.1mm_PTH</footprint>
+      <fields>
+        <field name="Footprint">stdpads:PasteHole_1.1mm_PTH</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
       <libsource lib="Mechanical" part="MountingHole_Pad" description="Mounting Hole with connection"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Mounting Hole with connection"/>
       <property name="ki_keywords" value="mounting hole"/>
+      <property name="ki_fp_filters" value="MountingHole*Pad*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005ed15a93</tstamps>
     </comp>
     <comp ref="J1">
       <value>AppleIIeAux</value>
       <footprint>stdpads:AppleIIeAux_Edge</footprint>
+      <fields>
+        <field name="Footprint">stdpads:AppleIIeAux_Edge</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
       <libsource lib="Connector_Generic" part="Conn_02x30_Counter_Clockwise" description="Generic connector, double row, 02x30, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Generic connector, double row, 02x30, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005cfb6fe3</tstamps>
     </comp>
@@ -710,61 +872,82 @@
       <footprint>stdpads:USB_Micro-B_Amphenol_10118192-0001</footprint>
       <fields>
         <field name="LCSC Part">C132564</field>
+        <field name="Footprint">stdpads:USB_Micro-B_Amphenol_10118192-0001</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Connector" part="USB_B_Micro" description="USB Micro Type B connector"/>
       <property name="LCSC Part" value="C132564"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="USB Micro Type B connector"/>
       <property name="ki_keywords" value="connector USB micro"/>
+      <property name="ki_fp_filters" value="USB*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>50e6007d-16fc-4c33-800f-6b6d1f9e6846</tstamps>
     </comp>
     <comp ref="J3">
       <value>C14M</value>
       <footprint>stdpads:EdgeClipHole</footprint>
+      <fields>
+        <field name="Footprint">stdpads:EdgeClipHole</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
       <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>ee8f59c3-0e08-42c7-979e-411d2a07820d</tstamps>
     </comp>
     <comp ref="J4">
       <value>C14M</value>
       <footprint>stdpads:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">stdpads:PinHeader_1x02_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
       <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-0000608879ca</tstamps>
     </comp>
     <comp ref="J5">
       <value>JTAG</value>
       <footprint>stdpads:Tag-Connect_TC2050-IDC-FP_2x05_P1.27mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">stdpads:Tag-Connect_TC2050-IDC-FP_2x05_P1.27mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
       <libsource lib="Connector_Generic" part="Conn_02x05_Odd_Even" description="Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>48887840-8dea-48a4-a286-8bf2feb70f56</tstamps>
     </comp>
     <comp ref="R1">
-      <value>0 </value>
+      <value>0</value>
       <footprint>stdpads:R_0805</footprint>
       <fields>
         <field name="LCSC Part">C17477</field>
+        <field name="Footprint">stdpads:R_0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <property name="LCSC Part" value="C17477"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Resistor, small symbol"/>
       <property name="ki_keywords" value="R resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005fa85b84</tstamps>
     </comp>
@@ -773,13 +956,16 @@
       <footprint>stdpads:R_0603</footprint>
       <fields>
         <field name="LCSC Part">C23182</field>
+        <field name="Footprint">stdpads:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <property name="LCSC Part" value="C23182"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Resistor, small symbol"/>
       <property name="ki_keywords" value="R resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00006088a353</tstamps>
     </comp>
@@ -788,13 +974,16 @@
       <footprint>stdpads:R_0603</footprint>
       <fields>
         <field name="LCSC Part">C23182</field>
+        <field name="Footprint">stdpads:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <property name="LCSC Part" value="C23182"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Resistor, small symbol"/>
       <property name="ki_keywords" value="R resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00006081d682</tstamps>
     </comp>
@@ -803,13 +992,16 @@
       <footprint>stdpads:R_0603</footprint>
       <fields>
         <field name="LCSC Part">C23182</field>
+        <field name="Footprint">stdpads:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <property name="LCSC Part" value="C23182"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Resistor, small symbol"/>
       <property name="ki_keywords" value="R resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000060afb4bd</tstamps>
     </comp>
@@ -818,37 +1010,52 @@
       <footprint>stdpads:R_0603</footprint>
       <fields>
         <field name="LCSC Part">C23182</field>
+        <field name="Footprint">stdpads:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <property name="LCSC Part" value="C23182"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Resistor, small symbol"/>
       <property name="ki_keywords" value="R resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000060afb1ec</tstamps>
     </comp>
     <comp ref="R6">
       <value>DNP</value>
       <footprint>stdpads:R_0603</footprint>
+      <fields>
+        <field name="LCSC Part"/>
+        <field name="Footprint">stdpads:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <property name="LCSC Part" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Resistor, small symbol"/>
       <property name="ki_keywords" value="R resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>08f8bc6c-0125-4400-952b-b67ffbba1927</tstamps>
     </comp>
     <comp ref="R7">
       <value>DNP</value>
       <footprint>stdpads:R_0603</footprint>
+      <fields>
+        <field name="LCSC Part"/>
+        <field name="Footprint">stdpads:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <property name="LCSC Part" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Resistor, small symbol"/>
       <property name="ki_keywords" value="R resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>65f1dc47-8496-4392-8e33-2e387b0987b4</tstamps>
     </comp>
@@ -857,13 +1064,16 @@
       <footprint>stdpads:R_0805</footprint>
       <fields>
         <field name="LCSC Part">C17557</field>
+        <field name="Footprint">stdpads:R_0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <property name="LCSC Part" value="C17557"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Resistor, small symbol"/>
       <property name="ki_keywords" value="R resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000060aeed36</tstamps>
     </comp>
@@ -872,25 +1082,34 @@
       <footprint>stdpads:R_0603</footprint>
       <fields>
         <field name="LCSC Part">C25804</field>
+        <field name="Footprint">stdpads:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <property name="LCSC Part" value="C25804"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Resistor, small symbol"/>
       <property name="ki_keywords" value="R resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>4a6dfb06-6ee0-4840-93c2-dc707374167d</tstamps>
     </comp>
     <comp ref="R10">
       <value>DNP</value>
       <footprint>stdpads:R_0603</footprint>
+      <fields>
+        <field name="LCSC Part"/>
+        <field name="Footprint">stdpads:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <property name="LCSC Part" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Resistor, small symbol"/>
       <property name="ki_keywords" value="R resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>1c02fbc8-da32-4b63-b3dd-16334cf226c0</tstamps>
     </comp>
@@ -899,13 +1118,16 @@
       <footprint>stdpads:R_0603</footprint>
       <fields>
         <field name="LCSC Part">C25804</field>
+        <field name="Footprint">stdpads:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <property name="LCSC Part" value="C25804"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Resistor, small symbol"/>
       <property name="ki_keywords" value="R resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>c711e853-18e3-4b93-9358-bdc826f42429</tstamps>
     </comp>
@@ -914,13 +1136,16 @@
       <footprint>stdpads:R_0603</footprint>
       <fields>
         <field name="LCSC Part">C25804</field>
+        <field name="Footprint">stdpads:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <property name="LCSC Part" value="C25804"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Resistor, small symbol"/>
       <property name="ki_keywords" value="R resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>f6940c70-d714-4591-b167-9289e5842065</tstamps>
     </comp>
@@ -929,13 +1154,16 @@
       <footprint>stdpads:R_0603</footprint>
       <fields>
         <field name="LCSC Part">C23182</field>
+        <field name="Footprint">stdpads:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <property name="LCSC Part" value="C23182"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Resistor, small symbol"/>
       <property name="ki_keywords" value="R resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>b2194561-fa34-4a6d-9a3e-20b529281f19</tstamps>
     </comp>
@@ -944,11 +1172,15 @@
       <footprint>stdpads:TQFP-100_14x14mm_P0.5mm</footprint>
       <fields>
         <field name="LCSC Part">C192889</field>
+        <field name="Footprint">stdpads:TQFP-100_14x14mm_P0.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="GW_PLD" part="5M240ZT100" description=""/>
       <property name="LCSC Part" value="C192889"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
+      <property name="ki_fp_filters" value="*QFP*P0.5mm*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005ef407e5</tstamps>
     </comp>
@@ -957,6 +1189,9 @@
       <footprint>stdpads:TSOP-II-54_22.2x10.16mm_P0.8mm</footprint>
       <fields>
         <field name="LCSC Part">C62379</field>
+        <field name="Footprint">stdpads:TSOP-II-54_22.2x10.16mm_P0.8mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="GW_RAM" part="SDRAM-16Mx16-TSOP2-54" description=""/>
       <property name="LCSC Part" value="C62379"/>
@@ -970,6 +1205,9 @@
       <footprint>stdpads:TSSOP-20_4.4x6.5mm_P0.65mm</footprint>
       <fields>
         <field name="LCSC Part">C6082</field>
+        <field name="Footprint">stdpads:TSSOP-20_4.4x6.5mm_P0.65mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="GW_Logic" part="74245" description=""/>
       <property name="LCSC Part" value="C6082"/>
@@ -983,6 +1221,9 @@
       <footprint>stdpads:TSSOP-20_4.4x6.5mm_P0.65mm</footprint>
       <fields>
         <field name="LCSC Part">C6082</field>
+        <field name="Footprint">stdpads:TSSOP-20_4.4x6.5mm_P0.65mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="GW_Logic" part="74245" description=""/>
       <property name="LCSC Part" value="C6082"/>
@@ -996,6 +1237,9 @@
       <footprint>stdpads:TSSOP-20_4.4x6.5mm_P0.65mm</footprint>
       <fields>
         <field name="LCSC Part">C6082</field>
+        <field name="Footprint">stdpads:TSSOP-20_4.4x6.5mm_P0.65mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="GW_Logic" part="74245" description=""/>
       <property name="LCSC Part" value="C6082"/>
@@ -1009,6 +1253,9 @@
       <footprint>stdpads:TSSOP-20_4.4x6.5mm_P0.65mm</footprint>
       <fields>
         <field name="LCSC Part">C173388</field>
+        <field name="Footprint">stdpads:TSSOP-20_4.4x6.5mm_P0.65mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="GW_Logic" part="74245" description=""/>
       <property name="LCSC Part" value="C173388"/>
@@ -1022,6 +1269,9 @@
       <footprint>stdpads:TSSOP-20_4.4x6.5mm_P0.65mm</footprint>
       <fields>
         <field name="LCSC Part">C173388</field>
+        <field name="Footprint">stdpads:TSSOP-20_4.4x6.5mm_P0.65mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="GW_Logic" part="74245" description=""/>
       <property name="LCSC Part" value="C173388"/>
@@ -1035,6 +1285,9 @@
       <footprint>stdpads:SOT-23</footprint>
       <fields>
         <field name="LCSC Part">C5446</field>
+        <field name="Footprint">stdpads:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="GW_Power" part="AP2125" description=""/>
       <property name="LCSC Part" value="C5446"/>
@@ -1048,13 +1301,16 @@
       <footprint>stdpads:SOT-23-5</footprint>
       <fields>
         <field name="LCSC Part">C151375</field>
+        <field name="Footprint">stdpads:SOT-23-5</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Regulator_Linear" part="AP2127K-1.8" description="300mA low dropout linear regulator, shutdown pin, 2.5V-6V input voltage, 1.8V fixed positive output, SOT-23-5"/>
       <property name="LCSC Part" value="C151375"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="300mA low dropout linear regulator, shutdown pin, 2.5V-6V input voltage, 1.8V fixed positive output, SOT-23-5"/>
       <property name="ki_keywords" value="linear regulator ldo fixed positive"/>
+      <property name="ki_fp_filters" value="SOT?23?5*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005f6dd402</tstamps>
     </comp>
@@ -1063,13 +1319,16 @@
       <footprint>stdpads:SOIC-16_3.9mm</footprint>
       <fields>
         <field name="LCSC Part">C14267</field>
+        <field name="Footprint">stdpads:SOIC-16_3.9mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Interface_USB" part="CH340G" description="USB serial converter, UART, SOIC-16"/>
       <property name="LCSC Part" value="C14267"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="USB serial converter, UART, SOIC-16"/>
       <property name="ki_keywords" value="USB UART Serial Converter Interface"/>
+      <property name="ki_fp_filters" value="SOIC*3.9x9.9mm*P1.27mm*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>dc1075b3-c03c-471b-8500-362a05540a70</tstamps>
     </comp>
@@ -1078,6 +1337,9 @@
       <footprint>stdpads:SOT-353</footprint>
       <fields>
         <field name="LCSC Part">C12495</field>
+        <field name="Footprint">stdpads:SOT-353</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="GW_Logic" part="741G125GW" description=""/>
       <property name="LCSC Part" value="C12495"/>
@@ -1091,13 +1353,16 @@
       <footprint>stdpads:Crystal_SMD_3225-4Pin_3.2x2.5mm</footprint>
       <fields>
         <field name="LCSC Part">C9002</field>
+        <field name="Footprint">stdpads:Crystal_SMD_3225-4Pin_3.2x2.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="Device" part="Crystal_GND24_Small" description="Four pin crystal, GND on pins 2 and 4, small symbol"/>
       <property name="LCSC Part" value="C9002"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2E.kicad_sch"/>
-      <property name="ki_description" value="Four pin crystal, GND on pins 2 and 4, small symbol"/>
       <property name="ki_keywords" value="quartz ceramic resonator oscillator"/>
+      <property name="ki_fp_filters" value="Crystal*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>b72d7e19-bb06-4fb5-828e-08cedd0a35f7</tstamps>
     </comp>
@@ -1112,7 +1377,9 @@
       <fields>
         <field name="Reference">J</field>
         <field name="Value">USB_B_Micro</field>
+        <field name="Footprint"/>
         <field name="Datasheet">~</field>
+        <field name="Description">USB Micro Type B connector</field>
       </fields>
       <pins>
         <pin num="1" name="VBUS" type="power_out"/>
@@ -1132,7 +1399,9 @@
       <fields>
         <field name="Reference">J</field>
         <field name="Value">Conn_01x01</field>
+        <field name="Footprint"/>
         <field name="Datasheet">~</field>
+        <field name="Description">Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
       </fields>
       <pins>
         <pin num="1" name="Pin_1" type="passive"/>
@@ -1147,7 +1416,9 @@
       <fields>
         <field name="Reference">J</field>
         <field name="Value">Conn_01x02</field>
+        <field name="Footprint"/>
         <field name="Datasheet">~</field>
+        <field name="Description">Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
       </fields>
       <pins>
         <pin num="1" name="Pin_1" type="passive"/>
@@ -1163,7 +1434,9 @@
       <fields>
         <field name="Reference">J</field>
         <field name="Value">Conn_02x05_Odd_Even</field>
+        <field name="Footprint"/>
         <field name="Datasheet">~</field>
+        <field name="Description">Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</field>
       </fields>
       <pins>
         <pin num="1" name="Pin_1" type="passive"/>
@@ -1187,7 +1460,9 @@
       <fields>
         <field name="Reference">J</field>
         <field name="Value">Conn_02x30_Counter_Clockwise</field>
+        <field name="Footprint"/>
         <field name="Datasheet">~</field>
+        <field name="Description">Generic connector, double row, 02x30, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)</field>
       </fields>
       <pins>
         <pin num="1" name="Pin_1" type="passive"/>
@@ -1261,7 +1536,9 @@
       <fields>
         <field name="Reference">C</field>
         <field name="Value">C_Small</field>
+        <field name="Footprint"/>
         <field name="Datasheet">~</field>
+        <field name="Description">Unpolarized capacitor, small symbol</field>
       </fields>
       <pins>
         <pin num="1" name="" type="passive"/>
@@ -1277,7 +1554,9 @@
       <fields>
         <field name="Reference">Y</field>
         <field name="Value">Crystal_GND24_Small</field>
+        <field name="Footprint"/>
         <field name="Datasheet">~</field>
+        <field name="Description">Four pin crystal, GND on pins 2 and 4, small symbol</field>
       </fields>
       <pins>
         <pin num="1" name="1" type="passive"/>
@@ -1295,6 +1574,9 @@
       <fields>
         <field name="Reference">D</field>
         <field name="Value">Device_LED_Small_ALT</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <pins>
         <pin num="1" name="K" type="passive"/>
@@ -1310,7 +1592,9 @@
       <fields>
         <field name="Reference">R</field>
         <field name="Value">R_Small</field>
+        <field name="Footprint"/>
         <field name="Datasheet">~</field>
+        <field name="Description">Resistor, small symbol</field>
       </fields>
       <pins>
         <pin num="1" name="" type="passive"/>
@@ -1322,6 +1606,8 @@
         <field name="Reference">U</field>
         <field name="Value">741G125GW</field>
         <field name="Footprint">stdpads:SOT-353</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <pins>
         <pin num="1" name="~{OE}" type="input"/>
@@ -1335,6 +1621,9 @@
       <fields>
         <field name="Reference">U</field>
         <field name="Value">GW_Logic_74245</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <pins>
         <pin num="1" name="AtoB" type="input"/>
@@ -1367,6 +1656,8 @@
         <field name="Reference">U</field>
         <field name="Value">GW_PLD_5M240ZT100</field>
         <field name="Footprint">stdpads:TQFP-100_14x14mm_P0.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <pins>
         <pin num="1" name="GND" type="power_in"/>
@@ -1476,6 +1767,8 @@
         <field name="Reference">U</field>
         <field name="Value">GW_Power_AP2125</field>
         <field name="Footprint">stdpads:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <pins>
         <pin num="1" name="GND" type="power_in"/>
@@ -1486,8 +1779,10 @@
     <libpart lib="GW_RAM" part="SDRAM-16Mx16-TSOP2-54">
       <fields>
         <field name="Reference">U</field>
-        <field name="Value">GW_RAM_SDRAM-16Mx16-TSOP2-54</field>
-        <field name="Footprint">stdpads:Winbond_TSOPII-54</field>
+        <field name="Value">SDRAM-16Mx16-TSOP2-54</field>
+        <field name="Footprint">stdpads:TSOP-II-54_22.2x10.16mm_P0.8mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <pins>
         <pin num="1" name="VDD" type="power_in"/>
@@ -1529,6 +1824,7 @@
         <pin num="37" name="CKE" type="input"/>
         <pin num="38" name="CLK" type="input"/>
         <pin num="39" name="DQMH" type="input"/>
+        <pin num="40" name="NC" type="no_connect"/>
         <pin num="41" name="VSS" type="power_in"/>
         <pin num="42" name="DQ8" type="bidirectional"/>
         <pin num="43" name="VDDQ" type="power_in"/>
@@ -1556,6 +1852,7 @@
         <field name="Value">CH340G</field>
         <field name="Footprint">Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</field>
         <field name="Datasheet">http://www.datasheet5.com/pdf-local-2195953</field>
+        <field name="Description">USB serial converter, UART, SOIC-16</field>
       </fields>
       <pins>
         <pin num="1" name="GND" type="power_in"/>
@@ -1585,7 +1882,9 @@
       <fields>
         <field name="Reference">FID</field>
         <field name="Value">Fiducial</field>
+        <field name="Footprint"/>
         <field name="Datasheet">~</field>
+        <field name="Description">Fiducial Marker</field>
       </fields>
     </libpart>
     <libpart lib="Mechanical" part="MountingHole">
@@ -1597,7 +1896,9 @@
       <fields>
         <field name="Reference">H</field>
         <field name="Value">MountingHole</field>
+        <field name="Footprint"/>
         <field name="Datasheet">~</field>
+        <field name="Description">Mounting Hole without connection</field>
       </fields>
     </libpart>
     <libpart lib="Mechanical" part="MountingHole_Pad">
@@ -1609,7 +1910,9 @@
       <fields>
         <field name="Reference">H</field>
         <field name="Value">MountingHole_Pad</field>
+        <field name="Footprint"/>
         <field name="Datasheet">~</field>
+        <field name="Description">Mounting Hole with connection</field>
       </fields>
       <pins>
         <pin num="1" name="1" type="input"/>
@@ -1626,6 +1929,7 @@
         <field name="Value">AP2127K-1.8</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
         <field name="Datasheet">https://www.diodes.com/assets/Datasheets/AP2127.pdf</field>
+        <field name="Description">300mA low dropout linear regulator, shutdown pin, 2.5V-6V input voltage, 1.8V fixed positive output, SOT-23-5</field>
       </fields>
       <pins>
         <pin num="1" name="VIN" type="power_in"/>
@@ -2457,10 +2761,13 @@
     <net code="162" name="unconnected-(U1-IO2_86-Pad86)">
       <node ref="U1" pin="86" pinfunction="IO2_86" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="163" name="unconnected-(U4-B1-Pad17)">
+    <net code="163" name="unconnected-(U2-NC-Pad40)">
+      <node ref="U2" pin="40" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="164" name="unconnected-(U4-B1-Pad17)">
       <node ref="U4" pin="17" pinfunction="B1" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="164" name="unconnected-(U9-NC-Pad4)">
+    <net code="165" name="unconnected-(U9-NC-Pad4)">
       <node ref="U9" pin="4" pinfunction="NC" pintype="no_connect"/>
     </net>
   </nets>
